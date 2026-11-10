@@ -47,3 +47,18 @@ Total scanned items: **10 top-level categories**, 403MB media assets:
 - [ ] **Milestone 4: Regional Market Pricing & Syndication Generator** (Comps store schema, multi-tier pricing, Kijiji / FB / eBay ad copy generators).
 - [ ] **Milestone 5: Fast Public Showroom / Browsable Web Catalog** (Lightweight, responsive web catalog matching Cloudflare Pages / portfolio standard).
 - [ ] **Milestone 6: Commercial & Warehouse Expansion API** (Barcode/QR, batch status transitions, webhook ingress).
+
+---
+
+## 4. Cross-Project Interoperability & Infusion Matrix (`theCore` Ecosystem)
+
+To ensure any other workspace or autonomous agent on `theCore` can read, integrate with, or syndicate this project's state, the following interface contracts are established (detailed in [`PROJECT_INTERFACE.md`](./PROJECT_INTERFACE.md) and [`project-manifest.json`](./project-manifest.json)):
+
+| Target Workspace / Service | Infusion Mechanism | Consumed Artifacts & Interfaces |
+| :--- | :--- | :--- |
+| **`pagesCloudflare`** (`c:\Users\alihm\Projects\pagesCloudflare`) | Web Showcase / Subpath Embedding | Reads `data/inventory.json` or consumes compiled static catalog bundle in `dist/` to embed live inventory under `portfolio.alhamaz.me/inventory` or deploy standalone to Cloudflare Pages. |
+| **`syncServe`** (`CT300`, `10.23.45.105`) | Mobile Intake Automation | Mounts / syncs a Syncthing camera folder from mobile devices directly to `c:\Users\alihm\Projects\letgolist\Sales/Intake` for zero-friction intake. |
+| **`backupCore`** (`CT200`, `10.23.43.2`) | Automated GitOps Backup | Targets `c:\Users\alihm\Projects\letgolist` under `targets.d/letgolist.sh` to preserve Git commit history, inventory ledger, and media. |
+| **`reachCore` / `reachMe`** (`CT1000` / `CT2000`) | P2P Buyer Messaging & Alerts | Connects to `@reachcore/core` WebSockets for real-time buyer lead notifications and P2P communication switchboard. |
+| **`infraEng`** (`c:\Users\alihm\Projects\infraEng`) | Upstream Living Network Baseline | Syncs service registration, tunnel routes (`inventory.alhamaz.me`), and container allocations (`SERV_VLAN`) into `NETWORK_CONTEXT.md`. |
+

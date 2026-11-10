@@ -1,0 +1,40 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "project_name": "letgolist",
+  "canonical_host": "theCore (10.23.40.3)",
+  "canonical_workspace": "c:\\Users\\alihm\\Projects\\letgolist",
+  "version": "1.0.0",
+  "description": "Circular Asset Liquidation, Personal Inventory Sidelining, and Regional Market Intelligence",
+  "state_document": "PROJECT_STATE.md",
+  "interface_document": "PROJECT_INTERFACE.md",
+  "prd_document": "PRD.md",
+  "user_stories_document": "UserStories.md",
+  "session_log": "SESSION_LOG.md",
+  "data_paths": {
+    "media_root": "Sales",
+    "inventory_ledger": "data/inventory.json",
+    "regional_comps": "data/regional_comps.json",
+    "compiled_dist": "dist"
+  },
+  "integration_targets": {
+    "pagesCloudflare": {
+      "path": "c:\\Users\\alihm\\Projects\\pagesCloudflare",
+      "method": "static_json_ingest",
+      "endpoint": "portfolio.alhamaz.me"
+    },
+    "syncServe": {
+      "host": "10.23.45.105",
+      "role": "syncthing_camera_intake",
+      "target_folder": "Sales/Intake"
+    },
+    "backupCore": {
+      "host": "10.23.43.2",
+      "role": "automated_git_and_data_backup"
+    },
+    "reachMe": {
+      "host": "10.23.45.115",
+      "endpoint": "reachme.alhamaz.me",
+      "role": "p2p_buyer_inquiry_switchboard"
+    }
+  }
+}
