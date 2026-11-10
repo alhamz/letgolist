@@ -1,0 +1,2045 @@
+{
+  "schema_version": "1.0.0",
+  "last_updated": "2026-11-10T20:13:34.393Z",
+  "summary": {
+    "total_items": 30,
+    "active_listings": 0,
+    "sidelined_items": 0,
+    "sold_items": 0,
+    "total_estimated_value": 0,
+    "circular_ewaste_diverted_kg": 94.2
+  },
+  "items": [
+    {
+      "id": "carseats-ahmedbooster",
+      "sku": "LGL-CAR-AHMEDBOO-659",
+      "title": "Highback Booster Car Seat",
+      "category": "Car Seats & Baby Gear",
+      "brand": "Cosco / Safety 1st",
+      "model": "Booster Seat",
+      "condition": "good",
+      "location": {
+        "public_region": {
+          "country": "CA",
+          "region": "ON",
+          "city": "Ottawa",
+          "postal_area": "K1A area"
+        },
+        "internal_sidelining": {
+          "zone": "Basement",
+          "shelf_or_bin": "Baby Gear Rack"
+        }
+      },
+      "specs": {
+        "inferred_from_path": "CarSeats\\AhmedBooster",
+        "media_count": 4
+      },
+      "clearance_identifiers": {
+        "tokenized_tags": [],
+        "vault_ref": "vlt_carseats-ahmedbooster"
+      },
+      "pricing": {
+        "currency": "CAD",
+        "fast_liquidation": 0,
+        "fair_market": 0,
+        "optimistic_anchor": 0,
+        "active_price": 0
+      },
+      "circular_metrics": {
+        "estimated_weight_kg": 8.5,
+        "refurb_status": "ready_for_curation"
+      },
+      "status": "draft",
+      "media": {
+        "primary_image": "Sales/CarSeats/AhmedBooster/IMG_20241209_104144_3306864646933892040.jpg",
+        "gallery": [
+          "Sales/CarSeats/AhmedBooster/IMG_20241209_104144_3306864646933892040.jpg",
+          "Sales/CarSeats/AhmedBooster/IMG_20241209_104430_1471074454626227307.jpg",
+          "Sales/CarSeats/AhmedBooster/IMG_20241209_104500_8351562353121698941.jpg",
+          "Sales/CarSeats/AhmedBooster/IMG_20241209_104545_122346051732535932.jpg"
+        ]
+      },
+      "syndication": {
+        "facebook": {
+          "title": "Highback Booster Car Seat",
+          "description": "",
+          "tags": []
+        },
+        "kijiji": {
+          "title": "Highback Booster Car Seat",
+          "description": "",
+          "tags": []
+        },
+        "ebay": {
+          "title": "Highback Booster Car Seat",
+          "description": ""
+        }
+      },
+      "created_at": "2026-11-10T20:13:34.366Z",
+      "updated_at": "2026-11-10T20:13:34.366Z"
+    },
+    {
+      "id": "carseats-evenflotriumph",
+      "sku": "LGL-CAR-EVENFLOT-707",
+      "title": "Evenflo Triumph Convertible Car Seat",
+      "category": "Car Seats & Baby Gear",
+      "brand": "Evenflo",
+      "model": "Triumph Convertible",
+      "condition": "good",
+      "location": {
+        "public_region": {
+          "country": "CA",
+          "region": "ON",
+          "city": "Ottawa",
+          "postal_area": "K1A area"
+        },
+        "internal_sidelining": {
+          "zone": "Basement",
+          "shelf_or_bin": "Baby Gear Rack"
+        }
+      },
+      "specs": {
+        "inferred_from_path": "CarSeats\\EvenFloTriumph",
+        "media_count": 6
+      },
+      "clearance_identifiers": {
+        "tokenized_tags": [],
+        "vault_ref": "vlt_carseats-evenflotriumph"
+      },
+      "pricing": {
+        "currency": "CAD",
+        "fast_liquidation": 0,
+        "fair_market": 0,
+        "optimistic_anchor": 0,
+        "active_price": 0
+      },
+      "circular_metrics": {
+        "estimated_weight_kg": 8.5,
+        "refurb_status": "ready_for_curation"
+      },
+      "status": "draft",
+      "media": {
+        "primary_image": "Sales/CarSeats/EvenFloTriumph/IMG_20250405_121702_4942873400938140852.jpg",
+        "gallery": [
+          "Sales/CarSeats/EvenFloTriumph/IMG_20250405_121702_4942873400938140852.jpg",
+          "Sales/CarSeats/EvenFloTriumph/IMG_20250405_121736_6775982416525319488.jpg",
+          "Sales/CarSeats/EvenFloTriumph/IMG_20250405_121810_6249523320218972859.jpg",
+          "Sales/CarSeats/EvenFloTriumph/IMG_20250405_121830_6678695365079124575.jpg",
+          "Sales/CarSeats/EvenFloTriumph/IMG_20250405_121913_5114725399652261628.jpg",
+          "Sales/CarSeats/EvenFloTriumph/IMG_20250405_121955_3344487941858483068.jpg"
+        ]
+      },
+      "syndication": {
+        "facebook": {
+          "title": "Evenflo Triumph Convertible Car Seat",
+          "description": "",
+          "tags": []
+        },
+        "kijiji": {
+          "title": "Evenflo Triumph Convertible Car Seat",
+          "description": "",
+          "tags": []
+        },
+        "ebay": {
+          "title": "Evenflo Triumph Convertible Car Seat",
+          "description": ""
+        }
+      },
+      "created_at": "2026-11-10T20:13:34.367Z",
+      "updated_at": "2026-11-10T20:13:34.367Z"
+    },
+    {
+      "id": "carseats-harmonycommanderdeluxe",
+      "sku": "LGL-CAR-HARMONYC-231",
+      "title": "Harmony Commander Deluxe Youth Booster Seat",
+      "category": "Car Seats & Baby Gear",
+      "brand": "Harmony",
+      "model": "Commander Deluxe",
+      "condition": "good",
+      "location": {
+        "public_region": {
+          "country": "CA",
+          "region": "ON",
+          "city": "Ottawa",
+          "postal_area": "K1A area"
+        },
+        "internal_sidelining": {
+          "zone": "Basement",
+          "shelf_or_bin": "Baby Gear Rack"
+        }
+      },
+      "specs": {
+        "inferred_from_path": "CarSeats\\HarmonyCommanderDeluxe",
+        "media_count": 3
+      },
+      "clearance_identifiers": {
+        "tokenized_tags": [],
+        "vault_ref": "vlt_carseats-harmonycommanderdeluxe"
+      },
+      "pricing": {
+        "currency": "CAD",
+        "fast_liquidation": 0,
+        "fair_market": 0,
+        "optimistic_anchor": 0,
+        "active_price": 0
+      },
+      "circular_metrics": {
+        "estimated_weight_kg": 8.5,
+        "refurb_status": "ready_for_curation"
+      },
+      "status": "draft",
+      "media": {
+        "primary_image": "Sales/CarSeats/HarmonyCommanderDeluxe/IMG_20260506_182931_8560424541413318394.jpg",
+        "gallery": [
+          "Sales/CarSeats/HarmonyCommanderDeluxe/IMG_20260506_182931_8560424541413318394.jpg",
+          "Sales/CarSeats/HarmonyCommanderDeluxe/IMG_20260506_183131_7623594693633766782.jpg",
+          "Sales/CarSeats/HarmonyCommanderDeluxe/IMG_20260506_183230_4752278592323670056.jpg"
+        ]
+      },
+      "syndication": {
+        "facebook": {
+          "title": "Harmony Commander Deluxe Youth Booster Seat",
+          "description": "",
+          "tags": []
+        },
+        "kijiji": {
+          "title": "Harmony Commander Deluxe Youth Booster Seat",
+          "description": "",
+          "tags": []
+        },
+        "ebay": {
+          "title": "Harmony Commander Deluxe Youth Booster Seat",
+          "description": ""
+        }
+      },
+      "created_at": "2026-11-10T20:13:34.368Z",
+      "updated_at": "2026-11-10T20:13:34.368Z"
+    },
+    {
+      "id": "dock-dell-wd15",
+      "sku": "LGL-DOC-DELLWD15-436",
+      "title": "Dell WD15 K17A USB-C Docking Station with Power Supply",
+      "category": "Docks",
+      "brand": "Dell",
+      "model": "WD15 USB-C",
+      "condition": "good",
+      "location": {
+        "public_region": {
+          "country": "CA",
+          "region": "ON",
+          "city": "Ottawa",
+          "postal_area": "K1A area"
+        },
+        "internal_sidelining": {
+          "zone": "Office",
+          "shelf_or_bin": "Dock Bin #1"
+        }
+      },
+      "specs": {
+        "inferred_from_path": "Dock\\Dell\\WD15",
+        "media_count": 2
+      },
+      "clearance_identifiers": {
+        "tokenized_tags": [],
+        "vault_ref": "vlt_dock-dell-wd15"
+      },
+      "pricing": {
+        "currency": "CAD",
+        "fast_liquidation": 0,
+        "fair_market": 0,
+        "optimistic_anchor": 0,
+        "active_price": 0
+      },
+      "circular_metrics": {
+        "estimated_weight_kg": 1.2,
+        "refurb_status": "ready_for_curation"
+      },
+      "status": "draft",
+      "media": {
+        "primary_image": "Sales/Dock/Dell/WD15/IMG_20260520_123736_1502649380157587165.jpg",
+        "gallery": [
+          "Sales/Dock/Dell/WD15/IMG_20260520_123736_1502649380157587165.jpg",
+          "Sales/Dock/Dell/WD15/IMG_20260520_123757_7251389510479596311.jpg"
+        ]
+      },
+      "syndication": {
+        "facebook": {
+          "title": "Dell WD15 K17A USB-C Docking Station with Power Supply",
+          "description": "",
+          "tags": []
+        },
+        "kijiji": {
+          "title": "Dell WD15 K17A USB-C Docking Station with Power Supply",
+          "description": "",
+          "tags": []
+        },
+        "ebay": {
+          "title": "Dell WD15 K17A USB-C Docking Station with Power Supply",
+          "description": ""
+        }
+      },
+      "created_at": "2026-11-10T20:13:34.369Z",
+      "updated_at": "2026-11-10T20:13:34.369Z"
+    },
+    {
+      "id": "dock-dell-wd19s",
+      "sku": "LGL-DOC-DELLWD19-694",
+      "title": "Dell WD19S 130W/180W USB-C Modular Docking Station",
+      "category": "Docks",
+      "brand": "Dell",
+      "model": "WD19S Modular USB-C",
+      "condition": "good",
+      "location": {
+        "public_region": {
+          "country": "CA",
+          "region": "ON",
+          "city": "Ottawa",
+          "postal_area": "K1A area"
+        },
+        "internal_sidelining": {
+          "zone": "Office",
+          "shelf_or_bin": "Dock Bin #1"
+        }
+      },
+      "specs": {
+        "inferred_from_path": "Dock\\Dell\\WD19S",
+        "media_count": 2
+      },
+      "clearance_identifiers": {
+        "tokenized_tags": [],
+        "vault_ref": "vlt_dock-dell-wd19s"
+      },
+      "pricing": {
+        "currency": "CAD",
+        "fast_liquidation": 0,
+        "fair_market": 0,
+        "optimistic_anchor": 0,
+        "active_price": 0
+      },
+      "circular_metrics": {
+        "estimated_weight_kg": 1.2,
+        "refurb_status": "ready_for_curation"
+      },
+      "status": "draft",
+      "media": {
+        "primary_image": "Sales/Dock/Dell/WD19S/IMG_20260520_123908_4653378551044768019.jpg",
+        "gallery": [
+          "Sales/Dock/Dell/WD19S/IMG_20260520_123908_4653378551044768019.jpg",
+          "Sales/Dock/Dell/WD19S/IMG_20260520_123926_6384170999859047228.jpg"
+        ]
+      },
+      "syndication": {
+        "facebook": {
+          "title": "Dell WD19S 130W/180W USB-C Modular Docking Station",
+          "description": "",
+          "tags": []
+        },
+        "kijiji": {
+          "title": "Dell WD19S 130W/180W USB-C Modular Docking Station",
+          "description": "",
+          "tags": []
+        },
+        "ebay": {
+          "title": "Dell WD19S 130W/180W USB-C Modular Docking Station",
+          "description": ""
+        }
+      },
+      "created_at": "2026-11-10T20:13:34.370Z",
+      "updated_at": "2026-11-10T20:13:34.370Z"
+    },
+    {
+      "id": "firewall-dell-tz300w",
+      "sku": "LGL-FIR-DELLTZ30-807",
+      "title": "SonicWall TZ300W Wireless-AC Security Firewall",
+      "category": "Firewalls & Security",
+      "brand": "SonicWall (Dell)",
+      "model": "TZ300W Wireless-AC",
+      "condition": "good",
+      "location": {
+        "public_region": {
+          "country": "CA",
+          "region": "ON",
+          "city": "Ottawa",
+          "postal_area": "K1A area"
+        },
+        "internal_sidelining": {
+          "zone": "Office",
+          "shelf_or_bin": "Network Gear Shelf"
+        }
+      },
+      "specs": {
+        "inferred_from_path": "Firewall\\Dell TZ300W",
+        "media_count": 3
+      },
+      "clearance_identifiers": {
+        "tokenized_tags": [],
+        "vault_ref": "vlt_firewall-dell-tz300w"
+      },
+      "pricing": {
+        "currency": "CAD",
+        "fast_liquidation": 0,
+        "fair_market": 0,
+        "optimistic_anchor": 0,
+        "active_price": 0
+      },
+      "circular_metrics": {
+        "estimated_weight_kg": 1.8,
+        "refurb_status": "ready_for_curation"
+      },
+      "status": "draft",
+      "media": {
+        "primary_image": "Sales/Firewall/Dell TZ300W/IMG_20260520_150228_8319951728072129432.jpg",
+        "gallery": [
+          "Sales/Firewall/Dell TZ300W/IMG_20260520_150228_8319951728072129432.jpg",
+          "Sales/Firewall/Dell TZ300W/IMG_20260520_150250_8410567222840341515.jpg",
+          "Sales/Firewall/Dell TZ300W/IMG_20260520_150316_9041813482278108325.jpg"
+        ]
+      },
+      "syndication": {
+        "facebook": {
+          "title": "SonicWall TZ300W Wireless-AC Security Firewall",
+          "description": "",
+          "tags": []
+        },
+        "kijiji": {
+          "title": "SonicWall TZ300W Wireless-AC Security Firewall",
+          "description": "",
+          "tags": []
+        },
+        "ebay": {
+          "title": "SonicWall TZ300W Wireless-AC Security Firewall",
+          "description": ""
+        }
+      },
+      "created_at": "2026-11-10T20:13:34.371Z",
+      "updated_at": "2026-11-10T20:13:34.371Z"
+    },
+    {
+      "id": "ipad-6th-gen-0",
+      "sku": "LGL-TAB-6THGEN0-595",
+      "title": "Apple iPad 6th Gen 9.7\" Wi-Fi (Unit 1)",
+      "category": "Tablets",
+      "brand": "Apple",
+      "model": "iPad (6th Generation) Unit 1",
+      "condition": "good",
+      "location": {
+        "public_region": {
+          "country": "CA",
+          "region": "ON",
+          "city": "Ottawa",
+          "postal_area": "K1A area"
+        },
+        "internal_sidelining": {
+          "zone": "Office",
+          "shelf_or_bin": "Tablet Drawer A"
+        }
+      },
+      "specs": {
+        "inferred_from_path": "iPad\\6th Gen\\#0",
+        "media_count": 5
+      },
+      "clearance_identifiers": {
+        "tokenized_tags": [],
+        "vault_ref": "vlt_ipad-6th-gen-0"
+      },
+      "pricing": {
+        "currency": "CAD",
+        "fast_liquidation": 0,
+        "fair_market": 0,
+        "optimistic_anchor": 0,
+        "active_price": 0
+      },
+      "circular_metrics": {
+        "estimated_weight_kg": 0.5,
+        "refurb_status": "ready_for_curation"
+      },
+      "status": "draft",
+      "media": {
+        "primary_image": "Sales/iPad/6th Gen/#0/IMG_20250112_091738_8744549741361900931.jpg",
+        "gallery": [
+          "Sales/iPad/6th Gen/#0/IMG_20250112_091738_8744549741361900931.jpg",
+          "Sales/iPad/6th Gen/#0/IMG_20250112_091918_2525886643024412158.jpg",
+          "Sales/iPad/6th Gen/#0/IMG_20250112_091932_6037401592801286207.jpg",
+          "Sales/iPad/6th Gen/#0/IMG_20250112_091958_6407508885142380946.jpg",
+          "Sales/iPad/6th Gen/#0/IMG_20250112_092132_2893091988896222176.jpg"
+        ]
+      },
+      "syndication": {
+        "facebook": {
+          "title": "Apple iPad 6th Gen 9.7\" Wi-Fi (Unit 1)",
+          "description": "",
+          "tags": []
+        },
+        "kijiji": {
+          "title": "Apple iPad 6th Gen 9.7\" Wi-Fi (Unit 1)",
+          "description": "",
+          "tags": []
+        },
+        "ebay": {
+          "title": "Apple iPad 6th Gen 9.7\" Wi-Fi (Unit 1)",
+          "description": ""
+        }
+      },
+      "created_at": "2026-11-10T20:13:34.372Z",
+      "updated_at": "2026-11-10T20:13:34.372Z"
+    },
+    {
+      "id": "ipad-6th-gen-1",
+      "sku": "LGL-TAB-6THGEN1-533",
+      "title": "Apple iPad 6th Gen 9.7\" Wi-Fi (Unit 2)",
+      "category": "Tablets",
+      "brand": "Apple",
+      "model": "iPad (6th Generation) Unit 2",
+      "condition": "good",
+      "location": {
+        "public_region": {
+          "country": "CA",
+          "region": "ON",
+          "city": "Ottawa",
+          "postal_area": "K1A area"
+        },
+        "internal_sidelining": {
+          "zone": "Office",
+          "shelf_or_bin": "Tablet Drawer A"
+        }
+      },
+      "specs": {
+        "inferred_from_path": "iPad\\6th Gen\\#1",
+        "media_count": 3
+      },
+      "clearance_identifiers": {
+        "tokenized_tags": [],
+        "vault_ref": "vlt_ipad-6th-gen-1"
+      },
+      "pricing": {
+        "currency": "CAD",
+        "fast_liquidation": 0,
+        "fair_market": 0,
+        "optimistic_anchor": 0,
+        "active_price": 0
+      },
+      "circular_metrics": {
+        "estimated_weight_kg": 0.5,
+        "refurb_status": "ready_for_curation"
+      },
+      "status": "draft",
+      "media": {
+        "primary_image": "Sales/iPad/6th Gen/#1/IMG_20260506_195959_8064272507909561324.jpg",
+        "gallery": [
+          "Sales/iPad/6th Gen/#1/IMG_20260506_195959_8064272507909561324.jpg",
+          "Sales/iPad/6th Gen/#1/IMG_20260506_200039_2656858828889993730.jpg",
+          "Sales/iPad/6th Gen/#1/IMG_20260506_200348_1397017347585725252.jpg"
+        ]
+      },
+      "syndication": {
+        "facebook": {
+          "title": "Apple iPad 6th Gen 9.7\" Wi-Fi (Unit 2)",
+          "description": "",
+          "tags": []
+        },
+        "kijiji": {
+          "title": "Apple iPad 6th Gen 9.7\" Wi-Fi (Unit 2)",
+          "description": "",
+          "tags": []
+        },
+        "ebay": {
+          "title": "Apple iPad 6th Gen 9.7\" Wi-Fi (Unit 2)",
+          "description": ""
+        }
+      },
+      "created_at": "2026-11-10T20:13:34.373Z",
+      "updated_at": "2026-11-10T20:13:34.373Z"
+    },
+    {
+      "id": "ipad-9th-gen-0",
+      "sku": "LGL-TAB-9THGEN0-888",
+      "title": "Apple iPad 9th Gen 10.2\" Wi-Fi (Unit 1)",
+      "category": "Tablets",
+      "brand": "Apple",
+      "model": "iPad (9th Generation) Unit 1",
+      "condition": "good",
+      "location": {
+        "public_region": {
+          "country": "CA",
+          "region": "ON",
+          "city": "Ottawa",
+          "postal_area": "K1A area"
+        },
+        "internal_sidelining": {
+          "zone": "Office",
+          "shelf_or_bin": "Tablet Drawer A"
+        }
+      },
+      "specs": {
+        "inferred_from_path": "iPad\\9th Gen\\#0",
+        "media_count": 3
+      },
+      "clearance_identifiers": {
+        "tokenized_tags": [],
+        "vault_ref": "vlt_ipad-9th-gen-0"
+      },
+      "pricing": {
+        "currency": "CAD",
+        "fast_liquidation": 0,
+        "fair_market": 0,
+        "optimistic_anchor": 0,
+        "active_price": 0
+      },
+      "circular_metrics": {
+        "estimated_weight_kg": 0.5,
+        "refurb_status": "ready_for_curation"
+      },
+      "status": "draft",
+      "media": {
+        "primary_image": "Sales/iPad/9th Gen/#0/IMG_20260506_201458_8413933107600210504.jpg",
+        "gallery": [
+          "Sales/iPad/9th Gen/#0/IMG_20260506_201458_8413933107600210504.jpg",
+          "Sales/iPad/9th Gen/#0/IMG_20260506_201529_7844822219066687709.jpg",
+          "Sales/iPad/9th Gen/#0/IMG_20260506_201738_997328321997077592.jpg"
+        ]
+      },
+      "syndication": {
+        "facebook": {
+          "title": "Apple iPad 9th Gen 10.2\" Wi-Fi (Unit 1)",
+          "description": "",
+          "tags": []
+        },
+        "kijiji": {
+          "title": "Apple iPad 9th Gen 10.2\" Wi-Fi (Unit 1)",
+          "description": "",
+          "tags": []
+        },
+        "ebay": {
+          "title": "Apple iPad 9th Gen 10.2\" Wi-Fi (Unit 1)",
+          "description": ""
+        }
+      },
+      "created_at": "2026-11-10T20:13:34.374Z",
+      "updated_at": "2026-11-10T20:13:34.374Z"
+    },
+    {
+      "id": "ipad-9th-gen-1",
+      "sku": "LGL-TAB-9THGEN1-363",
+      "title": "Apple iPad 9th Gen 10.2\" Wi-Fi (Unit 2)",
+      "category": "Tablets",
+      "brand": "Apple",
+      "model": "iPad (9th Generation) Unit 2",
+      "condition": "good",
+      "location": {
+        "public_region": {
+          "country": "CA",
+          "region": "ON",
+          "city": "Ottawa",
+          "postal_area": "K1A area"
+        },
+        "internal_sidelining": {
+          "zone": "Office",
+          "shelf_or_bin": "Tablet Drawer A"
+        }
+      },
+      "specs": {
+        "inferred_from_path": "iPad\\9th Gen\\#1",
+        "media_count": 5
+      },
+      "clearance_identifiers": {
+        "tokenized_tags": [],
+        "vault_ref": "vlt_ipad-9th-gen-1"
+      },
+      "pricing": {
+        "currency": "CAD",
+        "fast_liquidation": 0,
+        "fair_market": 0,
+        "optimistic_anchor": 0,
+        "active_price": 0
+      },
+      "circular_metrics": {
+        "estimated_weight_kg": 0.5,
+        "refurb_status": "ready_for_curation"
+      },
+      "status": "draft",
+      "media": {
+        "primary_image": "Sales/iPad/9th Gen/#1/IMG_20260508_145217_7810072823912052889.jpg",
+        "gallery": [
+          "Sales/iPad/9th Gen/#1/IMG_20260508_145217_7810072823912052889.jpg",
+          "Sales/iPad/9th Gen/#1/IMG_20260508_145412_3026082831849285121.jpg",
+          "Sales/iPad/9th Gen/#1/IMG_20260508_145455_6699375340428558943.jpg",
+          "Sales/iPad/9th Gen/#1/IMG_20260508_145517_3238464680889323585.jpg",
+          "Sales/iPad/9th Gen/#1/IMG_20260508_145532_5465804071527967867.jpg"
+        ]
+      },
+      "syndication": {
+        "facebook": {
+          "title": "Apple iPad 9th Gen 10.2\" Wi-Fi (Unit 2)",
+          "description": "",
+          "tags": []
+        },
+        "kijiji": {
+          "title": "Apple iPad 9th Gen 10.2\" Wi-Fi (Unit 2)",
+          "description": "",
+          "tags": []
+        },
+        "ebay": {
+          "title": "Apple iPad 9th Gen 10.2\" Wi-Fi (Unit 2)",
+          "description": ""
+        }
+      },
+      "created_at": "2026-11-10T20:13:34.375Z",
+      "updated_at": "2026-11-10T20:13:34.375Z"
+    },
+    {
+      "id": "ipad-accessories-logitechcase",
+      "sku": "LGL-PER-ACCESSOR-101",
+      "title": "Apple iPad Accessory - Accessories LogitechCase",
+      "category": "Peripherals & Accessories",
+      "brand": "Apple",
+      "model": "Accessories LogitechCase",
+      "condition": "good",
+      "location": {
+        "public_region": {
+          "country": "CA",
+          "region": "ON",
+          "city": "Ottawa",
+          "postal_area": "K1A area"
+        },
+        "internal_sidelining": {
+          "zone": "Office",
+          "shelf_or_bin": "Tablet Drawer A"
+        }
+      },
+      "specs": {
+        "inferred_from_path": "iPad\\Accessories\\LogitechCase",
+        "media_count": 3
+      },
+      "clearance_identifiers": {
+        "tokenized_tags": [],
+        "vault_ref": "vlt_ipad-accessories-logitechcase"
+      },
+      "pricing": {
+        "currency": "CAD",
+        "fast_liquidation": 0,
+        "fair_market": 0,
+        "optimistic_anchor": 0,
+        "active_price": 0
+      },
+      "circular_metrics": {
+        "estimated_weight_kg": 0.5,
+        "refurb_status": "ready_for_curation"
+      },
+      "status": "draft",
+      "media": {
+        "primary_image": "Sales/iPad/Accessories/LogitechCase/IMG_20250112_211152_666313881081039713.jpg",
+        "gallery": [
+          "Sales/iPad/Accessories/LogitechCase/IMG_20250112_211152_666313881081039713.jpg",
+          "Sales/iPad/Accessories/LogitechCase/IMG_20250112_211223_734581773614097374.jpg",
+          "Sales/iPad/Accessories/LogitechCase/IMG_20250112_211256_4452624091293624031.jpg"
+        ]
+      },
+      "syndication": {
+        "facebook": {
+          "title": "Apple iPad Accessory - Accessories LogitechCase",
+          "description": "",
+          "tags": []
+        },
+        "kijiji": {
+          "title": "Apple iPad Accessory - Accessories LogitechCase",
+          "description": "",
+          "tags": []
+        },
+        "ebay": {
+          "title": "Apple iPad Accessory - Accessories LogitechCase",
+          "description": ""
+        }
+      },
+      "created_at": "2026-11-10T20:13:34.375Z",
+      "updated_at": "2026-11-10T20:13:34.375Z"
+    },
+    {
+      "id": "ipad-accessories-pinkcase",
+      "sku": "LGL-PER-ACCESSOR-702",
+      "title": "Apple iPad Accessory - Accessories PinkCase",
+      "category": "Peripherals & Accessories",
+      "brand": "Apple",
+      "model": "Accessories PinkCase",
+      "condition": "good",
+      "location": {
+        "public_region": {
+          "country": "CA",
+          "region": "ON",
+          "city": "Ottawa",
+          "postal_area": "K1A area"
+        },
+        "internal_sidelining": {
+          "zone": "Office",
+          "shelf_or_bin": "Tablet Drawer A"
+        }
+      },
+      "specs": {
+        "inferred_from_path": "iPad\\Accessories\\PinkCase",
+        "media_count": 3
+      },
+      "clearance_identifiers": {
+        "tokenized_tags": [],
+        "vault_ref": "vlt_ipad-accessories-pinkcase"
+      },
+      "pricing": {
+        "currency": "CAD",
+        "fast_liquidation": 0,
+        "fair_market": 0,
+        "optimistic_anchor": 0,
+        "active_price": 0
+      },
+      "circular_metrics": {
+        "estimated_weight_kg": 0.5,
+        "refurb_status": "ready_for_curation"
+      },
+      "status": "draft",
+      "media": {
+        "primary_image": "Sales/iPad/Accessories/PinkCase/IMG_20260506_201910_2981808272183943933.jpg",
+        "gallery": [
+          "Sales/iPad/Accessories/PinkCase/IMG_20260506_201910_2981808272183943933.jpg",
+          "Sales/iPad/Accessories/PinkCase/IMG_20260506_201934_6218759450864000872.jpg",
+          "Sales/iPad/Accessories/PinkCase/IMG_20260506_201957_3947079254350680922.jpg"
+        ]
+      },
+      "syndication": {
+        "facebook": {
+          "title": "Apple iPad Accessory - Accessories PinkCase",
+          "description": "",
+          "tags": []
+        },
+        "kijiji": {
+          "title": "Apple iPad Accessory - Accessories PinkCase",
+          "description": "",
+          "tags": []
+        },
+        "ebay": {
+          "title": "Apple iPad Accessory - Accessories PinkCase",
+          "description": ""
+        }
+      },
+      "created_at": "2026-11-10T20:13:34.376Z",
+      "updated_at": "2026-11-10T20:13:34.376Z"
+    },
+    {
+      "id": "ipad-accessories-zagg-keyboard-case",
+      "sku": "LGL-PER-ACCESSOR-172",
+      "title": "Apple iPad Accessory - Accessories ZAGG Keyboard Case",
+      "category": "Peripherals & Accessories",
+      "brand": "Apple",
+      "model": "Accessories ZAGG Keyboard Case",
+      "condition": "good",
+      "location": {
+        "public_region": {
+          "country": "CA",
+          "region": "ON",
+          "city": "Ottawa",
+          "postal_area": "K1A area"
+        },
+        "internal_sidelining": {
+          "zone": "Office",
+          "shelf_or_bin": "Tablet Drawer A"
+        }
+      },
+      "specs": {
+        "inferred_from_path": "iPad\\Accessories\\ZAGG Keyboard Case",
+        "media_count": 4
+      },
+      "clearance_identifiers": {
+        "tokenized_tags": [],
+        "vault_ref": "vlt_ipad-accessories-zagg-keyboard-case"
+      },
+      "pricing": {
+        "currency": "CAD",
+        "fast_liquidation": 0,
+        "fair_market": 0,
+        "optimistic_anchor": 0,
+        "active_price": 0
+      },
+      "circular_metrics": {
+        "estimated_weight_kg": 0.5,
+        "refurb_status": "ready_for_curation"
+      },
+      "status": "draft",
+      "media": {
+        "primary_image": "Sales/iPad/Accessories/ZAGG Keyboard Case/IMG_20260413_132953_5647617791864803855.jpg",
+        "gallery": [
+          "Sales/iPad/Accessories/ZAGG Keyboard Case/IMG_20260413_132953_5647617791864803855.jpg",
+          "Sales/iPad/Accessories/ZAGG Keyboard Case/IMG_20260413_133019_4595464746116680357.jpg",
+          "Sales/iPad/Accessories/ZAGG Keyboard Case/IMG_20260413_133044_8197795327168821747.jpg",
+          "Sales/iPad/Accessories/ZAGG Keyboard Case/IMG_20260413_133128_7479121909450305503.jpg"
+        ]
+      },
+      "syndication": {
+        "facebook": {
+          "title": "Apple iPad Accessory - Accessories ZAGG Keyboard Case",
+          "description": "",
+          "tags": []
+        },
+        "kijiji": {
+          "title": "Apple iPad Accessory - Accessories ZAGG Keyboard Case",
+          "description": "",
+          "tags": []
+        },
+        "ebay": {
+          "title": "Apple iPad Accessory - Accessories ZAGG Keyboard Case",
+          "description": ""
+        }
+      },
+      "created_at": "2026-11-10T20:13:34.377Z",
+      "updated_at": "2026-11-10T20:13:34.377Z"
+    },
+    {
+      "id": "iphones-iphone11pro",
+      "sku": "LGL-PHO-IPHONE11-412",
+      "title": "Apple iPhone 11 Pro",
+      "category": "Phones",
+      "brand": "Apple",
+      "model": "iPhone 11 Pro",
+      "condition": "good",
+      "location": {
+        "public_region": {
+          "country": "CA",
+          "region": "ON",
+          "city": "Ottawa",
+          "postal_area": "K1A area"
+        },
+        "internal_sidelining": {
+          "zone": "Office",
+          "shelf_or_bin": "Phone Tray"
+        }
+      },
+      "specs": {
+        "inferred_from_path": "iPhones\\iPhone11Pro",
+        "media_count": 6
+      },
+      "clearance_identifiers": {
+        "tokenized_tags": [],
+        "vault_ref": "vlt_iphones-iphone11pro"
+      },
+      "pricing": {
+        "currency": "CAD",
+        "fast_liquidation": 0,
+        "fair_market": 0,
+        "optimistic_anchor": 0,
+        "active_price": 0
+      },
+      "circular_metrics": {
+        "estimated_weight_kg": 0.25,
+        "refurb_status": "ready_for_curation"
+      },
+      "status": "draft",
+      "media": {
+        "primary_image": "Sales/iPhones/iPhone11Pro/IMG_20260504_144602_3209862757808086543.jpg",
+        "gallery": [
+          "Sales/iPhones/iPhone11Pro/IMG_20260504_144602_3209862757808086543.jpg",
+          "Sales/iPhones/iPhone11Pro/IMG_20260504_144658_9166654749341700746.jpg",
+          "Sales/iPhones/iPhone11Pro/IMG_20260504_144729_5919742535589334687.jpg",
+          "Sales/iPhones/iPhone11Pro/IMG_20260508_075324_6048698994101960442.jpg",
+          "Sales/iPhones/iPhone11Pro/IMG_20260508_075354_6009984041201985171.jpg",
+          "Sales/iPhones/iPhone11Pro/IMG_20260508_075502_4765818714247510183.jpg"
+        ]
+      },
+      "syndication": {
+        "facebook": {
+          "title": "Apple iPhone 11 Pro",
+          "description": "",
+          "tags": []
+        },
+        "kijiji": {
+          "title": "Apple iPhone 11 Pro",
+          "description": "",
+          "tags": []
+        },
+        "ebay": {
+          "title": "Apple iPhone 11 Pro",
+          "description": ""
+        }
+      },
+      "created_at": "2026-11-10T20:13:34.378Z",
+      "updated_at": "2026-11-10T20:13:34.378Z"
+    },
+    {
+      "id": "iphones-iphone6s",
+      "sku": "LGL-PHO-IPHONE6S-512",
+      "title": "Apple iPhone 6s",
+      "category": "Phones",
+      "brand": "Apple",
+      "model": "iPhone 6s",
+      "condition": "good",
+      "location": {
+        "public_region": {
+          "country": "CA",
+          "region": "ON",
+          "city": "Ottawa",
+          "postal_area": "K1A area"
+        },
+        "internal_sidelining": {
+          "zone": "Office",
+          "shelf_or_bin": "Phone Tray"
+        }
+      },
+      "specs": {
+        "inferred_from_path": "iPhones\\iPhone6S",
+        "media_count": 2
+      },
+      "clearance_identifiers": {
+        "tokenized_tags": [],
+        "vault_ref": "vlt_iphones-iphone6s"
+      },
+      "pricing": {
+        "currency": "CAD",
+        "fast_liquidation": 0,
+        "fair_market": 0,
+        "optimistic_anchor": 0,
+        "active_price": 0
+      },
+      "circular_metrics": {
+        "estimated_weight_kg": 0.25,
+        "refurb_status": "ready_for_curation"
+      },
+      "status": "draft",
+      "media": {
+        "primary_image": "Sales/iPhones/iPhone6S/IMG_20260504_145052_7216121623655051677.jpg",
+        "gallery": [
+          "Sales/iPhones/iPhone6S/IMG_20260504_145052_7216121623655051677.jpg",
+          "Sales/iPhones/iPhone6S/IMG_20260504_145132_3388901938558296235.jpg"
+        ]
+      },
+      "syndication": {
+        "facebook": {
+          "title": "Apple iPhone 6s",
+          "description": "",
+          "tags": []
+        },
+        "kijiji": {
+          "title": "Apple iPhone 6s",
+          "description": "",
+          "tags": []
+        },
+        "ebay": {
+          "title": "Apple iPhone 6s",
+          "description": ""
+        }
+      },
+      "created_at": "2026-11-10T20:13:34.379Z",
+      "updated_at": "2026-11-10T20:13:34.379Z"
+    },
+    {
+      "id": "iphones-iphone7s",
+      "sku": "LGL-PHO-IPHONE7S-421",
+      "title": "Apple iPhone 7",
+      "category": "Phones",
+      "brand": "Apple",
+      "model": "iPhone 7",
+      "condition": "good",
+      "location": {
+        "public_region": {
+          "country": "CA",
+          "region": "ON",
+          "city": "Ottawa",
+          "postal_area": "K1A area"
+        },
+        "internal_sidelining": {
+          "zone": "Office",
+          "shelf_or_bin": "Phone Tray"
+        }
+      },
+      "specs": {
+        "inferred_from_path": "iPhones\\iPhone7s",
+        "media_count": 3
+      },
+      "clearance_identifiers": {
+        "tokenized_tags": [],
+        "vault_ref": "vlt_iphones-iphone7s"
+      },
+      "pricing": {
+        "currency": "CAD",
+        "fast_liquidation": 0,
+        "fair_market": 0,
+        "optimistic_anchor": 0,
+        "active_price": 0
+      },
+      "circular_metrics": {
+        "estimated_weight_kg": 0.25,
+        "refurb_status": "ready_for_curation"
+      },
+      "status": "draft",
+      "media": {
+        "primary_image": "Sales/iPhones/iPhone7s/IMG_20250112_065040_407507542888222463.jpg",
+        "gallery": [
+          "Sales/iPhones/iPhone7s/IMG_20250112_065040_407507542888222463.jpg",
+          "Sales/iPhones/iPhone7s/IMG_20250112_065137_3630284270034986788.jpg",
+          "Sales/iPhones/iPhone7s/IMG_20250112_065230_5566600329387479450.jpg"
+        ]
+      },
+      "syndication": {
+        "facebook": {
+          "title": "Apple iPhone 7",
+          "description": "",
+          "tags": []
+        },
+        "kijiji": {
+          "title": "Apple iPhone 7",
+          "description": "",
+          "tags": []
+        },
+        "ebay": {
+          "title": "Apple iPhone 7",
+          "description": ""
+        }
+      },
+      "created_at": "2026-11-10T20:13:34.380Z",
+      "updated_at": "2026-11-10T20:13:34.380Z"
+    },
+    {
+      "id": "iphones-iphone8plus",
+      "sku": "LGL-PHO-IPHONE8P-555",
+      "title": "Apple iPhone 8 Plus",
+      "category": "Phones",
+      "brand": "Apple",
+      "model": "iPhone 8 Plus",
+      "condition": "good",
+      "location": {
+        "public_region": {
+          "country": "CA",
+          "region": "ON",
+          "city": "Ottawa",
+          "postal_area": "K1A area"
+        },
+        "internal_sidelining": {
+          "zone": "Office",
+          "shelf_or_bin": "Phone Tray"
+        }
+      },
+      "specs": {
+        "inferred_from_path": "iPhones\\iPhone8Plus",
+        "media_count": 6
+      },
+      "clearance_identifiers": {
+        "tokenized_tags": [],
+        "vault_ref": "vlt_iphones-iphone8plus"
+      },
+      "pricing": {
+        "currency": "CAD",
+        "fast_liquidation": 0,
+        "fair_market": 0,
+        "optimistic_anchor": 0,
+        "active_price": 0
+      },
+      "circular_metrics": {
+        "estimated_weight_kg": 0.25,
+        "refurb_status": "ready_for_curation"
+      },
+      "status": "draft",
+      "media": {
+        "primary_image": "Sales/iPhones/iPhone8Plus/IMG_20250111_222105_1787850297677773562.jpg",
+        "gallery": [
+          "Sales/iPhones/iPhone8Plus/IMG_20250111_222105_1787850297677773562.jpg",
+          "Sales/iPhones/iPhone8Plus/IMG_20250111_222140_4472260239214541359.jpg",
+          "Sales/iPhones/iPhone8Plus/IMG_20250112_065314_5555060257277256193.jpg",
+          "Sales/iPhones/iPhone8Plus/IMG_20250112_065447_9048379736826499884.jpg",
+          "Sales/iPhones/iPhone8Plus/IMG_20250112_065508_3732533315791784440.jpg",
+          "Sales/iPhones/iPhone8Plus/IMG_20250112_065552_9151714429506863751.jpg"
+        ]
+      },
+      "syndication": {
+        "facebook": {
+          "title": "Apple iPhone 8 Plus",
+          "description": "",
+          "tags": []
+        },
+        "kijiji": {
+          "title": "Apple iPhone 8 Plus",
+          "description": "",
+          "tags": []
+        },
+        "ebay": {
+          "title": "Apple iPhone 8 Plus",
+          "description": ""
+        }
+      },
+      "created_at": "2026-11-10T20:13:34.381Z",
+      "updated_at": "2026-11-10T20:13:34.381Z"
+    },
+    {
+      "id": "latitutde-1",
+      "sku": "LGL-LAP-1-297",
+      "title": "Dell Latitude Enterprise Laptop %1",
+      "category": "Laptops",
+      "brand": "Dell",
+      "model": "Latitude Series (%1)",
+      "condition": "good",
+      "location": {
+        "public_region": {
+          "country": "CA",
+          "region": "ON",
+          "city": "Ottawa",
+          "postal_area": "K1A area"
+        },
+        "internal_sidelining": {
+          "zone": "Office",
+          "shelf_or_bin": "Laptop Rack B"
+        }
+      },
+      "specs": {
+        "inferred_from_path": "Latitutde\\%1",
+        "media_count": 4
+      },
+      "clearance_identifiers": {
+        "tokenized_tags": [],
+        "vault_ref": "vlt_latitutde-1"
+      },
+      "pricing": {
+        "currency": "CAD",
+        "fast_liquidation": 0,
+        "fair_market": 0,
+        "optimistic_anchor": 0,
+        "active_price": 0
+      },
+      "circular_metrics": {
+        "estimated_weight_kg": 2.1,
+        "refurb_status": "ready_for_curation"
+      },
+      "status": "draft",
+      "media": {
+        "primary_image": "Sales/Latitutde/%1/IMG_20250112_231111_4710607637813945135.jpg",
+        "gallery": [
+          "Sales/Latitutde/%1/IMG_20250112_231111_4710607637813945135.jpg",
+          "Sales/Latitutde/%1/IMG_20250112_231142_2715794667005171093.jpg",
+          "Sales/Latitutde/%1/IMG_20250112_231201_8834770698859031441.jpg",
+          "Sales/Latitutde/%1/IMG_20250112_231526_858267153087876352.jpg"
+        ]
+      },
+      "syndication": {
+        "facebook": {
+          "title": "Dell Latitude Enterprise Laptop %1",
+          "description": "",
+          "tags": []
+        },
+        "kijiji": {
+          "title": "Dell Latitude Enterprise Laptop %1",
+          "description": "",
+          "tags": []
+        },
+        "ebay": {
+          "title": "Dell Latitude Enterprise Laptop %1",
+          "description": ""
+        }
+      },
+      "created_at": "2026-11-10T20:13:34.382Z",
+      "updated_at": "2026-11-10T20:13:34.382Z"
+    },
+    {
+      "id": "latitutde-2",
+      "sku": "LGL-LAP-2-340",
+      "title": "Dell Latitude Enterprise Laptop %2",
+      "category": "Laptops",
+      "brand": "Dell",
+      "model": "Latitude Series (%2)",
+      "condition": "good",
+      "location": {
+        "public_region": {
+          "country": "CA",
+          "region": "ON",
+          "city": "Ottawa",
+          "postal_area": "K1A area"
+        },
+        "internal_sidelining": {
+          "zone": "Office",
+          "shelf_or_bin": "Laptop Rack B"
+        }
+      },
+      "specs": {
+        "inferred_from_path": "Latitutde\\%2",
+        "media_count": 4
+      },
+      "clearance_identifiers": {
+        "tokenized_tags": [],
+        "vault_ref": "vlt_latitutde-2"
+      },
+      "pricing": {
+        "currency": "CAD",
+        "fast_liquidation": 0,
+        "fair_market": 0,
+        "optimistic_anchor": 0,
+        "active_price": 0
+      },
+      "circular_metrics": {
+        "estimated_weight_kg": 2.1,
+        "refurb_status": "ready_for_curation"
+      },
+      "status": "draft",
+      "media": {
+        "primary_image": "Sales/Latitutde/%2/IMG_20250112_232725_6112139410078618245.jpg",
+        "gallery": [
+          "Sales/Latitutde/%2/IMG_20250112_232725_6112139410078618245.jpg",
+          "Sales/Latitutde/%2/IMG_20250112_233349_7569143415795910003.jpg",
+          "Sales/Latitutde/%2/IMG_20250112_233431_7674462765822344221.jpg",
+          "Sales/Latitutde/%2/IMG_20250112_233448_6466329284687587434.jpg"
+        ]
+      },
+      "syndication": {
+        "facebook": {
+          "title": "Dell Latitude Enterprise Laptop %2",
+          "description": "",
+          "tags": []
+        },
+        "kijiji": {
+          "title": "Dell Latitude Enterprise Laptop %2",
+          "description": "",
+          "tags": []
+        },
+        "ebay": {
+          "title": "Dell Latitude Enterprise Laptop %2",
+          "description": ""
+        }
+      },
+      "created_at": "2026-11-10T20:13:34.383Z",
+      "updated_at": "2026-11-10T20:13:34.383Z"
+    },
+    {
+      "id": "latitutde-3",
+      "sku": "LGL-LAP-3-485",
+      "title": "Dell Latitude Enterprise Laptop %3",
+      "category": "Laptops",
+      "brand": "Dell",
+      "model": "Latitude Series (%3)",
+      "condition": "good",
+      "location": {
+        "public_region": {
+          "country": "CA",
+          "region": "ON",
+          "city": "Ottawa",
+          "postal_area": "K1A area"
+        },
+        "internal_sidelining": {
+          "zone": "Office",
+          "shelf_or_bin": "Laptop Rack B"
+        }
+      },
+      "specs": {
+        "inferred_from_path": "Latitutde\\%3",
+        "media_count": 4
+      },
+      "clearance_identifiers": {
+        "tokenized_tags": [],
+        "vault_ref": "vlt_latitutde-3"
+      },
+      "pricing": {
+        "currency": "CAD",
+        "fast_liquidation": 0,
+        "fair_market": 0,
+        "optimistic_anchor": 0,
+        "active_price": 0
+      },
+      "circular_metrics": {
+        "estimated_weight_kg": 2.1,
+        "refurb_status": "ready_for_curation"
+      },
+      "status": "draft",
+      "media": {
+        "primary_image": "Sales/Latitutde/%3/037A114D-9A45-44C6-A76D-9ABAD3E51911.jpeg",
+        "gallery": [
+          "Sales/Latitutde/%3/037A114D-9A45-44C6-A76D-9ABAD3E51911.jpeg",
+          "Sales/Latitutde/%3/5CAD8351-147B-412E-82D3-61E3BA89714B.jpeg",
+          "Sales/Latitutde/%3/77F540A7-FF52-40AD-837C-3ED3E958F34B.jpeg",
+          "Sales/Latitutde/%3/C9D0F3E3-4923-49C9-805A-CCD17CE4D3B3.jpeg"
+        ]
+      },
+      "syndication": {
+        "facebook": {
+          "title": "Dell Latitude Enterprise Laptop %3",
+          "description": "",
+          "tags": []
+        },
+        "kijiji": {
+          "title": "Dell Latitude Enterprise Laptop %3",
+          "description": "",
+          "tags": []
+        },
+        "ebay": {
+          "title": "Dell Latitude Enterprise Laptop %3",
+          "description": ""
+        }
+      },
+      "created_at": "2026-11-10T20:13:34.384Z",
+      "updated_at": "2026-11-10T20:13:34.384Z"
+    },
+    {
+      "id": "latitutde-4",
+      "sku": "LGL-LAP-4-834",
+      "title": "Dell Latitude Enterprise Laptop %4",
+      "category": "Laptops",
+      "brand": "Dell",
+      "model": "Latitude Series (%4)",
+      "condition": "good",
+      "location": {
+        "public_region": {
+          "country": "CA",
+          "region": "ON",
+          "city": "Ottawa",
+          "postal_area": "K1A area"
+        },
+        "internal_sidelining": {
+          "zone": "Office",
+          "shelf_or_bin": "Laptop Rack B"
+        }
+      },
+      "specs": {
+        "inferred_from_path": "Latitutde\\%4",
+        "media_count": 5
+      },
+      "clearance_identifiers": {
+        "tokenized_tags": [],
+        "vault_ref": "vlt_latitutde-4"
+      },
+      "pricing": {
+        "currency": "CAD",
+        "fast_liquidation": 0,
+        "fair_market": 0,
+        "optimistic_anchor": 0,
+        "active_price": 0
+      },
+      "circular_metrics": {
+        "estimated_weight_kg": 2.1,
+        "refurb_status": "ready_for_curation"
+      },
+      "status": "draft",
+      "media": {
+        "primary_image": "Sales/Latitutde/%4/145C2B75-1B99-4481-9296-C3626FE18BFE.jpeg",
+        "gallery": [
+          "Sales/Latitutde/%4/145C2B75-1B99-4481-9296-C3626FE18BFE.jpeg",
+          "Sales/Latitutde/%4/78F41760-115D-4A62-B7D4-D2A452EB42E1.jpeg",
+          "Sales/Latitutde/%4/8158A045-28EE-432A-91D0-991D1D024948.jpeg",
+          "Sales/Latitutde/%4/A5F945FA-BAAF-4BE5-8280-EE58F73C3523.jpeg",
+          "Sales/Latitutde/%4/F196FFAD-1AF8-4EF2-B77A-282F1534D859.jpeg"
+        ]
+      },
+      "syndication": {
+        "facebook": {
+          "title": "Dell Latitude Enterprise Laptop %4",
+          "description": "",
+          "tags": []
+        },
+        "kijiji": {
+          "title": "Dell Latitude Enterprise Laptop %4",
+          "description": "",
+          "tags": []
+        },
+        "ebay": {
+          "title": "Dell Latitude Enterprise Laptop %4",
+          "description": ""
+        }
+      },
+      "created_at": "2026-11-10T20:13:34.385Z",
+      "updated_at": "2026-11-10T20:13:34.385Z"
+    },
+    {
+      "id": "latitutde-5",
+      "sku": "LGL-LAP-5-279",
+      "title": "Dell Latitude Enterprise Laptop %5",
+      "category": "Laptops",
+      "brand": "Dell",
+      "model": "Latitude Series (%5)",
+      "condition": "good",
+      "location": {
+        "public_region": {
+          "country": "CA",
+          "region": "ON",
+          "city": "Ottawa",
+          "postal_area": "K1A area"
+        },
+        "internal_sidelining": {
+          "zone": "Office",
+          "shelf_or_bin": "Laptop Rack B"
+        }
+      },
+      "specs": {
+        "inferred_from_path": "Latitutde\\%5",
+        "media_count": 3
+      },
+      "clearance_identifiers": {
+        "tokenized_tags": [],
+        "vault_ref": "vlt_latitutde-5"
+      },
+      "pricing": {
+        "currency": "CAD",
+        "fast_liquidation": 0,
+        "fair_market": 0,
+        "optimistic_anchor": 0,
+        "active_price": 0
+      },
+      "circular_metrics": {
+        "estimated_weight_kg": 2.1,
+        "refurb_status": "ready_for_curation"
+      },
+      "status": "draft",
+      "media": {
+        "primary_image": "Sales/Latitutde/%5/269CFA82-988A-412C-88A0-E857F8BCFE5E.jpeg",
+        "gallery": [
+          "Sales/Latitutde/%5/269CFA82-988A-412C-88A0-E857F8BCFE5E.jpeg",
+          "Sales/Latitutde/%5/C18A81EE-3D23-4964-A437-9A7310DF970E.jpeg",
+          "Sales/Latitutde/%5/EA1C1621-B070-4DF4-8E20-409391D3EA5F.jpeg"
+        ]
+      },
+      "syndication": {
+        "facebook": {
+          "title": "Dell Latitude Enterprise Laptop %5",
+          "description": "",
+          "tags": []
+        },
+        "kijiji": {
+          "title": "Dell Latitude Enterprise Laptop %5",
+          "description": "",
+          "tags": []
+        },
+        "ebay": {
+          "title": "Dell Latitude Enterprise Laptop %5",
+          "description": ""
+        }
+      },
+      "created_at": "2026-11-10T20:13:34.385Z",
+      "updated_at": "2026-11-10T20:13:34.385Z"
+    },
+    {
+      "id": "latitutde-6",
+      "sku": "LGL-LAP-6-159",
+      "title": "Dell Latitude Enterprise Laptop %6",
+      "category": "Laptops",
+      "brand": "Dell",
+      "model": "Latitude Series (%6)",
+      "condition": "good",
+      "location": {
+        "public_region": {
+          "country": "CA",
+          "region": "ON",
+          "city": "Ottawa",
+          "postal_area": "K1A area"
+        },
+        "internal_sidelining": {
+          "zone": "Office",
+          "shelf_or_bin": "Laptop Rack B"
+        }
+      },
+      "specs": {
+        "inferred_from_path": "Latitutde\\%6",
+        "media_count": 3
+      },
+      "clearance_identifiers": {
+        "tokenized_tags": [],
+        "vault_ref": "vlt_latitutde-6"
+      },
+      "pricing": {
+        "currency": "CAD",
+        "fast_liquidation": 0,
+        "fair_market": 0,
+        "optimistic_anchor": 0,
+        "active_price": 0
+      },
+      "circular_metrics": {
+        "estimated_weight_kg": 2.1,
+        "refurb_status": "ready_for_curation"
+      },
+      "status": "draft",
+      "media": {
+        "primary_image": "Sales/Latitutde/%6/3E0668A5-47B4-4421-81E1-1848E07B6C35.jpeg",
+        "gallery": [
+          "Sales/Latitutde/%6/3E0668A5-47B4-4421-81E1-1848E07B6C35.jpeg",
+          "Sales/Latitutde/%6/5282B849-EBAB-49D1-B852-5FDAA3CB73D1.jpeg",
+          "Sales/Latitutde/%6/8E74EF59-733F-453D-A82C-05E141E774A8.jpeg"
+        ]
+      },
+      "syndication": {
+        "facebook": {
+          "title": "Dell Latitude Enterprise Laptop %6",
+          "description": "",
+          "tags": []
+        },
+        "kijiji": {
+          "title": "Dell Latitude Enterprise Laptop %6",
+          "description": "",
+          "tags": []
+        },
+        "ebay": {
+          "title": "Dell Latitude Enterprise Laptop %6",
+          "description": ""
+        }
+      },
+      "created_at": "2026-11-10T20:13:34.386Z",
+      "updated_at": "2026-11-10T20:13:34.386Z"
+    },
+    {
+      "id": "networking-powerline-adapter",
+      "sku": "LGL-NET-POWERLIN-463",
+      "title": "Ethernet-over-Power Powerline Adapter Kit",
+      "category": "Networking",
+      "brand": "D-Link / TP-Link",
+      "model": "AV Powerline Adapter Kit",
+      "condition": "good",
+      "location": {
+        "public_region": {
+          "country": "CA",
+          "region": "ON",
+          "city": "Ottawa",
+          "postal_area": "K1A area"
+        },
+        "internal_sidelining": {
+          "zone": "Office",
+          "shelf_or_bin": "Networking Shelf"
+        }
+      },
+      "specs": {
+        "inferred_from_path": "Networking\\powerline adapter",
+        "media_count": 2
+      },
+      "clearance_identifiers": {
+        "tokenized_tags": [],
+        "vault_ref": "vlt_networking-powerline-adapter"
+      },
+      "pricing": {
+        "currency": "CAD",
+        "fast_liquidation": 0,
+        "fair_market": 0,
+        "optimistic_anchor": 0,
+        "active_price": 0
+      },
+      "circular_metrics": {
+        "estimated_weight_kg": 0.6,
+        "refurb_status": "ready_for_curation"
+      },
+      "status": "draft",
+      "media": {
+        "primary_image": "Sales/Networking/powerline adapter/3E359C36-070C-43FD-90D0-BD051F4B7ED7.jpeg",
+        "gallery": [
+          "Sales/Networking/powerline adapter/3E359C36-070C-43FD-90D0-BD051F4B7ED7.jpeg",
+          "Sales/Networking/powerline adapter/9BA34A69-F597-4A1C-B446-99083118909C.jpeg"
+        ]
+      },
+      "syndication": {
+        "facebook": {
+          "title": "Ethernet-over-Power Powerline Adapter Kit",
+          "description": "",
+          "tags": []
+        },
+        "kijiji": {
+          "title": "Ethernet-over-Power Powerline Adapter Kit",
+          "description": "",
+          "tags": []
+        },
+        "ebay": {
+          "title": "Ethernet-over-Power Powerline Adapter Kit",
+          "description": ""
+        }
+      },
+      "created_at": "2026-11-10T20:13:34.387Z",
+      "updated_at": "2026-11-10T20:13:34.387Z"
+    },
+    {
+      "id": "networking-tp-link-poe-injector",
+      "sku": "LGL-NET-TPLINKPO-601",
+      "title": "TP-Link Gigabit Power-over-Ethernet (PoE) Injector",
+      "category": "Networking",
+      "brand": "TP-Link",
+      "model": "Gigabit PoE Injector",
+      "condition": "good",
+      "location": {
+        "public_region": {
+          "country": "CA",
+          "region": "ON",
+          "city": "Ottawa",
+          "postal_area": "K1A area"
+        },
+        "internal_sidelining": {
+          "zone": "Office",
+          "shelf_or_bin": "Networking Shelf"
+        }
+      },
+      "specs": {
+        "inferred_from_path": "Networking\\tp-link POE injector",
+        "media_count": 4
+      },
+      "clearance_identifiers": {
+        "tokenized_tags": [],
+        "vault_ref": "vlt_networking-tp-link-poe-injector"
+      },
+      "pricing": {
+        "currency": "CAD",
+        "fast_liquidation": 0,
+        "fair_market": 0,
+        "optimistic_anchor": 0,
+        "active_price": 0
+      },
+      "circular_metrics": {
+        "estimated_weight_kg": 0.6,
+        "refurb_status": "ready_for_curation"
+      },
+      "status": "draft",
+      "media": {
+        "primary_image": "Sales/Networking/tp-link POE injector/1396C38C-9448-4F7B-AD92-C81A9075540D.jpeg",
+        "gallery": [
+          "Sales/Networking/tp-link POE injector/1396C38C-9448-4F7B-AD92-C81A9075540D.jpeg",
+          "Sales/Networking/tp-link POE injector/2836AFB8-32A8-4095-A764-52C226EC7085.jpeg",
+          "Sales/Networking/tp-link POE injector/DB0E7C62-F5E5-40EF-A2FE-2664C51B8D4A.jpeg",
+          "Sales/Networking/tp-link POE injector/EA51962B-112D-440B-AFCB-E3F403726A6E.jpeg"
+        ]
+      },
+      "syndication": {
+        "facebook": {
+          "title": "TP-Link Gigabit Power-over-Ethernet (PoE) Injector",
+          "description": "",
+          "tags": []
+        },
+        "kijiji": {
+          "title": "TP-Link Gigabit Power-over-Ethernet (PoE) Injector",
+          "description": "",
+          "tags": []
+        },
+        "ebay": {
+          "title": "TP-Link Gigabit Power-over-Ethernet (PoE) Injector",
+          "description": ""
+        }
+      },
+      "created_at": "2026-11-10T20:13:34.388Z",
+      "updated_at": "2026-11-10T20:13:34.388Z"
+    },
+    {
+      "id": "peripherals-keyboard-asus",
+      "sku": "LGL-PER-KEYBOARD-829",
+      "title": "ASUS Wired Desktop Keyboard",
+      "category": "Peripherals & Accessories",
+      "brand": "ASUS",
+      "model": "USB Desktop Keyboard",
+      "condition": "good",
+      "location": {
+        "public_region": {
+          "country": "CA",
+          "region": "ON",
+          "city": "Ottawa",
+          "postal_area": "K1A area"
+        },
+        "internal_sidelining": {
+          "zone": "Office",
+          "shelf_or_bin": "Peripherals Bin"
+        }
+      },
+      "specs": {
+        "inferred_from_path": "Peripherals\\Keyboard\\ASUS",
+        "media_count": 4
+      },
+      "clearance_identifiers": {
+        "tokenized_tags": [],
+        "vault_ref": "vlt_peripherals-keyboard-asus"
+      },
+      "pricing": {
+        "currency": "CAD",
+        "fast_liquidation": 0,
+        "fair_market": 0,
+        "optimistic_anchor": 0,
+        "active_price": 0
+      },
+      "circular_metrics": {
+        "estimated_weight_kg": 1,
+        "refurb_status": "ready_for_curation"
+      },
+      "status": "draft",
+      "media": {
+        "primary_image": "Sales/Peripherals/Keyboard/ASUS/IMG_20260330_122224_481097664474132516.jpg",
+        "gallery": [
+          "Sales/Peripherals/Keyboard/ASUS/IMG_20260330_122224_481097664474132516.jpg",
+          "Sales/Peripherals/Keyboard/ASUS/IMG_20260330_122256_1397973353957447465.jpg",
+          "Sales/Peripherals/Keyboard/ASUS/IMG_20260330_122315_3830078051819001209.jpg",
+          "Sales/Peripherals/Keyboard/ASUS/IMG_20260330_122522_3913790339724139680.jpg"
+        ]
+      },
+      "syndication": {
+        "facebook": {
+          "title": "ASUS Wired Desktop Keyboard",
+          "description": "",
+          "tags": []
+        },
+        "kijiji": {
+          "title": "ASUS Wired Desktop Keyboard",
+          "description": "",
+          "tags": []
+        },
+        "ebay": {
+          "title": "ASUS Wired Desktop Keyboard",
+          "description": ""
+        }
+      },
+      "created_at": "2026-11-10T20:13:34.389Z",
+      "updated_at": "2026-11-10T20:13:34.389Z"
+    },
+    {
+      "id": "peripherals-keyboard-and-mice-microsoft-designer",
+      "sku": "LGL-PER-KEYBOARD-220",
+      "title": "Microsoft Designer Bluetooth Keyboard and Mouse Set",
+      "category": "Peripherals & Accessories",
+      "brand": "Microsoft",
+      "model": "Designer Bluetooth Desktop",
+      "condition": "good",
+      "location": {
+        "public_region": {
+          "country": "CA",
+          "region": "ON",
+          "city": "Ottawa",
+          "postal_area": "K1A area"
+        },
+        "internal_sidelining": {
+          "zone": "Office",
+          "shelf_or_bin": "Peripherals Bin"
+        }
+      },
+      "specs": {
+        "inferred_from_path": "Peripherals\\Keyboard and Mice\\Microsoft Designer",
+        "media_count": 3
+      },
+      "clearance_identifiers": {
+        "tokenized_tags": [],
+        "vault_ref": "vlt_peripherals-keyboard-and-mice-microsoft-designer"
+      },
+      "pricing": {
+        "currency": "CAD",
+        "fast_liquidation": 0,
+        "fair_market": 0,
+        "optimistic_anchor": 0,
+        "active_price": 0
+      },
+      "circular_metrics": {
+        "estimated_weight_kg": 1,
+        "refurb_status": "ready_for_curation"
+      },
+      "status": "draft",
+      "media": {
+        "primary_image": "Sales/Peripherals/Keyboard and Mice/Microsoft Designer/IMG_20260520_143300_9148155305627430283.jpg",
+        "gallery": [
+          "Sales/Peripherals/Keyboard and Mice/Microsoft Designer/IMG_20260520_143300_9148155305627430283.jpg",
+          "Sales/Peripherals/Keyboard and Mice/Microsoft Designer/IMG_20260520_143324_5675245997284706607.jpg",
+          "Sales/Peripherals/Keyboard and Mice/Microsoft Designer/IMG_20260520_143343_5270457632874258080.jpg"
+        ]
+      },
+      "syndication": {
+        "facebook": {
+          "title": "Microsoft Designer Bluetooth Keyboard and Mouse Set",
+          "description": "",
+          "tags": []
+        },
+        "kijiji": {
+          "title": "Microsoft Designer Bluetooth Keyboard and Mouse Set",
+          "description": "",
+          "tags": []
+        },
+        "ebay": {
+          "title": "Microsoft Designer Bluetooth Keyboard and Mouse Set",
+          "description": ""
+        }
+      },
+      "created_at": "2026-11-10T20:13:34.390Z",
+      "updated_at": "2026-11-10T20:13:34.390Z"
+    },
+    {
+      "id": "surfacepros-1",
+      "sku": "LGL-LAP-1-279",
+      "title": "Microsoft Surface Pro 2-in-1 Tablet/Laptop _1",
+      "category": "Laptops",
+      "brand": "Microsoft",
+      "model": "Surface Pro (_1)",
+      "condition": "good",
+      "location": {
+        "public_region": {
+          "country": "CA",
+          "region": "ON",
+          "city": "Ottawa",
+          "postal_area": "K1A area"
+        },
+        "internal_sidelining": {
+          "zone": "Office",
+          "shelf_or_bin": "Laptop Rack B"
+        }
+      },
+      "specs": {
+        "inferred_from_path": "SurfacePros\\_1",
+        "media_count": 4
+      },
+      "clearance_identifiers": {
+        "tokenized_tags": [],
+        "vault_ref": "vlt_surfacepros-1"
+      },
+      "pricing": {
+        "currency": "CAD",
+        "fast_liquidation": 0,
+        "fair_market": 0,
+        "optimistic_anchor": 0,
+        "active_price": 0
+      },
+      "circular_metrics": {
+        "estimated_weight_kg": 1.1,
+        "refurb_status": "ready_for_curation"
+      },
+      "status": "draft",
+      "media": {
+        "primary_image": "Sales/SurfacePros/_1/1865DA6E-C85B-48D4-A420-03A1AA15EE06.jpeg",
+        "gallery": [
+          "Sales/SurfacePros/_1/1865DA6E-C85B-48D4-A420-03A1AA15EE06.jpeg",
+          "Sales/SurfacePros/_1/7814479E-3A02-46E0-98EF-62B1375DCBD0.jpeg",
+          "Sales/SurfacePros/_1/D3A189AF-F77C-4FF0-B990-023645EA3F8D.jpeg",
+          "Sales/SurfacePros/_1/F07AD575-A4F2-4E93-8825-8C366C4E589C.jpeg"
+        ]
+      },
+      "syndication": {
+        "facebook": {
+          "title": "Microsoft Surface Pro 2-in-1 Tablet/Laptop _1",
+          "description": "",
+          "tags": []
+        },
+        "kijiji": {
+          "title": "Microsoft Surface Pro 2-in-1 Tablet/Laptop _1",
+          "description": "",
+          "tags": []
+        },
+        "ebay": {
+          "title": "Microsoft Surface Pro 2-in-1 Tablet/Laptop _1",
+          "description": ""
+        }
+      },
+      "created_at": "2026-11-10T20:13:34.390Z",
+      "updated_at": "2026-11-10T20:13:34.390Z"
+    },
+    {
+      "id": "surfacepros-2",
+      "sku": "LGL-LAP-2-193",
+      "title": "Microsoft Surface Pro 2-in-1 Tablet/Laptop _2",
+      "category": "Laptops",
+      "brand": "Microsoft",
+      "model": "Surface Pro (_2)",
+      "condition": "good",
+      "location": {
+        "public_region": {
+          "country": "CA",
+          "region": "ON",
+          "city": "Ottawa",
+          "postal_area": "K1A area"
+        },
+        "internal_sidelining": {
+          "zone": "Office",
+          "shelf_or_bin": "Laptop Rack B"
+        }
+      },
+      "specs": {
+        "inferred_from_path": "SurfacePros\\_2",
+        "media_count": 4
+      },
+      "clearance_identifiers": {
+        "tokenized_tags": [],
+        "vault_ref": "vlt_surfacepros-2"
+      },
+      "pricing": {
+        "currency": "CAD",
+        "fast_liquidation": 0,
+        "fair_market": 0,
+        "optimistic_anchor": 0,
+        "active_price": 0
+      },
+      "circular_metrics": {
+        "estimated_weight_kg": 1.1,
+        "refurb_status": "ready_for_curation"
+      },
+      "status": "draft",
+      "media": {
+        "primary_image": "Sales/SurfacePros/_2/198D9A69-4FB9-4BA6-BA52-ACDFE363D64F.jpeg",
+        "gallery": [
+          "Sales/SurfacePros/_2/198D9A69-4FB9-4BA6-BA52-ACDFE363D64F.jpeg",
+          "Sales/SurfacePros/_2/3576AE31-70B1-462C-BEF5-6325711FB6C0.jpeg",
+          "Sales/SurfacePros/_2/AB3BD672-2DA0-44A7-8DE7-B540F65E936B.jpeg",
+          "Sales/SurfacePros/_2/F58B3162-9E8A-4190-947D-650033387FF9.jpeg"
+        ]
+      },
+      "syndication": {
+        "facebook": {
+          "title": "Microsoft Surface Pro 2-in-1 Tablet/Laptop _2",
+          "description": "",
+          "tags": []
+        },
+        "kijiji": {
+          "title": "Microsoft Surface Pro 2-in-1 Tablet/Laptop _2",
+          "description": "",
+          "tags": []
+        },
+        "ebay": {
+          "title": "Microsoft Surface Pro 2-in-1 Tablet/Laptop _2",
+          "description": ""
+        }
+      },
+      "created_at": "2026-11-10T20:13:34.391Z",
+      "updated_at": "2026-11-10T20:13:34.391Z"
+    },
+    {
+      "id": "treadmill",
+      "sku": "LGL-FIT-TREADMIL-886",
+      "title": "Folding Motorized Running & Walking Treadmill with Console",
+      "category": "Fitness & Sports",
+      "brand": "Folding Motorized",
+      "model": "Compact Folding Electric Treadmill",
+      "condition": "good",
+      "location": {
+        "public_region": {
+          "country": "CA",
+          "region": "ON",
+          "city": "Ottawa",
+          "postal_area": "K1A area"
+        },
+        "internal_sidelining": {
+          "zone": "Basement / Gym",
+          "shelf_or_bin": "Fitness Floor Area"
+        }
+      },
+      "specs": {
+        "inferred_from_path": "Treadmill",
+        "media_count": 4
+      },
+      "clearance_identifiers": {
+        "tokenized_tags": [],
+        "vault_ref": "vlt_treadmill"
+      },
+      "pricing": {
+        "currency": "CAD",
+        "fast_liquidation": 0,
+        "fair_market": 0,
+        "optimistic_anchor": 0,
+        "active_price": 0
+      },
+      "circular_metrics": {
+        "estimated_weight_kg": 42,
+        "refurb_status": "ready_for_curation"
+      },
+      "status": "draft",
+      "media": {
+        "primary_image": "Sales/Treadmill/3276D3A5-95E2-4A89-90ED-AB6342E00837.jpeg",
+        "gallery": [
+          "Sales/Treadmill/3276D3A5-95E2-4A89-90ED-AB6342E00837.jpeg",
+          "Sales/Treadmill/7EA20C0D-5666-419F-BE3A-88F3E17D88D8.jpeg",
+          "Sales/Treadmill/979AE065-540A-4D80-8B1D-EEC01D482082.jpeg",
+          "Sales/Treadmill/76937502854__EAA325CC-AA9F-4F77-B2D1-009099D62D81.MOV"
+        ]
+      },
+      "syndication": {
+        "facebook": {
+          "title": "Folding Motorized Running & Walking Treadmill with Console",
+          "description": "",
+          "tags": []
+        },
+        "kijiji": {
+          "title": "Folding Motorized Running & Walking Treadmill with Console",
+          "description": "",
+          "tags": []
+        },
+        "ebay": {
+          "title": "Folding Motorized Running & Walking Treadmill with Console",
+          "description": ""
+        }
+      },
+      "created_at": "2026-11-10T20:13:34.392Z",
+      "updated_at": "2026-11-10T20:13:34.392Z"
+    }
+  ]
+}

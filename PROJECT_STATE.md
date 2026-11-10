@@ -42,8 +42,9 @@ Total scanned items: **10 top-level categories**, 403MB media assets:
 
 - [x] **Milestone 0: Discovery & Interpretation** (Aligned with user on circular economy, regional public comps data, and WMS scalability).
 - [x] **Milestone 1: GitOps Governance Scaffolding** (`git init`, `PROJECT_STATE.md`, `SESSION_LOG.md`, `PRD.md`, `UserStories.md`).
-- [ ] **Milestone 2: Asset Data Schema & Inventory Model** (Normalized schema for tech, household goods, vehicles; physical bin/shelf sidelining).
-- [ ] **Milestone 3: Vision Intake & Interactive Curation Engine** (Interactive Q&A script to populate missing attributes for `Sales/` items).
+- [x] **Milestone 2: Asset Data Schema & Inventory Model** (Normalized schema, polymorphic specs, sidelining location, harm-based classification, `data/inventory.json` with 30 discovered lots).
+- [x] **Milestone 2.1: Sovereign Feedback & piiScrub Blackbox Integration** (`FEEDBACK.md`, `data/feedback.jsonl`, `src/security/piiClient.js`, automated upstream feedback handshake verified).
+- [ ] **Milestone 3: Interactive Curation Engine** (Interactive Q&A CLI to walk through draft lots, populate missing attributes, verify battery/condition, and set physical bin/shelf).
 - [ ] **Milestone 4: Regional Market Pricing & Syndication Generator** (Comps store schema, multi-tier pricing, Kijiji / FB / eBay ad copy generators).
 - [ ] **Milestone 5: Fast Public Showroom / Browsable Web Catalog** (Lightweight, responsive web catalog matching Cloudflare Pages / portfolio standard).
 - [ ] **Milestone 6: Commercial & Warehouse Expansion API** (Barcode/QR, batch status transitions, webhook ingress).

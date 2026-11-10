@@ -49,4 +49,24 @@ All events, architecture decisions, and verification outputs are recorded chrono
   - Created directories `feedback/inbox` and `feedback/outbox` with `.gitkeep`.
   - Updated `PROJECT_STATE.md`: Integrated `piiScrub` into the Cross-Project Interoperability Matrix.
 
+---
+
+## 2026-11-10T15:15:00-05:00 — Milestone 2 & Closed-Loop piiScrub Handshake Implementation
+
+* **Context:** User instructed proceeding with implementation: review universal product feedback implementation plan, review `piiScrub`'s self-designed feedback system, implement in `letgolist`, and advance product design.
+* **Actions Executed:**
+  - Reviewed Universal Governance Section 2.4 and Section 6.4 (`FEEDBACK.md`, `data/feedback.jsonl`, consumer-to-producer handshake).
+  - Inspected `piiScrub`'s `FeedbackManager` and CLI feedback commands (`node bin/pii-scrub.js feedback submit`).
+  - Implemented `letgolist` `FeedbackManager` (`src/core/feedback.js`) with dual persistence (`data/feedback.jsonl` and `FEEDBACK.md`).
+  - Implemented `PiiClient` adapter (`src/security/piiClient.js`) providing blackbox subprocess calls for redaction, tokenization, auditing, and upstream feedback delivery to `piiScrub`.
+  - Implemented `InventoryStore` (`src/model/schema.js`) managing `data/inventory.json` and `data/clearance_vault.json`.
+  - Implemented `CatalogScanner` (`src/scanner/scanner.js`) crawling `Sales/` directory.
+  - Implemented main CLI `bin/letgo.js` (`scan`, `status`, `pii-audit`, `feedback`, `pii-feedback`).
+  - Authored automated tests in `test/piiClient.test.js` and `test/feedback.test.js` (4/4 passing).
+  - Scanned `Sales/`: Discovered and indexed **30 item lots** across all 10 categories, allocating 94.2 kg circular e-waste savings baseline.
+  - Verified closed-loop feedback:
+    1. Downstream test: Successfully registered client feedback from `client:pagesCloudflare` in `FEEDBACK.md`.
+    2. Upstream test: Successfully submitted cross-project feedback to `piiScrub` via `node bin/letgo.js pii-feedback submit`, verified in `c:\Users\alihm\Projects\piiScrub\FEEDBACK.md` (`fb_mwb76l4x_63d67d`).
+
+
 

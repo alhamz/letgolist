@@ -1,0 +1,28 @@
+{
+  "name": "letgolist",
+  "version": "1.0.0",
+  "description": "Circular Asset Liquidation, Personal Inventory Sidelining, and Regional Market Intelligence",
+  "type": "module",
+  "bin": {
+    "letgo": "./bin/letgo.js"
+  },
+  "scripts": {
+    "start": "node bin/letgo.js",
+    "scan": "node bin/letgo.js scan",
+    "curate": "node bin/letgo.js curate",
+    "build": "node bin/letgo.js build",
+    "feedback": "node bin/letgo.js feedback",
+    "test": "node --test test/**/*.test.js"
+  },
+  "keywords": [
+    "inventory",
+    "liquidation",
+    "marketplace",
+    "circular-economy",
+    "pii-protection",
+    "kijiji",
+    "facebook-marketplace"
+  ],
+  "author": "theCore",
+  "license": "UNLICENSED"
+}
