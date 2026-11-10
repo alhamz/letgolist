@@ -53,6 +53,31 @@ So that I can choose the optimal pricing strategy based on my urgency.
   - **Then** three calculated price tiers are presented alongside historical regional comps,
   - **And** selecting a tier updates the active listing price in the ledger.
 
+### Story 2.3: Reversible Clearance Vaulting for Hardware Identifiers
+As a seller listing serialized technology and vehicles,  
+I want hardware identifiers (Service Tags, Serials, VINs) tokenized in public listings and AI prompts,  
+So that they are protected from unauthorized scraping while remaining recallable for buyer verification.
+
+* **Scenario: Tokenizing a Dell Latitude service tag for listing**
+  - **Given** a Dell Latitude laptop with Service Tag `74E6E2FE`,
+  - **When** syndication copy is generated using `piiScrub` tokenization,
+  - **Then** the public listing displays `{{SERVICE_TAG_1}}` or a redacted indicator,
+  - **And** the original Service Tag is securely mapped inside the local clearance vault,
+  - **And** an authorized buyer request for warranty verification allows on-demand recall and disclosure.
+
+### Story 2.4: Geographic Privacy Tiering
+As a private seller,  
+I want public listings to display only my regional Forward Sortation Area (FSA),  
+So that buyers can estimate pickup distance without exposing my exact residential street address.
+
+* **Scenario: Generating safe pickup location parameters**
+  - **Given** an item located at a residential address in Ottawa `K1A 0B1`,
+  - **When** listing parameters are prepared for Kijiji and Facebook Marketplace,
+  - **Then** public ad copy and web catalog cards display only `Ottawa (K1A area)`,
+  - **And** the full street address is stored in the clearance vault,
+  - **And** only revealed when the transaction status transitions to `reserved` with a confirmed pickup appointment.
+
+
 ---
 
 ## Epic 3: Public Browsable Catalog
@@ -83,3 +108,20 @@ So that I can measure the economic value preserved and the physical weight diver
   - **When** a comp record is entered into the analytics store,
   - **Then** the platform records the sale price, date, channel, and estimated e-waste weight diverted,
   - **And** the data is queryable for regional pricing intelligence and historical reporting.
+
+### Story 4.2: Sovereign Feedback Loop & Upstream Telemetry
+As a developer running `letgolist` alongside other projects on `theCore`,  
+I want automated telemetry channels to report edge cases to `piiScrub` and receive improvement feedback from `pagesCloudflare`,  
+So that each autonomous project continuously improves its own capabilities without cross-workspace code mutation.
+
+* **Scenario: Staging a false-positive report for `piiScrub`**
+  - **Given** an invocation of `piiScrub` where a model number was mistakenly flagged as PII,
+  - **When** the error is detected during curation,
+  - **Then** a structured feedback event is written to `feedback/piiScrub_feedback.jsonl`,
+  - **And** the telemetry is available for `piiScrub` to ingest according to its own client feedback protocol.
+
+* **Scenario: Ingesting consumer feedback from `pagesCloudflare`**
+  - **Given** the web catalog consumer `pagesCloudflare` requires an additional image aspect ratio in `data/inventory.json`,
+  - **When** `pagesCloudflare` submits a request to `letgolist`'s feedback inbox,
+  - **Then** `letgolist` logs the request in its product backlog for the next schema iteration.
+

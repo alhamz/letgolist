@@ -57,11 +57,24 @@ export interface InventoryItem {
   brand: string;
   model: string;
   condition: 'new' | 'like_new' | 'good' | 'fair' | 'needs_rehaul' | 'parts_only';
-  physical_location: {
-    zone: string;                // e.g. "Office", "Basement", "Garage"
-    shelf_or_bin: string;        // e.g. "Shelf B2", "Storage Box #4"
+  location: {
+    public_region: {
+      country: string;           // e.g. "CA" or "US"
+      region: string;            // e.g. "ON"
+      city: string;              // e.g. "Ottawa"
+      postal_area: string;       // First 3 characters (FSA) e.g. "K1A" or 3-digit ZIP
+    };
+    internal_sidelining: {
+      zone: string;              // e.g. "Office", "Basement", "Garage"
+      shelf_or_bin: string;      // e.g. "Shelf B2", "Storage Box #4"
+    };
+    clearance_vault_ref?: string;// References vaulted exact pickup address (unlocked upon 'reserved' status)
   };
-  specs: Record<string, any>;    // Polymorphic specs (CPU, RAM, storage, safety cert, VIN)
+  specs: Record<string, any>;    // Public specs (CPU, RAM, storage, safety cert)
+  clearance_identifiers?: {
+    tokenized_tags: string[];    // e.g. ["{{SERVICE_TAG_1}}", "{{VIN_1}}"]
+    vault_ref: string;           // Vault key holding real Service Tag / Serial / VIN
+  };
   pricing: {
     currency: 'CAD' | 'USD';
     fast_liquidation: number;    // Quick cash / low-friction local price
@@ -111,3 +124,45 @@ export interface InventoryItem {
 * **Goal:** Real-time buyer notifications and communication switchboard.
 * **Mechanism:**
   - Public catalog contact links generate a secure P2P inquiry routed into `reachMe` (`reachme.alhamaz.me`), allowing prospective buyers to communicate without leaking personal phone numbers.
+
+---
+
+## 4. `letgolist` Sovereign Client Feedback Protocol
+
+In accordance with Section 6 of Universal Agent Governance, `letgolist` defines its own public feedback intake contract for downstream consumers (e.g. `pagesCloudflare`, `reachMe`, external WMS systems).
+
+Downstream clients submit product improvement requests, missing schema attribute notices, or synchronization latency reports to `letgolist` via:
+
+### A. Feedback Drop Inbox (`feedback/inbox/`)
+Clients stage feedback events as JSON files in `c:\Users\alihm\Projects\letgolist\feedback\inbox/<client_name>_<timestamp>.json`:
+
+```json
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "client_project": "pagesCloudflare",
+  "client_version": "1.2.0",
+  "timestamp": "2026-11-10T14:30:00.000Z",
+  "feedback_category": "schema_enhancement | rendering_issue | sync_latency | bug_report",
+  "summary": "Need webp image variants for faster mobile rendering",
+  "context": {
+    "requested_fields": ["media.webp_thumbnails"],
+    "observed_impact": "LCP performance score on mobile showroom dropped 12 points"
+  },
+  "suggested_improvement": "Generate optimized webp thumbnails during the build or intake step"
+}
+```
+
+### B. Ingestion Protocol
+During Turn 0 drift reconciliation and milestone planning, the `letgolist` agent scans `feedback/inbox/`, aggregates telemetry, updates `SESSION_LOG.md`, and prioritizes backlog adjustments.
+
+---
+
+## 5. Upstream Client Telemetry for `piiScrub`
+
+As a consumer of `piiScrub`, `letgolist` stages feedback events under `feedback/outbox/piiScrub_feedback.jsonl` tracking:
+* False positives on asset model numbers, dock SKUs, and firewall codes (e.g. `WD19S`, `TZ300W`).
+* Tokenization and detokenization vault roundtrip accuracy.
+* Format and latency reports.
+
+When `piiScrub` publishes its intake method, `letgolist` delivers staged events through that channel.
+

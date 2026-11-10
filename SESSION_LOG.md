@@ -33,3 +33,20 @@ All events, architecture decisions, and verification outputs are recorded chrono
   - Authored `project-manifest.json`: Created a structured, machine-readable JSON manifest exposing project paths, schema files, and integration endpoints.
   - Verification: Confirmed all files exist, are properly linked, and are staged for Git commit.
 
+---
+
+## 2026-11-10T14:18:00-05:00 — Harm-Based Information Architecture & Sovereign Feedback Integration
+
+* **Context:** User provided architectural direction on `piiScrub` integration:
+  1. Eliminate artificial AI vs. Public information splits; classify data strictly based on harm if exposed. Decided if scrubbed or referenced & hidden, preserved securely in clearance vault, and transmitted securely.
+  2. Geographic specificity tiering: High-level area (FSA / 3-digit prefix) for public ads/catalog, exact address preserved in clearance vault and disclosed upon reserved pickup.
+  3. Sovereign feedback delivery: Each project designs its own feedback ingestion contract and channel based on its internal goals.
+* **Actions Executed:**
+  - Updated `PRD.md`: Formalized Harm-Based Classification & Clearance Vaulting (Section 5), Geographic Specificity (Section 6), and Sovereign Feedback Architecture (Section 7).
+  - Updated `UserStories.md`: Added Story 2.3 (Reversible Clearance Vaulting for Hardware IDs), Story 2.4 (Geographic Privacy Tiering), and Story 4.2 (Sovereign Feedback Telemetry).
+  - Updated `PROJECT_INTERFACE.md`: Refined `InventoryItem` TypeScript schema with `location.public_region` and `clearance_identifiers`; established the `letgolist` Client Feedback Protocol (`feedback/inbox/`) and `piiScrub` Outbox protocol.
+  - Updated `project-manifest.json`: Registered `feedback/inbox` and `feedback/outbox` endpoints.
+  - Created directories `feedback/inbox` and `feedback/outbox` with `.gitkeep`.
+  - Updated `PROJECT_STATE.md`: Integrated `piiScrub` into the Cross-Project Interoperability Matrix.
+
+

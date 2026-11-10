@@ -57,6 +57,7 @@ To ensure any other workspace or autonomous agent on `theCore` can read, integra
 | Target Workspace / Service | Infusion Mechanism | Consumed Artifacts & Interfaces |
 | :--- | :--- | :--- |
 | **`pagesCloudflare`** (`c:\Users\alihm\Projects\pagesCloudflare`) | Web Showcase / Subpath Embedding | Reads `data/inventory.json` or consumes compiled static catalog bundle in `dist/` to embed live inventory under `portfolio.alhamaz.me/inventory` or deploy standalone to Cloudflare Pages. |
+| **`piiScrub`** (`c:\Users\alihm\Projects\piiScrub`) | Upstream Security Blackbox | Standalone CLI (`bin/pii-scrub.js`) invoked to scrub/tokenize PII and hardware identifiers; `letgolist` stages client feedback in `feedback/outbox/piiScrub_feedback.jsonl`. |
 | **`syncServe`** (`CT300`, `10.23.45.105`) | Mobile Intake Automation | Mounts / syncs a Syncthing camera folder from mobile devices directly to `c:\Users\alihm\Projects\letgolist\Sales/Intake` for zero-friction intake. |
 | **`backupCore`** (`CT200`, `10.23.43.2`) | Automated GitOps Backup | Targets `c:\Users\alihm\Projects\letgolist` under `targets.d/letgolist.sh` to preserve Git commit history, inventory ledger, and media. |
 | **`reachCore` / `reachMe`** (`CT1000` / `CT2000`) | P2P Buyer Messaging & Alerts | Connects to `@reachcore/core` WebSockets for real-time buyer lead notifications and P2P communication switchboard. |

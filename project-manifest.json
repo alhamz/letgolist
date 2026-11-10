@@ -14,7 +14,9 @@
     "media_root": "Sales",
     "inventory_ledger": "data/inventory.json",
     "regional_comps": "data/regional_comps.json",
-    "compiled_dist": "dist"
+    "compiled_dist": "dist",
+    "client_feedback_inbox": "feedback/inbox",
+    "provider_feedback_outbox": "feedback/outbox"
   },
   "integration_targets": {
     "pagesCloudflare": {

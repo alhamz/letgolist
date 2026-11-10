@@ -55,3 +55,35 @@
    - Static/SSR Web Catalog for public showcase.
    - Formatted clipboard/export bundles for one-click marketplace submission.
 5. **Analytics & Regional Store:** Seed repository for regional comps, depreciation curves, and circular reuse metrics.
+
+---
+
+## 5. Harm-Based Information Classification & Clearance Vaulting
+
+All data handled within `letgolist` (whether destined for external AI ingestion or public web syndication) is classified strictly by **Harm if Exposed**, eliminating artificial splits between AI and public visibility:
+
+1. **Classification Matrix:**
+   - **Critical / High Harm (Never Exposed):** Private financial details, exact home address, personal phone numbers, and private identity documents. These are either permanently scrubbed via `piiScrub` or stored strictly within an encrypted local clearance vault.
+   - **Operational & Verification Identifiers (Referenced & Hidden):** Dell Service Tags, Apple Serial Numbers, IMEI, and Vehicle Identification Numbers (VINs).
+     - *In Transit / Public / AI:* Represented by context-preserving surrogate tokens (`{{SERVICE_TAG_1}}`, `{{VIN_1}}`) generated via `piiScrub` tokenization vaults.
+     - *Clearance Recall:* Preserved securely in the local ledger so they can be recalled and disclosed on-demand to verified buyers (e.g., verifying Dell warranty status or running a vehicle history report).
+   - **Public Specifications (Freely Exposed):** Brand, model family, dimensions, general specifications, cosmetic grading, and functional condition.
+
+---
+
+## 6. Geographic Specificity & Privacy Architecture
+
+Classified buyers require regional distance awareness, while sellers require privacy and defense against unwanted in-person visits:
+1. **Public / Advertising Layer:** Restricted to high-level geographic areas:
+   - Canada: Forward Sortation Area (FSA - first 3 characters of postal code, e.g. `K1A`, `M5V`) or major municipal intersection.
+   - US: 3-digit ZIP prefix or metropolitan region.
+2. **Clearance Pickup Layer:** Exact residential street address and apartment numbers are preserved in the secure local vault and released exclusively when a transaction reaches the `reserved` status with a confirmed pickup appointment.
+
+---
+
+## 7. Sovereign Client Feedback & Continuous Improvement Architecture
+
+In alignment with Section 6 of Universal Agent Governance, `letgolist` enforces autonomous product feedback loops:
+1. **As a Client of `piiScrub`:** `letgolist` stages structured telemetry on false positives, false negatives, and asset-specific identifier edge cases, delivering it through `piiScrub`'s self-designed client intake protocol.
+2. **For Clients of `letgolist`:** `letgolist` establishes its own public feedback intake contract (`feedback/inbox/` and CLI `--feedback`), enabling downstream consumers (e.g. `pagesCloudflare`, `reachMe`, warehouse management clients) to submit product improvement data, schema gap requests, and synchronization telemetry back to `letgolist`.
+
