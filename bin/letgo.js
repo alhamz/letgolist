@@ -9,6 +9,7 @@ import { CatalogScanner } from '../src/scanner/scanner.js';
 import { InventoryStore } from '../src/model/schema.js';
 import { PiiClient } from '../src/security/piiClient.js';
 import { FeedbackManager } from '../src/core/feedback.js';
+import { ItemCurator } from '../src/curator/curator.js';
 
 const VERSION = '1.0.0';
 
@@ -22,6 +23,8 @@ USAGE:
 COMMANDS:
   scan                   Scan the Sales/ folder and index candidate item lots into data/inventory.json
   status                 Display inventory summary, counts, and sidelining statistics
+  curate [id]            Run interactive curation wizard for all draft items, or a specific item ID
+  curate --list          List all draft items awaiting curation and missing attributes
   pii-audit              Run piiScrub audit over all inventory records to ensure zero PII leakage
   pii-feedback submit    Submit upstream product feedback / edge case report to piiScrub
   feedback submit        Submit client product feedback to letgolist (for downstream consumers)
@@ -221,7 +224,30 @@ function handlePiiAudit() {
   }
 }
 
-function main() {
+async function handleCurate(args) {
+  const curator = new ItemCurator();
+  const sub = args[0];
+
+  if (sub === '--list' || sub === '-l') {
+    const pending = curator.getPendingItems();
+    console.log(`\n=== Items Awaiting Curation (${pending.length} lots) ===\n`);
+    for (const item of pending) {
+      const photos = item.media?.gallery?.length || 0;
+      console.log(`• ID: ${item.id}`);
+      console.log(`  Title:    ${item.title}`);
+      console.log(`  Category: ${item.category} | Model: ${item.model}`);
+      console.log(`  Photos:   ${photos} photos available`);
+      console.log(`  Location: ${item.location.internal_sidelining.zone} -> ${item.location.internal_sidelining.shelf_or_bin}`);
+      console.log('');
+    }
+    return;
+  }
+
+  const targetId = (sub && !sub.startsWith('-')) ? sub : null;
+  await curator.runInteractiveCuration(targetId);
+}
+
+async function main() {
   const args = process.argv.slice(2);
   const cmd = args[0];
 
@@ -241,6 +267,9 @@ function main() {
       break;
     case 'status':
       handleStatus();
+      break;
+    case 'curate':
+      await handleCurate(args.slice(1));
       break;
     case 'pii-audit':
       handlePiiAudit();

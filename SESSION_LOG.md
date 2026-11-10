@@ -68,5 +68,22 @@ All events, architecture decisions, and verification outputs are recorded chrono
     1. Downstream test: Successfully registered client feedback from `client:pagesCloudflare` in `FEEDBACK.md`.
     2. Upstream test: Successfully submitted cross-project feedback to `piiScrub` via `node bin/letgo.js pii-feedback submit`, verified in `c:\Users\alihm\Projects\piiScrub\FEEDBACK.md` (`fb_mwb76l4x_63d67d`).
 
+---
+
+## 2026-11-10T18:50:00-05:00 — Milestone 3.1: Interactive Curation Engine Implementation
+
+* **Context:** User instructed starting with Step 1: building the interactive curation engine and CLI.
+* **Actions Executed:**
+  - Implemented `ItemCurator` (`src/curator/curator.js`) supporting:
+    1. Category-tailored spec discovery (laptops, phones, tablets, car seats, docks, fitness).
+    2. Physical storage sidelining assignment (Zone, Shelf/Bin).
+    3. Clearance vaulting for sensitive hardware identifiers (Service Tag, Serial, VIN) using `piiClient.tokenize()`.
+    4. Multi-channel syndication refresh (Facebook Marketplace, Kijiji, eBay ad copies auto-generated).
+    5. Terminal interactive wizard via Node `readline/promises`.
+  - Updated `bin/letgo.js`: Added `curate` command with `--list` flag and interactive wizard mode.
+  - Authored automated tests in `test/curator.test.js`: Verified pending item queries, programmatic curation, clearance tokenization, and syndication updates.
+  - Test Suite: 6/6 tests passing (`npm.cmd test`).
+
+
 
 
