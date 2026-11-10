@@ -1,0 +1,30 @@
+# Dependencies
+node_modules/
+.pnp
+.pnp.js
+
+# Environment & Secrets
+.env
+.env.local
+.env.*.local
+
+# Build & Cache Outputs
+dist/
+build/
+out/
+.next/
+.cache/
+
+# Operating System Files
+Thumbs.db
+[Dd]esktop.ini
+.DS_Store
+
+# Large Raw Video Captures (keep images tracked or managed)
+*.MOV
+*.mp4
+
+# Editor & IDE
+.vscode/
+.idea/
+*.swp
