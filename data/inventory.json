@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0.0",
-  "last_updated": "2026-11-13T03:04:18.482Z",
+  "last_updated": "2026-11-13T20:10:10.754Z",
   "summary": {
     "total_items": 30,
     "active_listings": 0,
@@ -11,8 +11,8 @@
   },
   "items": [
     {
-      "id": "carseats-ahmedbooster",
-      "sku": "LGL-CAR-AHMEDBOO-659",
+      "id": "carseats-highback-booster",
+      "sku": "LGL-CAR-HIGHBACK-659",
       "title": "Highback Booster Car Seat",
       "category": "Car Seats & Baby Gear",
       "brand": "Cosco / Safety 1st",
@@ -31,12 +31,12 @@
         }
       },
       "specs": {
-        "inferred_from_path": "CarSeats\\AhmedBooster",
+        "inferred_from_path": "CarSeats\\HighbackBooster",
         "media_count": 4
       },
       "clearance_identifiers": {
         "tokenized_tags": [],
-        "vault_ref": "vlt_carseats-ahmedbooster"
+        "vault_ref": "vlt_carseats-highback-booster"
       },
       "pricing": {
         "currency": "CAD",
@@ -51,12 +51,12 @@
       },
       "status": "draft",
       "media": {
-        "primary_image": "Sales/CarSeats/AhmedBooster/IMG_20241209_104144_3306864646933892040.jpg",
+        "primary_image": "Sales/CarSeats/HighbackBooster/IMG_20241209_104144_3306864646933892040.jpg",
         "gallery": [
-          "Sales/CarSeats/AhmedBooster/IMG_20241209_104144_3306864646933892040.jpg",
-          "Sales/CarSeats/AhmedBooster/IMG_20241209_104430_1471074454626227307.jpg",
-          "Sales/CarSeats/AhmedBooster/IMG_20241209_104500_8351562353121698941.jpg",
-          "Sales/CarSeats/AhmedBooster/IMG_20241209_104545_122346051732535932.jpg"
+          "Sales/CarSeats/HighbackBooster/IMG_20241209_104144_3306864646933892040.jpg",
+          "Sales/CarSeats/HighbackBooster/IMG_20241209_104430_1471074454626227307.jpg",
+          "Sales/CarSeats/HighbackBooster/IMG_20241209_104500_8351562353121698941.jpg",
+          "Sales/CarSeats/HighbackBooster/IMG_20241209_104545_122346051732535932.jpg"
         ]
       },
       "syndication": {

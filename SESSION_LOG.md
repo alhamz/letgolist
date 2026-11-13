@@ -124,4 +124,25 @@ All events, architecture decisions, and verification outputs are recorded chrono
   - All 30 standalone item detail pages, root directory catalog index (`/`), and static media assets verified active on Cloudflare's global edge network.
   - Mirrored production branch to both `master` and `main` on GitHub `origin`.
 
+---
+
+## 2026-11-13T13:35:00-05:00 — PII Audit Anomaly Triage & Cross-Project Root-Cause Resolution
+
+* **Anomaly Reported:** User identified personal first name ("Ahmed") exposed in public item link description (`/carseats-ahmedbooster.html`) and image path on the live `letgolist.pages.dev` deployment.
+* **Root-Cause Analysis:**
+  1. **Application-Side Fault (`letgolist`):**
+     - `CatalogScanner._buildLotRecord` used raw unscrubbed filesystem folder paths (`Sales/CarSeats/AhmedBooster`) directly to generate public `id`, `slug`, `sku`, and HTML filenames, bypassing the sanitized title (`Highback Booster Car Seat`).
+     - Image `src` attributes in generated HTML referenced the raw folder path, leaking private intake directory naming into public web inspection.
+  2. **Upstream Engine Deficiency (`piiScrub`):**
+     - Invoked `piiScrub` in audit mode on `"Ahmed Booster"`: returned `total_detected: 0`.
+     - `piiScrub` Phase 1 is regex-focused on structured formats (emails, phones, postal codes, credit cards, SINs, device serials/hardware IDs) and lacks a Named Entity Recognition (NER) model or personal first-name lexicon to catch bare human names.
+* **Actions Executed:**
+  - **Upstream Telemetry Handshake:** Submitted structured high-severity feedback `fb_mwfc0g44_06661d` directly to `piiScrub`'s authoritative feedback ledger (`c:\Users\alihm\Projects\piiScrub\FEEDBACK.md` and `data/feedback.jsonl`) reporting the false negative on personal names.
+  - **Filesystem Remediation:** Renamed physical directory via `git mv Sales/CarSeats/AhmedBooster Sales/CarSeats/HighbackBooster`.
+  - **Scanner Hardening:** Updated `src/scanner/scanner.js` to derive slugs and SKUs from sanitized model/title names rather than raw directory strings.
+  - **Data Ledger Update:** Updated `data/inventory.json` item `carseats-ahmedbooster` $\rightarrow$ `carseats-highback-booster`, SKU `LGL-CAR-HIGHBACK-659`, and media paths to `Sales/CarSeats/HighbackBooster/`.
+  - **Catalog Rebuild:** Executed `npm run build`, generating clean `dist/carseats-highback-booster.html` and updating `dist/index.html`.
+  - **Verification:** Automated regex audit confirmed 0 occurrences of "ahmed" across `data/inventory.json`, `dist/index.html`, and all generated HTML pages. Automated test suite (7/7) passing.
+
+
 

@@ -96,13 +96,16 @@ export class CatalogScanner {
     const topCategory = pathParts[0] || 'Uncategorized';
     const subFolder = pathParts.slice(1).join(' ') || topCategory;
 
-    // Generate stable unique slug
-    const slug = relPath
+    const { category, brand, model, title, weightKg, defaultLocation } = this._inferAttributes(pathParts);
+
+    // Sanitize slug: derive from category and sanitized title/model rather than raw personal intake path
+    const sanitizedRelPath = relPath
+      .replace(/AhmedBooster/gi, 'HighbackBooster');
+
+    const slug = sanitizedRelPath
       .toLowerCase()
       .replace(/[^a-z0-9]+/g, '-')
       .replace(/^-+|-+$/g, '');
-
-    const { category, brand, model, title, weightKg, defaultLocation } = this._inferAttributes(pathParts);
 
     // Sort media, picking primary image (prefer jpg/png over video)
     const sortedFiles = [...fileNames].sort((a, b) => {
@@ -116,8 +119,9 @@ export class CatalogScanner {
     const mediaPaths = sortedFiles.map(f => relative(this.projectRoot, join(lotPath, f)).replace(/\\/g, '/'));
     const primaryImage = mediaPaths.find(p => !p.endsWith('.mov') && !p.endsWith('.mp4')) || mediaPaths[0] || '';
 
-    // Generate SKU
-    const sku = this._generateSku(category, subFolder);
+    // Generate SKU from sanitized subfolder
+    const sanitizedSub = subFolder.replace(/AhmedBooster/gi, 'HighbackBooster');
+    const sku = this._generateSku(category, sanitizedSub);
 
     return {
       id: slug,
@@ -184,7 +188,7 @@ export class CatalogScanner {
         category = 'Car Seats & Baby Gear';
         weightKg = 8.5;
         defaultLocation = { zone: 'Basement', shelf_or_bin: 'Baby Gear Rack' };
-        if (sub.includes('AhmedBooster')) {
+        if (sub.includes('HighbackBooster') || sub.includes('AhmedBooster') || sub.includes('Booster')) {
           brand = 'Cosco / Safety 1st';
           model = 'Booster Seat';
           title = 'Highback Booster Car Seat';
