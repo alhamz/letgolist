@@ -3,7 +3,8 @@
 > **Canonical Host:** `theCore` (`10.23.40.3/24` on `LAN` `10.23.40.0/24`)  
 > **Workspace Path:** `c:\Users\alihm\Projects\letgolist`  
 > **Git Remote:** `git@github.com:alhamz/letgolist.git` (`origin/master` synced)  
-> **Current Status:** GitHub Remote & Cloudflare Pages CI/CD Ready (Commit `14c731b`)  
+> **Current Status:** Deployed Live to Cloudflare Pages (`https://letgolist.pages.dev`)  
+> **Production Hostname:** `letgolist.pages.dev` (Cloudflare Pages legacy static workflow)  
 > **Last Updated:** 2026-11-13
 
 ---
@@ -49,7 +50,7 @@ Total scanned items: **10 top-level categories**, 403MB media assets:
 - [ ] **Milestone 3.2: Lot Curation Execution** (Walk through and curate attributes for the 30 discovered lots in `Sales/`).
 - [ ] **Milestone 4: Regional Market Pricing & Syndication Generator** (Comps store schema, multi-tier pricing, Kijiji / FB / eBay ad copy generators).
 - [x] **Milestone 5.1: Standalone Item Webpage Generator (Cloudflare Pages Ready)** (`src/generator/pageGenerator.js`, `bin/letgo.js build/render`, 30 standalone item profiles in `dist/items/`, responsive photo/video gallery, OpenGraph & Schema.org JSON-LD metadata, 7/7 tests passing).
-- [x] **Milestone 5.2: GitHub Remote & Cloudflare Pages CI/CD Setup** (Repository `alhamz/letgolist` deployed via Cloudflare Pages legacy workflow; build command `npm run build`, output directory `dist`, clean static repository without workers wrapper).
+- [x] **Milestone 5.2: GitHub Remote & Cloudflare Pages CI/CD Setup** (Repository `alhamz/letgolist` deployed live to Cloudflare Pages at `https://letgolist.pages.dev`; automated CI/CD builds on git push to `master`/`main`).
 - [ ] **Milestone 5.3: Parent Collections & Aggregated Showroom** (Reverse-mapping items into category collections and main catalog view).
 - [ ] **Milestone 6: Commercial & Warehouse Expansion API** (Barcode/QR, batch status transitions, webhook ingress).
 

@@ -120,7 +120,8 @@ All events, architecture decisions, and verification outputs are recorded chrono
   - Build Command: `npm run build`
   - Build Output Directory: `dist`
   - Node Version: Automatically resolved to `20.18.0` via repo `.nvmrc` / `.node-version`.
-  - Deployment confirmed via Cloudflare Pages legacy workflow (`*.pages.dev`).
-  - Removed temporary `wrangler.json` to keep repository cleanly focused on pure static generation.
+  - Deployment confirmed live on Cloudflare Pages: `https://letgolist.pages.dev`.
+  - All 30 standalone item detail pages, root directory catalog index (`/`), and static media assets verified active on Cloudflare's global edge network.
+  - Mirrored production branch to both `master` and `main` on GitHub `origin`.
 
 
