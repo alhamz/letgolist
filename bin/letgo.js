@@ -10,6 +10,7 @@ import { InventoryStore } from '../src/model/schema.js';
 import { PiiClient } from '../src/security/piiClient.js';
 import { FeedbackManager } from '../src/core/feedback.js';
 import { ItemCurator } from '../src/curator/curator.js';
+import { PageGenerator } from '../src/generator/pageGenerator.js';
 
 const VERSION = '1.0.0';
 
@@ -25,6 +26,8 @@ COMMANDS:
   status                 Display inventory summary, counts, and sidelining statistics
   curate [id]            Run interactive curation wizard for all draft items, or a specific item ID
   curate --list          List all draft items awaiting curation and missing attributes
+  build                  Generate standalone, high-conversion static HTML pages for Cloudflare Pages (dist/items/)
+  render <id>            Render a standalone HTML page for a specific item to dist/items/<id>.html
   pii-audit              Run piiScrub audit over all inventory records to ensure zero PII leakage
   pii-feedback submit    Submit upstream product feedback / edge case report to piiScrub
   feedback submit        Submit client product feedback to letgolist (for downstream consumers)
@@ -247,6 +250,44 @@ async function handleCurate(args) {
   await curator.runInteractiveCuration(targetId);
 }
 
+function handleBuild() {
+  console.log(`Generating standalone item web pages for Cloudflare Pages (dist/items/)...`);
+  const store = new InventoryStore();
+  const db = store.read();
+  const generator = new PageGenerator();
+
+  const rendered = generator.renderAll(db.items);
+  console.log(`\n✔ Successfully generated ${rendered.length} standalone item pages in dist/items/\n`);
+  for (const r of rendered.slice(0, 5)) {
+    console.log(`  • dist/items/${r.id}.html`);
+  }
+  if (rendered.length > 5) {
+    console.log(`  • ...and ${rendered.length - 5} more item pages.`);
+  }
+  console.log(`\nReady for Cloudflare Pages direct deployment or embedding!`);
+}
+
+function handleRender(args) {
+  const id = args[0];
+  if (!id) {
+    console.error('Error: Please provide an item ID to render. Run "node bin/letgo.js curate --list" to view available IDs.');
+    process.exit(1);
+  }
+
+  const store = new InventoryStore();
+  const db = store.read();
+  const item = db.items.find(i => i.id === id);
+
+  if (!item) {
+    console.error(`Error: Item with ID "${id}" not found.`);
+    process.exit(1);
+  }
+
+  const generator = new PageGenerator();
+  const outPath = generator.writeItemPage(item);
+  console.log(`✔ Rendered standalone page: ${outPath}`);
+}
+
 async function main() {
   const args = process.argv.slice(2);
   const cmd = args[0];
@@ -270,6 +311,12 @@ async function main() {
       break;
     case 'curate':
       await handleCurate(args.slice(1));
+      break;
+    case 'build':
+      handleBuild();
+      break;
+    case 'render':
+      handleRender(args.slice(1));
       break;
     case 'pii-audit':
       handlePiiAudit();

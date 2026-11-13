@@ -84,6 +84,24 @@ All events, architecture decisions, and verification outputs are recorded chrono
   - Authored automated tests in `test/curator.test.js`: Verified pending item queries, programmatic curation, clearance tokenization, and syndication updates.
   - Test Suite: 6/6 tests passing (`npm.cmd test`).
 
+---
+
+## 2026-11-12T21:45:00-05:00 — Milestone 5.1: Standalone Item Webpage Generator (Item-First Reverse Mapping)
+
+* **Context:** User confirmed retained records and instructed starting by creating a simple, distraction-free standalone webpage deployable via Cloudflare Pages (even for a different project/domain) to display an inventory item directly as a webpage with pictures and information formatted for maximum clarity for viewers visiting from FB Marketplace, Amazon, etc. Architecture maps backwards from list items to parent collections.
+* **Actions Executed:**
+  - Implemented `PageGenerator` (`src/generator/pageGenerator.js`):
+    1. Distraction-free, mobile-first responsive layout with dark mode aesthetics.
+    2. Interactive high-res photo gallery and video demonstration player (pure CSS/vanilla JS, < 10KB, zero bloated frameworks).
+    3. Prominent price and status badges (*Available*, *Pending Pickup*, *Sold*).
+    4. Categorized specifications table, inspection notes, and clear pickup terms (cash/e-Transfer on physical inspection).
+    5. Direct "Message Seller / Schedule Pickup" CTA with auto-populated subject/body.
+    6. OpenGraph social card meta tags (`og:title`, `og:image`, `og:price`) and Schema.org JSON-LD structured data (`Product`, `Offer`) for rich link previews across Facebook, WhatsApp, iMessage, and Discord.
+  - Updated `bin/letgo.js`: Added `build` and `render <id>` commands.
+  - Generated 30 standalone item profiles under `dist/items/*.html`.
+  - Authored unit test in `test/generator.test.js` (7/7 tests passing).
+
+
 
 
 

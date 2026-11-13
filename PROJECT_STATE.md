@@ -47,7 +47,8 @@ Total scanned items: **10 top-level categories**, 403MB media assets:
 - [x] **Milestone 3.1: Interactive Curation Engine & CLI** (`src/curator/curator.js`, `bin/letgo.js curate`, clearance vaulting, dynamic multi-channel syndication refresh, 6/6 tests passing).
 - [ ] **Milestone 3.2: Lot Curation Execution** (Walk through and curate attributes for the 30 discovered lots in `Sales/`).
 - [ ] **Milestone 4: Regional Market Pricing & Syndication Generator** (Comps store schema, multi-tier pricing, Kijiji / FB / eBay ad copy generators).
-- [ ] **Milestone 5: Fast Public Showroom / Browsable Web Catalog** (Lightweight, responsive web catalog matching Cloudflare Pages / portfolio standard).
+- [x] **Milestone 5.1: Standalone Item Webpage Generator (Cloudflare Pages Ready)** (`src/generator/pageGenerator.js`, `bin/letgo.js build/render`, 30 standalone item profiles in `dist/items/`, responsive photo/video gallery, OpenGraph & Schema.org JSON-LD metadata, 7/7 tests passing).
+- [ ] **Milestone 5.2: Parent Collections & Aggregated Showroom** (Reverse-mapping items into category collections and main catalog view).
 - [ ] **Milestone 6: Commercial & Warehouse Expansion API** (Barcode/QR, batch status transitions, webhook ingress).
 
 ---
