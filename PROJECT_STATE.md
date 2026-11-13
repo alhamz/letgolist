@@ -2,8 +2,9 @@
 
 > **Canonical Host:** `theCore` (`10.23.40.3/24` on `LAN` `10.23.40.0/24`)  
 > **Workspace Path:** `c:\Users\alihm\Projects\letgolist`  
-> **Initial Status:** Bootstrap & Discovery Complete (Phase 3 Documentation)  
-> **Last Updated:** 2026-11-10
+> **Git Remote:** `git@github.com:alhamz/letgolist.git` (`origin/master` synced)  
+> **Current Status:** GitHub Remote & Cloudflare Pages CI/CD Ready (Commit `14c731b`)  
+> **Last Updated:** 2026-11-13
 
 ---
 
@@ -48,7 +49,8 @@ Total scanned items: **10 top-level categories**, 403MB media assets:
 - [ ] **Milestone 3.2: Lot Curation Execution** (Walk through and curate attributes for the 30 discovered lots in `Sales/`).
 - [ ] **Milestone 4: Regional Market Pricing & Syndication Generator** (Comps store schema, multi-tier pricing, Kijiji / FB / eBay ad copy generators).
 - [x] **Milestone 5.1: Standalone Item Webpage Generator (Cloudflare Pages Ready)** (`src/generator/pageGenerator.js`, `bin/letgo.js build/render`, 30 standalone item profiles in `dist/items/`, responsive photo/video gallery, OpenGraph & Schema.org JSON-LD metadata, 7/7 tests passing).
-- [ ] **Milestone 5.2: Parent Collections & Aggregated Showroom** (Reverse-mapping items into category collections and main catalog view).
+- [x] **Milestone 5.2: GitHub Remote & Cloudflare Pages CI/CD Setup** (Repository `alhamz/letgolist` initialized, deploy key configured, commit `14c731b` packaging 122 media assets + `.node-version` + `.nvmrc` pushed to `origin/master`).
+- [ ] **Milestone 5.3: Parent Collections & Aggregated Showroom** (Reverse-mapping items into category collections and main catalog view).
 - [ ] **Milestone 6: Commercial & Warehouse Expansion API** (Barcode/QR, batch status transitions, webhook ingress).
 
 ---

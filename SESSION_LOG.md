@@ -101,7 +101,23 @@ All events, architecture decisions, and verification outputs are recorded chrono
   - Generated 30 standalone item profiles under `dist/items/*.html`.
   - Authored unit test in `test/generator.test.js` (7/7 tests passing).
 
+---
 
+## 2026-11-13T09:35:00-05:00 — Milestone 5.2: GitHub Remote Synchronization & Cloudflare Pages CI/CD Staging
 
-
+* **Context:** User provided deploy key integration for GitHub repository `alhamz/letgolist` to enable direct Git-backed continuous deployment on Cloudflare Pages.
+* **Actions Executed:**
+  - Configured Git SSH credentials: Dedicated key `~/.ssh/letgolist_deploy_key` with `core.sshCommand = "ssh -F none -i ~/.ssh/letgolist_deploy_key -o IdentitiesOnly=yes"`.
+  - Added remote `origin`: `git@github.com:alhamz/letgolist.git`.
+  - Staged complete Sales assets and runtime files: 122 media assets across all 10 categories, `.node-version` (20.18.0), `.nvmrc`, `bin/serve.js`, and updated `PageGenerator`.
+  - Committed as `14c731b`: `feat(deploy): package Sales media, directory index, and Cloudflare Pages runtime config`.
+  - Pushed to GitHub: `git push -u origin master` completed with exit code 0; tracking established for `origin/master`.
+  - Verified local build pipeline: `npm run build` executed cleanly, copying `Sales/` into `dist/Sales/` and `dist/items/Sales/` and compiling all 30 HTML item pages and `dist/index.html`.
+  - Verified automated test suite: `npm run test` passed 7/7 tests with zero errors.
+* **Cloudflare Pages Deployment Configuration:**
+  - Repository: `alhamz/letgolist`
+  - Framework Preset: `None`
+  - Build Command: `npm run build`
+  - Build Output Directory: `dist`
+  - Node Version: Automatically resolved to `20.18.0` via repo `.nvmrc` / `.node-version`.
 
