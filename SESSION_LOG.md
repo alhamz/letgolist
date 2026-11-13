@@ -120,4 +120,7 @@ All events, architecture decisions, and verification outputs are recorded chrono
   - Build Command: `npm run build`
   - Build Output Directory: `dist`
   - Node Version: Automatically resolved to `20.18.0` via repo `.nvmrc` / `.node-version`.
+  - Deployment confirmed via Cloudflare Pages legacy workflow (`*.pages.dev`).
+  - Removed temporary `wrangler.json` to keep repository cleanly focused on pure static generation.
+
 
