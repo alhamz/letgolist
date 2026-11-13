@@ -46,14 +46,13 @@ export class PageGenerator {
     const gallery = item.media?.gallery || [];
     const primaryImg = item.media?.primary_image || gallery[0] || '';
 
-    // Relative path to media from dist/items/ (pointing to dist/Sales/ or workspace Sales/)
+    // Clean, encode, and format media paths for browsers and Cloudflare Pages
+    // Corrects special characters in folder names like '%1' (%251) and '#0' (%230) and spaces (%20)
     const toRelativeMedia = (p) => {
       if (!p) return '';
-      const cleanPath = p.replace(/\\/g, '/');
-      if (cleanPath.startsWith('Sales/')) {
-        return `../${cleanPath}`;
-      }
-      return cleanPath;
+      const cleanPath = p.replace(/\\/g, '/').replace(/^\.\//, '');
+      const parts = cleanPath.split('/').map(seg => encodeURIComponent(seg));
+      return `./${parts.join('/')}`;
     };
 
     // Filter public specs (exclude internal keys)
@@ -498,13 +497,15 @@ export class PageGenerator {
   }
 
   /**
-   * Writes the rendered page to dist/items/<id>.html
+   * Writes the rendered page to dist/items/<id>.html and dist/<id>.html
    */
   writeItemPage(item) {
     const html = this.renderItemPage(item);
-    const filePath = resolve(this.itemsDir, `${item.id}.html`);
-    writeFileSync(filePath, html, 'utf-8');
-    return filePath;
+    const itemPath = resolve(this.itemsDir, `${item.id}.html`);
+    const rootPath = resolve(this.distDir, `${item.id}.html`);
+    writeFileSync(itemPath, html, 'utf-8');
+    writeFileSync(rootPath, html, 'utf-8');
+    return itemPath;
   }
 
   /**

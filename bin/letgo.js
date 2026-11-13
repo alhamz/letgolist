@@ -5,6 +5,8 @@
  * Asset Liquidation, Sidelining Ledger, and Sovereign Feedback CLI
  */
 
+import { cpSync, existsSync } from 'node:fs';
+import { resolve } from 'node:path';
 import { CatalogScanner } from '../src/scanner/scanner.js';
 import { InventoryStore } from '../src/model/schema.js';
 import { PiiClient } from '../src/security/piiClient.js';
@@ -251,15 +253,22 @@ async function handleCurate(args) {
 }
 
 function handleBuild() {
-  console.log(`Generating standalone item web pages for Cloudflare Pages (dist/items/)...`);
+  console.log(`Generating standalone item web pages for Cloudflare Pages (dist/)...`);
   const store = new InventoryStore();
   const db = store.read();
   const generator = new PageGenerator();
 
+  // Sync Sales media to dist/Sales and dist/items/Sales so relative paths resolve cleanly in both
+  const salesSrc = resolve('Sales');
+  if (existsSync(salesSrc)) {
+    cpSync(salesSrc, resolve('dist', 'Sales'), { recursive: true, force: true });
+    cpSync(salesSrc, resolve('dist', 'items', 'Sales'), { recursive: true, force: true });
+  }
+
   const rendered = generator.renderAll(db.items);
-  console.log(`\n✔ Successfully generated ${rendered.length} standalone item pages in dist/items/\n`);
+  console.log(`\n✔ Successfully generated ${rendered.length} standalone item pages in dist/ and dist/items/\n`);
   for (const r of rendered.slice(0, 5)) {
-    console.log(`  • dist/items/${r.id}.html`);
+    console.log(`  • dist/${r.id}.html`);
   }
   if (rendered.length > 5) {
     console.log(`  • ...and ${rendered.length - 5} more item pages.`);

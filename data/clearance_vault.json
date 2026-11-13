@@ -1,10 +1,10 @@
 {
   "vault_version": "1.0.0",
-  "last_updated": "2026-11-13T02:55:09.993Z",
+  "last_updated": "2026-11-13T03:04:18.481Z",
   "records": {
     "vlt_test-curation-laptop": {
       "item_id": "test-curation-laptop",
-      "updated_at": "2026-11-13T02:55:09.992Z",
+      "updated_at": "2026-11-13T03:04:18.480Z",
       "raw_identifiers": {
         "service_tag": "74E6E2FE"
       },
