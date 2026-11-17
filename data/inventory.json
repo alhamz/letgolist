@@ -1,13 +1,13 @@
 {
   "schema_version": "1.0.0",
-  "last_updated": "2026-11-17T23:05:09.890Z",
+  "last_updated": "2026-11-17T23:27:34.473Z",
   "summary": {
     "total_items": 30,
     "active_listings": 24,
     "in_use_items": 1,
     "sidelined_items": 0,
     "sold_items": 5,
-    "total_estimated_value": 4210,
+    "total_estimated_value": 4235,
     "circular_ewaste_diverted_kg": 130.8
   },
   "items": [
@@ -1706,10 +1706,10 @@
     {
       "id": "latitutde-3",
       "sku": "LGL-LAP-3-485",
-      "title": "Dell Latitude 7490 14\" FHD Laptop (Unit 3 - Intel i5-8250U, 8GB RAM, 256GB SSD, Win 11 Pro)",
+      "title": "Dell Latitude 5400 14\" FHD Laptop (Unit 2 - Intel i5-8265U Whiskey Lake, 8GB RAM, 256GB SSD, Win Pro)",
       "category": "Laptops",
       "brand": "Dell",
-      "model": "Latitude 7490",
+      "model": "Latitude 5400",
       "condition": "very_good",
       "location": {
         "public_region": {
@@ -1724,18 +1724,21 @@
         }
       },
       "specs": {
-        "display": "14.0\" Anti-Glare FHD (1920 x 1080) WVA display",
+        "display": "14.0\" Full HD (1920x1080) Anti-Glare IPS Display",
         "processor": "Intel Core i5-8250U Quad-Core (1.60 GHz base, up to 3.40 GHz Turbo, 6MB Cache)",
-        "ram": "8 GB DDR4 (upgradable to 32 GB)",
-        "storage": "256 GB M.2 Solid State Drive (SSD)",
+        "ram": "8GB DDR4 (Expandable to 32GB)",
+        "storage": "256GB NVMe M.2 Solid State Drive",
         "graphics": "Intel UHD Graphics 620",
         "os": "Windows 11 Pro 64-bit (clean installation, digital license activated)",
-        "ports": "USB-C / DisplayPort over Type-C, 3x USB 3.1 Gen 1, HDMI 1.4, RJ-45 Ethernet, uSD card reader, audio jack",
+        "ports": "USB-C DisplayPort/Power Delivery, 3x USB 3.1 Gen 1, HDMI 1.4, RJ-45 GbE, MicroSD, Audio Combo",
         "keyboard_input": "Dual-pointing keyboard with center trackstick and multi-touch trackpad",
         "power_adapter": "Original Dell 65W OEM AC Power Adapter included",
         "battery_condition": "Very good battery health; holds charge reliably",
         "dock_compatibility": "100% plug-and-play compatible with Dell WD15 & WD19 USB-C docking stations",
-        "fulfillment": "Local pickup at central community landmark in Milton (L9T area) or buyer-paid tracked shipping (Canada-wide & International)"
+        "fulfillment": "Local pickup at central community landmark in Milton (L9T area) or buyer-paid tracked shipping (Canada-wide & International)",
+        "cpu": "Intel Core i5-8265U (Whiskey Lake 4C/8T 1.6GHz - 3.9GHz Turbo)",
+        "operating_system": "Windows 11 / Windows 10 Pro (Digital License)",
+        "charger_included": "OEM Dell 65W AC Adapter included"
       },
       "clearance_identifiers": {
         "tokenized_tags": [],
@@ -1744,9 +1747,10 @@
       "pricing": {
         "currency": "CAD",
         "fast_liquidation": 150,
-        "fair_market": 195,
+        "fair_market": 260,
         "optimistic_anchor": 240,
-        "active_price": 195
+        "active_price": 220,
+        "quick_sale": 200
       },
       "circular_metrics": {
         "estimated_weight_kg": 1.4,

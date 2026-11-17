@@ -1,6 +1,6 @@
 # Active Syndication & Listing Bundles
 
-Generated on: 2026-11-17T23:01:56.855Z  
+Generated on: 2026-11-17T23:27:44.459Z  
 Total Active Listings: **24**  
 Master Showcase: [https://letgolist.pages.dev](https://letgolist.pages.dev)
 
@@ -21,7 +21,7 @@ Master Showcase: [https://letgolist.pages.dev](https://letgolist.pages.dev)
 | [Apple iPhone 8 Plus 64GB - Space Gray (Unlocked)](./iphones-iphone8plus.md) | Phones | **$130 CAD** | very_good | [Web Link](https://letgolist.pages.dev/iphones-iphone8plus.html) |
 | [Dell Latitude 7490 14" FHD Laptop (Intel i5-8250U, 8GB RAM, 256GB SSD, Win 11 Pro)](./latitutde-1.md) | Laptops | **$195 CAD** | very_good | [Web Link](https://letgolist.pages.dev/latitutde-1.html) |
 | [Dell Latitude 7490 14" FHD Laptop (Unit 2 - Intel i5-8250U, 8GB RAM, 256GB SSD, Win 10/11 Pro)](./latitutde-2.md) | Laptops | **$195 CAD** | very_good | [Web Link](https://letgolist.pages.dev/latitutde-2.html) |
-| [Dell Latitude 7490 14" FHD Laptop (Unit 3 - Intel i5-8250U, 8GB RAM, 256GB SSD, Win 11 Pro)](./latitutde-3.md) | Laptops | **$195 CAD** | very_good | [Web Link](https://letgolist.pages.dev/latitutde-3.html) |
+| [Dell Latitude 5400 14" FHD Laptop (Unit 2 - Intel i5-8265U Whiskey Lake, 8GB RAM, 256GB SSD, Win Pro)](./latitutde-3.md) | Laptops | **$220 CAD** | very_good | [Web Link](https://letgolist.pages.dev/latitutde-3.html) |
 | [Dell Latitude 5400 14" FHD Laptop (Intel i5-8265U Whiskey Lake, 8GB RAM, 256GB SSD, Win Pro)](./latitutde-4.md) | Laptops | **$220 CAD** | very_good | [Web Link](https://letgolist.pages.dev/latitutde-4.html) |
 | [Dell Latitude 5420 14" FHD Laptop (11th Gen Intel i7-1185G7 vPro, 8GB RAM, 256GB SSD, Boxed)](./latitutde-5.md) | Laptops | **$380 CAD** | like_new | [Web Link](https://letgolist.pages.dev/latitutde-5.html) |
 | [Dell Latitude 5420 14" FHD Laptop (Unit 2 - 11th Gen Intel i7-1185G7 vPro, 8GB RAM, 256GB SSD, Boxed)](./latitutde-6.md) | Laptops | **$380 CAD** | like_new | [Web Link](https://letgolist.pages.dev/latitutde-6.html) |

@@ -1,7 +1,7 @@
 =======================================================
-ITEM: Dell Latitude 7490 14" FHD Laptop (Unit 3 - Intel i5-8250U, 8GB RAM, 256GB SSD, Win 11 Pro)
+ITEM: Dell Latitude 5400 14" FHD Laptop (Unit 2 - Intel i5-8265U Whiskey Lake, 8GB RAM, 256GB SSD, Win Pro)
 SKU / ID: LGL-LAP-3-485
-PRICE: $195 CAD
+PRICE: $220 CAD
 CONDITION: VERY GOOD
 STATUS: ACTIVE
 PUBLIC SHOWCASE LINK: https://letgolist.pages.dev/latitutde-3.html
@@ -16,7 +16,7 @@ PHOTOS TO ATTACH (4):
 📘 FACEBOOK MARKETPLACE LISTING COPY
 -------------------------------------------------------
 TITLE: Dell Latitude 7490 14" FHD (i5-8250U, 8GB, 256GB SSD, Win 11 Pro, OEM Charger)
-PRICE: 195
+PRICE: 220
 CATEGORY: Laptops
 CONDITION: Used - Good
 LOCATION: Milton, ON (L9T area)
@@ -46,7 +46,7 @@ TAGS: Dell, Latitude, Laptop, Windows 11 Pro, Business Laptop
 🍁 KIJIJI CLASSIFIEDS LISTING COPY
 -------------------------------------------------------
 TITLE: Dell Latitude 7490 14" FHD Laptop (i5-8250U / 8GB / 256GB SSD / Win 11 Pro) - Milton
-PRICE: 195
+PRICE: 220
 LOCATION: Milton, ON (L9T area)
 
 DESCRIPTION:
@@ -68,7 +68,7 @@ KEYWORDS: Dell, Latitude 7490, Laptop, Milton, local pickup, shipping available
 🏷️ EBAY LISTING SUMMARY
 -------------------------------------------------------
 TITLE: Dell Latitude 7490 14in FHD i5-8250U 8GB RAM 256GB SSD Win 11 Pro Tested 
-BUY IT NOW / STARTING PRICE: $195 CAD
+BUY IT NOW / STARTING PRICE: $220 CAD
 ESTIMATED SHIPPING WEIGHT: 2.1 kg
 
 DESCRIPTION:
