@@ -61,6 +61,11 @@ export class PageGenerator {
       return `./${parts.join('/')}`;
     };
 
+    const mediaList = gallery.map(m => ({
+      src: toRelativeMedia(m),
+      isVideo: m.toLowerCase().endsWith('.mov') || m.toLowerCase().endsWith('.mp4')
+    }));
+
     // Filter public specs (exclude internal keys)
     const publicSpecs = Object.entries(item.specs || {})
       .filter(([k]) => !k.startsWith('inferred') && k !== 'media_count');
@@ -191,10 +196,10 @@ export class PageGenerator {
     }
 
     .container {
-      max-width: 960px;
+      max-width: 1200px;
       width: 100%;
       margin: 0 auto;
-      padding: 1rem 0 3rem 0;
+      padding: 1.25rem 1rem 4rem 1rem;
     }
 
     /* Top Trust Bar */
@@ -207,7 +212,7 @@ export class PageGenerator {
       border: 1px solid var(--card-border);
       border-radius: 12px;
       padding: 0.75rem 1.25rem;
-      margin-bottom: 1.5rem;
+      margin-bottom: 1.75rem;
       font-size: 0.875rem;
       color: var(--text-muted);
     }
@@ -223,60 +228,93 @@ export class PageGenerator {
     .product-grid {
       display: grid;
       grid-template-columns: 1fr;
-      gap: 2rem;
+      gap: 2.5rem;
     }
-    @media (min-width: 768px) {
+    @media (min-width: 880px) {
       .product-grid {
-        grid-template-columns: 1.1fr 0.9fr;
+        grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr);
+        gap: 3rem;
+        align-items: start;
       }
     }
 
     /* Gallery Section */
     .gallery-container {
+      min-width: 0;
+      width: 100%;
       background: var(--card-bg);
       border: 1px solid var(--card-border);
       border-radius: 16px;
-      overflow: hidden;
-      padding: 1rem;
+      padding: 1.25rem;
       display: flex;
       flex-direction: column;
-      gap: 1rem;
+      gap: 1.25rem;
+      position: sticky;
+      top: 1.5rem;
     }
     .main-image-wrap {
+      position: relative;
       width: 100%;
       aspect-ratio: 4 / 3;
-      background: #000;
+      min-height: 360px;
+      background: #060a12;
+      border: 1px solid rgba(255, 255, 255, 0.08);
       border-radius: 12px;
       overflow: hidden;
       display: flex;
       align-items: center;
       justify-content: center;
+      cursor: zoom-in;
     }
     .main-image-wrap img, .main-image-wrap video {
       width: 100%;
       height: 100%;
       object-fit: contain;
+      transition: transform 0.25s ease;
+    }
+    .main-image-wrap:hover img {
+      transform: scale(1.02);
+    }
+    .expand-pill {
+      position: absolute;
+      bottom: 12px;
+      right: 12px;
+      background: rgba(15, 23, 42, 0.88);
+      backdrop-filter: blur(8px);
+      color: #fff;
+      font-size: 0.75rem;
+      font-weight: 600;
+      padding: 0.35rem 0.75rem;
+      border-radius: 9999px;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      pointer-events: none;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
     }
     .thumbnail-row {
       display: flex;
-      gap: 0.75rem;
+      gap: 0.85rem;
       overflow-x: auto;
       padding-bottom: 0.5rem;
       scrollbar-width: thin;
     }
     .thumbnail-btn {
-      flex: 0 0 72px;
-      height: 72px;
+      flex: 0 0 88px;
+      height: 88px;
       border: 2px solid var(--card-border);
-      border-radius: 8px;
+      border-radius: 10px;
       overflow: hidden;
       cursor: pointer;
-      background: #000;
+      background: #060a12;
       padding: 0;
-      transition: border-color 0.2s;
+      transition: all 0.2s ease;
     }
     .thumbnail-btn.active, .thumbnail-btn:hover {
       border-color: var(--primary);
+      box-shadow: 0 0 0 2px rgba(56, 189, 248, 0.35);
+      transform: translateY(-2px);
     }
     .thumbnail-btn img {
       width: 100%;
@@ -284,8 +322,106 @@ export class PageGenerator {
       object-fit: cover;
     }
 
+    /* Lightbox Modal */
+    .lightbox-modal {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: rgba(4, 8, 16, 0.94);
+      backdrop-filter: blur(16px);
+      z-index: 99999;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      padding: 1.5rem;
+    }
+    .lightbox-modal.active {
+      display: flex;
+    }
+    .lightbox-content {
+      position: relative;
+      max-width: 92vw;
+      max-height: 86vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .lightbox-img, .lightbox-video {
+      max-width: 92vw;
+      max-height: 84vh;
+      object-fit: contain;
+      border-radius: 8px;
+      box-shadow: 0 24px 48px rgba(0, 0, 0, 0.85);
+    }
+    .lightbox-close {
+      position: absolute;
+      top: 24px;
+      right: 28px;
+      background: rgba(30, 41, 59, 0.85);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      color: #fff;
+      font-size: 1.5rem;
+      line-height: 1;
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.2s;
+      z-index: 100001;
+    }
+    .lightbox-close:hover {
+      background: var(--danger);
+      color: #fff;
+    }
+    .lightbox-nav {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(30, 41, 59, 0.85);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      color: #fff;
+      font-size: 2.25rem;
+      line-height: 1;
+      width: 52px;
+      height: 52px;
+      border-radius: 50%;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.2s;
+      z-index: 100001;
+      user-select: none;
+    }
+    .lightbox-nav:hover {
+      background: var(--primary);
+      color: #04101e;
+    }
+    .lightbox-prev { left: 28px; }
+    .lightbox-next { right: 28px; }
+    .lightbox-counter {
+      position: absolute;
+      bottom: 24px;
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      background: rgba(15, 23, 42, 0.85);
+      padding: 0.4rem 1rem;
+      border-radius: 9999px;
+      border: 1px solid var(--card-border);
+    }
+
     /* Information Section */
     .info-container {
+      min-width: 0;
+      width: 100%;
       display: flex;
       flex-direction: column;
       gap: 1.25rem;
@@ -396,6 +532,7 @@ export class PageGenerator {
       width: 100%;
       border-collapse: collapse;
       font-size: 0.9rem;
+      table-layout: fixed;
     }
     .spec-table tr {
       border-bottom: 1px solid rgba(255, 255, 255, 0.06);
@@ -403,15 +540,18 @@ export class PageGenerator {
     .spec-table tr:last-child { border-bottom: none; }
     .spec-table td {
       padding: 0.6rem 0;
+      vertical-align: top;
     }
     .spec-label {
       color: var(--text-muted);
-      width: 40%;
+      width: 38%;
       font-weight: 500;
+      word-break: break-word;
     }
     .spec-value {
       color: var(--text);
       font-weight: 600;
+      word-break: break-word;
     }
 
     /* Verification Box */
@@ -533,11 +673,15 @@ export class PageGenerator {
     <div class="product-grid">
       <!-- Media Gallery Column -->
       <div class="gallery-container">
-        <div class="main-image-wrap" id="mainMediaContainer">
+        <div class="main-image-wrap" id="mainMediaContainer" onclick="openLightbox()" title="Click to view full-size photo">
           ${primaryImg.toLowerCase().endsWith('.mov') || primaryImg.toLowerCase().endsWith('.mp4')
-            ? `<video src="${toRelativeMedia(primaryImg)}" controls autoplay muted loop playsinline id="mainVideo"></video>`
-            : `<img src="${toRelativeMedia(primaryImg)}" alt="${this._escape(item.title)}" id="mainImg">`
+            ? `<video src="${toRelativeMedia(primaryImg)}" controls autoplay muted loop playsinline id="mainMedia"></video>`
+            : `<img src="${toRelativeMedia(primaryImg)}" alt="${this._escape(item.title)}" id="mainMedia">`
           }
+          <div class="expand-pill">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 3 21 3 21 9"></polyline><polyline points="9 21 3 21 3 15"></polyline><line x1="21" y1="3" x2="14" y2="10"></line><line x1="3" y1="21" x2="10" y2="14"></line></svg>
+            <span>Click to Expand</span>
+          </div>
         </div>
 
         ${gallery.length > 1 ? `
@@ -545,7 +689,7 @@ export class PageGenerator {
             ${gallery.map((mediaPath, idx) => {
               const isVideo = mediaPath.toLowerCase().endsWith('.mov') || mediaPath.toLowerCase().endsWith('.mp4');
               return `
-                <button type="button" class="thumbnail-btn ${idx === 0 ? 'active' : ''}" onclick="switchMedia('${toRelativeMedia(mediaPath)}', ${isVideo}, this)">
+                <button type="button" class="thumbnail-btn ${idx === 0 ? 'active' : ''}" onclick="switchMedia(${idx})">
                   ${isVideo 
                     ? `<div style="display:flex;align-items:center;justify-content:center;height:100%;color:#fff;font-size:10px;text-align:center;">▶ VIDEO</div>`
                     : `<img src="${toRelativeMedia(mediaPath)}" alt="Thumbnail ${idx + 1}">`
@@ -632,18 +776,105 @@ export class PageGenerator {
     </footer>
   </div>
 
-  <script>
-    function switchMedia(src, isVideo, btn) {
-      const container = document.getElementById('mainMediaContainer');
-      document.querySelectorAll('.thumbnail-btn').forEach(b => b.classList.remove('active'));
-      btn.classList.add('active');
+  <!-- Lightbox Fullscreen Modal -->
+  <div class="lightbox-modal" id="lightboxModal" onclick="handleBackdropClick(event)">
+    <button class="lightbox-close" onclick="closeLightbox()" title="Close (Esc)">✕</button>
+    ${gallery.length > 1 ? `
+      <button class="lightbox-nav lightbox-prev" onclick="prevLightbox(event)" title="Previous photo (Left Arrow)">‹</button>
+      <button class="lightbox-nav lightbox-next" onclick="nextLightbox(event)" title="Next photo (Right Arrow)">›</button>
+    ` : ''}
+    <div class="lightbox-content" id="lightboxContent"></div>
+    <div class="lightbox-counter" id="lightboxCounter"></div>
+  </div>
 
-      if (isVideo) {
-        container.innerHTML = '<video src="' + src + '" controls autoplay muted loop playsinline></video>';
+  <script>
+    const galleryItems = ${JSON.stringify(mediaList)};
+    let currentIndex = 0;
+
+    function switchMedia(idx, isVideo, btn) {
+      if (typeof idx !== 'number') {
+        const found = galleryItems.findIndex(g => g.src === idx);
+        idx = found !== -1 ? found : 0;
+      }
+      if (idx < 0 || idx >= galleryItems.length) return;
+      currentIndex = idx;
+
+      const container = document.getElementById('mainMediaContainer');
+      const item = galleryItems[currentIndex];
+
+      const btns = document.querySelectorAll('.thumbnail-btn');
+      btns.forEach((b, i) => {
+        if (i === currentIndex) b.classList.add('active');
+        else b.classList.remove('active');
+      });
+
+      let mediaHtml = '';
+      if (item.isVideo) {
+        mediaHtml = '<video src="' + item.src + '" controls autoplay muted loop playsinline id="mainMedia"></video>';
       } else {
-        container.innerHTML = '<img src="' + src + '" alt="Product photo">';
+        mediaHtml = '<img src="' + item.src + '" alt="Product photo" id="mainMedia">';
+      }
+      container.innerHTML = mediaHtml + '<div class="expand-pill"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 3 21 3 21 9"></polyline><polyline points="9 21 3 21 3 15"></polyline><line x1="21" y1="3" x2="14" y2="10"></line><line x1="3" y1="21" x2="10" y2="14"></line></svg><span>Click to Expand</span></div>';
+    }
+
+    function openLightbox() {
+      if (!galleryItems || galleryItems.length === 0) return;
+      const modal = document.getElementById('lightboxModal');
+      const content = document.getElementById('lightboxContent');
+      const counter = document.getElementById('lightboxCounter');
+      const item = galleryItems[currentIndex];
+
+      if (item.isVideo) {
+        content.innerHTML = '<video src="' + item.src + '" class="lightbox-video" controls autoplay loop playsinline></video>';
+      } else {
+        content.innerHTML = '<img src="' + item.src + '" class="lightbox-img" alt="Full size photo">';
+      }
+
+      if (counter) {
+        counter.textContent = (currentIndex + 1) + ' / ' + galleryItems.length;
+      }
+
+      modal.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeLightbox() {
+      const modal = document.getElementById('lightboxModal');
+      if (modal) modal.classList.remove('active');
+      const content = document.getElementById('lightboxContent');
+      if (content) content.innerHTML = '';
+      document.body.style.overflow = '';
+    }
+
+    function prevLightbox(e) {
+      if (e) e.stopPropagation();
+      let prevIdx = currentIndex - 1;
+      if (prevIdx < 0) prevIdx = galleryItems.length - 1;
+      switchMedia(prevIdx);
+      openLightbox();
+    }
+
+    function nextLightbox(e) {
+      if (e) e.stopPropagation();
+      let nextIdx = currentIndex + 1;
+      if (nextIdx >= galleryItems.length) nextIdx = 0;
+      switchMedia(nextIdx);
+      openLightbox();
+    }
+
+    function handleBackdropClick(e) {
+      if (e.target.id === 'lightboxModal') {
+        closeLightbox();
       }
     }
+
+    document.addEventListener('keydown', function(e) {
+      const modal = document.getElementById('lightboxModal');
+      if (!modal || !modal.classList.contains('active')) return;
+      if (e.key === 'Escape') closeLightbox();
+      else if (e.key === 'ArrowLeft') prevLightbox();
+      else if (e.key === 'ArrowRight') nextLightbox();
+    });
   </script>
 </body>
 </html>`;
