@@ -71,13 +71,14 @@ All data handled within `letgolist` (whether destined for external AI ingestion 
 
 ---
 
-## 6. Geographic Specificity & Privacy Architecture
+## 6. Geographic Specificity & Strict Zero-Residential-Exposure Architecture
 
-Classified buyers require regional distance awareness, while sellers require privacy and defense against unwanted in-person visits:
-1. **Public / Advertising Layer:** Restricted to high-level geographic areas:
-   - Canada: Forward Sortation Area (FSA - first 3 characters of postal code, e.g. `K1A`, `M5V`) or major municipal intersection.
-   - US: 3-digit ZIP prefix or metropolitan region.
-2. **Clearance Pickup Layer:** Exact residential street address and apartment numbers are preserved in the secure local vault and released exclusively when a transaction reaches the `reserved` status with a confirmed pickup appointment.
+Classified buyers require regional distance awareness, while sellers require total privacy against unwanted in-person visits to private residences or places of business:
+1. **Public / Advertising Layer:** Restricted to high-level municipal areas and Forward Sortation Areas (FSA - first 3 characters of postal code, e.g. `L9T area` for Milton, ON).
+2. **Strict Zero-Residential-Exposure Policy:**
+   - Under **no circumstances** (even for confirmed reservations or advance payments) is a residential street address, apartment number, or private workplace address ever recorded, staged, or disclosed to buyers.
+   - All local in-person handoffs take place exclusively at a neutral, well-known public community landmark within the locality (e.g. municipal community center, public library, or designated police safe-exchange trade zone).
+3. **Fulfillment Flexibility:** For electronics, computing equipment, and small lot items, tracked shipping across Canada and internationally is accommodated at the buyer's expense.
 
 ---
 

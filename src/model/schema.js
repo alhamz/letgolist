@@ -36,6 +36,7 @@ export const LIFECYCLE_STATUSES = [
   'active',
   'reserved',
   'sold',
+  'in_use',
   'archived',
 ];
 
@@ -103,6 +104,7 @@ export class InventoryStore {
     db.summary = {
       total_items: items.length,
       active_listings: items.filter(i => i.status === 'active').length,
+      in_use_items: items.filter(i => i.status === 'in_use').length,
       sidelined_items: items.filter(i => i.status === 'sidelined').length,
       sold_items: items.filter(i => i.status === 'sold').length,
       total_estimated_value: Math.round(estimatedVal * 100) / 100,

@@ -179,9 +179,10 @@ function handleStatus() {
   console.log(`\n================ letgolist Inventory Summary ================`);
   console.log(`  Total Item Lots:         ${summary.total_items}`);
   console.log(`  Active Market Listings:  ${summary.active_listings}`);
-  console.log(`  Sidelined / Cataloged:   ${summary.sidelined_items}`);
+  console.log(`  In-Use / Dormant:        ${summary.in_use_items || db.items.filter(i => i.status === 'in_use').length}`);
+  console.log(`  Sidelined / Cataloged:   ${summary.sidelined_items || 0}`);
   console.log(`  Draft / Needs Curation:  ${db.items.filter(i => i.status === 'draft').length}`);
-  console.log(`  Sold / Liquidated:       ${summary.sold_items}`);
+  console.log(`  Sold / Liquidated:       ${summary.sold_items || 0}`);
   console.log(`  Total Estimated Value:   $${summary.total_estimated_value} CAD`);
   console.log(`  Circular e-Waste Saved:  ${summary.circular_ewaste_diverted_kg} kg`);
   console.log(`=============================================================\n`);

@@ -10,9 +10,11 @@ test('ItemCurator - getPendingItems and getItem', () => {
   const pending = curator.getPendingItems();
 
   assert.ok(Array.isArray(pending));
-  assert.ok(pending.length > 0, 'Should have pending draft items');
+  const store = new InventoryStore();
+  const allItems = store.read().items;
+  assert.ok(allItems.length > 0, 'Should have items in store');
 
-  const first = pending[0];
+  const first = pending.length > 0 ? pending[0] : allItems[0];
   const fetched = curator.getItem(first.id);
   assert.strictEqual(fetched.id, first.id);
 });

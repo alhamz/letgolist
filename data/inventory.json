@@ -1,22 +1,23 @@
 {
   "schema_version": "1.0.0",
-  "last_updated": "2026-11-13T20:10:10.754Z",
+  "last_updated": "2026-11-17T00:07:31.264Z",
   "summary": {
     "total_items": 30,
-    "active_listings": 0,
+    "active_listings": 24,
+    "in_use_items": 1,
     "sidelined_items": 0,
-    "sold_items": 0,
-    "total_estimated_value": 0,
-    "circular_ewaste_diverted_kg": 94.2
+    "sold_items": 5,
+    "total_estimated_value": 4210,
+    "circular_ewaste_diverted_kg": 130.8
   },
   "items": [
     {
       "id": "carseats-highback-booster",
       "sku": "LGL-CAR-HIGHBACK-659",
-      "title": "Highback Booster Car Seat",
-      "category": "Car Seats & Baby Gear",
-      "brand": "Cosco / Safety 1st",
-      "model": "Booster Seat",
+      "title": "Highback Booster Child Car Seat",
+      "category": "Baby & Child Gear",
+      "brand": "Universal / Graco",
+      "model": "Highback Booster Seat",
       "condition": "good",
       "location": {
         "public_region": {
@@ -31,8 +32,7 @@
         }
       },
       "specs": {
-        "inferred_from_path": "CarSeats\\HighbackBooster",
-        "media_count": 4
+        "fulfillment": "Sold / completed hand-off to buyer."
       },
       "clearance_identifiers": {
         "tokenized_tags": [],
@@ -40,16 +40,16 @@
       },
       "pricing": {
         "currency": "CAD",
-        "fast_liquidation": 0,
-        "fair_market": 0,
-        "optimistic_anchor": 0,
-        "active_price": 0
+        "fast_liquidation": 25,
+        "fair_market": 35,
+        "optimistic_anchor": 50,
+        "active_price": 35
       },
       "circular_metrics": {
         "estimated_weight_kg": 8.5,
         "refurb_status": "ready_for_curation"
       },
-      "status": "draft",
+      "status": "sold",
       "media": {
         "primary_image": "Sales/CarSeats/HighbackBooster/IMG_20241209_104144_3306864646933892040.jpg",
         "gallery": [
@@ -76,13 +76,13 @@
         }
       },
       "created_at": "2026-11-10T20:13:34.366Z",
-      "updated_at": "2026-11-10T20:13:34.366Z"
+      "updated_at": "2026-11-16T23:38:23.439Z"
     },
     {
       "id": "carseats-evenflotriumph",
       "sku": "LGL-CAR-EVENFLOT-707",
-      "title": "Evenflo Triumph Convertible Car Seat",
-      "category": "Car Seats & Baby Gear",
+      "title": "Evenflo Triumph Convertible Child & Infant Car Seat",
+      "category": "Baby & Child Gear",
       "brand": "Evenflo",
       "model": "Triumph Convertible",
       "condition": "good",
@@ -99,8 +99,7 @@
         }
       },
       "specs": {
-        "inferred_from_path": "CarSeats\\EvenFloTriumph",
-        "media_count": 6
+        "fulfillment": "Sold / completed hand-off to buyer."
       },
       "clearance_identifiers": {
         "tokenized_tags": [],
@@ -108,16 +107,16 @@
       },
       "pricing": {
         "currency": "CAD",
-        "fast_liquidation": 0,
-        "fair_market": 0,
-        "optimistic_anchor": 0,
-        "active_price": 0
+        "fast_liquidation": 45,
+        "fair_market": 65,
+        "optimistic_anchor": 85,
+        "active_price": 65
       },
       "circular_metrics": {
         "estimated_weight_kg": 8.5,
         "refurb_status": "ready_for_curation"
       },
-      "status": "draft",
+      "status": "sold",
       "media": {
         "primary_image": "Sales/CarSeats/EvenFloTriumph/IMG_20250405_121702_4942873400938140852.jpg",
         "gallery": [
@@ -146,14 +145,14 @@
         }
       },
       "created_at": "2026-11-10T20:13:34.367Z",
-      "updated_at": "2026-11-10T20:13:34.367Z"
+      "updated_at": "2026-11-16T23:38:23.439Z"
     },
     {
       "id": "carseats-harmonycommanderdeluxe",
       "sku": "LGL-CAR-HARMONYC-231",
       "title": "Harmony Commander Deluxe Youth Booster Seat",
-      "category": "Car Seats & Baby Gear",
-      "brand": "Harmony",
+      "category": "Baby & Child Gear",
+      "brand": "Harmony Juvenile Products",
       "model": "Commander Deluxe",
       "condition": "good",
       "location": {
@@ -169,8 +168,7 @@
         }
       },
       "specs": {
-        "inferred_from_path": "CarSeats\\HarmonyCommanderDeluxe",
-        "media_count": 3
+        "fulfillment": "Sold / completed hand-off to buyer."
       },
       "clearance_identifiers": {
         "tokenized_tags": [],
@@ -178,16 +176,16 @@
       },
       "pricing": {
         "currency": "CAD",
-        "fast_liquidation": 0,
-        "fair_market": 0,
-        "optimistic_anchor": 0,
-        "active_price": 0
+        "fast_liquidation": 25,
+        "fair_market": 35,
+        "optimistic_anchor": 45,
+        "active_price": 35
       },
       "circular_metrics": {
         "estimated_weight_kg": 8.5,
         "refurb_status": "ready_for_curation"
       },
-      "status": "draft",
+      "status": "sold",
       "media": {
         "primary_image": "Sales/CarSeats/HarmonyCommanderDeluxe/IMG_20260506_182931_8560424541413318394.jpg",
         "gallery": [
@@ -213,22 +211,22 @@
         }
       },
       "created_at": "2026-11-10T20:13:34.368Z",
-      "updated_at": "2026-11-10T20:13:34.368Z"
+      "updated_at": "2026-11-16T23:38:23.439Z"
     },
     {
       "id": "dock-dell-wd15",
       "sku": "LGL-DOC-DELLWD15-436",
-      "title": "Dell WD15 K17A USB-C Docking Station with Power Supply",
+      "title": "Dell WD15 K17A USB-C Docking Station with 130W Power Supply",
       "category": "Docks",
       "brand": "Dell",
-      "model": "WD15 USB-C",
-      "condition": "good",
+      "model": "WD15 USB-C (K17A)",
+      "condition": "very_good",
       "location": {
         "public_region": {
           "country": "CA",
           "region": "ON",
-          "city": "Ottawa",
-          "postal_area": "K1A area"
+          "city": "Milton",
+          "postal_area": "L9T area"
         },
         "internal_sidelining": {
           "zone": "Office",
@@ -236,8 +234,13 @@
         }
       },
       "specs": {
-        "inferred_from_path": "Dock\\Dell\\WD15",
-        "media_count": 2
+        "video_outputs": "1x HDMI, 1x Mini-DisplayPort, 1x VGA",
+        "usb_ports": "3x USB 3.0 (1x PowerShare), 2x USB 2.0",
+        "networking": "1x Gigabit Ethernet (RJ-45)",
+        "audio": "1x 3.5mm Headset Combo Jack, 1x Line-Out",
+        "power_adapter": "130W OEM Dell AC Power Supply (Included)",
+        "tested_status": "All display outputs, USB ports, and Ethernet tested operational",
+        "fulfillment": "Local pickup at central community landmark in Milton (L9T area) or buyer-paid tracked shipping (Canada-wide & International)"
       },
       "clearance_identifiers": {
         "tokenized_tags": [],
@@ -245,16 +248,16 @@
       },
       "pricing": {
         "currency": "CAD",
-        "fast_liquidation": 0,
-        "fair_market": 0,
-        "optimistic_anchor": 0,
-        "active_price": 0
+        "fast_liquidation": 35,
+        "fair_market": 50,
+        "optimistic_anchor": 65,
+        "active_price": 50
       },
       "circular_metrics": {
         "estimated_weight_kg": 1.2,
-        "refurb_status": "ready_for_curation"
+        "refurb_status": "curated_ready_for_sale"
       },
-      "status": "draft",
+      "status": "active",
       "media": {
         "primary_image": "Sales/Dock/Dell/WD15/IMG_20260520_123736_1502649380157587165.jpg",
         "gallery": [
@@ -264,22 +267,43 @@
       },
       "syndication": {
         "facebook": {
-          "title": "Dell WD15 K17A USB-C Docking Station with Power Supply",
-          "description": "",
-          "tags": []
+          "title": "Dell WD15 K17A USB-C Docking Station with 130W Power Supply",
+          "description": "Dell WD15 K17A USB-C Docking Station with 130W Power Supply\n\nCondition: VERY GOOD\n\nKey Specs & Details:\n• Video Outputs: 1x HDMI, 1x Mini-DisplayPort, 1x VGA\n• USB Ports: 3x USB 3.0 (1x PowerShare), 2x USB 2.0\n• Networking: 1x Gigabit Ethernet (RJ-45)\n• Audio: 1x 3.5mm Headset Combo Jack, 1x Line-Out\n• Power Adapter: 130W OEM Dell AC Power Supply (Included)\n• Tested Status: All display outputs, USB ports, and Ethernet tested operational\n\nPickup Location: Public community landmark in Milton (L9T area).\nShipping: Tracked Canada-wide & International shipping available (buyer pays shipping).\nPayment: Cash or Interac e-Transfer upon inspection.",
+          "tags": [
+            "Docks",
+            "Dell",
+            "WD15 USB-C (K17A)",
+            "laptop dock",
+            "usb-c dock"
+          ]
         },
         "kijiji": {
-          "title": "Dell WD15 K17A USB-C Docking Station with Power Supply",
-          "description": "",
-          "tags": []
+          "title": "Dell WD15 K17A USB-C Docking Station with 130W Power Supply - Milton (L9T area)",
+          "description": "For sale: Dell WD15 K17A USB-C Docking Station with 130W Power Supply in very good condition.\n\nSpecifications:\n• Video Outputs: 1x HDMI, 1x Mini-DisplayPort, 1x VGA\n• USB Ports: 3x USB 3.0 (1x PowerShare), 2x USB 2.0\n• Networking: 1x Gigabit Ethernet (RJ-45)\n• Power Adapter: 130W OEM Dell AC Power Supply (Included)\n• Tested Status: All display outputs, USB ports, and Ethernet tested operational\n\nLocation: Safe public meeting at a central community landmark in Milton (L9T area).\nShipping: Tracked shipping across Canada and internationally available at buyer's cost.\nContact for any questions or to arrange hand-off.",
+          "tags": [
+            "Docks",
+            "Dell",
+            "local pickup",
+            "shipping available",
+            "classifieds"
+          ]
         },
         "ebay": {
-          "title": "Dell WD15 K17A USB-C Docking Station with Power Supply",
-          "description": ""
+          "title": "Dell WD15 K17A USB-C Docking Station 130W Power Adapter Tested",
+          "description": "Item: Dell WD15 K17A USB-C Docking Station with 130W Power Supply\nBrand: Dell\nModel: WD15 USB-C (K17A)\nCondition: very_good\n\nSpecifications:\n1x HDMI, 1x Mini-DisplayPort, 1x VGA, 3x USB 3.0, 2x USB 2.0, Gigabit Ethernet, 130W OEM Dell AC power supply included.\n\nShipping: Worldwide / North America tracked shipping available.",
+          "shipping_weight_kg": 1.2
         }
       },
       "created_at": "2026-11-10T20:13:34.369Z",
-      "updated_at": "2026-11-10T20:13:34.369Z"
+      "updated_at": "2026-11-16T22:12:44.115Z",
+      "related_items": [
+        "latitutde-1",
+        "latitutde-2",
+        "latitutde-3",
+        "latitutde-4",
+        "latitutde-5",
+        "latitutde-6"
+      ]
     },
     {
       "id": "dock-dell-wd19s",
@@ -288,22 +312,26 @@
       "category": "Docks",
       "brand": "Dell",
       "model": "WD19S Modular USB-C",
-      "condition": "good",
+      "condition": "very_good",
       "location": {
         "public_region": {
           "country": "CA",
           "region": "ON",
-          "city": "Ottawa",
-          "postal_area": "K1A area"
+          "city": "Milton",
+          "postal_area": "L9T area"
         },
         "internal_sidelining": {
           "zone": "Office",
-          "shelf_or_bin": "Dock Bin #1"
+          "shelf_or_bin": "Operator Desk Workstation (In Active Daily Use)"
         }
       },
       "specs": {
-        "inferred_from_path": "Dock\\Dell\\WD19S",
-        "media_count": 2
+        "video_outputs": "2x DisplayPort 1.4, 1x HDMI 2.0b, 1x USB-C Multifunction DisplayPort",
+        "usb_ports": "3x USB 3.1 Gen 1 Type-A, 2x USB 3.1 Gen 2 Type-C",
+        "power_delivery": "Up to 130W Dell ExpressCharge / 90W standard USB-PD",
+        "power_adapter": "130W OEM Dell AC Adapter",
+        "internal_deployment": "In active daily use by operator on desk workstation",
+        "availability_note": "Currently unavailable / dormant in inventory"
       },
       "clearance_identifiers": {
         "tokenized_tags": [],
@@ -311,16 +339,16 @@
       },
       "pricing": {
         "currency": "CAD",
-        "fast_liquidation": 0,
-        "fair_market": 0,
-        "optimistic_anchor": 0,
+        "fast_liquidation": 65,
+        "fair_market": 85,
+        "optimistic_anchor": 110,
         "active_price": 0
       },
       "circular_metrics": {
         "estimated_weight_kg": 1.2,
-        "refurb_status": "ready_for_curation"
+        "refurb_status": "in_active_daily_use"
       },
-      "status": "draft",
+      "status": "in_use",
       "media": {
         "primary_image": "Sales/Dock/Dell/WD19S/IMG_20260520_123908_4653378551044768019.jpg",
         "gallery": [
@@ -330,37 +358,38 @@
       },
       "syndication": {
         "facebook": {
-          "title": "Dell WD19S 130W/180W USB-C Modular Docking Station",
-          "description": "",
+          "title": "Dell WD19S 130W/180W USB-C Modular Docking Station [UNAVAILABLE - IN USE]",
+          "description": "This item is in active daily personal use and is not currently available for sale.",
           "tags": []
         },
         "kijiji": {
-          "title": "Dell WD19S 130W/180W USB-C Modular Docking Station",
-          "description": "",
+          "title": "Dell WD19S 130W/180W USB-C Modular Docking Station [UNAVAILABLE - IN USE]",
+          "description": "This item is in active daily personal use and is not currently available for sale.",
           "tags": []
         },
         "ebay": {
-          "title": "Dell WD19S 130W/180W USB-C Modular Docking Station",
-          "description": ""
+          "title": "Dell WD19S 130W/180W USB-C Modular Docking Station [UNAVAILABLE - IN USE]",
+          "description": "Currently unavailable.",
+          "shipping_weight_kg": 0
         }
       },
       "created_at": "2026-11-10T20:13:34.370Z",
-      "updated_at": "2026-11-10T20:13:34.370Z"
+      "updated_at": "2026-11-14T00:53:55.794Z"
     },
     {
       "id": "firewall-dell-tz300w",
       "sku": "LGL-FIR-DELLTZ30-807",
-      "title": "SonicWall TZ300W Wireless-AC Security Firewall",
-      "category": "Firewalls & Security",
+      "title": "Dell / SonicWall TZ300W Wireless-AC Security Firewall Appliance (Gigabit Router)",
+      "category": "Networking",
       "brand": "SonicWall (Dell)",
-      "model": "TZ300W Wireless-AC",
+      "model": "TZ300W Wireless-AC (APL28-0B5)",
       "condition": "good",
       "location": {
         "public_region": {
           "country": "CA",
           "region": "ON",
-          "city": "Ottawa",
-          "postal_area": "K1A area"
+          "city": "Milton",
+          "postal_area": "L9T area"
         },
         "internal_sidelining": {
           "zone": "Office",
@@ -368,8 +397,14 @@
         }
       },
       "specs": {
-        "inferred_from_path": "Firewall\\Dell TZ300W",
-        "media_count": 3
+        "ports": "5x Gigabit Ethernet (10/100/1000 Mbps) RJ-45 ports (X0 LAN, X1 WAN, X2-X4 configurable), 1x dedicated RJ-45 Console port",
+        "wireless": "Integrated 802.11a/b/g/n/ac dual-band high-speed wireless with 3x RP-SMA antenna connectors",
+        "throughput": "Enterprise security inspection throughput up to 750 Mbps; 300 Mbps IPSec VPN throughput",
+        "vpn_support": "Built-in IPSec and SSL VPN support for secure remote site-to-site and client connectivity",
+        "power_adapter": "Original Dell / Sunny 12V 2.0A 24W AC power supply brick and AC wall cord included",
+        "antenna": "Detachable high-gain RP-SMA omnidirectional dipole antenna included",
+        "reset_status": "Factory reset to default settings, management credentials restored to default",
+        "fulfillment": "Local pickup at central community landmark in Milton (L9T area) or buyer-paid tracked shipping (Canada-wide & International)"
       },
       "clearance_identifiers": {
         "tokenized_tags": [],
@@ -377,16 +412,16 @@
       },
       "pricing": {
         "currency": "CAD",
-        "fast_liquidation": 0,
-        "fair_market": 0,
-        "optimistic_anchor": 0,
-        "active_price": 0
+        "fast_liquidation": 50,
+        "fair_market": 75,
+        "optimistic_anchor": 100,
+        "active_price": 75
       },
       "circular_metrics": {
-        "estimated_weight_kg": 1.8,
-        "refurb_status": "ready_for_curation"
+        "estimated_weight_kg": 1.1,
+        "refurb_status": "curated_ready_for_sale"
       },
-      "status": "draft",
+      "status": "active",
       "media": {
         "primary_image": "Sales/Firewall/Dell TZ300W/IMG_20260520_150228_8319951728072129432.jpg",
         "gallery": [
@@ -397,37 +432,57 @@
       },
       "syndication": {
         "facebook": {
-          "title": "SonicWall TZ300W Wireless-AC Security Firewall",
-          "description": "",
-          "tags": []
+          "title": "Dell / SonicWall TZ300W Wireless-AC Gigabit Firewall & Router (With Power Supply & Antenna)",
+          "description": "Dell / SonicWall TZ300W Enterprise Security Firewall & Wireless-AC Router\n\nCondition: GOOD / TESTED\n\nKey Specs:\n• 5x Gigabit Ethernet (10/100/1000) Ports + Console\n• Integrated Dual-Band 802.11ac Wi-Fi\n• 750 Mbps Firewall / 300 Mbps VPN Throughput\n• Advanced Stateful Packet Inspection & IPSec/SSL VPN\n• Includes OEM 12V 2.0A Power Adapter + RP-SMA Antenna\n• Factory reset and ready for deployment\n\nPickup Location: Central public community landmark in Milton (L9T area).\nShipping: Tracked Canada-wide & International shipping available (buyer pays shipping).\nPayment: Cash or Interac e-Transfer upon inspection.",
+          "tags": [
+            "SonicWall",
+            "TZ300W",
+            "Firewall",
+            "Gigabit Router",
+            "Networking",
+            "VPN"
+          ]
         },
         "kijiji": {
-          "title": "SonicWall TZ300W Wireless-AC Security Firewall",
-          "description": "",
-          "tags": []
+          "title": "Dell SonicWall TZ300W Wireless-AC Gigabit Firewall Router - Milton (L9T area)",
+          "description": "For sale: Dell SonicWall TZ300W enterprise security firewall and wireless router.\n\n• 5x Gigabit Ethernet RJ-45 ports\n• High-speed 802.11ac wireless\n• Stateful inspection and VPN support\n• Includes original 12V power supply and antenna\n• Factory reset\n\nLocation: Safe public meeting at a central community landmark in Milton (L9T area).\nShipping: Tracked shipping across Canada and internationally available at buyer's cost.",
+          "tags": [
+            "SonicWall",
+            "Firewall",
+            "Gigabit",
+            "Router",
+            "Milton",
+            "local pickup",
+            "shipping available"
+          ]
         },
         "ebay": {
-          "title": "SonicWall TZ300W Wireless-AC Security Firewall",
-          "description": ""
+          "title": "Dell SonicWall TZ300W Wireless-AC Gigabit Firewall APL28-0B5 Tested w/ AC Antenna",
+          "description": "Item: Dell SonicWall TZ300W Wireless-AC Security Firewall\nModel: APL28-0B5\nCondition: good\nTested and working. Includes OEM power supply and antenna. Factory reset.",
+          "shipping_weight_kg": 1.6
         }
       },
       "created_at": "2026-11-10T20:13:34.371Z",
-      "updated_at": "2026-11-10T20:13:34.371Z"
+      "updated_at": "2026-11-16T23:27:48.809Z",
+      "related_items": [
+        "networking-powerline-adapter",
+        "networking-tp-link-poe-injector"
+      ]
     },
     {
       "id": "ipad-6th-gen-0",
       "sku": "LGL-TAB-6THGEN0-595",
-      "title": "Apple iPad 6th Gen 9.7\" Wi-Fi (Unit 1)",
+      "title": "Apple iPad 6th Gen 9.7\" 32GB Wi-Fi (Unit 1)",
       "category": "Tablets",
       "brand": "Apple",
-      "model": "iPad (6th Generation) Unit 1",
-      "condition": "good",
+      "model": "iPad (6th Generation, A1893)",
+      "condition": "very_good",
       "location": {
         "public_region": {
           "country": "CA",
           "region": "ON",
-          "city": "Ottawa",
-          "postal_area": "K1A area"
+          "city": "Milton",
+          "postal_area": "L9T area"
         },
         "internal_sidelining": {
           "zone": "Office",
@@ -435,8 +490,15 @@
         }
       },
       "specs": {
-        "inferred_from_path": "iPad\\6th Gen\\#0",
-        "media_count": 5
+        "display": "9.7\" Retina Display (2048 x 1536 resolution, 264 ppi)",
+        "storage": "32 GB",
+        "chip": "Apple A10 Fusion 64-bit with M10 motion coprocessor",
+        "cameras": "8MP rear camera (1080p HD video), 1.2MP FaceTime HD front camera",
+        "security": "Touch ID fingerprint sensor in Home button",
+        "pencil_support": "Apple Pencil (1st generation) supported",
+        "battery_condition": "Holds charge well; tested and verified operational",
+        "reset_status": "iCloud unlocked, Activation Lock removed, factory reset to setup screen",
+        "fulfillment": "Local pickup at central community landmark in Milton (L9T area) or buyer-paid tracked shipping (Canada-wide & International)"
       },
       "clearance_identifiers": {
         "tokenized_tags": [],
@@ -444,16 +506,16 @@
       },
       "pricing": {
         "currency": "CAD",
-        "fast_liquidation": 0,
-        "fair_market": 0,
-        "optimistic_anchor": 0,
-        "active_price": 0
+        "fast_liquidation": 120,
+        "fair_market": 150,
+        "optimistic_anchor": 180,
+        "active_price": 150
       },
       "circular_metrics": {
-        "estimated_weight_kg": 0.5,
-        "refurb_status": "ready_for_curation"
+        "estimated_weight_kg": 0.47,
+        "refurb_status": "curated_ready_for_sale"
       },
-      "status": "draft",
+      "status": "active",
       "media": {
         "primary_image": "Sales/iPad/6th Gen/#0/IMG_20250112_091738_8744549741361900931.jpg",
         "gallery": [
@@ -466,37 +528,55 @@
       },
       "syndication": {
         "facebook": {
-          "title": "Apple iPad 6th Gen 9.7\" Wi-Fi (Unit 1)",
-          "description": "",
-          "tags": []
+          "title": "Apple iPad 6th Gen 9.7\" 32GB Wi-Fi (Unit 1)",
+          "description": "Apple iPad 6th Gen 9.7\" 32GB Wi-Fi\n\nCondition: VERY GOOD\n\nKey Specs:\n• 9.7\" Retina Display (2048 x 1536)\n• 32GB Storage\n• Apple A10 Fusion Chip\n• Touch ID & Apple Pencil (1st Gen) Support\n• iCloud unlocked and factory reset ready for new owner\n\nPickup Location: Public community landmark in Milton (L9T area).\nShipping: Tracked Canada-wide & International shipping available (buyer pays shipping).\nPayment: Cash or Interac e-Transfer upon inspection.",
+          "tags": [
+            "iPad",
+            "Apple",
+            "iPad 6th Gen",
+            "tablets",
+            "apple pencil"
+          ]
         },
         "kijiji": {
-          "title": "Apple iPad 6th Gen 9.7\" Wi-Fi (Unit 1)",
-          "description": "",
-          "tags": []
+          "title": "Apple iPad 6th Gen 9.7\" 32GB Wi-Fi - Milton (L9T area)",
+          "description": "For sale: Apple iPad 6th Gen 9.7\" 32GB Wi-Fi in very good condition.\n\nSpecs:\n• 9.7\" Retina Display\n• 32GB Storage\n• Touch ID, Apple Pencil 1 support\n• Factory reset and fully tested\n\nLocation: Safe public meeting at a central community landmark in Milton (L9T area).\nShipping: Tracked shipping across Canada and internationally available at buyer's cost.",
+          "tags": [
+            "iPad",
+            "Apple",
+            "local pickup",
+            "shipping available",
+            "classifieds"
+          ]
         },
         "ebay": {
-          "title": "Apple iPad 6th Gen 9.7\" Wi-Fi (Unit 1)",
-          "description": ""
+          "title": "Apple iPad 6th Gen 9.7in 32GB Wi-Fi A1893 Clean Tested",
+          "description": "Item: Apple iPad 6th Gen 9.7\" 32GB Wi-Fi\nBrand: Apple\nModel: A1893\nCondition: very_good\nFactory reset, iCloud signed out, fully functional.",
+          "shipping_weight_kg": 0.6
         }
       },
       "created_at": "2026-11-10T20:13:34.372Z",
-      "updated_at": "2026-11-10T20:13:34.372Z"
+      "updated_at": "2026-11-16T21:32:04.477Z",
+      "related_items": [
+        "ipad-accessories-logitechcase",
+        "ipad-accessories-pinkcase",
+        "ipad-accessories-zagg-keyboard-case"
+      ]
     },
     {
       "id": "ipad-6th-gen-1",
       "sku": "LGL-TAB-6THGEN1-533",
-      "title": "Apple iPad 6th Gen 9.7\" Wi-Fi (Unit 2)",
+      "title": "Apple iPad 6th Gen 9.7\" 32GB Wi-Fi (Unit 2)",
       "category": "Tablets",
       "brand": "Apple",
-      "model": "iPad (6th Generation) Unit 2",
-      "condition": "good",
+      "model": "iPad (6th Generation, A1893)",
+      "condition": "very_good",
       "location": {
         "public_region": {
           "country": "CA",
           "region": "ON",
-          "city": "Ottawa",
-          "postal_area": "K1A area"
+          "city": "Milton",
+          "postal_area": "L9T area"
         },
         "internal_sidelining": {
           "zone": "Office",
@@ -504,8 +584,15 @@
         }
       },
       "specs": {
-        "inferred_from_path": "iPad\\6th Gen\\#1",
-        "media_count": 3
+        "display": "9.7\" Retina Display (2048 x 1536 resolution, 264 ppi)",
+        "storage": "32 GB",
+        "chip": "Apple A10 Fusion 64-bit with M10 motion coprocessor",
+        "cameras": "8MP rear camera (1080p HD video), 1.2MP FaceTime HD front camera",
+        "security": "Touch ID fingerprint sensor in Home button",
+        "pencil_support": "Apple Pencil (1st generation) supported",
+        "battery_condition": "Holds charge well; tested and verified operational",
+        "reset_status": "iCloud unlocked, Activation Lock removed, factory reset to setup screen",
+        "fulfillment": "Local pickup at central community landmark in Milton (L9T area) or buyer-paid tracked shipping (Canada-wide & International)"
       },
       "clearance_identifiers": {
         "tokenized_tags": [],
@@ -513,16 +600,16 @@
       },
       "pricing": {
         "currency": "CAD",
-        "fast_liquidation": 0,
-        "fair_market": 0,
-        "optimistic_anchor": 0,
-        "active_price": 0
+        "fast_liquidation": 120,
+        "fair_market": 150,
+        "optimistic_anchor": 180,
+        "active_price": 150
       },
       "circular_metrics": {
-        "estimated_weight_kg": 0.5,
-        "refurb_status": "ready_for_curation"
+        "estimated_weight_kg": 0.47,
+        "refurb_status": "curated_ready_for_sale"
       },
-      "status": "draft",
+      "status": "active",
       "media": {
         "primary_image": "Sales/iPad/6th Gen/#1/IMG_20260506_195959_8064272507909561324.jpg",
         "gallery": [
@@ -533,37 +620,55 @@
       },
       "syndication": {
         "facebook": {
-          "title": "Apple iPad 6th Gen 9.7\" Wi-Fi (Unit 2)",
-          "description": "",
-          "tags": []
+          "title": "Apple iPad 6th Gen 9.7\" 32GB Wi-Fi (Unit 2)",
+          "description": "Apple iPad 6th Gen 9.7\" 32GB Wi-Fi\n\nCondition: VERY GOOD\n\nKey Specs:\n• 9.7\" Retina Display (2048 x 1536)\n• 32GB Storage\n• Apple A10 Fusion Chip\n• Touch ID & Apple Pencil (1st Gen) Support\n• iCloud unlocked and factory reset ready for new owner\n\nPickup Location: Public community landmark in Milton (L9T area).\nShipping: Tracked Canada-wide & International shipping available (buyer pays shipping).\nPayment: Cash or Interac e-Transfer upon inspection.",
+          "tags": [
+            "iPad",
+            "Apple",
+            "iPad 6th Gen",
+            "tablets",
+            "apple pencil"
+          ]
         },
         "kijiji": {
-          "title": "Apple iPad 6th Gen 9.7\" Wi-Fi (Unit 2)",
-          "description": "",
-          "tags": []
+          "title": "Apple iPad 6th Gen 9.7\" 32GB Wi-Fi - Milton (L9T area)",
+          "description": "For sale: Apple iPad 6th Gen 9.7\" 32GB Wi-Fi in very good condition.\n\nSpecs:\n• 9.7\" Retina Display\n• 32GB Storage\n• Touch ID, Apple Pencil 1 support\n• Factory reset and fully tested\n\nLocation: Safe public meeting at a central community landmark in Milton (L9T area).\nShipping: Tracked shipping across Canada and internationally available at buyer's cost.",
+          "tags": [
+            "iPad",
+            "Apple",
+            "local pickup",
+            "shipping available",
+            "classifieds"
+          ]
         },
         "ebay": {
-          "title": "Apple iPad 6th Gen 9.7\" Wi-Fi (Unit 2)",
-          "description": ""
+          "title": "Apple iPad 6th Gen 9.7in 32GB Wi-Fi A1893 Clean Tested",
+          "description": "Item: Apple iPad 6th Gen 9.7\" 32GB Wi-Fi\nBrand: Apple\nModel: A1893\nCondition: very_good\nFactory reset, iCloud signed out, fully functional.",
+          "shipping_weight_kg": 0.6
         }
       },
       "created_at": "2026-11-10T20:13:34.373Z",
-      "updated_at": "2026-11-10T20:13:34.373Z"
+      "updated_at": "2026-11-16T21:32:04.478Z",
+      "related_items": [
+        "ipad-accessories-logitechcase",
+        "ipad-accessories-pinkcase",
+        "ipad-accessories-zagg-keyboard-case"
+      ]
     },
     {
       "id": "ipad-9th-gen-0",
       "sku": "LGL-TAB-9THGEN0-888",
-      "title": "Apple iPad 9th Gen 10.2\" Wi-Fi (Unit 1)",
+      "title": "Apple iPad 9th Gen 10.2\" 64GB Wi-Fi (Unit 1)",
       "category": "Tablets",
       "brand": "Apple",
-      "model": "iPad (9th Generation) Unit 1",
-      "condition": "good",
+      "model": "iPad (9th Generation, A2602)",
+      "condition": "very_good",
       "location": {
         "public_region": {
           "country": "CA",
           "region": "ON",
-          "city": "Ottawa",
-          "postal_area": "K1A area"
+          "city": "Milton",
+          "postal_area": "L9T area"
         },
         "internal_sidelining": {
           "zone": "Office",
@@ -571,8 +676,15 @@
         }
       },
       "specs": {
-        "inferred_from_path": "iPad\\9th Gen\\#0",
-        "media_count": 3
+        "display": "10.2\" Retina Display with True Tone (2160 x 1620 resolution, 500 nits)",
+        "storage": "64 GB",
+        "chip": "Apple A13 Bionic chip with Neural Engine",
+        "cameras": "12MP Ultra-Wide front camera with Center Stage, 8MP Wide rear camera",
+        "security": "Touch ID fingerprint sensor in Home button",
+        "accessories_support": "Apple Pencil (1st generation) & Smart Keyboard supported",
+        "battery_condition": "Excellent battery health; holds charge as expected",
+        "reset_status": "iCloud unlocked, Activation Lock removed, factory reset to setup screen",
+        "fulfillment": "Local pickup at central community landmark in Milton (L9T area) or buyer-paid tracked shipping (Canada-wide & International)"
       },
       "clearance_identifiers": {
         "tokenized_tags": [],
@@ -580,16 +692,16 @@
       },
       "pricing": {
         "currency": "CAD",
-        "fast_liquidation": 0,
-        "fair_market": 0,
-        "optimistic_anchor": 0,
-        "active_price": 0
+        "fast_liquidation": 230,
+        "fair_market": 280,
+        "optimistic_anchor": 330,
+        "active_price": 280
       },
       "circular_metrics": {
-        "estimated_weight_kg": 0.5,
-        "refurb_status": "ready_for_curation"
+        "estimated_weight_kg": 0.49,
+        "refurb_status": "curated_ready_for_sale"
       },
-      "status": "draft",
+      "status": "active",
       "media": {
         "primary_image": "Sales/iPad/9th Gen/#0/IMG_20260506_201458_8413933107600210504.jpg",
         "gallery": [
@@ -600,37 +712,56 @@
       },
       "syndication": {
         "facebook": {
-          "title": "Apple iPad 9th Gen 10.2\" Wi-Fi (Unit 1)",
-          "description": "",
-          "tags": []
+          "title": "Apple iPad 9th Gen 10.2\" 64GB Wi-Fi (Unit 1)",
+          "description": "Apple iPad 9th Gen 10.2\" 64GB Wi-Fi\n\nCondition: VERY GOOD / LIKE NEW\n\nKey Specs:\n• 10.2\" Retina Display with True Tone\n• 64GB Storage\n• Apple A13 Bionic Chip with Neural Engine\n• 12MP Ultra-Wide Front Camera with Center Stage\n• Touch ID, Apple Pencil 1 & Smart Keyboard Support\n• Latest iPadOS supported\n• Factory reset and iCloud unlocked\n\nPickup Location: Public community landmark in Milton (L9T area).\nShipping: Tracked Canada-wide & International shipping available (buyer pays shipping).\nPayment: Cash or Interac e-Transfer upon inspection.",
+          "tags": [
+            "iPad",
+            "Apple",
+            "iPad 9th Gen",
+            "Center Stage",
+            "tablets"
+          ]
         },
         "kijiji": {
-          "title": "Apple iPad 9th Gen 10.2\" Wi-Fi (Unit 1)",
-          "description": "",
-          "tags": []
+          "title": "Apple iPad 9th Gen 10.2\" 64GB Wi-Fi - Milton (L9T area)",
+          "description": "For sale: Apple iPad 9th Gen 10.2\" 64GB Wi-Fi in excellent condition.\n\nSpecs:\n• 10.2\" True Tone Retina Display\n• 64GB Storage\n• A13 Bionic chip\n• Center Stage 12MP camera\n• Clean iCloud, fully reset and ready\n\nLocation: Safe public meeting at a central community landmark in Milton (L9T area).\nShipping: Tracked shipping across Canada and internationally available at buyer's cost.",
+          "tags": [
+            "iPad",
+            "Apple",
+            "iPad 9",
+            "local pickup",
+            "shipping available",
+            "classifieds"
+          ]
         },
         "ebay": {
-          "title": "Apple iPad 9th Gen 10.2\" Wi-Fi (Unit 1)",
-          "description": ""
+          "title": "Apple iPad 9th Gen 10.2in 64GB Wi-Fi A2602 Clean Tested",
+          "description": "Item: Apple iPad 9th Gen 10.2\" 64GB Wi-Fi\nBrand: Apple\nModel: A2602\nCondition: very_good\nFactory reset, iCloud signed out, fully functional.",
+          "shipping_weight_kg": 0.65
         }
       },
       "created_at": "2026-11-10T20:13:34.374Z",
-      "updated_at": "2026-11-10T20:13:34.374Z"
+      "updated_at": "2026-11-16T21:32:04.478Z",
+      "related_items": [
+        "ipad-accessories-logitechcase",
+        "ipad-accessories-pinkcase",
+        "ipad-accessories-zagg-keyboard-case"
+      ]
     },
     {
       "id": "ipad-9th-gen-1",
       "sku": "LGL-TAB-9THGEN1-363",
-      "title": "Apple iPad 9th Gen 10.2\" Wi-Fi (Unit 2)",
+      "title": "Apple iPad 9th Gen 10.2\" 64GB Wi-Fi (Unit 2)",
       "category": "Tablets",
       "brand": "Apple",
-      "model": "iPad (9th Generation) Unit 2",
-      "condition": "good",
+      "model": "iPad (9th Generation, A2602)",
+      "condition": "very_good",
       "location": {
         "public_region": {
           "country": "CA",
           "region": "ON",
-          "city": "Ottawa",
-          "postal_area": "K1A area"
+          "city": "Milton",
+          "postal_area": "L9T area"
         },
         "internal_sidelining": {
           "zone": "Office",
@@ -638,8 +769,15 @@
         }
       },
       "specs": {
-        "inferred_from_path": "iPad\\9th Gen\\#1",
-        "media_count": 5
+        "display": "10.2\" Retina Display with True Tone (2160 x 1620 resolution, 500 nits)",
+        "storage": "64 GB",
+        "chip": "Apple A13 Bionic chip with Neural Engine",
+        "cameras": "12MP Ultra-Wide front camera with Center Stage, 8MP Wide rear camera",
+        "security": "Touch ID fingerprint sensor in Home button",
+        "accessories_support": "Apple Pencil (1st generation) & Smart Keyboard supported",
+        "battery_condition": "Excellent battery health; holds charge as expected",
+        "reset_status": "iCloud unlocked, Activation Lock removed, factory reset to setup screen",
+        "fulfillment": "Local pickup at central community landmark in Milton (L9T area) or buyer-paid tracked shipping (Canada-wide & International)"
       },
       "clearance_identifiers": {
         "tokenized_tags": [],
@@ -647,16 +785,16 @@
       },
       "pricing": {
         "currency": "CAD",
-        "fast_liquidation": 0,
-        "fair_market": 0,
-        "optimistic_anchor": 0,
-        "active_price": 0
+        "fast_liquidation": 230,
+        "fair_market": 280,
+        "optimistic_anchor": 330,
+        "active_price": 280
       },
       "circular_metrics": {
-        "estimated_weight_kg": 0.5,
-        "refurb_status": "ready_for_curation"
+        "estimated_weight_kg": 0.49,
+        "refurb_status": "curated_ready_for_sale"
       },
-      "status": "draft",
+      "status": "active",
       "media": {
         "primary_image": "Sales/iPad/9th Gen/#1/IMG_20260508_145217_7810072823912052889.jpg",
         "gallery": [
@@ -669,37 +807,56 @@
       },
       "syndication": {
         "facebook": {
-          "title": "Apple iPad 9th Gen 10.2\" Wi-Fi (Unit 2)",
-          "description": "",
-          "tags": []
+          "title": "Apple iPad 9th Gen 10.2\" 64GB Wi-Fi (Unit 2)",
+          "description": "Apple iPad 9th Gen 10.2\" 64GB Wi-Fi\n\nCondition: VERY GOOD / LIKE NEW\n\nKey Specs:\n• 10.2\" Retina Display with True Tone\n• 64GB Storage\n• Apple A13 Bionic Chip with Neural Engine\n• 12MP Ultra-Wide Front Camera with Center Stage\n• Touch ID, Apple Pencil 1 & Smart Keyboard Support\n• Latest iPadOS supported\n• Factory reset and iCloud unlocked\n\nPickup Location: Public community landmark in Milton (L9T area).\nShipping: Tracked Canada-wide & International shipping available (buyer pays shipping).\nPayment: Cash or Interac e-Transfer upon inspection.",
+          "tags": [
+            "iPad",
+            "Apple",
+            "iPad 9th Gen",
+            "Center Stage",
+            "tablets"
+          ]
         },
         "kijiji": {
-          "title": "Apple iPad 9th Gen 10.2\" Wi-Fi (Unit 2)",
-          "description": "",
-          "tags": []
+          "title": "Apple iPad 9th Gen 10.2\" 64GB Wi-Fi - Milton (L9T area)",
+          "description": "For sale: Apple iPad 9th Gen 10.2\" 64GB Wi-Fi in excellent condition.\n\nSpecs:\n• 10.2\" True Tone Retina Display\n• 64GB Storage\n• A13 Bionic chip\n• Center Stage 12MP camera\n• Clean iCloud, fully reset and ready\n\nLocation: Safe public meeting at a central community landmark in Milton (L9T area).\nShipping: Tracked shipping across Canada and internationally available at buyer's cost.",
+          "tags": [
+            "iPad",
+            "Apple",
+            "iPad 9",
+            "local pickup",
+            "shipping available",
+            "classifieds"
+          ]
         },
         "ebay": {
-          "title": "Apple iPad 9th Gen 10.2\" Wi-Fi (Unit 2)",
-          "description": ""
+          "title": "Apple iPad 9th Gen 10.2in 64GB Wi-Fi A2602 Clean Tested",
+          "description": "Item: Apple iPad 9th Gen 10.2\" 64GB Wi-Fi\nBrand: Apple\nModel: A2602\nCondition: very_good\nFactory reset, iCloud signed out, fully functional.",
+          "shipping_weight_kg": 0.65
         }
       },
       "created_at": "2026-11-10T20:13:34.375Z",
-      "updated_at": "2026-11-10T20:13:34.375Z"
+      "updated_at": "2026-11-16T21:32:04.478Z",
+      "related_items": [
+        "ipad-accessories-logitechcase",
+        "ipad-accessories-pinkcase",
+        "ipad-accessories-zagg-keyboard-case"
+      ]
     },
     {
       "id": "ipad-accessories-logitechcase",
       "sku": "LGL-PER-ACCESSOR-101",
-      "title": "Apple iPad Accessory - Accessories LogitechCase",
+      "title": "Logitech Folio Protective Case for Apple iPad",
       "category": "Peripherals & Accessories",
-      "brand": "Apple",
-      "model": "Accessories LogitechCase",
+      "brand": "Logitech",
+      "model": "Folio Protective Case",
       "condition": "good",
       "location": {
         "public_region": {
           "country": "CA",
           "region": "ON",
-          "city": "Ottawa",
-          "postal_area": "K1A area"
+          "city": "Milton",
+          "postal_area": "L9T area"
         },
         "internal_sidelining": {
           "zone": "Office",
@@ -707,8 +864,11 @@
         }
       },
       "specs": {
-        "inferred_from_path": "iPad\\Accessories\\LogitechCase",
-        "media_count": 3
+        "compatibility": "Fits 9.7\" / 10.2\" Apple iPads (6th Gen & 9th Gen compatible)",
+        "materials": "Durable water-repellent fabric with corner shock protection",
+        "features": "Multi-angle viewing kickstand, magnetic sleep/wake cover, stylus/pencil holder loop",
+        "condition_notes": "Clean, kickstand hinge firm, corners intact",
+        "fulfillment": "Local pickup at central community landmark in Milton (L9T area) or buyer-paid tracked shipping"
       },
       "clearance_identifiers": {
         "tokenized_tags": [],
@@ -716,16 +876,16 @@
       },
       "pricing": {
         "currency": "CAD",
-        "fast_liquidation": 0,
-        "fair_market": 0,
-        "optimistic_anchor": 0,
-        "active_price": 0
+        "fast_liquidation": 15,
+        "fair_market": 25,
+        "optimistic_anchor": 35,
+        "active_price": 25
       },
       "circular_metrics": {
-        "estimated_weight_kg": 0.5,
-        "refurb_status": "ready_for_curation"
+        "estimated_weight_kg": 0.28,
+        "refurb_status": "curated_ready_for_sale"
       },
-      "status": "draft",
+      "status": "active",
       "media": {
         "primary_image": "Sales/iPad/Accessories/LogitechCase/IMG_20250112_211152_666313881081039713.jpg",
         "gallery": [
@@ -736,37 +896,53 @@
       },
       "syndication": {
         "facebook": {
-          "title": "Apple iPad Accessory - Accessories LogitechCase",
-          "description": "",
-          "tags": []
+          "title": "Logitech Folio Protective Case for Apple iPad (9.7\" / 10.2\")",
+          "description": "Logitech Folio Protective Case for Apple iPad\n\nCondition: GOOD\n\nFeatures:\n• Multi-angle viewing kickstand\n• Magnetic smart cover with auto sleep/wake\n• Apple Pencil holder\n• Fits 9.7\" and 10.2\" iPads\n\nPickup: Central community landmark in Milton (L9T area) or shipping available.",
+          "tags": [
+            "Logitech",
+            "iPad Case",
+            "Apple Accessories"
+          ]
         },
         "kijiji": {
-          "title": "Apple iPad Accessory - Accessories LogitechCase",
-          "description": "",
-          "tags": []
+          "title": "Logitech Folio Protective Case for Apple iPad - Milton (L9T area)",
+          "description": "For sale: Logitech Folio Protective Case for Apple iPad.\nCompatible with 9.7\" & 10.2\" iPads. Multi-angle stand, clean condition.",
+          "tags": [
+            "iPad Case",
+            "Logitech",
+            "local pickup",
+            "Milton"
+          ]
         },
         "ebay": {
-          "title": "Apple iPad Accessory - Accessories LogitechCase",
-          "description": ""
+          "title": "Logitech Folio Protective Case for Apple iPad 9.7 10.2 Inch Clean",
+          "description": "Logitech Folio Protective Case for Apple iPad. Good working condition.",
+          "shipping_weight_kg": 0.35
         }
       },
       "created_at": "2026-11-10T20:13:34.375Z",
-      "updated_at": "2026-11-10T20:13:34.375Z"
+      "updated_at": "2026-11-16T21:32:04.478Z",
+      "related_items": [
+        "ipad-6th-gen-0",
+        "ipad-6th-gen-1",
+        "ipad-9th-gen-0",
+        "ipad-9th-gen-1"
+      ]
     },
     {
       "id": "ipad-accessories-pinkcase",
       "sku": "LGL-PER-ACCESSOR-702",
-      "title": "Apple iPad Accessory - Accessories PinkCase",
+      "title": "Shockproof Convertible Kickstand Kid's Case for Apple iPad (Pink)",
       "category": "Peripherals & Accessories",
-      "brand": "Apple",
-      "model": "Accessories PinkCase",
+      "brand": "KidProof",
+      "model": "Shockproof Convertible Handle Case",
       "condition": "good",
       "location": {
         "public_region": {
           "country": "CA",
           "region": "ON",
-          "city": "Ottawa",
-          "postal_area": "K1A area"
+          "city": "Milton",
+          "postal_area": "L9T area"
         },
         "internal_sidelining": {
           "zone": "Office",
@@ -774,8 +950,12 @@
         }
       },
       "specs": {
-        "inferred_from_path": "iPad\\Accessories\\PinkCase",
-        "media_count": 3
+        "compatibility": "Fits 9.7\" / 10.2\" Apple iPads (6th Gen & 9th Gen compatible)",
+        "color": "Bright Pink",
+        "material": "Lightweight, non-toxic high-impact EVA shockproof foam",
+        "features": "180-degree rotatable convertible grip handle & dual-angle kickstand, raised screen bumper",
+        "condition_notes": "Thoroughly sanitized, clean foam, handle rotates firmly",
+        "fulfillment": "Local pickup at central community landmark in Milton (L9T area) or buyer-paid tracked shipping"
       },
       "clearance_identifiers": {
         "tokenized_tags": [],
@@ -783,16 +963,16 @@
       },
       "pricing": {
         "currency": "CAD",
-        "fast_liquidation": 0,
-        "fair_market": 0,
-        "optimistic_anchor": 0,
-        "active_price": 0
+        "fast_liquidation": 10,
+        "fair_market": 15,
+        "optimistic_anchor": 20,
+        "active_price": 15
       },
       "circular_metrics": {
-        "estimated_weight_kg": 0.5,
-        "refurb_status": "ready_for_curation"
+        "estimated_weight_kg": 0.22,
+        "refurb_status": "curated_ready_for_sale"
       },
-      "status": "draft",
+      "status": "active",
       "media": {
         "primary_image": "Sales/iPad/Accessories/PinkCase/IMG_20260506_201910_2981808272183943933.jpg",
         "gallery": [
@@ -803,37 +983,53 @@
       },
       "syndication": {
         "facebook": {
-          "title": "Apple iPad Accessory - Accessories PinkCase",
-          "description": "",
-          "tags": []
+          "title": "Shockproof Kid's Handle Kickstand Case for iPad (Pink)",
+          "description": "Kid's Shockproof EVA Foam Kickstand Case for Apple iPad\n\nColor: Pink\nCondition: GOOD / CLEAN\n\nFeatures:\n• Heavy-duty drop protection\n• 180-degree rotatable handle that doubles as kickstand\n• Fits 9.7\" / 10.2\" iPads\n\nPickup: Milton (L9T area) or shipping available.",
+          "tags": [
+            "iPad Kid Case",
+            "Shockproof",
+            "Pink iPad Case"
+          ]
         },
         "kijiji": {
-          "title": "Apple iPad Accessory - Accessories PinkCase",
-          "description": "",
-          "tags": []
+          "title": "Shockproof Kid's Handle Kickstand Case for iPad (Pink) - Milton",
+          "description": "Kid-friendly heavy-duty foam case with carrying handle / kickstand for 9.7\" and 10.2\" iPads.",
+          "tags": [
+            "iPad Case",
+            "Kids",
+            "Pink",
+            "Milton"
+          ]
         },
         "ebay": {
-          "title": "Apple iPad Accessory - Accessories PinkCase",
-          "description": ""
+          "title": "Shockproof EVA Foam Kids Handle Kickstand Case Pink for Apple iPad",
+          "description": "Shockproof Kid-safe EVA Foam Case with handle and stand for Apple iPad.",
+          "shipping_weight_kg": 0.3
         }
       },
       "created_at": "2026-11-10T20:13:34.376Z",
-      "updated_at": "2026-11-10T20:13:34.376Z"
+      "updated_at": "2026-11-16T21:32:04.478Z",
+      "related_items": [
+        "ipad-6th-gen-0",
+        "ipad-6th-gen-1",
+        "ipad-9th-gen-0",
+        "ipad-9th-gen-1"
+      ]
     },
     {
       "id": "ipad-accessories-zagg-keyboard-case",
       "sku": "LGL-PER-ACCESSOR-172",
-      "title": "Apple iPad Accessory - Accessories ZAGG Keyboard Case",
+      "title": "ZAGG Bluetooth Wireless Keyboard & Rugged Case for Apple iPad",
       "category": "Peripherals & Accessories",
-      "brand": "Apple",
-      "model": "Accessories ZAGG Keyboard Case",
-      "condition": "good",
+      "brand": "ZAGG",
+      "model": "Rugged Book / Folio Wireless Keyboard Case",
+      "condition": "very_good",
       "location": {
         "public_region": {
           "country": "CA",
           "region": "ON",
-          "city": "Ottawa",
-          "postal_area": "K1A area"
+          "city": "Milton",
+          "postal_area": "L9T area"
         },
         "internal_sidelining": {
           "zone": "Office",
@@ -841,8 +1037,11 @@
         }
       },
       "specs": {
-        "inferred_from_path": "iPad\\Accessories\\ZAGG Keyboard Case",
-        "media_count": 4
+        "compatibility": "Apple iPad 9.7\" / 10.2\" (6th Gen & 9th Gen compatible)",
+        "keyboard_features": "Laptop-style tactile keys, multi-device Bluetooth pairing, rechargeable battery",
+        "modes": "4 use modes: Keyboard typing, Case protection, Video viewing, Reading book mode",
+        "condition_notes": "All keys tested and working, Bluetooth pairs immediately, charging verified",
+        "fulfillment": "Local pickup at central community landmark in Milton (L9T area) or buyer-paid tracked shipping"
       },
       "clearance_identifiers": {
         "tokenized_tags": [],
@@ -850,16 +1049,16 @@
       },
       "pricing": {
         "currency": "CAD",
-        "fast_liquidation": 0,
-        "fair_market": 0,
-        "optimistic_anchor": 0,
-        "active_price": 0
+        "fast_liquidation": 20,
+        "fair_market": 35,
+        "optimistic_anchor": 45,
+        "active_price": 35
       },
       "circular_metrics": {
-        "estimated_weight_kg": 0.5,
-        "refurb_status": "ready_for_curation"
+        "estimated_weight_kg": 0.52,
+        "refurb_status": "curated_ready_for_sale"
       },
-      "status": "draft",
+      "status": "active",
       "media": {
         "primary_image": "Sales/iPad/Accessories/ZAGG Keyboard Case/IMG_20260413_132953_5647617791864803855.jpg",
         "gallery": [
@@ -871,37 +1070,54 @@
       },
       "syndication": {
         "facebook": {
-          "title": "Apple iPad Accessory - Accessories ZAGG Keyboard Case",
-          "description": "",
-          "tags": []
+          "title": "ZAGG Bluetooth Wireless Keyboard & Protective Case for Apple iPad",
+          "description": "ZAGG Bluetooth Wireless Keyboard & Rugged Case for Apple iPad (9.7\" / 10.2\")\n\nCondition: VERY GOOD\n\nFeatures:\n• Tactile laptop-style keys\n• Bluetooth connectivity (tested & working)\n• Detachable rugged protective back case\n• 4 viewing modes\n\nPickup: Central community landmark in Milton (L9T area) or shipping available.",
+          "tags": [
+            "ZAGG",
+            "iPad Keyboard",
+            "Bluetooth Keyboard",
+            "iPad Case"
+          ]
         },
         "kijiji": {
-          "title": "Apple iPad Accessory - Accessories ZAGG Keyboard Case",
-          "description": "",
-          "tags": []
+          "title": "ZAGG Bluetooth Wireless Keyboard & Rugged Case for iPad - Milton",
+          "description": "For sale: ZAGG Bluetooth Keyboard & Case for Apple iPad. Tested and working cleanly.",
+          "tags": [
+            "ZAGG",
+            "Keyboard Case",
+            "iPad",
+            "Milton"
+          ]
         },
         "ebay": {
-          "title": "Apple iPad Accessory - Accessories ZAGG Keyboard Case",
-          "description": ""
+          "title": "ZAGG Rugged Bluetooth Wireless Keyboard Case for Apple iPad 9.7 10.2 Tested",
+          "description": "ZAGG Bluetooth Keyboard Case for Apple iPad. All keys and Bluetooth tested working.",
+          "shipping_weight_kg": 0.65
         }
       },
       "created_at": "2026-11-10T20:13:34.377Z",
-      "updated_at": "2026-11-10T20:13:34.377Z"
+      "updated_at": "2026-11-16T21:32:04.478Z",
+      "related_items": [
+        "ipad-6th-gen-0",
+        "ipad-6th-gen-1",
+        "ipad-9th-gen-0",
+        "ipad-9th-gen-1"
+      ]
     },
     {
       "id": "iphones-iphone11pro",
       "sku": "LGL-PHO-IPHONE11-412",
-      "title": "Apple iPhone 11 Pro",
+      "title": "Apple iPhone 11 Pro 64GB - Space Gray (Cracked Screen / Fully Functional)",
       "category": "Phones",
       "brand": "Apple",
-      "model": "iPhone 11 Pro",
-      "condition": "good",
+      "model": "iPhone 11 Pro (A2160 / A2215)",
+      "condition": "fair",
       "location": {
         "public_region": {
           "country": "CA",
           "region": "ON",
-          "city": "Ottawa",
-          "postal_area": "K1A area"
+          "city": "Milton",
+          "postal_area": "L9T area"
         },
         "internal_sidelining": {
           "zone": "Office",
@@ -909,8 +1125,16 @@
         }
       },
       "specs": {
-        "inferred_from_path": "iPhones\\iPhone11Pro",
-        "media_count": 6
+        "display": "5.8\" Super Retina XDR OLED (2436 x 1125, HDR, True Tone) - Front glass cracked (touch & OLED display fully operational)",
+        "storage": "64 GB",
+        "chip": "Apple A13 Bionic chip with third-generation Neural Engine",
+        "cameras": "Triple 12MP camera system (Ultra Wide, Wide, and Telephoto) with Night mode & 4K60 video",
+        "biometrics": "Face ID facial recognition",
+        "carrier": "Carrier Unlocked (compatible with all Canadian & International carriers)",
+        "battery_condition": "Good battery health; holds charge reliably",
+        "condition_notes": "Front glass is cracked as pictured. Touch digitizer and display remain 100% responsive. Ideal for glass/screen repair or use as-is with a tempered glass screen protector.",
+        "reset_status": "iCloud signed out, Activation Lock removed, factory reset to setup screen",
+        "fulfillment": "Local pickup at central community landmark in Milton (L9T area) or buyer-paid tracked shipping (Canada-wide & International)"
       },
       "clearance_identifiers": {
         "tokenized_tags": [],
@@ -918,16 +1142,16 @@
       },
       "pricing": {
         "currency": "CAD",
-        "fast_liquidation": 0,
-        "fair_market": 0,
-        "optimistic_anchor": 0,
-        "active_price": 0
+        "fast_liquidation": 130,
+        "fair_market": 175,
+        "optimistic_anchor": 210,
+        "active_price": 175
       },
       "circular_metrics": {
-        "estimated_weight_kg": 0.25,
-        "refurb_status": "ready_for_curation"
+        "estimated_weight_kg": 0.19,
+        "refurb_status": "curated_ready_for_sale"
       },
-      "status": "draft",
+      "status": "active",
       "media": {
         "primary_image": "Sales/iPhones/iPhone11Pro/IMG_20260504_144602_3209862757808086543.jpg",
         "gallery": [
@@ -941,37 +1165,56 @@
       },
       "syndication": {
         "facebook": {
-          "title": "Apple iPhone 11 Pro",
-          "description": "",
-          "tags": []
+          "title": "Apple iPhone 11 Pro 64GB Unlocked (Cracked Glass / Fully Works)",
+          "description": "Apple iPhone 11 Pro 64GB - Space Gray\n\nCondition: FAIR (Front glass is cracked; OLED display and touch digitizer are 100% functional and responsive. Great repair candidate or usable as-is).\n\nKey Specs:\n• 5.8\" Super Retina XDR OLED Display\n• 64GB Storage\n• A13 Bionic chip\n• Triple 12MP Pro camera system with 4K60 video & Night mode\n• Face ID fully functional\n• Carrier Unlocked\n• Clean iCloud, fully reset and ready for setup\n\nPickup Location: Central public community landmark in Milton (L9T area).\nShipping: Tracked Canada-wide & International shipping available (buyer pays shipping).\nPayment: Cash or Interac e-Transfer upon inspection.",
+          "tags": [
+            "iPhone",
+            "iPhone 11 Pro",
+            "Apple",
+            "Unlocked",
+            "Smartphones"
+          ]
         },
         "kijiji": {
-          "title": "Apple iPhone 11 Pro",
-          "description": "",
-          "tags": []
+          "title": "Apple iPhone 11 Pro 64GB Unlocked - Milton (L9T area)",
+          "description": "For sale: Apple iPhone 11 Pro 64GB Space Gray.\n\nNote on condition: Front screen glass has cracks as shown in photos. OLED panel and touch response work completely fine with zero dead spots. Face ID, cameras, and all functions verified working.\n\n• Unlocked for any carrier\n• Factory reset, clean iCloud\n• 64GB storage\n\nMeeting: Safe public meeting at a central community landmark in Milton (L9T area).\nShipping: Tracked shipping across Canada and internationally available at buyer's cost.",
+          "tags": [
+            "iPhone",
+            "iPhone 11 Pro",
+            "Apple",
+            "local pickup",
+            "shipping available",
+            "classifieds"
+          ]
         },
         "ebay": {
-          "title": "Apple iPhone 11 Pro",
-          "description": ""
+          "title": "Apple iPhone 11 Pro 64GB Space Gray Unlocked A2160 Cracked Glass Works",
+          "description": "Item: Apple iPhone 11 Pro 64GB Space Gray Unlocked\nCondition: fair (cracked front glass, fully operational display and touch digitizer)\nFace ID, cameras, speakers, and charging verified. Clean iCloud, factory reset.",
+          "shipping_weight_kg": 0.35
         }
       },
       "created_at": "2026-11-10T20:13:34.378Z",
-      "updated_at": "2026-11-10T20:13:34.378Z"
+      "updated_at": "2026-11-16T22:02:14.897Z",
+      "related_items": [
+        "iphones-iphone8plus",
+        "iphones-iphone7s",
+        "iphones-iphone6s"
+      ]
     },
     {
       "id": "iphones-iphone6s",
       "sku": "LGL-PHO-IPHONE6S-512",
-      "title": "Apple iPhone 6s",
+      "title": "Apple iPhone 6s 32GB - Space Gray (Unlocked)",
       "category": "Phones",
       "brand": "Apple",
-      "model": "iPhone 6s",
+      "model": "iPhone 6s (A1633 / A1688)",
       "condition": "good",
       "location": {
         "public_region": {
           "country": "CA",
           "region": "ON",
-          "city": "Ottawa",
-          "postal_area": "K1A area"
+          "city": "Milton",
+          "postal_area": "L9T area"
         },
         "internal_sidelining": {
           "zone": "Office",
@@ -979,8 +1222,16 @@
         }
       },
       "specs": {
-        "inferred_from_path": "iPhones\\iPhone6S",
-        "media_count": 2
+        "display": "4.7\" Retina HD Display with 3D Touch (1334 x 750 resolution)",
+        "storage": "32 GB",
+        "chip": "Apple A9 dual-core chip with M9 motion coprocessor",
+        "cameras": "12MP iSight rear camera with 4K video & 5MP FaceTime HD camera with Retina Flash",
+        "audio": "Integrated 3.5mm Headphone Jack",
+        "biometrics": "Touch ID fingerprint sensor",
+        "carrier": "Carrier Unlocked (works with all standard SIM cards)",
+        "battery_condition": "Good battery health; holds charge as expected for standard use",
+        "reset_status": "iCloud unlocked, Activation Lock removed, factory reset to setup screen",
+        "fulfillment": "Local pickup at central community landmark in Milton (L9T area) or buyer-paid tracked shipping (Canada-wide & International)"
       },
       "clearance_identifiers": {
         "tokenized_tags": [],
@@ -988,16 +1239,16 @@
       },
       "pricing": {
         "currency": "CAD",
-        "fast_liquidation": 0,
-        "fair_market": 0,
-        "optimistic_anchor": 0,
-        "active_price": 0
+        "fast_liquidation": 30,
+        "fair_market": 50,
+        "optimistic_anchor": 70,
+        "active_price": 50
       },
       "circular_metrics": {
-        "estimated_weight_kg": 0.25,
-        "refurb_status": "ready_for_curation"
+        "estimated_weight_kg": 0.14,
+        "refurb_status": "curated_ready_for_sale"
       },
-      "status": "draft",
+      "status": "active",
       "media": {
         "primary_image": "Sales/iPhones/iPhone6S/IMG_20260504_145052_7216121623655051677.jpg",
         "gallery": [
@@ -1007,37 +1258,56 @@
       },
       "syndication": {
         "facebook": {
-          "title": "Apple iPhone 6s",
-          "description": "",
-          "tags": []
+          "title": "Apple iPhone 6s 32GB Space Gray Unlocked (With 3.5mm Headphone Jack)",
+          "description": "Apple iPhone 6s 32GB - Space Gray\n\nCondition: GOOD\n\nKey Specs:\n• 4.7\" Retina HD Display with 3D Touch\n• 32GB Storage\n• 12MP Camera with 4K recording\n• 3.5mm Headphone Jack included\n• Touch ID fingerprint sensor\n• Carrier Unlocked\n• Clean iCloud, factory reset to setup screen\n\nPickup Location: Central public community landmark in Milton (L9T area).\nShipping: Tracked Canada-wide & International shipping available (buyer pays shipping).\nPayment: Cash or Interac e-Transfer upon inspection.",
+          "tags": [
+            "iPhone",
+            "iPhone 6s",
+            "Apple",
+            "Unlocked",
+            "Headphone Jack"
+          ]
         },
         "kijiji": {
-          "title": "Apple iPhone 6s",
-          "description": "",
-          "tags": []
+          "title": "Apple iPhone 6s 32GB Space Gray Unlocked - Milton (L9T area)",
+          "description": "For sale: Apple iPhone 6s 32GB Space Gray in good working condition.\n\n• Compact 4.7\" Retina display\n• Features standard 3.5mm headphone jack\n• Carrier unlocked\n• Clean iCloud, fully reset and ready to use\n\nLocation: Safe public meeting at a central community landmark in Milton (L9T area).\nShipping: Tracked shipping across Canada and internationally available at buyer's cost.",
+          "tags": [
+            "iPhone",
+            "iPhone 6s",
+            "Apple",
+            "local pickup",
+            "shipping available",
+            "classifieds"
+          ]
         },
         "ebay": {
-          "title": "Apple iPhone 6s",
-          "description": ""
+          "title": "Apple iPhone 6s 32GB Space Gray Unlocked A1633 Clean Tested",
+          "description": "Item: Apple iPhone 6s 32GB Space Gray Unlocked\nCondition: good\nFully tested and working. Touch ID, headphone jack, camera, and battery verified. Clean iCloud, factory reset.",
+          "shipping_weight_kg": 0.3
         }
       },
       "created_at": "2026-11-10T20:13:34.379Z",
-      "updated_at": "2026-11-10T20:13:34.379Z"
+      "updated_at": "2026-11-16T22:02:14.897Z",
+      "related_items": [
+        "iphones-iphone11pro",
+        "iphones-iphone8plus",
+        "iphones-iphone7s"
+      ]
     },
     {
       "id": "iphones-iphone7s",
       "sku": "LGL-PHO-IPHONE7S-421",
-      "title": "Apple iPhone 7",
+      "title": "Apple iPhone 7 32GB - Black (Unlocked)",
       "category": "Phones",
       "brand": "Apple",
-      "model": "iPhone 7",
+      "model": "iPhone 7 (A1660 / A1778)",
       "condition": "good",
       "location": {
         "public_region": {
           "country": "CA",
           "region": "ON",
-          "city": "Ottawa",
-          "postal_area": "K1A area"
+          "city": "Milton",
+          "postal_area": "L9T area"
         },
         "internal_sidelining": {
           "zone": "Office",
@@ -1045,8 +1315,15 @@
         }
       },
       "specs": {
-        "inferred_from_path": "iPhones\\iPhone7s",
-        "media_count": 3
+        "display": "4.7\" Retina HD Display with wide color gamut (1334 x 750 resolution)",
+        "storage": "32 GB",
+        "chip": "Apple A10 Fusion quad-core chip",
+        "cameras": "12MP rear camera with Optical Image Stabilization (OIS) & 7MP FaceTime HD front camera",
+        "biometrics": "Touch ID solid-state Home button with Taptic Engine",
+        "carrier": "Carrier Unlocked (works on all GSM/LTE networks)",
+        "battery_condition": "Good battery health; holds charge reliably for standard daily use",
+        "reset_status": "iCloud unlocked, Activation Lock removed, factory reset to setup screen",
+        "fulfillment": "Local pickup at central community landmark in Milton (L9T area) or buyer-paid tracked shipping (Canada-wide & International)"
       },
       "clearance_identifiers": {
         "tokenized_tags": [],
@@ -1054,16 +1331,16 @@
       },
       "pricing": {
         "currency": "CAD",
-        "fast_liquidation": 0,
-        "fair_market": 0,
-        "optimistic_anchor": 0,
-        "active_price": 0
+        "fast_liquidation": 45,
+        "fair_market": 70,
+        "optimistic_anchor": 90,
+        "active_price": 70
       },
       "circular_metrics": {
-        "estimated_weight_kg": 0.25,
-        "refurb_status": "ready_for_curation"
+        "estimated_weight_kg": 0.14,
+        "refurb_status": "curated_ready_for_sale"
       },
-      "status": "draft",
+      "status": "active",
       "media": {
         "primary_image": "Sales/iPhones/iPhone7s/IMG_20250112_065040_407507542888222463.jpg",
         "gallery": [
@@ -1074,37 +1351,56 @@
       },
       "syndication": {
         "facebook": {
-          "title": "Apple iPhone 7",
-          "description": "",
-          "tags": []
+          "title": "Apple iPhone 7 32GB Black Unlocked (Good Condition)",
+          "description": "Apple iPhone 7 32GB - Black\n\nCondition: GOOD\n\nKey Specs:\n• 4.7\" Retina HD Display\n• 32GB Storage\n• 12MP Camera with OIS & 4K video\n• Apple A10 Fusion Chip\n• Touch ID & Taptic Engine\n• Carrier Unlocked\n• Clean iCloud, factory reset to setup screen\n\nPickup Location: Central public community landmark in Milton (L9T area).\nShipping: Tracked Canada-wide & International shipping available (buyer pays shipping).\nPayment: Cash or Interac e-Transfer upon inspection.",
+          "tags": [
+            "iPhone",
+            "iPhone 7",
+            "Apple",
+            "Unlocked",
+            "Smartphones"
+          ]
         },
         "kijiji": {
-          "title": "Apple iPhone 7",
-          "description": "",
-          "tags": []
+          "title": "Apple iPhone 7 32GB Black Unlocked - Milton (L9T area)",
+          "description": "For sale: Apple iPhone 7 32GB Black in good working condition.\n\n• Compact 4.7\" Retina display\n• 12MP rear camera with stabilization\n• Carrier unlocked\n• Clean iCloud, fully reset and ready to use\n\nLocation: Safe public meeting at a central community landmark in Milton (L9T area).\nShipping: Tracked shipping across Canada and internationally available at buyer's cost.",
+          "tags": [
+            "iPhone",
+            "iPhone 7",
+            "Apple",
+            "local pickup",
+            "shipping available",
+            "classifieds"
+          ]
         },
         "ebay": {
-          "title": "Apple iPhone 7",
-          "description": ""
+          "title": "Apple iPhone 7 32GB Black Unlocked A1660 Clean Tested",
+          "description": "Item: Apple iPhone 7 32GB Black Unlocked\nCondition: good\nFully tested and working. Touch ID, camera, audio, and battery verified. Clean iCloud, factory reset.",
+          "shipping_weight_kg": 0.3
         }
       },
       "created_at": "2026-11-10T20:13:34.380Z",
-      "updated_at": "2026-11-10T20:13:34.380Z"
+      "updated_at": "2026-11-16T22:02:14.897Z",
+      "related_items": [
+        "iphones-iphone11pro",
+        "iphones-iphone8plus",
+        "iphones-iphone6s"
+      ]
     },
     {
       "id": "iphones-iphone8plus",
       "sku": "LGL-PHO-IPHONE8P-555",
-      "title": "Apple iPhone 8 Plus",
+      "title": "Apple iPhone 8 Plus 64GB - Space Gray (Unlocked)",
       "category": "Phones",
       "brand": "Apple",
-      "model": "iPhone 8 Plus",
-      "condition": "good",
+      "model": "iPhone 8 Plus (A1864 / A1897)",
+      "condition": "very_good",
       "location": {
         "public_region": {
           "country": "CA",
           "region": "ON",
-          "city": "Ottawa",
-          "postal_area": "K1A area"
+          "city": "Milton",
+          "postal_area": "L9T area"
         },
         "internal_sidelining": {
           "zone": "Office",
@@ -1112,8 +1408,16 @@
         }
       },
       "specs": {
-        "inferred_from_path": "iPhones\\iPhone8Plus",
-        "media_count": 6
+        "display": "5.5\" Retina HD Display with True Tone (1920 x 1080 resolution at 401 ppi)",
+        "storage": "64 GB",
+        "chip": "Apple A11 Bionic chip with Neural Engine",
+        "cameras": "Dual 12MP Wide and Telephoto cameras with Portrait mode and Optical 2x zoom",
+        "biometrics": "Touch ID fingerprint sensor built into Home button",
+        "charging": "Qi wireless charging & Lightning wired fast charging supported",
+        "carrier": "Carrier Unlocked (works with all Canadian & International networks)",
+        "battery_condition": "Very good battery health; holds charge reliably throughout the day",
+        "reset_status": "iCloud unlocked, Activation Lock removed, factory reset to setup screen",
+        "fulfillment": "Local pickup at central community landmark in Milton (L9T area) or buyer-paid tracked shipping (Canada-wide & International)"
       },
       "clearance_identifiers": {
         "tokenized_tags": [],
@@ -1121,16 +1425,16 @@
       },
       "pricing": {
         "currency": "CAD",
-        "fast_liquidation": 0,
-        "fair_market": 0,
-        "optimistic_anchor": 0,
-        "active_price": 0
+        "fast_liquidation": 90,
+        "fair_market": 130,
+        "optimistic_anchor": 160,
+        "active_price": 130
       },
       "circular_metrics": {
-        "estimated_weight_kg": 0.25,
-        "refurb_status": "ready_for_curation"
+        "estimated_weight_kg": 0.2,
+        "refurb_status": "curated_ready_for_sale"
       },
-      "status": "draft",
+      "status": "active",
       "media": {
         "primary_image": "Sales/iPhones/iPhone8Plus/IMG_20250111_222105_1787850297677773562.jpg",
         "gallery": [
@@ -1144,37 +1448,56 @@
       },
       "syndication": {
         "facebook": {
-          "title": "Apple iPhone 8 Plus",
-          "description": "",
-          "tags": []
+          "title": "Apple iPhone 8 Plus 64GB Space Gray Unlocked (Very Good Condition)",
+          "description": "Apple iPhone 8 Plus 64GB - Space Gray\n\nCondition: VERY GOOD\n\nKey Specs:\n• 5.5\" Retina HD Display with True Tone\n• 64GB Storage\n• Dual 12MP cameras with Portrait Mode & 4K video\n• Apple A11 Bionic Chip\n• Touch ID & Wireless Charging\n• Carrier Unlocked\n• Clean iCloud, factory reset and ready for setup\n\nPickup Location: Central public community landmark in Milton (L9T area).\nShipping: Tracked Canada-wide & International shipping available (buyer pays shipping).\nPayment: Cash or Interac e-Transfer upon inspection.",
+          "tags": [
+            "iPhone",
+            "iPhone 8 Plus",
+            "Apple",
+            "Unlocked",
+            "Smartphones"
+          ]
         },
         "kijiji": {
-          "title": "Apple iPhone 8 Plus",
-          "description": "",
-          "tags": []
+          "title": "Apple iPhone 8 Plus 64GB Space Gray Unlocked - Milton (L9T area)",
+          "description": "For sale: Apple iPhone 8 Plus 64GB Space Gray in very good condition.\n\n• 5.5\" True Tone Retina display\n• Dual 12MP cameras with 2x optical zoom\n• Unlocked for all carriers\n• Touch ID verified and working\n• Clean iCloud, fully reset\n\nLocation: Safe public meeting at a central community landmark in Milton (L9T area).\nShipping: Tracked shipping across Canada and internationally available at buyer's cost.",
+          "tags": [
+            "iPhone",
+            "iPhone 8 Plus",
+            "Apple",
+            "local pickup",
+            "shipping available",
+            "classifieds"
+          ]
         },
         "ebay": {
-          "title": "Apple iPhone 8 Plus",
-          "description": ""
+          "title": "Apple iPhone 8 Plus 64GB Space Gray Unlocked A1864 Clean iCloud Tested",
+          "description": "Item: Apple iPhone 8 Plus 64GB Space Gray Unlocked\nCondition: very_good\nFully tested and working. Touch ID, dual cameras, battery hold verified. Clean iCloud, factory reset.",
+          "shipping_weight_kg": 0.35
         }
       },
       "created_at": "2026-11-10T20:13:34.381Z",
-      "updated_at": "2026-11-10T20:13:34.381Z"
+      "updated_at": "2026-11-16T22:02:14.897Z",
+      "related_items": [
+        "iphones-iphone11pro",
+        "iphones-iphone7s",
+        "iphones-iphone6s"
+      ]
     },
     {
       "id": "latitutde-1",
       "sku": "LGL-LAP-1-297",
-      "title": "Dell Latitude Enterprise Laptop %1",
+      "title": "Dell Latitude 7490 14\" FHD Laptop (Intel i5-8250U, 8GB RAM, 256GB SSD, Win 11 Pro)",
       "category": "Laptops",
       "brand": "Dell",
-      "model": "Latitude Series (%1)",
-      "condition": "good",
+      "model": "Latitude 7490",
+      "condition": "very_good",
       "location": {
         "public_region": {
           "country": "CA",
           "region": "ON",
-          "city": "Ottawa",
-          "postal_area": "K1A area"
+          "city": "Milton",
+          "postal_area": "L9T area"
         },
         "internal_sidelining": {
           "zone": "Office",
@@ -1182,8 +1505,18 @@
         }
       },
       "specs": {
-        "inferred_from_path": "Latitutde\\%1",
-        "media_count": 4
+        "display": "14.0\" Anti-Glare FHD (1920 x 1080) WVA display",
+        "processor": "Intel Core i5-8250U Quad-Core (1.60 GHz base, up to 3.40 GHz Turbo, 6MB Cache)",
+        "ram": "8 GB DDR4 (upgradable to 32 GB)",
+        "storage": "256 GB M.2 Solid State Drive (SSD)",
+        "graphics": "Intel UHD Graphics 620",
+        "os": "Windows 11 Pro 64-bit (clean fresh installation, verified activated)",
+        "ports": "USB-C / DisplayPort over Type-C, 3x USB 3.1 Gen 1 (one with PowerShare), HDMI 1.4, RJ-45 Ethernet, uSD 4.0 card reader, headset jack",
+        "keyboard_input": "Dual-pointing backlit keyboard with center trackstick and responsive trackpad",
+        "power_adapter": "Original Dell 65W OEM AC Power Adapter included",
+        "battery_condition": "Excellent battery health reported in BIOS/Windows; holds charge reliably",
+        "dock_compatibility": "100% plug-and-play compatible with Dell WD15 & WD19 USB-C docking stations",
+        "fulfillment": "Local pickup at central community landmark in Milton (L9T area) or buyer-paid tracked shipping (Canada-wide & International)"
       },
       "clearance_identifiers": {
         "tokenized_tags": [],
@@ -1191,16 +1524,16 @@
       },
       "pricing": {
         "currency": "CAD",
-        "fast_liquidation": 0,
-        "fair_market": 0,
-        "optimistic_anchor": 0,
-        "active_price": 0
+        "fast_liquidation": 150,
+        "fair_market": 195,
+        "optimistic_anchor": 240,
+        "active_price": 195
       },
       "circular_metrics": {
-        "estimated_weight_kg": 2.1,
-        "refurb_status": "ready_for_curation"
+        "estimated_weight_kg": 1.4,
+        "refurb_status": "curated_ready_for_sale"
       },
-      "status": "draft",
+      "status": "active",
       "media": {
         "primary_image": "Sales/Latitutde/%1/IMG_20250112_231111_4710607637813945135.jpg",
         "gallery": [
@@ -1212,37 +1545,57 @@
       },
       "syndication": {
         "facebook": {
-          "title": "Dell Latitude Enterprise Laptop %1",
-          "description": "",
-          "tags": []
+          "title": "Dell Latitude 7490 14\" FHD (i5-8250U, 8GB, 256GB SSD, Win 11 Pro, Charger)",
+          "description": "Dell Latitude 7490 14\" Business Laptop\n\nCondition: VERY GOOD\n\nKey Specs:\n• 14.0\" Full HD 1080p Anti-Glare Display\n• Intel Core i5-8250U Quad-Core Processor\n• 8GB DDR4 RAM (expandable)\n• 256GB Fast M.2 SSD\n• Windows 11 Pro (fresh install, activated)\n• USB-C, HDMI, 3x USB 3.1, Gigabit LAN, WebCam, Backlit Keyboard\n• OEM Dell 65W Charger included\n\nMeeting: Safe public meeting at a central community landmark in Milton (L9T area).\nShipping: Tracked Canada-wide & International shipping available (buyer pays shipping).\nPayment: Cash or Interac e-Transfer upon inspection.",
+          "tags": [
+            "Dell",
+            "Latitude",
+            "Laptop",
+            "Windows 11",
+            "Business Laptop"
+          ]
         },
         "kijiji": {
-          "title": "Dell Latitude Enterprise Laptop %1",
-          "description": "",
-          "tags": []
+          "title": "Dell Latitude 7490 14\" FHD Laptop (i5-8250U / 8GB / 256GB SSD / Win 11 Pro) - Milton",
+          "description": "For sale: Dell Latitude 7490 enterprise laptop in very good working condition.\n\n• 14\" FHD (1920x1080) screen\n• Intel Quad-Core i5-8250U\n• 8GB RAM, 256GB SSD\n• Genuine Windows 11 Pro 64-bit\n• Includes Dell OEM charger\n• Tested and ready for work, study, or home office\n\nLocation: Safe public meeting at a central community landmark in Milton (L9T area).\nShipping: Tracked shipping across Canada and internationally available at buyer's cost.",
+          "tags": [
+            "Dell",
+            "Latitude 7490",
+            "Laptop",
+            "Milton",
+            "local pickup",
+            "shipping available"
+          ]
         },
         "ebay": {
-          "title": "Dell Latitude Enterprise Laptop %1",
-          "description": ""
+          "title": "Dell Latitude 7490 14in FHD i5-8250U 8GB RAM 256GB SSD Win 11 Pro Tested AC",
+          "description": "Item: Dell Latitude 7490 14\" FHD Laptop\nSpecs: Intel Core i5-8250U, 8GB DDR4, 256GB SSD, Win 11 Pro\nCondition: very_good\nFully tested and working. Includes Dell OEM 65W AC adapter.",
+          "shipping_weight_kg": 2.1
         }
       },
       "created_at": "2026-11-10T20:13:34.382Z",
-      "updated_at": "2026-11-10T20:13:34.382Z"
+      "updated_at": "2026-11-16T22:12:44.115Z",
+      "related_items": [
+        "dock-dell-wd15",
+        "latitutde-2",
+        "latitutde-4",
+        "latitutde-5"
+      ]
     },
     {
       "id": "latitutde-2",
       "sku": "LGL-LAP-2-340",
-      "title": "Dell Latitude Enterprise Laptop %2",
+      "title": "Dell Latitude 7490 14\" FHD Laptop (Unit 2 - Intel i5-8250U, 8GB RAM, 256GB SSD, Win 10/11 Pro)",
       "category": "Laptops",
       "brand": "Dell",
-      "model": "Latitude Series (%2)",
-      "condition": "good",
+      "model": "Latitude 7490",
+      "condition": "very_good",
       "location": {
         "public_region": {
           "country": "CA",
           "region": "ON",
-          "city": "Ottawa",
-          "postal_area": "K1A area"
+          "city": "Milton",
+          "postal_area": "L9T area"
         },
         "internal_sidelining": {
           "zone": "Office",
@@ -1250,8 +1603,18 @@
         }
       },
       "specs": {
-        "inferred_from_path": "Latitutde\\%2",
-        "media_count": 4
+        "display": "14.0\" Anti-Glare FHD (1920 x 1080) WVA display",
+        "processor": "Intel Core i5-8250U Quad-Core (1.60 GHz base, up to 3.40 GHz Turbo, 6MB Cache)",
+        "ram": "8 GB DDR4 (upgradable to 32 GB)",
+        "storage": "256 GB M.2 Solid State Drive (SSD)",
+        "graphics": "Intel UHD Graphics 620",
+        "os": "Windows 10/11 Pro 64-bit (clean installation, digital license activated)",
+        "ports": "USB-C / DisplayPort over Type-C, 3x USB 3.1 Gen 1, HDMI 1.4, RJ-45 Ethernet, uSD card reader, audio jack",
+        "keyboard_input": "Dual-pointing keyboard with center trackstick and multi-touch trackpad",
+        "power_adapter": "Original Dell 65W OEM AC Power Adapter included",
+        "battery_condition": "Very good battery health; holds charge reliably",
+        "dock_compatibility": "100% plug-and-play compatible with Dell WD15 & WD19 USB-C docking stations",
+        "fulfillment": "Local pickup at central community landmark in Milton (L9T area) or buyer-paid tracked shipping (Canada-wide & International)"
       },
       "clearance_identifiers": {
         "tokenized_tags": [],
@@ -1259,16 +1622,16 @@
       },
       "pricing": {
         "currency": "CAD",
-        "fast_liquidation": 0,
-        "fair_market": 0,
-        "optimistic_anchor": 0,
-        "active_price": 0
+        "fast_liquidation": 150,
+        "fair_market": 195,
+        "optimistic_anchor": 240,
+        "active_price": 195
       },
       "circular_metrics": {
-        "estimated_weight_kg": 2.1,
-        "refurb_status": "ready_for_curation"
+        "estimated_weight_kg": 1.4,
+        "refurb_status": "curated_ready_for_sale"
       },
-      "status": "draft",
+      "status": "active",
       "media": {
         "primary_image": "Sales/Latitutde/%2/IMG_20250112_232725_6112139410078618245.jpg",
         "gallery": [
@@ -1280,37 +1643,57 @@
       },
       "syndication": {
         "facebook": {
-          "title": "Dell Latitude Enterprise Laptop %2",
-          "description": "",
-          "tags": []
+          "title": "Dell Latitude 7490 14\" FHD (i5-8250U, 8GB, 256GB SSD, Win Pro, OEM Charger)",
+          "description": "Dell Latitude 7490 14\" Business Laptop (Unit 2)\n\nCondition: VERY GOOD\n\nKey Specs:\n• 14.0\" Full HD 1080p Display\n• Intel Core i5-8250U Quad-Core\n• 8GB DDR4 RAM\n• 256GB M.2 SSD\n• Windows Pro (activated)\n• USB-C, HDMI, USB 3.1, Gigabit LAN, WebCam\n• OEM Dell 65W Charger included\n\nMeeting: Safe public meeting at a central community landmark in Milton (L9T area).\nShipping: Tracked Canada-wide & International shipping available (buyer pays shipping).\nPayment: Cash or Interac e-Transfer upon inspection.",
+          "tags": [
+            "Dell",
+            "Latitude",
+            "Laptop",
+            "Windows Pro",
+            "Business Laptop"
+          ]
         },
         "kijiji": {
-          "title": "Dell Latitude Enterprise Laptop %2",
-          "description": "",
-          "tags": []
+          "title": "Dell Latitude 7490 14\" FHD Laptop (i5-8250U / 8GB / 256GB SSD) - Milton",
+          "description": "For sale: Dell Latitude 7490 enterprise laptop in very good working condition.\n\n• 14\" FHD (1920x1080) screen\n• Intel Quad-Core i5-8250U\n• 8GB RAM, 256GB SSD\n• Genuine Windows Pro 64-bit\n• Includes Dell OEM charger\n\nLocation: Safe public meeting at a central community landmark in Milton (L9T area).\nShipping: Tracked shipping across Canada and internationally available at buyer's cost.",
+          "tags": [
+            "Dell",
+            "Latitude 7490",
+            "Laptop",
+            "Milton",
+            "local pickup",
+            "shipping available"
+          ]
         },
         "ebay": {
-          "title": "Dell Latitude Enterprise Laptop %2",
-          "description": ""
+          "title": "Dell Latitude 7490 14in FHD i5-8250U 8GB RAM 256GB SSD Win Pro Tested AC",
+          "description": "Item: Dell Latitude 7490 14\" FHD Laptop\nSpecs: Intel Core i5-8250U, 8GB DDR4, 256GB SSD, Win Pro\nCondition: very_good\nFully tested and working. Includes Dell OEM 65W AC adapter.",
+          "shipping_weight_kg": 2.1
         }
       },
       "created_at": "2026-11-10T20:13:34.383Z",
-      "updated_at": "2026-11-10T20:13:34.383Z"
+      "updated_at": "2026-11-16T22:12:44.115Z",
+      "related_items": [
+        "dock-dell-wd15",
+        "latitutde-1",
+        "latitutde-3",
+        "latitutde-5"
+      ]
     },
     {
       "id": "latitutde-3",
       "sku": "LGL-LAP-3-485",
-      "title": "Dell Latitude Enterprise Laptop %3",
+      "title": "Dell Latitude 7490 14\" FHD Laptop (Unit 3 - Intel i5-8250U, 8GB RAM, 256GB SSD, Win 11 Pro)",
       "category": "Laptops",
       "brand": "Dell",
-      "model": "Latitude Series (%3)",
-      "condition": "good",
+      "model": "Latitude 7490",
+      "condition": "very_good",
       "location": {
         "public_region": {
           "country": "CA",
           "region": "ON",
-          "city": "Ottawa",
-          "postal_area": "K1A area"
+          "city": "Milton",
+          "postal_area": "L9T area"
         },
         "internal_sidelining": {
           "zone": "Office",
@@ -1318,8 +1701,18 @@
         }
       },
       "specs": {
-        "inferred_from_path": "Latitutde\\%3",
-        "media_count": 4
+        "display": "14.0\" Anti-Glare FHD (1920 x 1080) WVA display",
+        "processor": "Intel Core i5-8250U Quad-Core (1.60 GHz base, up to 3.40 GHz Turbo, 6MB Cache)",
+        "ram": "8 GB DDR4 (upgradable to 32 GB)",
+        "storage": "256 GB M.2 Solid State Drive (SSD)",
+        "graphics": "Intel UHD Graphics 620",
+        "os": "Windows 11 Pro 64-bit (clean installation, digital license activated)",
+        "ports": "USB-C / DisplayPort over Type-C, 3x USB 3.1 Gen 1, HDMI 1.4, RJ-45 Ethernet, uSD card reader, audio jack",
+        "keyboard_input": "Dual-pointing keyboard with center trackstick and multi-touch trackpad",
+        "power_adapter": "Original Dell 65W OEM AC Power Adapter included",
+        "battery_condition": "Very good battery health; holds charge reliably",
+        "dock_compatibility": "100% plug-and-play compatible with Dell WD15 & WD19 USB-C docking stations",
+        "fulfillment": "Local pickup at central community landmark in Milton (L9T area) or buyer-paid tracked shipping (Canada-wide & International)"
       },
       "clearance_identifiers": {
         "tokenized_tags": [],
@@ -1327,16 +1720,16 @@
       },
       "pricing": {
         "currency": "CAD",
-        "fast_liquidation": 0,
-        "fair_market": 0,
-        "optimistic_anchor": 0,
-        "active_price": 0
+        "fast_liquidation": 150,
+        "fair_market": 195,
+        "optimistic_anchor": 240,
+        "active_price": 195
       },
       "circular_metrics": {
-        "estimated_weight_kg": 2.1,
-        "refurb_status": "ready_for_curation"
+        "estimated_weight_kg": 1.4,
+        "refurb_status": "curated_ready_for_sale"
       },
-      "status": "draft",
+      "status": "active",
       "media": {
         "primary_image": "Sales/Latitutde/%3/037A114D-9A45-44C6-A76D-9ABAD3E51911.jpeg",
         "gallery": [
@@ -1348,37 +1741,57 @@
       },
       "syndication": {
         "facebook": {
-          "title": "Dell Latitude Enterprise Laptop %3",
-          "description": "",
-          "tags": []
+          "title": "Dell Latitude 7490 14\" FHD (i5-8250U, 8GB, 256GB SSD, Win 11 Pro, OEM Charger)",
+          "description": "Dell Latitude 7490 14\" Business Laptop (Unit 3)\n\nCondition: VERY GOOD\n\nKey Specs:\n• 14.0\" Full HD 1080p Display\n• Intel Core i5-8250U Quad-Core\n• 8GB DDR4 RAM\n• 256GB M.2 SSD\n• Windows 11 Pro (activated)\n• USB-C, HDMI, USB 3.1, Gigabit LAN, WebCam\n• OEM Dell 65W Charger included\n\nMeeting: Safe public meeting at a central community landmark in Milton (L9T area).\nShipping: Tracked Canada-wide & International shipping available (buyer pays shipping).\nPayment: Cash or Interac e-Transfer upon inspection.",
+          "tags": [
+            "Dell",
+            "Latitude",
+            "Laptop",
+            "Windows 11 Pro",
+            "Business Laptop"
+          ]
         },
         "kijiji": {
-          "title": "Dell Latitude Enterprise Laptop %3",
-          "description": "",
-          "tags": []
+          "title": "Dell Latitude 7490 14\" FHD Laptop (i5-8250U / 8GB / 256GB SSD / Win 11 Pro) - Milton",
+          "description": "For sale: Dell Latitude 7490 enterprise laptop in very good working condition.\n\n• 14\" FHD (1920x1080) screen\n• Intel Quad-Core i5-8250U\n• 8GB RAM, 256GB SSD\n• Genuine Windows 11 Pro 64-bit\n• Includes Dell OEM charger\n\nLocation: Safe public meeting at a central community landmark in Milton (L9T area).\nShipping: Tracked shipping across Canada and internationally available at buyer's cost.",
+          "tags": [
+            "Dell",
+            "Latitude 7490",
+            "Laptop",
+            "Milton",
+            "local pickup",
+            "shipping available"
+          ]
         },
         "ebay": {
-          "title": "Dell Latitude Enterprise Laptop %3",
-          "description": ""
+          "title": "Dell Latitude 7490 14in FHD i5-8250U 8GB RAM 256GB SSD Win 11 Pro Tested AC",
+          "description": "Item: Dell Latitude 7490 14\" FHD Laptop\nSpecs: Intel Core i5-8250U, 8GB DDR4, 256GB SSD, Win 11 Pro\nCondition: very_good\nFully tested and working. Includes Dell OEM 65W AC adapter.",
+          "shipping_weight_kg": 2.1
         }
       },
       "created_at": "2026-11-10T20:13:34.384Z",
-      "updated_at": "2026-11-10T20:13:34.384Z"
+      "updated_at": "2026-11-16T22:12:44.115Z",
+      "related_items": [
+        "dock-dell-wd15",
+        "latitutde-1",
+        "latitutde-2",
+        "latitutde-4"
+      ]
     },
     {
       "id": "latitutde-4",
       "sku": "LGL-LAP-4-834",
-      "title": "Dell Latitude Enterprise Laptop %4",
+      "title": "Dell Latitude 5400 14\" FHD Laptop (Intel i5-8265U Whiskey Lake, 8GB RAM, 256GB SSD, Win Pro)",
       "category": "Laptops",
       "brand": "Dell",
-      "model": "Latitude Series (%4)",
-      "condition": "good",
+      "model": "Latitude 5400",
+      "condition": "very_good",
       "location": {
         "public_region": {
           "country": "CA",
           "region": "ON",
-          "city": "Ottawa",
-          "postal_area": "K1A area"
+          "city": "Milton",
+          "postal_area": "L9T area"
         },
         "internal_sidelining": {
           "zone": "Office",
@@ -1386,8 +1799,18 @@
         }
       },
       "specs": {
-        "inferred_from_path": "Latitutde\\%4",
-        "media_count": 5
+        "display": "14.0\" Anti-Glare FHD (1920 x 1080) display with narrow border",
+        "processor": "Intel Core i5-8265U Quad-Core (Whiskey Lake 8th Gen Refresh, 1.60 GHz base, up to 3.90 GHz Turbo, 6MB Cache)",
+        "ram": "8 GB DDR4 (upgradable to 32 GB)",
+        "storage": "256 GB M.2 NVMe Solid State Drive (SSD)",
+        "graphics": "Intel UHD Graphics 620",
+        "os": "Windows 10/11 Pro 64-bit (clean installation, digital license activated)",
+        "ports": "USB Type-C 3.1 Gen 2 with Power Delivery & DisplayPort, 3x USB 3.1 Gen 1, HDMI 1.4, RJ-45 Ethernet, uSD reader, combo audio jack",
+        "keyboard_input": "Precision responsive keyboard and smooth multi-gesture trackpad",
+        "power_adapter": "Original Dell 65W OEM AC Power Adapter included",
+        "battery_condition": "Very good battery health; holds charge reliably",
+        "dock_compatibility": "100% plug-and-play compatible with Dell WD15 & WD19 USB-C docking stations",
+        "fulfillment": "Local pickup at central community landmark in Milton (L9T area) or buyer-paid tracked shipping (Canada-wide & International)"
       },
       "clearance_identifiers": {
         "tokenized_tags": [],
@@ -1395,16 +1818,16 @@
       },
       "pricing": {
         "currency": "CAD",
-        "fast_liquidation": 0,
-        "fair_market": 0,
-        "optimistic_anchor": 0,
-        "active_price": 0
+        "fast_liquidation": 170,
+        "fair_market": 220,
+        "optimistic_anchor": 260,
+        "active_price": 220
       },
       "circular_metrics": {
-        "estimated_weight_kg": 2.1,
-        "refurb_status": "ready_for_curation"
+        "estimated_weight_kg": 1.48,
+        "refurb_status": "curated_ready_for_sale"
       },
-      "status": "draft",
+      "status": "active",
       "media": {
         "primary_image": "Sales/Latitutde/%4/145C2B75-1B99-4481-9296-C3626FE18BFE.jpeg",
         "gallery": [
@@ -1417,37 +1840,57 @@
       },
       "syndication": {
         "facebook": {
-          "title": "Dell Latitude Enterprise Laptop %4",
-          "description": "",
-          "tags": []
+          "title": "Dell Latitude 5400 14\" FHD (i5-8265U, 8GB, 256GB NVMe, Win Pro, OEM Charger)",
+          "description": "Dell Latitude 5400 14\" Enterprise Laptop\n\nCondition: VERY GOOD\n\nKey Specs:\n• 14.0\" Full HD 1080p Narrow-Border Display\n• Intel Core i5-8265U Quad-Core (Whiskey Lake)\n• 8GB DDR4 RAM\n• 256GB Fast NVMe SSD\n• Windows Pro (activated)\n• USB-C with DisplayPort/Power Delivery, HDMI, 3x USB 3.1, Gigabit LAN, WebCam\n• OEM Dell 65W Charger included\n\nMeeting: Safe public meeting at a central community landmark in Milton (L9T area).\nShipping: Tracked Canada-wide & International shipping available (buyer pays shipping).\nPayment: Cash or Interac e-Transfer upon inspection.",
+          "tags": [
+            "Dell",
+            "Latitude 5400",
+            "Laptop",
+            "Windows Pro",
+            "Business Laptop"
+          ]
         },
         "kijiji": {
-          "title": "Dell Latitude Enterprise Laptop %4",
-          "description": "",
-          "tags": []
+          "title": "Dell Latitude 5400 14\" FHD Laptop (i5-8265U / 8GB / 256GB NVMe / Win Pro) - Milton",
+          "description": "For sale: Dell Latitude 5400 14\" enterprise laptop in very good condition.\n\n• 14\" FHD (1920x1080) screen\n• Intel Quad-Core i5-8265U (up to 3.9GHz)\n• 8GB RAM, 256GB NVMe SSD\n• Genuine Windows Pro 64-bit\n• Includes Dell OEM charger\n\nLocation: Safe public meeting at a central community landmark in Milton (L9T area).\nShipping: Tracked shipping across Canada and internationally available at buyer's cost.",
+          "tags": [
+            "Dell",
+            "Latitude 5400",
+            "Laptop",
+            "Milton",
+            "local pickup",
+            "shipping available"
+          ]
         },
         "ebay": {
-          "title": "Dell Latitude Enterprise Laptop %4",
-          "description": ""
+          "title": "Dell Latitude 5400 14in FHD i5-8265U 8GB RAM 256GB NVMe Win Pro Tested AC",
+          "description": "Item: Dell Latitude 5400 14\" FHD Laptop\nSpecs: Intel Core i5-8265U, 8GB DDR4, 256GB NVMe SSD, Win Pro\nCondition: very_good\nFully tested and working. Includes Dell OEM 65W AC adapter.",
+          "shipping_weight_kg": 2.2
         }
       },
       "created_at": "2026-11-10T20:13:34.385Z",
-      "updated_at": "2026-11-10T20:13:34.385Z"
+      "updated_at": "2026-11-16T22:12:44.115Z",
+      "related_items": [
+        "dock-dell-wd15",
+        "latitutde-1",
+        "latitutde-5",
+        "latitutde-6"
+      ]
     },
     {
       "id": "latitutde-5",
       "sku": "LGL-LAP-5-279",
-      "title": "Dell Latitude Enterprise Laptop %5",
+      "title": "Dell Latitude 5420 14\" FHD Laptop (11th Gen Intel i7-1185G7 vPro, 8GB RAM, 256GB SSD, Boxed)",
       "category": "Laptops",
       "brand": "Dell",
-      "model": "Latitude Series (%5)",
-      "condition": "good",
+      "model": "Latitude 5420",
+      "condition": "like_new",
       "location": {
         "public_region": {
           "country": "CA",
           "region": "ON",
-          "city": "Ottawa",
-          "postal_area": "K1A area"
+          "city": "Milton",
+          "postal_area": "L9T area"
         },
         "internal_sidelining": {
           "zone": "Office",
@@ -1455,8 +1898,18 @@
         }
       },
       "specs": {
-        "inferred_from_path": "Latitutde\\%5",
-        "media_count": 3
+        "display": "14.0\" FHD (1920 x 1080) Anti-Glare IPS display (250 nits, narrow border)",
+        "processor": "11th Gen Intel Core i7-1185G7 vPro Quad-Core (3.00 GHz base, up to 4.80 GHz Turbo, 12MB Intel Smart Cache)",
+        "ram": "8 GB DDR4 3200MHz (expandable up to 64 GB)",
+        "storage": "256 GB PCIe NVMe Class 35 Solid State Drive",
+        "graphics": "Intel Iris Xe Graphics (Tiger Lake-UP3)",
+        "os": "Windows 10/11 Pro 64-bit (digital license activated)",
+        "ports": "2x Thunderbolt 4 with Power Delivery & DisplayPort (USB Type-C), 2x USB 3.2 Gen 1 (one with PowerShare), HDMI 2.0, RJ-45 Gigabit Ethernet, uSD 4.0 card reader, audio jack",
+        "keyboard_input": "Modern precision backlit keyboard and smooth glass-feel trackpad",
+        "packaging_accessories": "Boxed with original Dell OEM Type-C / Barrel AC Power Adapter",
+        "battery_condition": "Like-new battery condition; holds full factory charge runtime",
+        "dock_compatibility": "100% plug-and-play compatible with Dell WD15, WD19, WD19S, and Thunderbolt docks",
+        "fulfillment": "Local pickup at central community landmark in Milton (L9T area) or buyer-paid tracked shipping (Canada-wide & International)"
       },
       "clearance_identifiers": {
         "tokenized_tags": [],
@@ -1464,16 +1917,16 @@
       },
       "pricing": {
         "currency": "CAD",
-        "fast_liquidation": 0,
-        "fair_market": 0,
-        "optimistic_anchor": 0,
-        "active_price": 0
+        "fast_liquidation": 290,
+        "fair_market": 380,
+        "optimistic_anchor": 450,
+        "active_price": 380
       },
       "circular_metrics": {
-        "estimated_weight_kg": 2.1,
-        "refurb_status": "ready_for_curation"
+        "estimated_weight_kg": 1.4,
+        "refurb_status": "curated_ready_for_sale"
       },
-      "status": "draft",
+      "status": "active",
       "media": {
         "primary_image": "Sales/Latitutde/%5/269CFA82-988A-412C-88A0-E857F8BCFE5E.jpeg",
         "gallery": [
@@ -1484,37 +1937,60 @@
       },
       "syndication": {
         "facebook": {
-          "title": "Dell Latitude Enterprise Laptop %5",
-          "description": "",
-          "tags": []
+          "title": "Dell Latitude 5420 14\" FHD (11th Gen i7-1185G7, 8GB, 256GB NVMe, Boxed, Like New)",
+          "description": "Dell Latitude 5420 14\" High-Performance Business Laptop\n\nCondition: LIKE NEW / BOXED\n\nKey Specs:\n• 14.0\" Full HD 1080p IPS Narrow-Border Screen\n• 11th Gen Intel Core i7-1185G7 vPro (up to 4.80GHz)\n• Intel Iris Xe Graphics\n• 8GB DDR4 3200MHz RAM\n• 256GB PCIe NVMe SSD\n• Dual Thunderbolt 4 / USB-C, HDMI 2.0, Gigabit LAN, WebCam with privacy shutter\n• Windows Pro (activated)\n• Boxed with original Dell OEM Power Adapter\n\nMeeting: Safe public meeting at a central community landmark in Milton (L9T area).\nShipping: Tracked Canada-wide & International shipping available (buyer pays shipping).\nPayment: Cash or Interac e-Transfer upon inspection.",
+          "tags": [
+            "Dell",
+            "Latitude 5420",
+            "i7",
+            "11th Gen",
+            "Iris Xe",
+            "Thunderbolt 4",
+            "Laptop"
+          ]
         },
         "kijiji": {
-          "title": "Dell Latitude Enterprise Laptop %5",
-          "description": "",
-          "tags": []
+          "title": "Dell Latitude 5420 14\" FHD Laptop (11th Gen i7-1185G7 / Iris Xe / 256GB SSD / Boxed) - Milton",
+          "description": "For sale: Dell Latitude 5420 14\" laptop in like-new, boxed condition.\n\n• 14\" FHD IPS screen\n• Powerful 11th Gen Intel Core i7-1185G7 (up to 4.8GHz)\n• Intel Iris Xe Graphics\n• 8GB RAM, 256GB NVMe SSD\n• Dual Thunderbolt 4 ports\n• Genuine Windows Pro\n• Boxed with Dell OEM adapter\n\nLocation: Safe public meeting at a central community landmark in Milton (L9T area).\nShipping: Tracked shipping across Canada and internationally available at buyer's cost.",
+          "tags": [
+            "Dell",
+            "Latitude 5420",
+            "Laptop",
+            "Core i7",
+            "Milton",
+            "local pickup",
+            "shipping available"
+          ]
         },
         "ebay": {
-          "title": "Dell Latitude Enterprise Laptop %5",
-          "description": ""
+          "title": "Dell Latitude 5420 14in FHD i7-1185G7 8GB RAM 256GB NVMe Iris Xe Boxed AC",
+          "description": "Item: Dell Latitude 5420 14\" FHD Laptop\nSpecs: 11th Gen Intel Core i7-1185G7, 8GB DDR4, 256GB NVMe SSD, Iris Xe Graphics, Win Pro\nCondition: like_new\nBoxed with original Dell OEM AC power adapter.",
+          "shipping_weight_kg": 2.3
         }
       },
       "created_at": "2026-11-10T20:13:34.385Z",
-      "updated_at": "2026-11-10T20:13:34.385Z"
+      "updated_at": "2026-11-16T22:12:44.115Z",
+      "related_items": [
+        "dock-dell-wd15",
+        "latitutde-6",
+        "latitutde-4",
+        "latitutde-1"
+      ]
     },
     {
       "id": "latitutde-6",
       "sku": "LGL-LAP-6-159",
-      "title": "Dell Latitude Enterprise Laptop %6",
+      "title": "Dell Latitude 5420 14\" FHD Laptop (Unit 2 - 11th Gen Intel i7-1185G7 vPro, 8GB RAM, 256GB SSD, Boxed)",
       "category": "Laptops",
       "brand": "Dell",
-      "model": "Latitude Series (%6)",
-      "condition": "good",
+      "model": "Latitude 5420",
+      "condition": "like_new",
       "location": {
         "public_region": {
           "country": "CA",
           "region": "ON",
-          "city": "Ottawa",
-          "postal_area": "K1A area"
+          "city": "Milton",
+          "postal_area": "L9T area"
         },
         "internal_sidelining": {
           "zone": "Office",
@@ -1522,8 +1998,18 @@
         }
       },
       "specs": {
-        "inferred_from_path": "Latitutde\\%6",
-        "media_count": 3
+        "display": "14.0\" FHD (1920 x 1080) Anti-Glare IPS display (250 nits, narrow border)",
+        "processor": "11th Gen Intel Core i7-1185G7 vPro Quad-Core (3.00 GHz base, up to 4.80 GHz Turbo, 12MB Intel Smart Cache)",
+        "ram": "8 GB DDR4 3200MHz (expandable up to 64 GB)",
+        "storage": "256 GB PCIe NVMe Class 35 Solid State Drive",
+        "graphics": "Intel Iris Xe Graphics (Tiger Lake-UP3)",
+        "os": "Windows 10/11 Pro 64-bit (digital license activated)",
+        "ports": "2x Thunderbolt 4 with Power Delivery & DisplayPort (USB Type-C), 2x USB 3.2 Gen 1 (one with PowerShare), HDMI 2.0, RJ-45 Gigabit Ethernet, uSD 4.0 card reader, audio jack",
+        "keyboard_input": "Modern precision backlit keyboard and smooth glass-feel trackpad",
+        "packaging_accessories": "Boxed with original Dell OEM Type-C / Barrel AC Power Adapter",
+        "battery_condition": "Like-new battery condition; holds full factory charge runtime",
+        "dock_compatibility": "100% plug-and-play compatible with Dell WD15, WD19, WD19S, and Thunderbolt docks",
+        "fulfillment": "Local pickup at central community landmark in Milton (L9T area) or buyer-paid tracked shipping (Canada-wide & International)"
       },
       "clearance_identifiers": {
         "tokenized_tags": [],
@@ -1531,16 +2017,16 @@
       },
       "pricing": {
         "currency": "CAD",
-        "fast_liquidation": 0,
-        "fair_market": 0,
-        "optimistic_anchor": 0,
-        "active_price": 0
+        "fast_liquidation": 290,
+        "fair_market": 380,
+        "optimistic_anchor": 450,
+        "active_price": 380
       },
       "circular_metrics": {
-        "estimated_weight_kg": 2.1,
-        "refurb_status": "ready_for_curation"
+        "estimated_weight_kg": 1.4,
+        "refurb_status": "curated_ready_for_sale"
       },
-      "status": "draft",
+      "status": "active",
       "media": {
         "primary_image": "Sales/Latitutde/%6/3E0668A5-47B4-4421-81E1-1848E07B6C35.jpeg",
         "gallery": [
@@ -1551,46 +2037,75 @@
       },
       "syndication": {
         "facebook": {
-          "title": "Dell Latitude Enterprise Laptop %6",
-          "description": "",
-          "tags": []
+          "title": "Dell Latitude 5420 14\" FHD (11th Gen i7-1185G7, 8GB, 256GB NVMe, Boxed, Like New)",
+          "description": "Dell Latitude 5420 14\" High-Performance Business Laptop (Unit 2)\n\nCondition: LIKE NEW / BOXED\n\nKey Specs:\n• 14.0\" Full HD 1080p IPS Screen\n• 11th Gen Intel Core i7-1185G7 vPro (up to 4.80GHz)\n• Intel Iris Xe Graphics\n• 8GB DDR4 3200MHz RAM\n• 256GB PCIe NVMe SSD\n• Dual Thunderbolt 4 / USB-C, HDMI 2.0, Gigabit LAN, WebCam\n• Windows Pro (activated)\n• Boxed with original Dell OEM Power Adapter\n\nMeeting: Safe public meeting at a central community landmark in Milton (L9T area).\nShipping: Tracked Canada-wide & International shipping available (buyer pays shipping).\nPayment: Cash or Interac e-Transfer upon inspection.",
+          "tags": [
+            "Dell",
+            "Latitude 5420",
+            "i7",
+            "11th Gen",
+            "Iris Xe",
+            "Thunderbolt 4",
+            "Laptop"
+          ]
         },
         "kijiji": {
-          "title": "Dell Latitude Enterprise Laptop %6",
-          "description": "",
-          "tags": []
+          "title": "Dell Latitude 5420 14\" FHD Laptop (11th Gen i7-1185G7 / Iris Xe / 256GB SSD / Boxed) - Milton",
+          "description": "For sale: Dell Latitude 5420 14\" laptop in like-new, boxed condition.\n\n• 14\" FHD IPS screen\n• Powerful 11th Gen Intel Core i7-1185G7 (up to 4.8GHz)\n• Intel Iris Xe Graphics\n• 8GB RAM, 256GB NVMe SSD\n• Dual Thunderbolt 4 ports\n• Genuine Windows Pro\n• Boxed with Dell OEM adapter\n\nLocation: Safe public meeting at a central community landmark in Milton (L9T area).\nShipping: Tracked shipping across Canada and internationally available at buyer's cost.",
+          "tags": [
+            "Dell",
+            "Latitude 5420",
+            "Laptop",
+            "Core i7",
+            "Milton",
+            "local pickup",
+            "shipping available"
+          ]
         },
         "ebay": {
-          "title": "Dell Latitude Enterprise Laptop %6",
-          "description": ""
+          "title": "Dell Latitude 5420 14in FHD i7-1185G7 8GB RAM 256GB NVMe Iris Xe Boxed AC",
+          "description": "Item: Dell Latitude 5420 14\" FHD Laptop\nSpecs: 11th Gen Intel Core i7-1185G7, 8GB DDR4, 256GB NVMe SSD, Iris Xe Graphics, Win Pro\nCondition: like_new\nBoxed with original Dell OEM AC power adapter.",
+          "shipping_weight_kg": 2.3
         }
       },
       "created_at": "2026-11-10T20:13:34.386Z",
-      "updated_at": "2026-11-10T20:13:34.386Z"
+      "updated_at": "2026-11-16T22:12:44.115Z",
+      "related_items": [
+        "dock-dell-wd15",
+        "latitutde-5",
+        "latitutde-4",
+        "latitutde-2"
+      ]
     },
     {
       "id": "networking-powerline-adapter",
       "sku": "LGL-NET-POWERLIN-463",
-      "title": "Ethernet-over-Power Powerline Adapter Kit",
+      "title": "Speedy Link 200Mbps HomePlug AV Powerline Network Adapter Kit (Matched Pair of 2)",
       "category": "Networking",
-      "brand": "D-Link / TP-Link",
-      "model": "AV Powerline Adapter Kit",
+      "brand": "Speedy Link",
+      "model": "200Mbps Powerline Adapter Kit (MP1211)",
       "condition": "good",
       "location": {
         "public_region": {
           "country": "CA",
           "region": "ON",
-          "city": "Ottawa",
-          "postal_area": "K1A area"
+          "city": "Milton",
+          "postal_area": "L9T area"
         },
         "internal_sidelining": {
           "zone": "Office",
-          "shelf_or_bin": "Networking Shelf"
+          "shelf_or_bin": "Network Gear Shelf"
         }
       },
       "specs": {
-        "inferred_from_path": "Networking\\powerline adapter",
-        "media_count": 2
+        "technology": "HomePlug AV standard (up to 200 Mbps PHY data rate over existing household AC electrical wiring)",
+        "package_contents": "Matched pair of 2 powerline wall plug adapters",
+        "ports": "1x 10/100 Mbps RJ-45 Fast Ethernet LAN port per adapter",
+        "plug_format": "Standard North American 2-prong wall outlet plug (110V - 240VAC, 50/60Hz compatible)",
+        "security_pairing": "Hardware push-button pairing with 128-bit AES network encryption",
+        "led_indicators": "Power, Powerline connection, and Ethernet link activity LEDs",
+        "use_case": "Instantly extends wired Internet/Ethernet across rooms and floors without drilling holes or running long cables; ideal for home offices, streaming boxes, gaming consoles, and smart TVs",
+        "fulfillment": "Local pickup at central community landmark in Milton (L9T area) or buyer-paid tracked shipping (Canada-wide & International)"
       },
       "clearance_identifiers": {
         "tokenized_tags": [],
@@ -1598,16 +2113,16 @@
       },
       "pricing": {
         "currency": "CAD",
-        "fast_liquidation": 0,
-        "fair_market": 0,
-        "optimistic_anchor": 0,
-        "active_price": 0
+        "fast_liquidation": 15,
+        "fair_market": 25,
+        "optimistic_anchor": 35,
+        "active_price": 25
       },
       "circular_metrics": {
-        "estimated_weight_kg": 0.6,
-        "refurb_status": "ready_for_curation"
+        "estimated_weight_kg": 0.35,
+        "refurb_status": "curated_ready_for_sale"
       },
-      "status": "draft",
+      "status": "active",
       "media": {
         "primary_image": "Sales/Networking/powerline adapter/3E359C36-070C-43FD-90D0-BD051F4B7ED7.jpeg",
         "gallery": [
@@ -1617,46 +2132,70 @@
       },
       "syndication": {
         "facebook": {
-          "title": "Ethernet-over-Power Powerline Adapter Kit",
-          "description": "",
-          "tags": []
+          "title": "Speedy Link 200Mbps Ethernet Powerline Adapter Kit (Pair of 2 - Plug & Play)",
+          "description": "Speedy Link 200Mbps HomePlug AV Powerline Network Adapter Kit (Pair of 2)\n\nCondition: GOOD / TESTED\n\nKey Specs:\n• Turns any standard wall power outlet into an Ethernet network jack\n• Up to 200 Mbps connection over electrical wiring\n• Plug and play: plug one near your router, plug the other in any room\n• 128-bit AES encryption security button\n• Includes matched pair (2 adapters)\n\nPickup Location: Central public community landmark in Milton (L9T area).\nShipping: Tracked Canada-wide & International shipping available (buyer pays shipping).\nPayment: Cash or Interac e-Transfer upon inspection.",
+          "tags": [
+            "Powerline",
+            "Ethernet",
+            "HomePlug",
+            "Networking",
+            "Home Office",
+            "Internet Extender"
+          ]
         },
         "kijiji": {
-          "title": "Ethernet-over-Power Powerline Adapter Kit",
-          "description": "",
-          "tags": []
+          "title": "Speedy Link 200Mbps Powerline Ethernet Adapter Kit (Pair of 2) - Milton (L9T area)",
+          "description": "For sale: Speedy Link 200Mbps Powerline Ethernet kit (pair of 2 adapters).\n\n• Extends wired internet through existing house wiring\n• Fast and easy setup without running Ethernet cables\n• Great for desktop PCs, game consoles, and TV boxes\n• Tested and working\n\nLocation: Safe public meeting at a central community landmark in Milton (L9T area).\nShipping: Tracked shipping across Canada and internationally available at buyer's cost.",
+          "tags": [
+            "Powerline",
+            "Ethernet",
+            "Networking",
+            "Milton",
+            "local pickup",
+            "shipping available"
+          ]
         },
         "ebay": {
-          "title": "Ethernet-over-Power Powerline Adapter Kit",
-          "description": ""
+          "title": "Speedy Link 200Mbps HomePlug AV Powerline Network Adapter Kit Pair Tested",
+          "description": "Item: Speedy Link 200Mbps Powerline Adapter Kit (Pair of 2)\nCondition: good\nFully tested and working. Extends Ethernet over standard AC wiring.",
+          "shipping_weight_kg": 0.5
         }
       },
       "created_at": "2026-11-10T20:13:34.387Z",
-      "updated_at": "2026-11-10T20:13:34.387Z"
+      "updated_at": "2026-11-16T23:27:48.809Z",
+      "related_items": [
+        "firewall-dell-tz300w",
+        "networking-tp-link-poe-injector"
+      ]
     },
     {
       "id": "networking-tp-link-poe-injector",
       "sku": "LGL-NET-TPLINKPO-601",
-      "title": "TP-Link Gigabit Power-over-Ethernet (PoE) Injector",
+      "title": "TP-Link TL-POE150S Gigabit Power-over-Ethernet (PoE) Injector (802.3af 48V, Like New in Film)",
       "category": "Networking",
       "brand": "TP-Link",
-      "model": "Gigabit PoE Injector",
-      "condition": "good",
+      "model": "TL-POE150S (UN) Ver: 4.0",
+      "condition": "like_new",
       "location": {
         "public_region": {
           "country": "CA",
           "region": "ON",
-          "city": "Ottawa",
-          "postal_area": "K1A area"
+          "city": "Milton",
+          "postal_area": "L9T area"
         },
         "internal_sidelining": {
           "zone": "Office",
-          "shelf_or_bin": "Networking Shelf"
+          "shelf_or_bin": "Network Gear Shelf"
         }
       },
       "specs": {
-        "inferred_from_path": "Networking\\tp-link POE injector",
-        "media_count": 4
+        "standard": "IEEE 802.3af compliant (automatically detects and supplies optimal power up to 15.4W)",
+        "speed": "Gigabit Ethernet (10/100/1000 Mbps) pass-through on both Data In and Power+Data Out ports",
+        "range": "Delivers combined power and high-speed data up to 100 meters (328 feet) via standard Cat5e/Cat6 cable",
+        "condition_notes": "Like new condition; original protective plastic film still intact on the piano-black glossy top casing",
+        "power_supply": "Original TP-Link 48V 0.5A AC power adapter (model T480050-2B1) included",
+        "use_case": "Powers VoIP phones, IP security surveillance cameras, wireless access points (APs), and IoT PoE devices without requiring an AC outlet at the remote location",
+        "fulfillment": "Local pickup at central community landmark in Milton (L9T area) or buyer-paid tracked shipping (Canada-wide & International)"
       },
       "clearance_identifiers": {
         "tokenized_tags": [],
@@ -1664,16 +2203,16 @@
       },
       "pricing": {
         "currency": "CAD",
-        "fast_liquidation": 0,
-        "fair_market": 0,
-        "optimistic_anchor": 0,
-        "active_price": 0
+        "fast_liquidation": 15,
+        "fair_market": 20,
+        "optimistic_anchor": 25,
+        "active_price": 20
       },
       "circular_metrics": {
-        "estimated_weight_kg": 0.6,
-        "refurb_status": "ready_for_curation"
+        "estimated_weight_kg": 0.35,
+        "refurb_status": "curated_ready_for_sale"
       },
-      "status": "draft",
+      "status": "active",
       "media": {
         "primary_image": "Sales/Networking/tp-link POE injector/1396C38C-9448-4F7B-AD92-C81A9075540D.jpeg",
         "gallery": [
@@ -1685,37 +2224,57 @@
       },
       "syndication": {
         "facebook": {
-          "title": "TP-Link Gigabit Power-over-Ethernet (PoE) Injector",
-          "description": "",
-          "tags": []
+          "title": "TP-Link TL-POE150S Gigabit PoE Injector 802.3af 48V (Like New with Protective Film)",
+          "description": "TP-Link TL-POE150S Gigabit Power-over-Ethernet (PoE) Injector\n\nCondition: LIKE NEW (Factory protective plastic film still attached)\n\nKey Specs:\n• IEEE 802.3af Compliant (Auto-supplies up to 15.4W)\n• Full Gigabit 10/100/1000 Mbps Speed\n• Powers IP Cameras, Wi-Fi Access Points, VoIP Phones up to 100 meters\n• Includes Original TP-Link 48V Power Adapter\n• Plug and play with zero configuration\n\nPickup Location: Central public community landmark in Milton (L9T area).\nShipping: Tracked Canada-wide & International shipping available (buyer pays shipping).\nPayment: Cash or Interac e-Transfer upon inspection.",
+          "tags": [
+            "TP-Link",
+            "PoE Injector",
+            "Gigabit PoE",
+            "IP Camera",
+            "Access Point",
+            "Networking"
+          ]
         },
         "kijiji": {
-          "title": "TP-Link Gigabit Power-over-Ethernet (PoE) Injector",
-          "description": "",
-          "tags": []
+          "title": "TP-Link TL-POE150S Gigabit PoE Injector (802.3af 48V, Like New) - Milton (L9T area)",
+          "description": "For sale: TP-Link TL-POE150S Gigabit Power-over-Ethernet Injector.\n\n• IEEE 802.3af compliant\n• Gigabit 10/100/1000 Mbps throughput\n• Powers access points and security cameras over network cable\n• Like new with protective plastic still attached\n• Includes original TP-Link 48V adapter\n\nLocation: Safe public meeting at a central community landmark in Milton (L9T area).\nShipping: Tracked shipping across Canada and internationally available at buyer's cost.",
+          "tags": [
+            "TP-Link",
+            "PoE",
+            "Injector",
+            "Gigabit",
+            "Milton",
+            "local pickup",
+            "shipping available"
+          ]
         },
         "ebay": {
-          "title": "TP-Link Gigabit Power-over-Ethernet (PoE) Injector",
-          "description": ""
+          "title": "TP-Link TL-POE150S Gigabit PoE Injector 802.3af 48V Ver 4.0 Like New OEM AC",
+          "description": "Item: TP-Link TL-POE150S Gigabit PoE Injector (UN) Ver: 4.0\nCondition: like_new (plastic film on casing)\nIncludes original TP-Link 48V power adapter. Tested and fully operational.",
+          "shipping_weight_kg": 0.5
         }
       },
       "created_at": "2026-11-10T20:13:34.388Z",
-      "updated_at": "2026-11-10T20:13:34.388Z"
+      "updated_at": "2026-11-16T23:27:48.809Z",
+      "related_items": [
+        "firewall-dell-tz300w",
+        "networking-powerline-adapter"
+      ]
     },
     {
       "id": "peripherals-keyboard-asus",
       "sku": "LGL-PER-KEYBOARD-829",
-      "title": "ASUS Wired Desktop Keyboard",
+      "title": "ASUS Wired Desktop Backlit Keyboard & Optical Mouse Set",
       "category": "Peripherals & Accessories",
       "brand": "ASUS",
-      "model": "USB Desktop Keyboard",
-      "condition": "good",
+      "model": "ASUS G01 KB & USB Optical Mouse Desktop Combo",
+      "condition": "very_good",
       "location": {
         "public_region": {
           "country": "CA",
           "region": "ON",
-          "city": "Ottawa",
-          "postal_area": "K1A area"
+          "city": "Milton",
+          "postal_area": "L9T area"
         },
         "internal_sidelining": {
           "zone": "Office",
@@ -1723,8 +2282,13 @@
         }
       },
       "specs": {
-        "inferred_from_path": "Peripherals\\Keyboard\\ASUS",
-        "media_count": 4
+        "keyboard_model": "ASUS G01 KB Full-Size Gaming / Office Desktop Keyboard with numeric keypad",
+        "lighting_and_controls": "Integrated blue LED backlighting with dedicated top-right volume roller dial wheel for instant sound control",
+        "key_mechanism": "Tactile responsive membrane switches designed for fast typing, office productivity, and gaming",
+        "mouse_included": "Matching USB wired optical desktop mouse (ergonomic ambidextrous grip, smooth tracking sensor, scroll wheel)",
+        "connectivity": "Dual USB wired plug-and-play connections (no drivers required)",
+        "compatibility": "Fully compatible with Windows 11, 10, 8, 7, macOS, Linux, and ChromeOS",
+        "fulfillment": "Local pickup at central community landmark in Milton (L9T area) or buyer-paid tracked shipping (Canada-wide & International)"
       },
       "clearance_identifiers": {
         "tokenized_tags": [],
@@ -1732,16 +2296,16 @@
       },
       "pricing": {
         "currency": "CAD",
-        "fast_liquidation": 0,
-        "fair_market": 0,
-        "optimistic_anchor": 0,
-        "active_price": 0
+        "fast_liquidation": 20,
+        "fair_market": 30,
+        "optimistic_anchor": 40,
+        "active_price": 30
       },
       "circular_metrics": {
-        "estimated_weight_kg": 1,
-        "refurb_status": "ready_for_curation"
+        "estimated_weight_kg": 0.95,
+        "refurb_status": "curated_ready_for_sale"
       },
-      "status": "draft",
+      "status": "active",
       "media": {
         "primary_image": "Sales/Peripherals/Keyboard/ASUS/IMG_20260330_122224_481097664474132516.jpg",
         "gallery": [
@@ -1753,37 +2317,58 @@
       },
       "syndication": {
         "facebook": {
-          "title": "ASUS Wired Desktop Keyboard",
-          "description": "",
-          "tags": []
+          "title": "ASUS Wired Desktop Backlit Keyboard & Mouse Set (Volume Dial, USB Plug & Play)",
+          "description": "ASUS G01 Desktop Keyboard and Optical Mouse Set\n\nCondition: VERY GOOD / CLEAN\n\nKey Specs:\n• Full-size desktop keyboard with numeric keypad\n• Blue LED backlighting\n• Built-in volume roller wheel for instant volume control\n• Matching USB optical mouse included\n• Reliable USB plug-and-play (no batteries or charging needed)\n• Tested and fully functional\n\nPickup Location: Central public community landmark in Milton (L9T area).\nShipping: Tracked Canada-wide & International shipping available (buyer pays shipping).\nPayment: Cash or Interac e-Transfer upon inspection.",
+          "tags": [
+            "ASUS",
+            "Keyboard",
+            "Mouse",
+            "Desktop Set",
+            "PC Gaming",
+            "Computer Accessories"
+          ]
         },
         "kijiji": {
-          "title": "ASUS Wired Desktop Keyboard",
-          "description": "",
-          "tags": []
+          "title": "ASUS Wired Backlit Desktop Keyboard & Mouse Combo - Milton (L9T area)",
+          "description": "For sale: ASUS G01 wired desktop backlit keyboard and optical mouse set.\n\n• Full-size keyboard with LED backlight\n• Dedicated volume adjustment dial\n• USB optical mouse included\n• Clean and tested working perfectly\n\nLocation: Safe public meeting at a central community landmark in Milton (L9T area).\nShipping: Tracked shipping across Canada and internationally available at buyer's cost.",
+          "tags": [
+            "ASUS",
+            "Keyboard",
+            "Mouse",
+            "PC Accessories",
+            "Milton",
+            "local pickup",
+            "shipping available"
+          ]
         },
         "ebay": {
-          "title": "ASUS Wired Desktop Keyboard",
-          "description": ""
+          "title": "ASUS G01 KB Wired Backlit Desktop Keyboard and USB Mouse Set Tested",
+          "description": "Item: ASUS G01 Backlit Keyboard and Optical Mouse Set\nCondition: very_good\nTested and working. Includes full-size backlit keyboard with volume wheel and USB mouse.",
+          "shipping_weight_kg": 1.2
         }
       },
       "created_at": "2026-11-10T20:13:34.389Z",
-      "updated_at": "2026-11-10T20:13:34.389Z"
+      "updated_at": "2026-11-17T00:03:50.920Z",
+      "related_items": [
+        "peripherals-keyboard-and-mice-microsoft-designer",
+        "dock-dell-wd15",
+        "latitutde-1"
+      ]
     },
     {
       "id": "peripherals-keyboard-and-mice-microsoft-designer",
       "sku": "LGL-PER-KEYBOARD-220",
-      "title": "Microsoft Designer Bluetooth Keyboard and Mouse Set",
+      "title": "Microsoft Designer Bluetooth Wireless Desktop Keyboard & Mouse Set",
       "category": "Peripherals & Accessories",
       "brand": "Microsoft",
-      "model": "Designer Bluetooth Desktop",
-      "condition": "good",
+      "model": "Designer Bluetooth Desktop (Keyboard 1678 / Mouse 1679)",
+      "condition": "very_good",
       "location": {
         "public_region": {
           "country": "CA",
           "region": "ON",
-          "city": "Ottawa",
-          "postal_area": "K1A area"
+          "city": "Milton",
+          "postal_area": "L9T area"
         },
         "internal_sidelining": {
           "zone": "Office",
@@ -1791,8 +2376,13 @@
         }
       },
       "specs": {
-        "inferred_from_path": "Peripherals\\Keyboard and Mice\\Microsoft Designer",
-        "media_count": 3
+        "design": "Ultra-thin, modern minimalist profile designed to complement sleek modern desks, workstations, and multi-monitor setups",
+        "wireless_technology": "Bluetooth 4.0 / 4.1 Low Energy (BLE) wireless connection (connects directly without taking up a USB port)",
+        "keyboard_features": "Full-size chiclet keyboard layout with built-in numeric keypad, dedicated media control keys, and Windows shortcut keys",
+        "mouse_features": "Compact ambidextrous Microsoft Designer mouse with BlueTrack Technology for accurate tracking on virtually any surface",
+        "power_and_battery": "Operates on standard AAA/AA batteries with up to 6 months typical battery life and power-saving sleep modes",
+        "compatibility": "Compatible with Windows 11, Windows 10, macOS, iPadOS, Android, and Bluetooth-enabled PCs and laptops",
+        "fulfillment": "Local pickup at central community landmark in Milton (L9T area) or buyer-paid tracked shipping (Canada-wide & International)"
       },
       "clearance_identifiers": {
         "tokenized_tags": [],
@@ -1800,16 +2390,16 @@
       },
       "pricing": {
         "currency": "CAD",
-        "fast_liquidation": 0,
-        "fair_market": 0,
-        "optimistic_anchor": 0,
-        "active_price": 0
+        "fast_liquidation": 30,
+        "fair_market": 45,
+        "optimistic_anchor": 60,
+        "active_price": 45
       },
       "circular_metrics": {
-        "estimated_weight_kg": 1,
-        "refurb_status": "ready_for_curation"
+        "estimated_weight_kg": 0.85,
+        "refurb_status": "curated_ready_for_sale"
       },
-      "status": "draft",
+      "status": "active",
       "media": {
         "primary_image": "Sales/Peripherals/Keyboard and Mice/Microsoft Designer/IMG_20260520_143300_9148155305627430283.jpg",
         "gallery": [
@@ -1820,27 +2410,46 @@
       },
       "syndication": {
         "facebook": {
-          "title": "Microsoft Designer Bluetooth Keyboard and Mouse Set",
-          "description": "",
-          "tags": []
+          "title": "Microsoft Designer Bluetooth Wireless Keyboard & Mouse Set (Ultra-Thin, Like New)",
+          "description": "Microsoft Designer Bluetooth Desktop Keyboard & Mouse Set\n\nCondition: VERY GOOD / EXCELLENT\n\nKey Specs:\n• Ultra-slim, elegant minimalist design\n• Bluetooth 4.0/4.1 Low Energy (No USB dongle required)\n• Full-size keyboard with numeric keypad & media keys\n• BlueTrack ambidextrous wireless mouse (tracks on almost any surface)\n• Long battery life with smart power management\n• Pairs seamlessly with Windows, Mac, iPads, and laptops\n\nPickup Location: Central public community landmark in Milton (L9T area).\nShipping: Tracked Canada-wide & International shipping available (buyer pays shipping).\nPayment: Cash or Interac e-Transfer upon inspection.",
+          "tags": [
+            "Microsoft",
+            "Designer Bluetooth",
+            "Wireless Keyboard",
+            "Bluetooth Mouse",
+            "PC Accessories"
+          ]
         },
         "kijiji": {
-          "title": "Microsoft Designer Bluetooth Keyboard and Mouse Set",
-          "description": "",
-          "tags": []
+          "title": "Microsoft Designer Bluetooth Wireless Keyboard and Mouse Set - Milton (L9T area)",
+          "description": "For sale: Microsoft Designer Bluetooth Desktop keyboard and mouse set.\n\n• Ultra-slim modern profile\n• Direct Bluetooth connection (frees up USB ports)\n• Full-size keyboard with number pad\n• Precise BlueTrack mouse\n• Tested and working in excellent condition\n\nLocation: Safe public meeting at a central community landmark in Milton (L9T area).\nShipping: Tracked shipping across Canada and internationally available at buyer's cost.",
+          "tags": [
+            "Microsoft",
+            "Bluetooth Keyboard",
+            "Wireless Mouse",
+            "Milton",
+            "local pickup",
+            "shipping available"
+          ]
         },
         "ebay": {
-          "title": "Microsoft Designer Bluetooth Keyboard and Mouse Set",
-          "description": ""
+          "title": "Microsoft Designer Bluetooth Desktop Keyboard & Mouse Combo Clean Tested",
+          "description": "Item: Microsoft Designer Bluetooth Desktop Set\nModels: Keyboard 1678 / Mouse 1679\nCondition: very_good\nFully tested and working. Connects via Bluetooth Smart.",
+          "shipping_weight_kg": 1.1
         }
       },
       "created_at": "2026-11-10T20:13:34.390Z",
-      "updated_at": "2026-11-10T20:13:34.390Z"
+      "updated_at": "2026-11-17T00:03:50.920Z",
+      "related_items": [
+        "peripherals-keyboard-asus",
+        "dock-dell-wd15",
+        "latitutde-5"
+      ]
     },
     {
       "id": "surfacepros-1",
       "sku": "LGL-LAP-1-279",
-      "title": "Microsoft Surface Pro 2-in-1 Tablet/Laptop _1",
+      "title": "Microsoft Surface Pro 2-in-1 Tablet / Laptop (Unit 1)",
       "category": "Laptops",
       "brand": "Microsoft",
       "model": "Surface Pro (_1)",
@@ -1858,8 +2467,7 @@
         }
       },
       "specs": {
-        "inferred_from_path": "SurfacePros\\_1",
-        "media_count": 4
+        "fulfillment": "Sold / completed hand-off to buyer."
       },
       "clearance_identifiers": {
         "tokenized_tags": [],
@@ -1867,16 +2475,16 @@
       },
       "pricing": {
         "currency": "CAD",
-        "fast_liquidation": 0,
-        "fair_market": 0,
-        "optimistic_anchor": 0,
-        "active_price": 0
+        "fast_liquidation": 180,
+        "fair_market": 240,
+        "optimistic_anchor": 290,
+        "active_price": 240
       },
       "circular_metrics": {
         "estimated_weight_kg": 1.1,
         "refurb_status": "ready_for_curation"
       },
-      "status": "draft",
+      "status": "sold",
       "media": {
         "primary_image": "Sales/SurfacePros/_1/1865DA6E-C85B-48D4-A420-03A1AA15EE06.jpeg",
         "gallery": [
@@ -1903,12 +2511,12 @@
         }
       },
       "created_at": "2026-11-10T20:13:34.390Z",
-      "updated_at": "2026-11-10T20:13:34.390Z"
+      "updated_at": "2026-11-16T22:12:44.115Z"
     },
     {
       "id": "surfacepros-2",
       "sku": "LGL-LAP-2-193",
-      "title": "Microsoft Surface Pro 2-in-1 Tablet/Laptop _2",
+      "title": "Microsoft Surface Pro 2-in-1 Tablet / Laptop (Unit 2)",
       "category": "Laptops",
       "brand": "Microsoft",
       "model": "Surface Pro (_2)",
@@ -1926,8 +2534,7 @@
         }
       },
       "specs": {
-        "inferred_from_path": "SurfacePros\\_2",
-        "media_count": 4
+        "fulfillment": "Sold / completed hand-off to buyer."
       },
       "clearance_identifiers": {
         "tokenized_tags": [],
@@ -1935,16 +2542,16 @@
       },
       "pricing": {
         "currency": "CAD",
-        "fast_liquidation": 0,
-        "fair_market": 0,
-        "optimistic_anchor": 0,
-        "active_price": 0
+        "fast_liquidation": 180,
+        "fair_market": 240,
+        "optimistic_anchor": 290,
+        "active_price": 240
       },
       "circular_metrics": {
         "estimated_weight_kg": 1.1,
         "refurb_status": "ready_for_curation"
       },
-      "status": "draft",
+      "status": "sold",
       "media": {
         "primary_image": "Sales/SurfacePros/_2/198D9A69-4FB9-4BA6-BA52-ACDFE363D64F.jpeg",
         "gallery": [
@@ -1971,31 +2578,37 @@
         }
       },
       "created_at": "2026-11-10T20:13:34.391Z",
-      "updated_at": "2026-11-10T20:13:34.391Z"
+      "updated_at": "2026-11-16T22:12:44.115Z"
     },
     {
       "id": "treadmill",
       "sku": "LGL-FIT-TREADMIL-886",
-      "title": "Folding Motorized Running & Walking Treadmill with Console",
+      "title": "XTERRA TR955 Folding Motorized Running & Walking Treadmill with Console",
       "category": "Fitness & Sports",
-      "brand": "Folding Motorized",
-      "model": "Compact Folding Electric Treadmill",
-      "condition": "good",
+      "brand": "XTERRA Fitness",
+      "model": "TR955",
+      "condition": "very_good",
       "location": {
         "public_region": {
           "country": "CA",
           "region": "ON",
-          "city": "Ottawa",
-          "postal_area": "K1A area"
+          "city": "Milton",
+          "postal_area": "L9T area"
         },
         "internal_sidelining": {
-          "zone": "Basement / Gym",
+          "zone": "Office",
           "shelf_or_bin": "Fitness Floor Area"
         }
       },
       "specs": {
-        "inferred_from_path": "Treadmill",
-        "media_count": 4
+        "motor_and_deck": "Heavy-duty motorized continuous-duty motor with cushioned shock-absorbing running deck",
+        "folding_mechanism": "Easy-lift hydraulic folding deck with soft-drop safety release latch for compact vertical storage",
+        "console_display": "Large 5.5\" blue backlit LCD display showing Speed, Incline, Elapsed Time, Distance, Calories, and Pulse",
+        "speed_and_incline": "10 speed quick-keys (up to 10 mph) and 10 motorized power incline levels with handlebar thumb controls",
+        "audio_and_cooling": "Built-in high-output stereo speakers with 3.5mm aux input and integrated cooling console fan",
+        "safety_and_extras": "Emergency magnetic safety stop key with lanyard clip, dual accessory/cup holders, integrated reading/tablet rack",
+        "video_demo": "Includes verified operational video demonstration showing smooth motor, deck belt, and console responsiveness",
+        "fulfillment": "Local pickup at community landmark or direct ground-floor vehicle loading in Milton (L9T area). SUV, minivan, or truck recommended due to frame length."
       },
       "clearance_identifiers": {
         "tokenized_tags": [],
@@ -2003,16 +2616,16 @@
       },
       "pricing": {
         "currency": "CAD",
-        "fast_liquidation": 0,
-        "fair_market": 0,
-        "optimistic_anchor": 0,
-        "active_price": 0
+        "fast_liquidation": 250,
+        "fair_market": 340,
+        "optimistic_anchor": 420,
+        "active_price": 340
       },
       "circular_metrics": {
-        "estimated_weight_kg": 42,
-        "refurb_status": "ready_for_curation"
+        "estimated_weight_kg": 85,
+        "refurb_status": "curated_ready_for_sale"
       },
-      "status": "draft",
+      "status": "active",
       "media": {
         "primary_image": "Sales/Treadmill/3276D3A5-95E2-4A89-90ED-AB6342E00837.jpeg",
         "gallery": [
@@ -2024,22 +2637,39 @@
       },
       "syndication": {
         "facebook": {
-          "title": "Folding Motorized Running & Walking Treadmill with Console",
-          "description": "",
-          "tags": []
+          "title": "XTERRA TR955 Heavy-Duty Folding Treadmill (Power Incline, LCD Console, Video Verified)",
+          "description": "XTERRA Fitness TR955 Folding Motorized Treadmill\n\nCondition: VERY GOOD / FULLY TESTED (Video demo available)\n\nKey Specs:\n• Powerful continuous-duty motor with smooth belt response\n• Motorized power incline (10 levels) & quick speed presets\n• Hydraulic Easy-Lift folding frame with soft-drop safety release\n• Backlit LCD console tracking distance, speed, calories, incline, pulse\n• Built-in speakers with audio jack + cooling fan + safety tether key\n• Hand grip pulse sensors\n\nLocation: Milton (L9T area). Ground floor easy load-in; will assist loading into your vehicle (SUV/van/truck recommended).\nPayment: Cash or Interac e-Transfer upon physical inspection.",
+          "tags": [
+            "Treadmill",
+            "XTERRA",
+            "TR955",
+            "Fitness",
+            "Home Gym",
+            "Workout",
+            "Exercise"
+          ]
         },
         "kijiji": {
-          "title": "Folding Motorized Running & Walking Treadmill with Console",
-          "description": "",
-          "tags": []
+          "title": "XTERRA TR955 Folding Motorized Treadmill (Incline, Speakers, LCD) - Milton (L9T area)",
+          "description": "For sale: XTERRA TR955 heavy-duty folding motorized treadmill in very good condition.\n\n• Motorized power incline and speed presets up to 10\n• Backlit LCD console with pulse monitoring\n• Folds upright easily to save floor space\n• Built-in sound speakers and cooling fan\n• Video showing smooth operation available\n\nPickup: Safe meeting / loading in Milton (L9T area).\nPayment: Cash or e-Transfer upon testing.",
+          "tags": [
+            "Treadmill",
+            "XTERRA",
+            "Fitness Equipment",
+            "Home Gym",
+            "Milton",
+            "local pickup"
+          ]
         },
         "ebay": {
-          "title": "Folding Motorized Running & Walking Treadmill with Console",
-          "description": ""
+          "title": "XTERRA TR955 Motorized Folding Treadmill Power Incline Console Tested Local",
+          "description": "Item: XTERRA TR955 Motorized Folding Treadmill\nCondition: very_good\nFully tested and working with video demonstration. Local pickup only.",
+          "shipping_weight_kg": 95
         }
       },
       "created_at": "2026-11-10T20:13:34.392Z",
-      "updated_at": "2026-11-10T20:13:34.392Z"
+      "updated_at": "2026-11-16T23:38:23.439Z",
+      "related_items": []
     }
   ]
 }

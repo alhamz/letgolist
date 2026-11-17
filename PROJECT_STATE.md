@@ -47,7 +47,18 @@ Total scanned items: **10 top-level categories**, 403MB media assets:
 - [x] **Milestone 2: Asset Data Schema & Inventory Model** (Normalized schema, polymorphic specs, sidelining location, harm-based classification, `data/inventory.json` with 30 discovered lots).
 - [x] **Milestone 2.1: Sovereign Feedback & piiScrub Blackbox Integration** (`FEEDBACK.md`, `data/feedback.jsonl`, `src/security/piiClient.js`, automated upstream feedback handshake verified).
 - [x] **Milestone 3.1: Interactive Curation Engine & CLI** (`src/curator/curator.js`, `bin/letgo.js curate`, clearance vaulting, dynamic multi-channel syndication refresh, 6/6 tests passing).
-- [ ] **Milestone 3.2: Lot Curation Execution** (Walk through and curate attributes for the 30 discovered lots in `Sales/`).
+- [x] **Milestone 3.2: Lot Curation Execution (Completed)**
+  - Enforced strict Zero-Residential-Exposure privacy: 0 residential addresses recorded or disclosed; local pickups designated exclusively at neutral public community landmarks in Milton, ON (`L9T area`).
+  - Added `'in_use'` lifecycle state for assets deployed in daily operations (`dock-dell-wd19s` marked unavailable / dormant).
+  - Added `'sold'` lifecycle state handling: suppresses active CTA, renders `[SOLD / LIQUIDATED]` badge, and preserves archival provenance.
+  - Curated Batch 1 (Docks): `dock-dell-wd15` activated ($50 CAD, 130W OEM adapter, tested) with tracked shipping (Canada/International) and local public landmark hand-off.
+  - Curated Batch 2 (Tablets & Accessories): 4 iPads activated (2x 6th Gen 32GB @ $150 CAD, 2x 9th Gen 64GB @ $280 CAD) + 3 standalone cases ($15–$35 CAD), with bidirectional related-accessories linking on each item profile.
+  - Curated Batch 3 (Phones): 4 Apple iPhones activated (iPhone 11 Pro 64GB with cracked screen @ $175 CAD, iPhone 8 Plus 64GB @ $130 CAD, iPhone 7 32GB @ $70 CAD, iPhone 6s 32GB @ $50 CAD), with inter-phone cross-linking.
+  - Curated Batch 4 (Laptops & 2-in-1s): 6 Dell Latitude laptops activated (3x Latitude 7490 @ $195 CAD, 1x Latitude 5400 @ $220 CAD, 2x Latitude 5420 i7 @ $380 CAD) with OEM power adapters and reciprocal WD15 dock cross-linking; 2x Surface Pro units marked `'sold'` ($240 CAD archival liquidated).
+  - Curated Batch 5 (Networking): 3 networking lots activated (SonicWall TZ300W Wireless-AC @ $75 CAD with power brick & antenna, Speedy Link 200Mbps Powerline Kit pair @ $25 CAD, TP-Link TL-POE150S Gigabit PoE Injector @ $20 CAD like new in film).
+  - Curated Batch 6 (Baby Gear & Fitness): 3x Car Seats marked `'sold'` (Evenflo Triumph, Highback Booster, Harmony Commander Deluxe); 1x XTERRA TR955 Folding Motorized Treadmill activated ($340 CAD with power incline, speakers, cooling fan, video demo verified).
+  - Curated Batch 7 (Desktop Peripherals): 2 desktop keyboard & mouse sets activated (ASUS G01 Backlit Keyboard + USB Mouse Set @ $30 CAD; Microsoft Designer Bluetooth Wireless Keyboard & Mouse Set @ $45 CAD).
+  - **Full Portfolio Metrics:** 30 total lots (24 active @ $4,210 CAD total value, 1 in-use, 5 sold, 0 draft; 130.8 kg e-waste diverted). All 30 standalone HTML profiles compiled in `dist/` and `dist/items/`.
 - [ ] **Milestone 4: Regional Market Pricing & Syndication Generator** (Comps store schema, multi-tier pricing, Kijiji / FB / eBay ad copy generators).
 - [x] **Milestone 5.1: Standalone Item Webpage Generator (Cloudflare Pages Ready)** (`src/generator/pageGenerator.js`, `bin/letgo.js build/render`, 30 standalone item profiles in `dist/items/`, responsive photo/video gallery, OpenGraph & Schema.org JSON-LD metadata, 7/7 tests passing).
 - [x] **Milestone 5.2: GitHub Remote & Cloudflare Pages CI/CD Setup** (Repository `alhamz/letgolist` deployed live to Cloudflare Pages at `https://letgolist.pages.dev`; automated CI/CD builds on git push to `master`/`main`).

@@ -65,17 +65,18 @@ So that they are protected from unauthorized scraping while remaining recallable
   - **And** the original Service Tag is securely mapped inside the local clearance vault,
   - **And** an authorized buyer request for warranty verification allows on-demand recall and disclosure.
 
-### Story 2.4: Geographic Privacy Tiering
+### Story 2.4: Geographic Privacy & Neutral Landmark Pickup
 As a private seller,  
-I want public listings to display only my regional Forward Sortation Area (FSA),  
-So that buyers can estimate pickup distance without exposing my exact residential street address.
+I want public listings and confirmed transaction parameters to direct buyers to a neutral public landmark rather than a private residence or workplace,  
+So that buyers can inspect and pick up items in a safe, visible community setting with zero exposure of my home address.
 
 * **Scenario: Generating safe pickup location parameters**
-  - **Given** an item located at a residential address in Ottawa `K1A 0B1`,
-  - **When** listing parameters are prepared for Kijiji and Facebook Marketplace,
-  - **Then** public ad copy and web catalog cards display only `Ottawa (K1A area)`,
-  - **And** the full street address is stored in the clearance vault,
-  - **And** only revealed when the transaction status transitions to `reserved` with a confirmed pickup appointment.
+  - **Given** an item located in the Milton area (`L9T`),
+  - **When** listing parameters and confirmation details are prepared for Kijiji, Facebook Marketplace, or direct web inquiries,
+  - **Then** public ad copy and web catalog cards display only `Milton, ON (L9T area)`,
+  - **And** in-person pickup instructions designate a well-known neutral public community landmark (e.g. Milton Sports Centre or Public Library Safe Trade zone),
+  - **And** zero residential or business street addresses are ever disclosed to buyers under any circumstances (including advance payments),
+  - **And** buyer-paid shipping across Canada or internationally is noted as an available option.
 
 
 ---

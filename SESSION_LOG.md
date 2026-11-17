@@ -144,5 +144,171 @@ All events, architecture decisions, and verification outputs are recorded chrono
   - **Catalog Rebuild:** Executed `npm run build`, generating clean `dist/carseats-highback-booster.html` and updating `dist/index.html`.
   - **Verification:** Automated regex audit confirmed 0 occurrences of "ahmed" across `data/inventory.json`, `dist/index.html`, and all generated HTML pages. Automated test suite (7/7) passing.
 
+---
+
+## 2026-11-13T19:55:00-05:00 — Category 1 Curation, Strict Zero-Residential-Exposure & Dynamic Lifecycle Integration
+
+* **Context:** User confirmed condition and accessories for Docks category. User instructed that `dock-dell-wd19s` is in personal daily use on an operator workstation and must be marked dormant/unavailable dynamically in inventory. User rejected disclosing residential street addresses even for confirmed/paid pickups, establishing strict neutral public landmark pickups in Milton, ON (`L9T area`) alongside Canada-wide & International buyer-paid tracked shipping. User instructed leaving remaining inventory slightly off to practice removal, relisting, and lifecycle fulfillment workflows.
+* **Actions Executed:**
+  1. **Zero-Residential-Exposure Privacy Standard:** Updated `PRD.md` Section 6 and `UserStories.md` Story 2.4. Explicitly barred collecting or disclosing residential/workplace street addresses under any circumstances; in-person handoffs designated exclusively at central public landmarks in Milton, ON (`L9T area`).
+  2. **Schema & Lifecycle Extension:** Added `'in_use'` state to `LIFECYCLE_STATUSES` in `src/model/schema.js`.
+  3. **Generator & Curation Hardening:**
+     - Updated `src/generator/pageGenerator.js`: Added `.status-in-use` badge (`[IN USE / UNAVAILABLE]`), suppressed contact CTAs for in-use assets, and added public landmark pickup and shipping fulfillment options.
+     - Updated `src/curator/curator.js`: Synchronized ad copy syndication generators for `in_use` assets and public landmark / shipping terms.
+     - Updated default regional fallbacks in `src/scanner/scanner.js` and `src/generator/pageGenerator.js` to Milton, ON (`L9T area`).
+  4. **Batch 1 (Docks) Curation Applied:**
+     - `dock-dell-wd15`: Promoted to `active`, condition `very_good`, active price `$50 CAD`, specs populated with port breakdown and included OEM 130W Dell adapter, fulfillment set to Milton community landmark pickup or buyer-paid tracked shipping.
+     - `dock-dell-wd19s`: Transitioned to `in_use` (unavailable / dormant), active price `$0 CAD`, internal sidelining mapped to `Operator Desk Workstation (In Active Daily Use)`.
+  5. **Inventory Calibration:** Kept remaining 28 items in draft/uncalibrated state to allow iterative fulfillment practice.
+  6. **Rebuild & Verification:** Executed `node bin/letgo.js build`; generated 30 clean standalone HTML profiles in `dist/` and refreshed `dist/index.html`. Verified `dist/dock-dell-wd19s.html` displays `[IN USE / UNAVAILABLE]` and `dist/dock-dell-wd15.html` displays `$50 CAD` with public landmark pickup and shipping parameters.
+
+---
+
+## 2026-11-16T16:32:00-05:00 — Category 2 (Tablets & Accessories) Curation & Related Companion Linking
+
+* **Context:** User confirmed storage capacities for iPads (32GB for 6th Gen; 64GB for 9th Gen), confirmed all 4 units are active for sale, and instructed that accessories remain standalone sale items while every item page incorporates a companion "Related Accessories & Add-ons" section linking cross-compatible lots.
+* **Actions Executed:**
+  1. **Related Companion Engine in PageGenerator:**
+     - Updated `src/generator/pageGenerator.js`: Added support for `related_items` array on items.
+     - Styled `.related-card`, `.related-items-grid`, and `.related-item-link` in clean responsive dark mode layout with thumbnail previews, titles, prices, and directional navigation indicators.
+     - Wired bidirectional links: iPad detail pages feature the 3 compatible cases; accessory pages feature direct links back to compatible iPads.
+  2. **Category 2 (Tablets & Accessories) Curation Applied (7 Lots):**
+     - `ipad-6th-gen-0` & `ipad-6th-gen-1`: Activated at **$150 CAD** each, 32GB Wi-Fi, A10 Fusion, Retina 9.7", Touch ID, Apple Pencil 1 support, verified battery health, iCloud unlocked / factory reset.
+     - `ipad-9th-gen-0` & `ipad-9th-gen-1`: Activated at **$280 CAD** each, 64GB Wi-Fi, A13 Bionic, 10.2" True Tone Retina, Center Stage 12MP front camera, Touch ID, clean battery health, iCloud unlocked / factory reset.
+     - `ipad-accessories-logitechcase`: Activated at **$25 CAD**, Logitech Folio protective kickstand case with smart sleep/wake and pencil loop.
+     - `ipad-accessories-pinkcase`: Activated at **$15 CAD**, Shockproof heavy-duty EVA foam kid's case with 180-degree convertible handle/kickstand.
+     - `ipad-accessories-zagg-keyboard-case`: Activated at **$35 CAD**, ZAGG Bluetooth wireless keyboard with detachable rugged protective case.
+  3. **Inventory & Ledger Synchronization:**
+     - Active listings increased from 1 to 8.
+     - Total cataloged liquidation value increased from $50 CAD to **$985 CAD**.
+     - 21 remaining items kept in draft/uncalibrated state per testing protocol.
+  4. **Catalog Rebuild & Verification:**
+     - Executed `node bin/letgo.js build`.
+     - Verified `dist/ipad-9th-gen-0.html` and companion pages render the related accessories card with thumbnail links, pricing, and active status.
 
 
+
+
+
+
+---
+
+## 2026-11-16T17:05:00-05:00 — Category 3 (Apple iPhones) Curation & Syndication Build
+
+* **Context:** User confirmed 64GB storage on iPhone 11 Pro with cracked front glass, confirmed pricing adjustments and specifications for remaining phones (iPhone 8 Plus 64GB, iPhone 7 32GB, iPhone 6s 32GB), and authorized curation of all 4 iPhone lots.
+* **Actions Executed:**
+  1. **Category 3 (Phones — 4 Lots) Curation Applied:**
+     - `iphones-iphone11pro`: Activated at **$175 CAD** (adjusted from $320 pristine baseline to reflect cracked front glass). 64GB, Space Gray, Apple A13 Bionic, 5.8" Super Retina XDR OLED, triple 12MP cameras with Night mode, Face ID verified, clean iCloud / factory reset. Condition explicitly marked as `fair` with detailed glass inspection disclosure and companion cross-linking.
+     - `iphones-iphone8plus`: Activated at **$130 CAD**. 64GB, Space Gray, Apple A11 Bionic, 5.5" True Tone Retina HD, dual 12MP cameras with Portrait mode, Touch ID, Qi wireless charging, clean iCloud / factory reset. Condition `very_good`.
+     - `iphones-iphone7s`: Activated at **$70 CAD**. 32GB, Black, Apple A10 Fusion, 4.7" Retina HD, 12MP camera with OIS, Touch ID with Taptic Engine, clean iCloud / factory reset. Condition `good`.
+     - `iphones-iphone6s`: Activated at **$50 CAD**. 32GB, Space Gray, Apple A9, 4.7" Retina HD with 3D Touch, 12MP camera with 4K recording, integrated 3.5mm headphone jack, Touch ID, clean iCloud / factory reset. Condition `good`.
+  2. **Inter-Phone Cross-Selling Navigation:**
+     - Linked all 4 phones reciprocally via `related_items` array, populating the responsive "Available Compatible Accessories & Companion Lots" grid on every phone profile.
+  3. **CLI & Summary Engine Modernization:**
+     - Updated `src/model/schema.js` (`updateSummary`) to properly track `in_use_items` alongside active, sidelined, draft, and sold counts.
+     - Updated `bin/letgo.js` (`handleStatus`) to output clean live inventory metrics with zero `undefined` values.
+  4. **Inventory & Ledger Synchronization:**
+     - Active listings increased from 8 to **12**.
+     - In-use items: **1** (`dock-dell-wd19s`).
+     - Draft items: **17** (remaining deliberately uncalibrated to test ongoing lifecycle fulfillment).
+     - Total active market liquidation value: **$1,495 CAD**.
+     - Diverted circular e-waste: **93.3 kg**.
+  5. **Static Site Rebuild & Verification:**
+     - Executed `node bin/letgo.js build` (`task-420`). All 30 standalone item pages regenerated in `dist/` and `dist/items/`.
+     - Verified `dist/iphones-iphone11pro.html` renders cracked screen disclosures, $175 CAD price, Milton landmark pickup, and companion phone cards.
+
+---
+
+## 2026-11-16T17:14:00-05:00 — Category 4 (Dell Latitude Laptops & Microsoft Surface Pros) Curation
+
+* **Context:** User confirmed all 6 Dell Latitude laptops are active for sale with OEM AC power adapters included, and confirmed both Microsoft Surface Pro units are sold out.
+* **Actions Executed:**
+  1. **Category 4 (Laptops & 2-in-1s — 8 Lots) Curation Applied:**
+     - `latitutde-1`: Dell Latitude 7490 14" FHD (i5-8250U, 8GB RAM, 256GB SSD, Windows 11 Pro, OEM 65W AC Adapter). Condition: `very_good`. Activated at **$195 CAD**.
+     - `latitutde-2`: Dell Latitude 7490 14" FHD (Unit 2 - i5-8250U, 8GB RAM, 256GB SSD, Windows Pro, OEM 65W AC Adapter). Condition: `very_good`. Activated at **$195 CAD**.
+     - `latitutde-3`: Dell Latitude 7490 14" FHD (Unit 3 - i5-8250U, 8GB RAM, 256GB SSD, Windows 11 Pro, OEM 65W AC Adapter). Condition: `very_good`. Activated at **$195 CAD**.
+     - `latitutde-4`: Dell Latitude 5400 14" FHD (i5-8265U Whiskey Lake, 8GB RAM, 256GB NVMe SSD, Windows Pro, OEM 65W AC Adapter). Condition: `very_good`. Activated at **$220 CAD**.
+     - `latitutde-5`: Dell Latitude 5420 14" FHD (11th Gen Intel Core i7-1185G7 vPro @ 3.0GHz, 8GB RAM, 256GB NVMe SSD, Iris Xe Graphics, Dual Thunderbolt 4, Boxed with OEM Power Adapter). Condition: `like_new`. Activated at **$380 CAD**.
+     - `latitutde-6`: Dell Latitude 5420 14" FHD (Unit 2 - 11th Gen Intel Core i7-1185G7 vPro @ 3.0GHz, 8GB RAM, 256GB NVMe SSD, Iris Xe Graphics, Dual Thunderbolt 4, Boxed with OEM Power Adapter). Condition: `like_new`. Activated at **$380 CAD**.
+     - `surfacepros-1` & `surfacepros-2`: Marked with status `'sold'`, suppressed inquiry CTA, displayed `[SOLD / LIQUIDATED]` badge and sold-out archival provenance card.
+  2. **Ecosystem Cross-Selling Engine Wiring:**
+     - Connected all 6 Dell Latitudes reciprocally to `dock-dell-wd15` (Dell WD15 USB-C 130W Docking Station), enabling buyers browsing laptops to view and bundle the docking station, and vice versa.
+  3. **PageGenerator Sold Status Refinement:**
+     - Enhanced `src/generator/pageGenerator.js` to render dedicated `[SOLD / LIQUIDATED]` styling and clear notice when `item.status === 'sold'`.
+  4. **Inventory & Ledger Synchronization:**
+     - Active listings: **18**
+     - In-use items: **1** (`dock-dell-wd19s`)
+     - Sold items: **2** (`surfacepros-1`, `surfacepros-2`)
+     - Draft items: **9** (remaining uncalibrated for continued testing)
+     - Total cataloged liquidation value: **$3,540 CAD**
+     - Diverted circular e-waste: **89.2 kg**
+  5. **Static Site Rebuild & Verification:**
+     - Executed `node bin/letgo.js build` (`task-501`). All 30 standalone item profiles recompiled in `dist/` and `dist/items/`.
+     - Verified `dist/surfacepros-1.html` renders `SOLD / LIQUIDATED`, and `dist/latitutde-5.html` renders `$380 CAD` with WD15 dock companion links.
+
+---
+
+## 2026-11-16T18:29:00-05:00 — Category 5 (Networking Gear) Curation & Build
+
+* **Context:** User confirmed all 3 networking lots are active for sale at proposed fair market prices ($75, $25, and $20 CAD), and noted cables can be provided on buyer demand but do not need separate listing callouts.
+* **Actions Executed:**
+  1. **Category 5 (Networking Gear — 3 Lots) Curation Applied:**
+     - `firewall-dell-tz300w`: Dell / SonicWall TZ300W Wireless-AC Security Firewall (APL28-0B5). Activated at **$75 CAD**. 5x Gigabit Ethernet, dedicated console, dual-band 802.11ac Wi-Fi, 750 Mbps inspection, OEM 12V 2.0A power supply brick, and detachable RP-SMA high-gain antenna included. Condition: `good`.
+     - `networking-powerline-adapter`: Speedy Link 200Mbps HomePlug AV Powerline Network Adapter Kit (Matched Pair of 2). Activated at **$25 CAD**. Plug-and-play Ethernet over existing household AC wiring, 128-bit AES encryption sync button, North American 2-prong plugs. Condition: `good`.
+     - `networking-tp-link-poe-injector`: TP-Link TL-POE150S Gigabit Power-over-Ethernet (PoE) Injector (Ver: 4.0). Activated at **$20 CAD**. IEEE 802.3af compliant (up to 15.4W / 48V, Gigabit 10/100/1000 Mbps pass-through). Unit in like-new condition with factory protective film attached; includes original TP-Link 48V 0.5A power adapter (`T480050-2B1`). Condition: `like_new`.
+  2. **Inter-Networking Companion Cross-Selling:**
+     - Reciprocally linked all 3 networking items in `related_items`, allowing home lab / network builders to cross-navigate between firewall, powerline extension, and PoE power delivery.
+  3. **Inventory & Ledger Synchronization:**
+     - Active market listings: **21**
+     - In-use items: **1** (`dock-dell-wd19s`)
+     - Sold items: **2** (`surfacepros-1`, `surfacepros-2`)
+     - Draft items: **6** (remaining uncalibrated for testing lifecycle fulfillment)
+     - Total cataloged liquidation value: **$3,660 CAD**
+     - Diverted circular e-waste: **88.0 kg**
+  4. **Static Site Rebuild & Verification:**
+     - Executed `node bin/letgo.js build`. Rebuilt all 30 standalone pages in `dist/` and `dist/items/`.
+     - Verified `dist/firewall-dell-tz300w.html`, `dist/networking-powerline-adapter.html`, and `dist/networking-tp-link-poe-injector.html` render active pricing, landmark meetup parameters, and related networking companion cards.
+
+---
+
+## 2026-11-16T18:40:00-05:00 — Baby Gear (Car Seats Sold) & Fitness (XTERRA TR955 Treadmill Activated)
+
+* **Context:** User confirmed that all 3 baby/child car seats were sold out, and confirmed that the motorized treadmill with console is still active for sale.
+* **Actions Executed:**
+  1. **Baby & Child Gear (3 Lots — Sold Out State):**
+     - `carseats-highback-booster`, `carseats-evenflotriumph`, `carseats-harmonycommanderdeluxe`: Marked with status `'sold'`, active price set to fair market value ($35, $65, $35 CAD respectively), inquiry CTA suppressed, `[SOLD / LIQUIDATED]` badge and provenance card rendered.
+  2. **Fitness Equipment (1 Lot — XTERRA TR955 Treadmill Activated):**
+     - Identified hardware from photos and video: **XTERRA TR955 Heavy-Duty Folding Motorized Treadmill**.
+     - Features continuous-duty motor, 10-level motorized power incline, 10 quick-speed presets, hydraulic Easy-Lift folding deck with soft-drop safety latch, large backlit blue LCD console (pulse/calories/distance/time/speed/incline), built-in stereo speakers with aux input, cooling console fan, safety tether key, and hand grip pulse sensors.
+     - Activated at **$340 CAD** (Condition: `very_good`), ground-floor vehicle loading assistance in Milton (`L9T area`).
+  3. **Inventory & Ledger Synchronization:**
+     - Active market listings: **22** ($4,135 CAD total active value)
+     - In-use items: **1** (`dock-dell-wd19s`)
+     - Sold items: **5** (2x Surface Pros, 3x Car Seats)
+     - Draft items: **2** (ASUS keyboard/mouse set, Microsoft Designer keyboard and mouse set)
+     - Diverted circular e-waste: **131.0 kg**
+  4. **Static Site Rebuild & Verification:**
+     - Executed `node bin/letgo.js build` (`task-600`). All 30 standalone item pages recompiled in `dist/` and `dist/items/`.
+     - Verified `dist/treadmill.html` renders XTERRA TR955, $340 CAD, video demo notes, and Milton ground-floor pickup parameters; verified `dist/carseats-evenflotriumph.html` renders `[SOLD / LIQUIDATED]`.
+
+---
+
+## 2026-11-16T19:05:00-05:00 — Category 6 (Desktop Peripherals) Curation & 100% Lot Calibration Completion
+
+* **Context:** User confirmed that the ASUS wired desktop keyboard is bundled with an optical mouse as a complete set active for sale at $30 CAD, and confirmed the Microsoft Designer Bluetooth wireless keyboard and mouse set is also active for sale at $45 CAD.
+* **Actions Executed:**
+  1. **Category 6 (Desktop Peripherals — 2 Lots) Curation Applied:**
+     - `peripherals-keyboard-asus`: ASUS G01 Backlit Desktop Keyboard & USB Optical Mouse Combo. Full-size layout with numeric keypad, blue LED illumination, tactile keys, top-right volume adjustment roller dial wheel, and matching USB optical mouse. Activated at **$30 CAD** (Condition: `very_good`).
+     - `peripherals-keyboard-and-mice-microsoft-designer`: Microsoft Designer Bluetooth Wireless Desktop Keyboard & Mouse Set. Ultra-thin minimalist aesthetic, Bluetooth 4.0/4.1 Low Energy (BLE) direct pairing (no USB dongle needed), full-size chiclet keyboard with number pad, and ambidextrous BlueTrack mouse. Activated at **$45 CAD** (Condition: `very_good`).
+  2. **Reciprocal Ecosystem Linking:**
+     - Cross-linked both peripheral sets with each other, with the Dell WD15 USB-C dock (`dock-dell-wd15`), and with the Dell Latitude laptops (`latitutde-1`, `latitutde-5`).
+  3. **Milestone 3.2 (Lot Curation Execution) 100% Completed:**
+     - **30 Total Discovered Lots** across all categories in `Sales/` fully cataloged and classified:
+       - **24 Active Market Listings** totaling **$4,210 CAD** in active liquidation value.
+       - **1 In-Use Asset** (`dock-dell-wd19s` @ $0 CAD) deployed in daily operator workstation use.
+       - **5 Sold / Liquidated Assets** (2x Surface Pros + 3x Child Car Seats) preserved in archival state.
+       - **0 Draft / Uncalibrated Items**.
+       - **130.8 kg** of circular e-waste diverted.
+  4. **Static Site Compilation & Full Verification:**
+     - Executed `node bin/letgo.js build` (`task-621`). Recompiled all 30 standalone HTML pages in `dist/` and `dist/items/`.
+     - Verified `dist/peripherals-keyboard-asus.html` ($30 CAD) and `dist/peripherals-keyboard-and-mice-microsoft-designer.html` ($45 CAD) render companion cards, Milton landmark pickup, and shipping parameters.

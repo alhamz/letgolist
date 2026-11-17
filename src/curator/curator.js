@@ -134,8 +134,15 @@ export class ItemCurator {
   }
 
   _refreshSyndication(item) {
+    if (item.status === 'in_use') {
+      item.syndication.facebook = { title: `${item.title} [UNAVAILABLE - IN USE]`, description: 'This item is in active daily personal use and is not currently available for sale.', tags: [] };
+      item.syndication.kijiji = { title: `${item.title} [UNAVAILABLE - IN USE]`, description: 'This item is in active daily personal use and is not currently available for sale.', tags: [] };
+      item.syndication.ebay = { title: `${item.title} [UNAVAILABLE - IN USE]`, description: 'Currently unavailable.', shipping_weight_kg: 0 };
+      return;
+    }
+
     const loc = item.location?.public_region;
-    const locStr = loc ? `${loc.city} (${loc.postal_area})` : 'Local Ottawa Area';
+    const locStr = loc ? `${loc.city} (${loc.postal_area})` : 'Milton (L9T area)';
 
     // Facebook Marketplace (Concise, key features, local pickup)
     const fbBullets = Object.entries(item.specs || {})
@@ -145,21 +152,21 @@ export class ItemCurator {
 
     item.syndication.facebook = {
       title: item.title,
-      description: `${item.title}\n\nCondition: ${item.condition.replace(/_/g, ' ').toUpperCase()}\n\nKey Specs & Details:\n${fbBullets || '• Fully tested and clean'}\n\nPickup Location: ${locStr}\nCash or Interac e-Transfer upon inspection.`,
+      description: `${item.title}\n\nCondition: ${item.condition.replace(/_/g, ' ').toUpperCase()}\n\nKey Specs & Details:\n${fbBullets || '• Fully tested and clean'}\n\nPickup Location: Public community landmark in ${locStr}.\nShipping: Tracked Canada-wide & International shipping available (buyer pays shipping).\nPayment: Cash or Interac e-Transfer upon inspection.`,
       tags: [item.category, item.brand, item.model].filter(Boolean),
     };
 
     // Kijiji (Detailed, regional Ontario focus, clear payment/terms)
     item.syndication.kijiji = {
       title: `${item.title} - ${locStr}`,
-      description: `For sale: ${item.title} in ${item.condition.replace(/_/g, ' ')} condition.\n\nSpecifications:\n${fbBullets || '• Standard specifications'}\n\nLocation: Pickup in ${locStr}.\nContact for any questions or to schedule a pickup.`,
-      tags: [item.category, item.brand, 'local pickup', 'classifieds'],
+      description: `For sale: ${item.title} in ${item.condition.replace(/_/g, ' ')} condition.\n\nSpecifications:\n${fbBullets || '• Standard specifications'}\n\nLocation: Safe public meeting at a central community landmark in ${locStr}.\nShipping: Tracked shipping across Canada and internationally available at buyer's cost.\nContact for any questions or to arrange hand-off.`,
+      tags: [item.category, item.brand, 'local pickup', 'shipping available', 'classifieds'],
     };
 
     // eBay (Detailed specs, tokenized identifiers)
     item.syndication.ebay = {
       title: `${item.brand} ${item.model} ${item.title}`.slice(0, 80),
-      description: `Item: ${item.title}\nBrand: ${item.brand}\nModel: ${item.model}\nCondition: ${item.condition}\n\nSpecifications:\n${fbBullets}`,
+      description: `Item: ${item.title}\nBrand: ${item.brand}\nModel: ${item.model}\nCondition: ${item.condition}\n\nSpecifications:\n${fbBullets}\n\nShipping: Worldwide / North America tracked shipping available.`,
       shipping_weight_kg: item.circular_metrics?.estimated_weight_kg || 1.0,
     };
   }

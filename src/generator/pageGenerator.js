@@ -6,12 +6,14 @@
 
 import { writeFileSync, mkdirSync, existsSync, copyFileSync } from 'node:fs';
 import { resolve, dirname, join } from 'node:path';
+import { InventoryStore } from '../model/schema.js';
 
 export class PageGenerator {
   constructor(options = {}) {
     this.projectRoot = options.projectRoot || resolve('.');
     this.distDir = options.distDir || resolve(this.projectRoot, 'dist');
     this.itemsDir = resolve(this.distDir, 'items');
+    this.store = new InventoryStore({ projectRoot: this.projectRoot });
     this.ensureDirs();
   }
 
@@ -24,9 +26,9 @@ export class PageGenerator {
   /**
    * Generates a single standalone HTML page for an inventory item.
    */
-  renderItemPage(item) {
+  renderItemPage(item, allItems = null) {
     const loc = item.location?.public_region;
-    const locStr = loc ? `${loc.city}, ${loc.region} (${loc.postal_area})` : 'Ottawa, ON (Local Pickup)';
+    const locStr = loc ? `${loc.city}, ${loc.region} (${loc.postal_area})` : 'Milton, ON (L9T area)';
     const priceDisplay = item.pricing?.active_price 
       ? `$${item.pricing.active_price} ${item.pricing.currency || 'CAD'}`
       : 'Contact for Price';
@@ -35,13 +37,17 @@ export class PageGenerator {
       ? 'status-sold' 
       : item.status === 'reserved' 
         ? 'status-reserved' 
-        : 'status-available';
+        : item.status === 'in_use'
+          ? 'status-in-use'
+          : 'status-available';
 
     const statusLabel = item.status === 'sold'
       ? 'SOLD / LIQUIDATED'
       : item.status === 'reserved'
         ? 'PENDING PICKUP'
-        : 'AVAILABLE FOR PICKUP';
+        : item.status === 'in_use'
+          ? 'IN USE / UNAVAILABLE'
+          : 'AVAILABLE FOR PICKUP';
 
     const gallery = item.media?.gallery || [];
     const primaryImg = item.media?.primary_image || gallery[0] || '';
@@ -84,10 +90,55 @@ export class PageGenerator {
         "@type": "Offer",
         "priceCurrency": item.pricing?.currency || "CAD",
         "price": item.pricing?.active_price || 0,
-        "availability": item.status === 'sold' ? "https://schema.org/SoldOut" : "https://schema.org/InStock",
+        "availability": item.status === 'sold' ? "https://schema.org/SoldOut" : item.status === 'in_use' ? "https://schema.org/Discontinued" : "https://schema.org/InStock",
         "itemCondition": this._getSchemaCondition(item.condition)
       }
     };
+
+    // Render Related Accessories / Companion Items
+    let relatedHtml = '';
+    const relatedIds = item.related_items || [];
+    if (relatedIds.length > 0) {
+      let itemsList = allItems;
+      if (!itemsList) {
+        try {
+          itemsList = this.store.read().items || [];
+        } catch {
+          itemsList = [];
+        }
+      }
+      const matched = relatedIds
+        .map(id => itemsList.find(i => i.id === id))
+        .filter(Boolean);
+
+      if (matched.length > 0) {
+        relatedHtml = `
+        <!-- Related Accessories & Companion Lots Card -->
+        <div class="related-card">
+          <div class="card-heading">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
+            Available Compatible Accessories & Companion Lots
+          </div>
+          <div class="related-items-grid">
+            ${matched.map(r => {
+              const rImg = r.media?.primary_image || (r.media?.gallery || [])[0] || '';
+              const rPrice = r.pricing?.active_price ? `$${r.pricing.active_price} CAD` : (r.status === 'in_use' ? 'In Use' : 'Inquire');
+              return `
+                <a href="./${r.id}.html" class="related-item-link">
+                  ${rImg ? `<img src="${toRelativeMedia(rImg)}" alt="${this._escape(r.title)}" class="related-item-thumb">` : `<div class="related-item-thumb-placeholder">No Pic</div>`}
+                  <div class="related-item-info">
+                    <span class="related-item-title">${this._escape(r.title)}</span>
+                    <span class="related-item-price">${rPrice} • <span class="related-item-badge">${this._escape(r.condition?.replace(/_/g, ' ') || 'good')}</span></span>
+                  </div>
+                  <span class="related-item-arrow">→</span>
+                </a>
+              `;
+            }).join('')}
+          </div>
+        </div>
+        `;
+      }
+    }
 
     const html = `<!DOCTYPE html>
 <html lang="en">
@@ -252,6 +303,7 @@ export class PageGenerator {
     .status-available { background: rgba(16, 185, 129, 0.2); color: var(--accent); border: 1px solid var(--accent); }
     .status-reserved { background: rgba(245, 158, 11, 0.2); color: var(--warn); border: 1px solid var(--warn); }
     .status-sold { background: rgba(239, 68, 68, 0.2); color: var(--danger); border: 1px solid var(--danger); }
+    .status-in-use { background: rgba(100, 116, 139, 0.2); color: #94a3b8; border: 1px solid #64748b; }
 
     .item-title {
       font-size: 1.75rem;
@@ -372,6 +424,92 @@ export class PageGenerator {
       margin-top: 1rem;
     }
 
+    /* Related Accessories Card */
+    .related-card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 12px;
+      padding: 1.25rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.85rem;
+    }
+    .related-items-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 0.65rem;
+    }
+    .related-item-link {
+      display: flex;
+      align-items: center;
+      gap: 0.85rem;
+      padding: 0.6rem 0.75rem;
+      background: rgba(15, 23, 42, 0.6);
+      border: 1px solid var(--card-border);
+      border-radius: 8px;
+      text-decoration: none;
+      color: inherit;
+      transition: border-color 0.15s, transform 0.15s;
+    }
+    .related-item-link:hover {
+      border-color: var(--primary);
+      transform: translateX(3px);
+    }
+    .related-item-thumb {
+      width: 48px;
+      height: 48px;
+      border-radius: 6px;
+      object-fit: cover;
+      background: #000;
+      flex-shrink: 0;
+    }
+    .related-item-thumb-placeholder {
+      width: 48px;
+      height: 48px;
+      border-radius: 6px;
+      background: #000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.65rem;
+      color: var(--text-muted);
+      flex-shrink: 0;
+    }
+    .related-item-info {
+      display: flex;
+      flex-direction: column;
+      gap: 0.15rem;
+      flex: 1;
+      min-width: 0;
+    }
+    .related-item-title {
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: #fff;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .related-item-price {
+      font-size: 0.8rem;
+      color: var(--primary);
+      font-weight: 700;
+    }
+    .related-item-badge {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      font-weight: normal;
+      text-transform: capitalize;
+    }
+    .related-item-arrow {
+      color: var(--text-muted);
+      font-size: 1rem;
+      font-weight: 700;
+    }
+    .related-item-link:hover .related-item-arrow {
+      color: var(--primary);
+    }
+
     footer {
       margin-top: 3rem;
       text-align: center;
@@ -429,23 +567,38 @@ export class PageGenerator {
         </div>
 
         <div class="price-box">
-          <div class="price-val">${priceDisplay}</div>
-          <div class="price-sub">Fixed local price • Cash or Interac e-Transfer upon physical inspection</div>
+          <div class="price-val">${item.status === 'in_use' ? 'Not for Sale' : item.status === 'sold' ? `${priceDisplay} (Sold Out)` : priceDisplay}</div>
+          <div class="price-sub">${item.status === 'in_use' ? 'Currently deployed in internal homelab/workstation use' : item.status === 'sold' ? 'This lot has been liquidated / completed handoff' : 'Fixed local price • Cash or Interac e-Transfer upon physical inspection'}</div>
         </div>
 
         <!-- Call to Action -->
-        <div class="cta-card">
-          <a href="mailto:inquire@alhamaz.me?subject=${encodeURIComponent(`Inquiry on ${item.title} (${item.sku || item.id})`)}&body=${encodeURIComponent(`Hi,\n\nI am interested in "${item.title}" listed for ${priceDisplay}.\n\nIs it still available for pickup in ${locStr}?\n\nThank you!`)}" class="cta-btn">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
-            Message Seller / Schedule Pickup
-          </a>
-
-          <div class="pickup-info">
-            <div>📍 <strong>Location:</strong> Pickup in ${this._escape(locStr)}</div>
-            <div>⏱ <strong>Hand-off:</strong> Safe daytime meeting / flexible schedule</div>
-            <div>🛡 <strong>Inspection:</strong> Test thoroughly before paying</div>
+        ${item.status === 'in_use' ? `
+          <div class="cta-card">
+            <div style="color: #94a3b8; font-size: 0.95rem; line-height: 1.5;">
+              🔒 <strong>Currently In Active Use:</strong> This asset is currently deployed in daily operational use on an internal workstation. It is cataloged in inventory for tracking but is unavailable for sale or pickup.
+            </div>
           </div>
-        </div>
+        ` : item.status === 'sold' ? `
+          <div class="cta-card">
+            <div style="color: #ef4444; font-size: 0.95rem; line-height: 1.5;">
+              🤝 <strong>Sold Out / Liquidated:</strong> This item has been sold and handed off to a buyer. It is preserved in the circular inventory catalog for provenance, specification records, and e-waste diversion metrics.
+            </div>
+          </div>
+        ` : `
+          <div class="cta-card">
+            <a href="mailto:inquire@alhamaz.me?subject=${encodeURIComponent(`Inquiry on ${item.title} (${item.sku || item.id})`)}&body=${encodeURIComponent(`Hi,\n\nI am interested in "${item.title}" listed for ${priceDisplay}.\n\nIs it still available for pickup in ${locStr}?\n\nThank you!`)}" class="cta-btn">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+              Message Seller / Schedule Pickup
+            </a>
+
+            <div class="pickup-info">
+              <div>📍 <strong>Location:</strong> Pickup at public community landmark in ${this._escape(locStr)}</div>
+              <div>📦 <strong>Shipping:</strong> Canada-wide & International tracked shipping available (buyer pays shipping)</div>
+              <div>⏱ <strong>Hand-off:</strong> Safe public daytime meeting / flexible schedule</div>
+              <div>🛡 <strong>Inspection:</strong> Test thoroughly before paying</div>
+            </div>
+          </div>
+        `}
 
         <!-- Condition & Specifications Card -->
         <div class="spec-card">
@@ -469,6 +622,8 @@ export class PageGenerator {
             🔒 <strong>Verified Ownership & Security:</strong> Hardware serial numbers and manufacturer validation tags are preserved securely in our local clearance vault and disclosed upon request to verified buyers.
           </div>
         </div>
+
+        ${relatedHtml}
       </div>
     </div>
 
@@ -499,8 +654,8 @@ export class PageGenerator {
   /**
    * Writes the rendered page to dist/items/<id>.html and dist/<id>.html
    */
-  writeItemPage(item) {
-    const html = this.renderItemPage(item);
+  writeItemPage(item, allItems = null) {
+    const html = this.renderItemPage(item, allItems);
     const itemPath = resolve(this.itemsDir, `${item.id}.html`);
     const rootPath = resolve(this.distDir, `${item.id}.html`);
     writeFileSync(itemPath, html, 'utf-8');
@@ -515,7 +670,7 @@ export class PageGenerator {
   renderAll(items) {
     const results = [];
     for (const item of items) {
-      const p = this.writeItemPage(item);
+      const p = this.writeItemPage(item, items);
       results.push({ id: item.id, path: p });
     }
     this.writeIndexPage(items);
@@ -543,7 +698,7 @@ export class PageGenerator {
                 <a href="./${item.id}.html" class="item-card">
                   <div class="card-img-wrap">
                     ${imgSrc ? `<img src="${imgSrc}" alt="${this._escape(item.title)}" loading="lazy">` : `<div class="no-img">No Image</div>`}
-                    <span class="card-badge ${item.status === 'sold' ? 'status-sold' : 'status-avail'}">${item.status === 'sold' ? 'Sold' : 'Available'}</span>
+                    <span class="card-badge ${item.status === 'sold' ? 'status-sold' : item.status === 'in_use' ? 'status-in-use' : 'status-avail'}">${item.status === 'sold' ? 'Sold' : item.status === 'in_use' ? 'In Use' : 'Available'}</span>
                   </div>
                   <div class="card-body">
                     <h3 class="card-title">${this._escape(item.title)}</h3>
@@ -597,6 +752,7 @@ export class PageGenerator {
     .card-badge { position: absolute; top: 8px; right: 8px; font-size: 0.65rem; font-weight: 700; text-transform: uppercase; padding: 0.2rem 0.5rem; border-radius: 4px; }
     .status-avail { background: rgba(16, 185, 129, 0.9); color: #fff; }
     .status-sold { background: rgba(239, 68, 68, 0.9); color: #fff; }
+    .status-in-use { background: rgba(100, 116, 139, 0.9); color: #fff; }
     .card-body { padding: 1rem; display: flex; flex-direction: column; gap: 0.35rem; flex: 1; }
     .card-title { font-size: 0.95rem; font-weight: 600; color: #fff; line-height: 1.3; }
     .card-meta { font-size: 0.8rem; color: var(--text-muted); }
@@ -610,7 +766,7 @@ export class PageGenerator {
     <header>
       <div>
         <h1>Verified Inventory Directory</h1>
-        <div class="subtitle">Direct physical asset profiles • Local pickup in Ottawa, ON</div>
+        <div class="subtitle">Direct physical asset profiles • Local pickup in Milton, ON (L9T area) & Tracked Shipping</div>
       </div>
       <div class="stat-pill">${items.length} Active Profiles</div>
     </header>

@@ -135,8 +135,8 @@ export class CatalogScanner {
         public_region: {
           country: 'CA',
           region: 'ON',
-          city: 'Ottawa',
-          postal_area: 'K1A area',
+          city: 'Milton',
+          postal_area: 'L9T area',
         },
         internal_sidelining: defaultLocation,
       },
