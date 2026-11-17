@@ -868,9 +868,9 @@ export class PageGenerator {
 
       <div class="filter-group" id="statusFilters">
         <span class="filter-label">Status:</span>
-        <button class="filter-btn active" data-filter-status="all">All (${items.length})</button>
-        <button class="filter-btn" data-filter-status="active">Available (${activeCount})</button>
-        <button class="filter-btn" data-filter-status="sold">Sold (${soldCount})</button>
+        <button class="filter-btn active" data-filter-status="active">Available for Sale (${activeCount})</button>
+        <button class="filter-btn" data-filter-status="all">All (${items.length})</button>
+        <button class="filter-btn" data-filter-status="sold">Sold / Liquidated (${soldCount})</button>
         <button class="filter-btn" data-filter-status="in_use">In Use (${inUseCount})</button>
       </div>
 
@@ -912,7 +912,7 @@ export class PageGenerator {
       const emptyState = document.getElementById('emptyState');
 
       let currentSearch = '';
-      let currentStatus = 'all';
+      let currentStatus = 'active';
       let currentCat = 'all';
 
       function applyFilters() {
@@ -977,6 +977,9 @@ export class PageGenerator {
           applyFilters();
         });
       });
+
+      // Initial filter execution to show only active available lots by default
+      applyFilters();
     })();
   </script>
 </body>
