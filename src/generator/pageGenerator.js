@@ -678,32 +678,48 @@ export class PageGenerator {
   }
 
   /**
-   * Generates a clean, directory-style index page at dist/index.html
-   * linking directly to each standalone item profile.
+   * Generates an enhanced, interactive directory-style index page at dist/index.html
+   * with real-time text search, category filtering, status toggles, and live metrics.
    */
   writeIndexPage(items) {
     const categories = Array.from(new Set(items.map(i => i.category || 'Other'))).sort();
+    const activeCount = items.filter(i => i.status === 'active').length;
+    const inUseCount = items.filter(i => i.status === 'in_use').length;
+    const soldCount = items.filter(i => i.status === 'sold').length;
+    const activeValue = items
+      .filter(i => i.status === 'active')
+      .reduce((sum, i) => sum + (i.pricing?.active_price || i.pricing?.fair_market || 0), 0);
+    const totalEwaste = Math.round(items.reduce((sum, i) => sum + (i.circular_metrics?.estimated_weight_kg || 0), 0) * 10) / 10;
 
     const categorySections = categories.map(cat => {
       const catItems = items.filter(i => (i.category || 'Other') === cat);
       return `
-        <section class="cat-section">
+        <section class="cat-section" data-cat="${this._escape(cat)}">
           <h2 class="cat-title">${this._escape(cat)} <span class="count-badge">${catItems.length}</span></h2>
           <div class="card-grid">
             ${catItems.map(item => {
               const primaryImg = item.media?.primary_image || (item.media?.gallery || [])[0] || '';
               const imgSrc = primaryImg ? `./${primaryImg.replace(/\\/g, '/').split('/').map(encodeURIComponent).join('/')}` : '';
-              const priceStr = item.pricing?.active_price ? `$${item.pricing.active_price} CAD` : 'Contact for Price';
+              let priceStr = 'Contact for Price';
+              if (item.status === 'in_use') {
+                priceStr = 'Not for Sale';
+              } else if (item.status === 'sold') {
+                priceStr = item.pricing?.active_price ? `$${item.pricing.active_price} CAD (Sold)` : 'Sold Out';
+              } else if (item.pricing?.active_price) {
+                priceStr = `$${item.pricing.active_price} CAD`;
+              }
+              const searchHaystack = `${item.title} ${item.brand || ''} ${item.model || ''} ${item.category || ''} ${JSON.stringify(item.specs || {})}`.toLowerCase();
+
               return `
-                <a href="./${item.id}.html" class="item-card">
+                <a href="./${item.id}.html" class="item-card" data-status="${item.status}" data-cat="${this._escape(item.category || 'Other')}" data-search="${this._escape(searchHaystack)}">
                   <div class="card-img-wrap">
                     ${imgSrc ? `<img src="${imgSrc}" alt="${this._escape(item.title)}" loading="lazy">` : `<div class="no-img">No Image</div>`}
                     <span class="card-badge ${item.status === 'sold' ? 'status-sold' : item.status === 'in_use' ? 'status-in-use' : 'status-avail'}">${item.status === 'sold' ? 'Sold' : item.status === 'in_use' ? 'In Use' : 'Available'}</span>
                   </div>
                   <div class="card-body">
                     <h3 class="card-title">${this._escape(item.title)}</h3>
-                    <div class="card-meta">${this._escape(item.brand)} • ${this._escape(item.model)}</div>
-                    <div class="card-price">${priceStr}</div>
+                    <div class="card-meta">${this._escape(item.brand || '')} • ${this._escape(item.model || '')}</div>
+                    <div class="card-price ${item.status === 'sold' ? 'price-sold' : item.status === 'in_use' ? 'price-in-use' : ''}">${priceStr}</div>
                   </div>
                 </a>
               `;
@@ -718,8 +734,8 @@ export class PageGenerator {
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>letgolist | Verified Inventory Directory</title>
-  <meta name="description" content="Direct, verified asset profiles and inventory available for local pickup.">
+  <title>letgolist | Verified Inventory Showcase & Sidelining Catalog</title>
+  <meta name="description" content="Direct, verified physical asset profiles, liquidation pricing, and circular economy hardware available in Milton, ON (L9T area).">
   <style>
     :root {
       --bg: #0f172a;
@@ -730,53 +746,206 @@ export class PageGenerator {
       --primary: #38bdf8;
       --primary-hover: #0ea5e9;
       --accent: #10b981;
+      --danger: #ef4444;
       --font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
     }
     * { box-sizing: border-box; margin: 0; padding: 0; }
     body { background: var(--bg); color: var(--text); font-family: var(--font); padding: 1.5rem 1rem 4rem; line-height: 1.5; }
-    .container { max-width: 1080px; margin: 0 auto; }
-    header { margin-bottom: 2.5rem; border-bottom: 1px solid var(--card-border); padding-bottom: 1.5rem; display: flex; justify-content: space-between; align-items: flex-end; flex-wrap: gap; gap: 1rem; }
-    h1 { font-size: 1.75rem; font-weight: 800; color: #fff; }
-    .subtitle { color: var(--text-muted); font-size: 0.95rem; margin-top: 0.25rem; }
-    .stat-pill { background: rgba(56, 189, 248, 0.1); border: 1px solid rgba(56, 189, 248, 0.3); color: var(--primary); padding: 0.35rem 0.85rem; border-radius: 9999px; font-size: 0.85rem; font-weight: 600; }
+    .container { max-width: 1140px; margin: 0 auto; }
     
+    /* Header & Stats Banner */
+    header { margin-bottom: 2rem; border-bottom: 1px solid var(--card-border); padding-bottom: 1.5rem; }
+    .header-top { display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 1rem; margin-bottom: 1.25rem; }
+    h1 { font-size: 1.85rem; font-weight: 800; color: #fff; letter-spacing: -0.02em; }
+    .subtitle { color: var(--text-muted); font-size: 0.95rem; margin-top: 0.25rem; }
+    
+    .stats-row { display: flex; flex-wrap: wrap; gap: 0.75rem; }
+    .stat-badge { background: rgba(30, 41, 59, 0.9); border: 1px solid var(--card-border); padding: 0.45rem 0.85rem; border-radius: 8px; font-size: 0.85rem; display: flex; align-items: center; gap: 0.5rem; }
+    .stat-val { font-weight: 700; color: var(--primary); }
+    .stat-accent { color: var(--accent); }
+
+    /* Interactive Search & Controls Bar */
+    .controls-panel { background: var(--card-bg); border: 1px solid var(--card-border); border-radius: 12px; padding: 1.25rem; margin-bottom: 2rem; display: flex; flex-direction: column; gap: 1rem; }
+    .search-box { position: relative; width: 100%; }
+    .search-box input { width: 100%; background: #0f172a; border: 1px solid var(--card-border); border-radius: 8px; padding: 0.75rem 1rem 0.75rem 2.5rem; color: #fff; font-size: 0.95rem; outline: none; transition: border-color 0.15s; }
+    .search-box input:focus { border-color: var(--primary); }
+    .search-icon { position: absolute; left: 0.85rem; top: 50%; transform: translateY(-50%); color: var(--text-muted); pointer-events: none; }
+    
+    .filter-group { display: flex; flex-wrap: wrap; gap: 0.5rem; align-items: center; }
+    .filter-label { font-size: 0.8rem; font-weight: 600; text-transform: uppercase; color: var(--text-muted); margin-right: 0.25rem; }
+    .filter-btn { background: #0f172a; border: 1px solid var(--card-border); color: var(--text-muted); padding: 0.35rem 0.75rem; border-radius: 9999px; font-size: 0.8rem; font-weight: 500; cursor: pointer; transition: all 0.15s; user-select: none; }
+    .filter-btn:hover { border-color: var(--primary); color: #fff; }
+    .filter-btn.active { background: var(--primary); border-color: var(--primary); color: #0f172a; font-weight: 700; }
+
+    /* Sections & Cards */
     .cat-section { margin-bottom: 2.5rem; }
     .cat-title { font-size: 1.25rem; font-weight: 700; color: #fff; margin-bottom: 1rem; display: flex; align-items: center; gap: 0.5rem; }
     .count-badge { font-size: 0.75rem; background: var(--card-border); color: var(--text-muted); padding: 0.15rem 0.5rem; border-radius: 999px; }
 
-    .card-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 1.25rem; }
+    .card-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 1.25rem; }
     .item-card { background: var(--card-bg); border: 1px solid var(--card-border); border-radius: 12px; overflow: hidden; text-decoration: none; color: inherit; display: flex; flex-direction: column; transition: transform 0.15s, border-color 0.15s; }
     .item-card:hover { transform: translateY(-3px); border-color: var(--primary); }
     .card-img-wrap { width: 100%; aspect-ratio: 4 / 3; background: #000; position: relative; overflow: hidden; }
     .card-img-wrap img { width: 100%; height: 100%; object-fit: cover; }
+    .no-img { display: flex; align-items: center; justify-content: center; height: 100%; color: var(--text-muted); font-size: 0.85rem; }
+    
     .card-badge { position: absolute; top: 8px; right: 8px; font-size: 0.65rem; font-weight: 700; text-transform: uppercase; padding: 0.2rem 0.5rem; border-radius: 4px; }
     .status-avail { background: rgba(16, 185, 129, 0.9); color: #fff; }
     .status-sold { background: rgba(239, 68, 68, 0.9); color: #fff; }
     .status-in-use { background: rgba(100, 116, 139, 0.9); color: #fff; }
-    .card-body { padding: 1rem; display: flex; flex-direction: column; gap: 0.35rem; flex: 1; }
-    .card-title { font-size: 0.95rem; font-weight: 600; color: #fff; line-height: 1.3; }
-    .card-meta { font-size: 0.8rem; color: var(--text-muted); }
-    .card-price { font-size: 1.1rem; font-weight: 700; color: var(--primary); margin-top: auto; padding-top: 0.5rem; }
     
-    footer { text-align: center; color: var(--text-muted); font-size: 0.8rem; margin-top: 3rem; border-top: 1px solid var(--card-border); padding-top: 1.5rem; }
+    .card-body { padding: 1rem; display: flex; flex-direction: column; gap: 0.35rem; flex: 1; }
+    .card-title { font-size: 0.95rem; font-weight: 600; color: #fff; line-height: 1.35; }
+    .card-meta { font-size: 0.8rem; color: var(--text-muted); }
+    .card-price { font-size: 1.15rem; font-weight: 700; color: var(--primary); margin-top: auto; padding-top: 0.5rem; }
+    .price-sold { color: var(--danger); font-size: 0.95rem; }
+    .price-in-use { color: var(--text-muted); font-size: 0.95rem; font-style: italic; }
+
+    #emptyState { display: none; text-align: center; padding: 3rem 1rem; background: var(--card-bg); border: 1px dashed var(--card-border); border-radius: 12px; margin-bottom: 2rem; }
+    #emptyState h3 { color: #fff; margin-bottom: 0.5rem; font-size: 1.2rem; }
+    #emptyState p { color: var(--text-muted); font-size: 0.9rem; }
+
+    footer { text-align: center; color: var(--text-muted); font-size: 0.85rem; margin-top: 3.5rem; border-top: 1px solid var(--card-border); padding-top: 1.5rem; line-height: 1.6; }
+    footer a { color: var(--primary); text-decoration: none; }
+    footer a:hover { text-decoration: underline; }
   </style>
 </head>
 <body>
   <div class="container">
     <header>
-      <div>
-        <h1>Verified Inventory Directory</h1>
-        <div class="subtitle">Direct physical asset profiles • Local pickup in Milton, ON (L9T area) & Tracked Shipping</div>
+      <div class="header-top">
+        <div>
+          <h1>Verified Asset Inventory Directory</h1>
+          <div class="subtitle">Direct physical asset profiles • Local meetup in Milton, ON (L9T area) & Tracked Shipping</div>
+        </div>
+        <div class="stats-row">
+          <div class="stat-badge"><span>Available:</span> <span class="stat-val stat-accent">${activeCount} Lots</span></div>
+          <div class="stat-badge"><span>Active Value:</span> <span class="stat-val">$${activeValue} CAD</span></div>
+          <div class="stat-badge"><span>Circular Saved:</span> <span class="stat-val">${totalEwaste} kg</span></div>
+        </div>
       </div>
-      <div class="stat-pill">${items.length} Active Profiles</div>
     </header>
 
-    ${categorySections}
+    <!-- Controls Panel -->
+    <div class="controls-panel">
+      <div class="search-box">
+        <svg class="search-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+        <input type="text" id="searchInput" placeholder="Search 30 lots by brand, model, storage, CPU (e.g. Dell, iPhone, 64GB, i7, iPad)...">
+      </div>
+
+      <div class="filter-group" id="statusFilters">
+        <span class="filter-label">Status:</span>
+        <button class="filter-btn active" data-filter-status="all">All (${items.length})</button>
+        <button class="filter-btn" data-filter-status="active">Available (${activeCount})</button>
+        <button class="filter-btn" data-filter-status="sold">Sold (${soldCount})</button>
+        <button class="filter-btn" data-filter-status="in_use">In Use (${inUseCount})</button>
+      </div>
+
+      <div class="filter-group" id="categoryFilters">
+        <span class="filter-label">Category:</span>
+        <button class="filter-btn active" data-filter-cat="all">All Categories</button>
+        ${categories.map(c => {
+          const cCount = items.filter(i => (i.category || 'Other') === c).length;
+          return `<button class="filter-btn" data-filter-cat="${this._escape(c)}">${this._escape(c)} (${cCount})</button>`;
+        }).join('')}
+      </div>
+    </div>
+
+    <!-- Empty Search State -->
+    <div id="emptyState">
+      <h3>No matching lots found</h3>
+      <p>Try clearing your search terms or selecting "All" in the status and category filters.</p>
+    </div>
+
+    <!-- Inventory Sections -->
+    <main id="catalogSections">
+      ${categorySections}
+    </main>
 
     <footer>
-      Hosted via Cloudflare Pages • Reverse-mapped from individual asset listings
+      🔒 <strong>Verified Ownership & Privacy Assurance:</strong> Serial numbers and manufacturer identifiers are vaulted locally. Pickups occur at neutral public community landmarks in Milton, ON.
+      <br>
+      Automated GitOps Liquidation Platform • Deployed live via Cloudflare Pages
     </footer>
   </div>
+
+  <script>
+    (function() {
+      const searchInput = document.getElementById('searchInput');
+      const statusBtns = document.querySelectorAll('#statusFilters .filter-btn');
+      const catBtns = document.querySelectorAll('#categoryFilters .filter-btn');
+      const itemCards = document.querySelectorAll('.item-card');
+      const catSections = document.querySelectorAll('.cat-section');
+      const emptyState = document.getElementById('emptyState');
+
+      let currentSearch = '';
+      let currentStatus = 'all';
+      let currentCat = 'all';
+
+      function applyFilters() {
+        let visibleCount = 0;
+
+        catSections.forEach(sec => {
+          let visibleInCategory = 0;
+          const cards = sec.querySelectorAll('.item-card');
+
+          cards.forEach(card => {
+            const cardStatus = card.getAttribute('data-status');
+            const cardCat = card.getAttribute('data-cat');
+            const cardSearch = card.getAttribute('data-search') || '';
+
+            const matchStatus = (currentStatus === 'all') || (cardStatus === currentStatus);
+            const matchCat = (currentCat === 'all') || (cardCat === currentCat);
+            const matchSearch = (!currentSearch) || (cardSearch.includes(currentSearch));
+
+            if (matchStatus && matchCat && matchSearch) {
+              card.style.display = 'flex';
+              visibleInCategory++;
+              visibleCount++;
+            } else {
+              card.style.display = 'none';
+            }
+          });
+
+          // Toggle visibility of category header
+          sec.style.display = visibleInCategory > 0 ? 'block' : 'none';
+        });
+
+        // Toggle empty state
+        emptyState.style.display = visibleCount === 0 ? 'block' : 'none';
+      }
+
+      // Search input handler with debounce
+      let searchTimeout;
+      searchInput.addEventListener('input', function(e) {
+        clearTimeout(searchTimeout);
+        searchTimeout = setTimeout(() => {
+          currentSearch = e.target.value.trim().toLowerCase();
+          applyFilters();
+        }, 120);
+      });
+
+      // Status button handlers
+      statusBtns.forEach(btn => {
+        btn.addEventListener('click', function() {
+          statusBtns.forEach(b => b.classList.remove('active'));
+          this.classList.add('active');
+          currentStatus = this.getAttribute('data-filter-status');
+          applyFilters();
+        });
+      });
+
+      // Category button handlers
+      catBtns.forEach(btn => {
+        btn.addEventListener('click', function() {
+          catBtns.forEach(b => b.classList.remove('active'));
+          this.classList.add('active');
+          currentCat = this.getAttribute('data-filter-cat');
+          applyFilters();
+        });
+      });
+    })();
+  </script>
 </body>
 </html>`;
 

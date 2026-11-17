@@ -312,3 +312,35 @@ All events, architecture decisions, and verification outputs are recorded chrono
   4. **Static Site Compilation & Full Verification:**
      - Executed `node bin/letgo.js build` (`task-621`). Recompiled all 30 standalone HTML pages in `dist/` and `dist/items/`.
      - Verified `dist/peripherals-keyboard-asus.html` ($30 CAD) and `dist/peripherals-keyboard-and-mice-microsoft-designer.html` ($45 CAD) render companion cards, Milton landmark pickup, and shipping parameters.
+
+---
+
+## 2026-11-17T17:45:00-05:00 — Remote Deployment, Syndication Bundles Engine, and Showcase UI Refinement
+
+* **Context:** User ordered the three remaining roadmap tasks:
+  1. Commit & push changes to GitHub / Cloudflare Pages.
+  2. Implement Milestone 4: Multi-Channel Syndication Generator (`export` / `export-all`).
+  3. Implement Milestone 5.3: Main Catalog Showcase Refinement (`dist/index.html` interactive search & filter suite).
+* **Actions Executed:**
+  1. **Phase 1: GitOps Commit & Cloudflare Pages CI/CD Trigger:**
+     - Reset `data/clearance_vault.json` to pristine state.
+     - Staged all 12 core schema, curation, and documentation files and committed: `feat: complete milestone 3.2 lot curation across 30 inventory items, zero residential exposure privacy, and in_use / sold lifecycle states` (`cd44ca0`).
+     - Pushed to `origin master` (`git@github.com:alhamz/letgolist.git`), triggering live build on Cloudflare Pages (`https://letgolist.pages.dev`).
+  2. **Phase 2: Multi-Channel Syndication Exporter (`src/syndication/exporter.js`):**
+     - Authored `SyndicationExporter` supporting Facebook Marketplace, Kijiji, and eBay listing formats.
+     - Formats clean ad copy with verified specs, neutral Milton community landmark meetup copy, buyer-paid shipping, direct photo references in `Sales/`, and live showcase links.
+     - Added CLI commands to `bin/letgo.js`:
+       - `node bin/letgo.js export <id> [--channel=facebook|kijiji|ebay|all]`
+       - `node bin/letgo.js export-all [--dir=syndication_bundles] [--status=active]`
+     - Generated 24 active listing bundles in `syndication_bundles/` and master index `syndication_bundles/CATALOG_SUMMARY.md`.
+     - Authored unit test suite in `test/syndication.test.js` (2/2 tests passing).
+  3. **Phase 3: Master Showcase Refinement (`dist/index.html`):**
+     - Re-engineered `writeIndexPage(items)` in `src/generator/pageGenerator.js`.
+     - Added live debounced text search filtering across titles, brands, models, categories, and specs.
+     - Added status filter buttons (`All (30)`, `Available (24)`, `Sold (5)`, `In Use (1)`).
+     - Added category filter pills (`All Categories`, `Laptops (6)`, `Phones (4)`, `Tablets (7)`, etc.).
+     - Added aggregate live summary banner: **24 Available Lots**, **$4,210 CAD Active Market Value**, **130.8 kg Diverted Circular e-Waste**.
+     - Dynamically hides empty category sections and provides zero-result feedback state.
+  4. **Verification & Testing:**
+     - Full test suite: 9/9 tests passing (`node --test`).
+     - Recompiled all 30 item profiles and master catalog via `node bin/letgo.js build` (`task-728`).

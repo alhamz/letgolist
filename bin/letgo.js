@@ -13,6 +13,7 @@ import { PiiClient } from '../src/security/piiClient.js';
 import { FeedbackManager } from '../src/core/feedback.js';
 import { ItemCurator } from '../src/curator/curator.js';
 import { PageGenerator } from '../src/generator/pageGenerator.js';
+import { SyndicationExporter } from '../src/syndication/exporter.js';
 
 const VERSION = '1.0.0';
 
@@ -28,6 +29,8 @@ COMMANDS:
   status                 Display inventory summary, counts, and sidelining statistics
   curate [id]            Run interactive curation wizard for all draft items, or a specific item ID
   curate --list          List all draft items awaiting curation and missing attributes
+  export <id>            Export copy-paste listing bundle for Facebook, Kijiji, and eBay
+  export-all             Export all active item syndication bundles to syndication_bundles/
   build                  Generate standalone, high-conversion static HTML pages for Cloudflare Pages (dist/items/)
   render <id>            Render a standalone HTML page for a specific item to dist/items/<id>.html
   pii-audit              Run piiScrub audit over all inventory records to ensure zero PII leakage
@@ -298,6 +301,55 @@ function handleRender(args) {
   console.log(`✔ Rendered standalone page: ${outPath}`);
 }
 
+function handleExport(args) {
+  const itemId = args[0];
+  if (!itemId) {
+    console.error('Error: Please specify an item ID to export. Run "node bin/letgo.js status" to see item IDs.');
+    process.exit(1);
+  }
+
+  let channel = 'all';
+  for (let i = 1; i < args.length; i++) {
+    const a = args[i];
+    if (a.startsWith('--channel=')) channel = a.split('=')[1];
+    else if (a === '--channel') channel = args[++i];
+  }
+
+  const exporter = new SyndicationExporter();
+  const store = new InventoryStore();
+  const db = store.read();
+  const item = db.items.find(i => i.id === itemId);
+
+  if (!item) {
+    console.error(`Error: Item "${itemId}" not found in inventory.`);
+    process.exit(1);
+  }
+
+  const output = exporter.formatListing(item, channel);
+  console.log(output);
+}
+
+function handleExportAll(args) {
+  let dir = 'syndication_bundles';
+  let status = 'active';
+
+  for (let i = 0; i < args.length; i++) {
+    const a = args[i];
+    if (a.startsWith('--dir=')) dir = a.split('=')[1];
+    else if (a === '--dir') dir = args[++i];
+    else if (a.startsWith('--status=')) status = a.split('=')[1];
+    else if (a === '--status') status = args[++i];
+  }
+
+  console.log(`Exporting syndication bundles (status="${status}") into "${dir}"...`);
+  const exporter = new SyndicationExporter();
+  const res = exporter.exportAll(dir, { status });
+
+  console.log(`\n✔ Successfully exported ${res.total_exported} syndication bundles into "${dir}/"!`);
+  console.log(`  • Master Catalog Summary: ${res.index_file}`);
+  console.log(`  • Copy/paste ready for Facebook Marketplace, Kijiji, and eBay.\n`);
+}
+
 async function main() {
   const args = process.argv.slice(2);
   const cmd = args[0];
@@ -327,6 +379,12 @@ async function main() {
       break;
     case 'render':
       handleRender(args.slice(1));
+      break;
+    case 'export':
+      handleExport(args.slice(1));
+      break;
+    case 'export-all':
+      handleExportAll(args.slice(1));
       break;
     case 'pii-audit':
       handlePiiAudit();

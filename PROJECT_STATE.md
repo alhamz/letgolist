@@ -59,10 +59,10 @@ Total scanned items: **10 top-level categories**, 403MB media assets:
   - Curated Batch 6 (Baby Gear & Fitness): 3x Car Seats marked `'sold'` (Evenflo Triumph, Highback Booster, Harmony Commander Deluxe); 1x XTERRA TR955 Folding Motorized Treadmill activated ($340 CAD with power incline, speakers, cooling fan, video demo verified).
   - Curated Batch 7 (Desktop Peripherals): 2 desktop keyboard & mouse sets activated (ASUS G01 Backlit Keyboard + USB Mouse Set @ $30 CAD; Microsoft Designer Bluetooth Wireless Keyboard & Mouse Set @ $45 CAD).
   - **Full Portfolio Metrics:** 30 total lots (24 active @ $4,210 CAD total value, 1 in-use, 5 sold, 0 draft; 130.8 kg e-waste diverted). All 30 standalone HTML profiles compiled in `dist/` and `dist/items/`.
-- [ ] **Milestone 4: Regional Market Pricing & Syndication Generator** (Comps store schema, multi-tier pricing, Kijiji / FB / eBay ad copy generators).
+- [x] **Milestone 4: Regional Market Pricing & Syndication Generator** (`src/syndication/exporter.js`, `bin/letgo.js export/export-all`, formatted ad copy bundles for Facebook Marketplace, Kijiji, and eBay, `syndication_bundles/` with 24 active listing bundles + master index, 2/2 tests passing).
 - [x] **Milestone 5.1: Standalone Item Webpage Generator (Cloudflare Pages Ready)** (`src/generator/pageGenerator.js`, `bin/letgo.js build/render`, 30 standalone item profiles in `dist/items/`, responsive photo/video gallery, OpenGraph & Schema.org JSON-LD metadata, 7/7 tests passing).
 - [x] **Milestone 5.2: GitHub Remote & Cloudflare Pages CI/CD Setup** (Repository `alhamz/letgolist` deployed live to Cloudflare Pages at `https://letgolist.pages.dev`; automated CI/CD builds on git push to `master`/`main`).
-- [ ] **Milestone 5.3: Parent Collections & Aggregated Showroom** (Reverse-mapping items into category collections and main catalog view).
+- [x] **Milestone 5.3: Parent Collections & Aggregated Showroom** (Enhanced `dist/index.html` with real-time text search, instant status filter pills [All, Available, Sold, In-Use], category filters, aggregate value/e-waste banner, and dynamic category visibility).
 - [ ] **Milestone 6: Commercial & Warehouse Expansion API** (Barcode/QR, batch status transitions, webhook ingress).
 
 ---
