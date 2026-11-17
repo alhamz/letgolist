@@ -674,7 +674,40 @@ export class PageGenerator {
       results.push({ id: item.id, path: p });
     }
     this.writeIndexPage(items);
+    this.writeRedirects();
     return results;
+  }
+
+  /**
+   * Writes Cloudflare Pages _redirects file and static HTML redirect stubs
+   * for legacy, scrubbed, or superseded item slugs to guarantee zero 404s and zero PII.
+   */
+  writeRedirects() {
+    const redirects = [
+      '/carseats-ahmedbooster /carseats-highback-booster 301',
+      '/carseats-ahmedbooster.html /carseats-highback-booster.html 301',
+      '/items/carseats-ahmedbooster.html /items/carseats-highback-booster.html 301'
+    ];
+    writeFileSync(resolve(this.distDir, '_redirects'), redirects.join('\n') + '\n', 'utf-8');
+
+    const stubHtml = `<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="refresh" content="0; url=./carseats-highback-booster.html">
+  <title>Redirecting...</title>
+  <script>window.location.replace('./carseats-highback-booster.html');</script>
+</head>
+<body>
+  <p>Redirecting to <a href="./carseats-highback-booster.html">Highback Booster Car Seat</a>...</p>
+</body>
+</html>`;
+
+    writeFileSync(resolve(this.distDir, 'carseats-ahmedbooster.html'), stubHtml, 'utf-8');
+    if (!existsSync(this.itemsDir)) {
+      mkdirSync(this.itemsDir, { recursive: true });
+    }
+    writeFileSync(resolve(this.itemsDir, 'carseats-ahmedbooster.html'), stubHtml, 'utf-8');
   }
 
   /**

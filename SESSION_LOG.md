@@ -344,3 +344,37 @@ All events, architecture decisions, and verification outputs are recorded chrono
   4. **Verification & Testing:**
      - Full test suite: 9/9 tests passing (`node --test`).
      - Recompiled all 30 item profiles and master catalog via `node bin/letgo.js build` (`task-728`).
+
+---
+
+## 2026-11-17T18:05:00-05:00 — Remediation: PII Purge, Car Seat Spec Enrichment, Milton Location Normalization, and Legacy Cloudflare Redirects
+
+* **Context:** User provided screenshot of `letgolist.pages.dev/carseats-ahmedbooster` showing lingering PII in SKU (`LGL-CAR-AHMEDBOO-659`), Ottawa pickup location, missing manufacturer specs, and active pickup notice on sold child car seats.
+* **Root Cause Diagnostics:**
+  1. Historical PII Leakage in Slug/SKU: The initial auto-ingestion lot slug `carseats-ahmedbooster` contained a personal first name which transferred into the SKU identifier.
+  2. Cloudflare Pages Branch Mismatch: Pushes had been sent to `origin/master`, whereas Cloudflare Pages was building from GitHub's default `main` branch (stuck at commit `440cdbf` from Nov 13 with the stale uncurated `carseats-ahmedbooster.html` file).
+  3. Residual Location Metadata: Five liquidated lots in `data/inventory.json` had retained legacy default `"Ottawa"` / `"K1A area"` metadata when their status was flipped to `sold`.
+  4. Sparse Manufacturer Specs: Highback booster and convertible car seat label data (exact manufacturer stickers in photos) were not fully transcribed into `specs`.
+* **Actions Executed:**
+  1. **Purged PII from Slugs, SKUs, and Inventory:**
+     - Overwrote and sanitized item ID from `carseats-ahmedbooster` to `carseats-highback-booster`.
+     - Regenerated clean SKU `LGL-CAR-HIGHBACK-659`.
+     - Scrubbed 100% of PII occurrences from `data/inventory.json` (0 instances of "Ottawa", 0 instances of "Ahmed").
+  2. **Location Normalization (Milton, ON - L9T Area):**
+     - Updated all 30 inventory items across every lifecycle status to `Milton, ON (L9T area)` (neutral community landmark hand-off).
+  3. **Manufacturer Specifications & Expiry Transcription:**
+     - Highback Booster (`carseats-highback-booster`): Brand: `Cosco Kids / Dorel Juvenile Group` (Made in USA), Model: `35012434C`, Name: `Go Time Highback Booster`, Date of Manufacture: `July 14, 2022`, Safety Expiration Date: `July 12, 2028` (Full active CMVSS 213 compliance), Weight Range: `40–100 lbs`.
+     - Evenflo Triumph (`carseats-evenflotriumph`): Brand: `Evenflo`, Model: `Triumph Convertible Car Seat`, Harness: `TensionRight knob adjuster`, Weight Range: Rear-Facing `5–40 lbs`, Forward-Facing `22–65 lbs`.
+     - Harmony Commander Deluxe (`carseats-harmonycommanderdeluxe`): Brand: `Harmony Juvenile Products`, Model: `Commander Deluxe Multi-Stage Booster`, Protection: `Full-body Side-Impact Protection (SIP)`.
+     - Surface Pros (`surfacepros-1`, `surfacepros-2`): Enriched specs with Microsoft Surface Pro 12.3" PixelSense display specifications.
+  4. **Cloudflare Pages Redirect Engine & HTML Fallback:**
+     - Added `writeRedirects()` to `src/generator/pageGenerator.js` (`renderAll`).
+     - Generates `dist/_redirects` with HTTP 301 rules for `/carseats-ahmedbooster` -> `/carseats-highback-booster`.
+     - Generates static HTML redirect stubs at `dist/carseats-ahmedbooster.html` and `dist/items/carseats-ahmedbooster.html` containing immediate `<meta http-equiv="refresh">` and `window.location.replace()`.
+  5. **Static Site & Syndication Rebuild:**
+     - Recompiled all 30 HTML pages via `node bin/letgo.js build`.
+     - Regenerated all syndication bundles via `node bin/letgo.js export-all`.
+     - Verified `dist/carseats-highback-booster.html` displays red `[SOLD / LIQUIDATED]` badge, `$35 CAD (Sold Out)`, liquidation notice, enriched specs, Milton landmark location, zero PII, and scrubbed SKU.
+  6. **Automated Verification:**
+     - Executed full test suite: 9/9 unit tests passing (`node --test`).
+

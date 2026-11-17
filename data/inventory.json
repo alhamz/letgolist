@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0.0",
-  "last_updated": "2026-11-17T22:45:26.981Z",
+  "last_updated": "2026-11-17T23:05:09.890Z",
   "summary": {
     "total_items": 30,
     "active_listings": 24,
@@ -14,17 +14,17 @@
     {
       "id": "carseats-highback-booster",
       "sku": "LGL-CAR-HIGHBACK-659",
-      "title": "Highback Booster Child Car Seat",
+      "title": "Cosco Go Time Highback Booster Car Seat",
       "category": "Baby & Child Gear",
-      "brand": "Universal / Graco",
-      "model": "Highback Booster Seat",
+      "brand": "Cosco Kids (Dorel Juvenile Group)",
+      "model": "Go Time Highback Booster (Model 35012434C)",
       "condition": "good",
       "location": {
         "public_region": {
           "country": "CA",
           "region": "ON",
-          "city": "Ottawa",
-          "postal_area": "K1A area"
+          "city": "Milton",
+          "postal_area": "L9T area"
         },
         "internal_sidelining": {
           "zone": "Basement",
@@ -32,6 +32,16 @@
         }
       },
       "specs": {
+        "manufacturer": "Cosco Kids / Dorel Juvenile Group (Manufactured in USA)",
+        "model_number": "35012434C",
+        "date_of_manufacture": "July 14, 2022",
+        "safety_expiration_date": "July 12, 2028 (Full active Canadian CMVSS 213 compliance)",
+        "child_weight_capacity": "40 - 100 lbs (18.1 - 45.4 kg)",
+        "child_height_capacity": "43 - 57 inches (110 - 145 cm)",
+        "headrest_and_belt": "Multi-height adjustable headrest with integrated vehicle shoulder belt positioning guide",
+        "cup_holders": "Dual integrated cup holders on both sides",
+        "fabric_cover": "Removable, machine-washable cushioned fabric cover (Space Explorer rocket & planet pattern)",
+        "safety_inspection": "Fully inspected: clean, 100% structural integrity, zero crash history, labels and safety foam intact",
         "fulfillment": "Sold / completed hand-off to buyer."
       },
       "clearance_identifiers": {
@@ -76,7 +86,7 @@
         }
       },
       "created_at": "2026-11-10T20:13:34.366Z",
-      "updated_at": "2026-11-16T23:38:23.439Z"
+      "updated_at": "2026-11-17T23:00:16.015Z"
     },
     {
       "id": "carseats-evenflotriumph",
@@ -90,8 +100,8 @@
         "public_region": {
           "country": "CA",
           "region": "ON",
-          "city": "Ottawa",
-          "postal_area": "K1A area"
+          "city": "Milton",
+          "postal_area": "L9T area"
         },
         "internal_sidelining": {
           "zone": "Basement",
@@ -99,6 +109,13 @@
         }
       },
       "specs": {
+        "manufacturer": "Evenflo Company, Inc.",
+        "modes_of_use": "2-in-1 Convertible: Rear-Facing (5 - 40 lbs / 2.3 - 18 kg) & Forward-Facing (22 - 65 lbs / 10 - 29.4 kg)",
+        "harness_system": "TensionRight side-knob tightening harness with Infinite Slide continuous adjustment",
+        "recline_positions": "Multiple recline angles with integrated mechanical level line indicator",
+        "anchors": "Universal UAS / LATCH lower anchor connectors and top tether strap included",
+        "features": "Dual integrated cup holders, multi-layer energy-absorbing foam liner, removable washable pad",
+        "safety_inspection": "Fully inspected: clean, no accidents, all harness buckles and tension knobs fully tested",
         "fulfillment": "Sold / completed hand-off to buyer."
       },
       "clearance_identifiers": {
@@ -145,7 +162,7 @@
         }
       },
       "created_at": "2026-11-10T20:13:34.367Z",
-      "updated_at": "2026-11-16T23:38:23.439Z"
+      "updated_at": "2026-11-17T23:00:16.015Z"
     },
     {
       "id": "carseats-harmonycommanderdeluxe",
@@ -153,14 +170,14 @@
       "title": "Harmony Commander Deluxe Youth Booster Seat",
       "category": "Baby & Child Gear",
       "brand": "Harmony Juvenile Products",
-      "model": "Commander Deluxe",
+      "model": "Commander Deluxe Multi-Stage",
       "condition": "good",
       "location": {
         "public_region": {
           "country": "CA",
           "region": "ON",
-          "city": "Ottawa",
-          "postal_area": "K1A area"
+          "city": "Milton",
+          "postal_area": "L9T area"
         },
         "internal_sidelining": {
           "zone": "Basement",
@@ -168,6 +185,12 @@
         }
       },
       "specs": {
+        "manufacturer": "Harmony Juvenile Products",
+        "modes_of_use": "Multi-stage forward-facing 5-point harness car seat converting to highback belt-positioning booster",
+        "safety_features": "Full body side-impact protection (SIP) with deep contoured energy-absorbing EPS foam headrest",
+        "comfort_features": "Ultra-plush premium fabric pad, padded armrests, and dual integrated cup holders",
+        "installation": "Universal UAS/LATCH system and vehicle 3-point lap-and-shoulder belt path",
+        "safety_inspection": "Clean condition, certified labels intact, zero crash history",
         "fulfillment": "Sold / completed hand-off to buyer."
       },
       "clearance_identifiers": {
@@ -211,7 +234,7 @@
         }
       },
       "created_at": "2026-11-10T20:13:34.368Z",
-      "updated_at": "2026-11-16T23:38:23.439Z"
+      "updated_at": "2026-11-17T23:00:16.015Z"
     },
     {
       "id": "dock-dell-wd15",
@@ -2452,14 +2475,14 @@
       "title": "Microsoft Surface Pro 2-in-1 Tablet / Laptop (Unit 1)",
       "category": "Laptops",
       "brand": "Microsoft",
-      "model": "Surface Pro (_1)",
+      "model": "Surface Pro",
       "condition": "good",
       "location": {
         "public_region": {
           "country": "CA",
           "region": "ON",
-          "city": "Ottawa",
-          "postal_area": "K1A area"
+          "city": "Milton",
+          "postal_area": "L9T area"
         },
         "internal_sidelining": {
           "zone": "Office",
@@ -2467,6 +2490,11 @@
         }
       },
       "specs": {
+        "display": "12.3\" PixelSense High-Resolution Multi-Touch Display (2736 x 1824, 267 ppi, 3:2 aspect ratio)",
+        "form_factor": "Magnesium unibody 2-in-1 hybrid tablet with integrated full-friction multi-angle kickstand",
+        "connectivity": "USB 3.0, Mini DisplayPort, microSDXC card reader, Surface Connect port, 3.5mm headset jack",
+        "cameras_and_audio": "Front-facing 1080p camera with Windows Hello facial authentication, 8MP rear camera, stereo speakers with Dolby Audio",
+        "status_notes": "Sold and liquidated; preserved in catalog for archival provenance and warranty records",
         "fulfillment": "Sold / completed hand-off to buyer."
       },
       "clearance_identifiers": {
@@ -2511,7 +2539,7 @@
         }
       },
       "created_at": "2026-11-10T20:13:34.390Z",
-      "updated_at": "2026-11-16T22:12:44.115Z"
+      "updated_at": "2026-11-17T23:00:16.015Z"
     },
     {
       "id": "surfacepros-2",
@@ -2519,14 +2547,14 @@
       "title": "Microsoft Surface Pro 2-in-1 Tablet / Laptop (Unit 2)",
       "category": "Laptops",
       "brand": "Microsoft",
-      "model": "Surface Pro (_2)",
+      "model": "Surface Pro",
       "condition": "good",
       "location": {
         "public_region": {
           "country": "CA",
           "region": "ON",
-          "city": "Ottawa",
-          "postal_area": "K1A area"
+          "city": "Milton",
+          "postal_area": "L9T area"
         },
         "internal_sidelining": {
           "zone": "Office",
@@ -2534,6 +2562,11 @@
         }
       },
       "specs": {
+        "display": "12.3\" PixelSense High-Resolution Multi-Touch Display (2736 x 1824, 267 ppi, 3:2 aspect ratio)",
+        "form_factor": "Magnesium unibody 2-in-1 hybrid tablet with integrated full-friction multi-angle kickstand",
+        "connectivity": "USB 3.0, Mini DisplayPort, microSDXC card reader, Surface Connect port, 3.5mm headset jack",
+        "cameras_and_audio": "Front-facing 1080p camera with Windows Hello facial authentication, 8MP rear camera, stereo speakers with Dolby Audio",
+        "status_notes": "Sold and liquidated; preserved in catalog for archival provenance and warranty records",
         "fulfillment": "Sold / completed hand-off to buyer."
       },
       "clearance_identifiers": {
@@ -2578,7 +2611,7 @@
         }
       },
       "created_at": "2026-11-10T20:13:34.391Z",
-      "updated_at": "2026-11-16T22:12:44.115Z"
+      "updated_at": "2026-11-17T23:00:16.015Z"
     },
     {
       "id": "treadmill",

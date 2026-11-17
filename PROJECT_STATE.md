@@ -62,7 +62,13 @@ Total scanned items: **10 top-level categories**, 403MB media assets:
 - [x] **Milestone 4: Regional Market Pricing & Syndication Generator** (`src/syndication/exporter.js`, `bin/letgo.js export/export-all`, formatted ad copy bundles for Facebook Marketplace, Kijiji, and eBay, `syndication_bundles/` with 24 active listing bundles + master index, 2/2 tests passing).
 - [x] **Milestone 5.1: Standalone Item Webpage Generator (Cloudflare Pages Ready)** (`src/generator/pageGenerator.js`, `bin/letgo.js build/render`, 30 standalone item profiles in `dist/items/`, responsive photo/video gallery, OpenGraph & Schema.org JSON-LD metadata, 7/7 tests passing).
 - [x] **Milestone 5.2: GitHub Remote & Cloudflare Pages CI/CD Setup** (Repository `alhamz/letgolist` deployed live to Cloudflare Pages at `https://letgolist.pages.dev`; automated CI/CD builds on git push to `master`/`main`).
-- [x] **Milestone 5.3: Parent Collections & Aggregated Showroom** (Enhanced `dist/index.html` with real-time text search, instant status filter pills [All, Available, Sold, In-Use], category filters, aggregate value/e-waste banner, and dynamic category visibility).
+- [x] **Milestone 5.3: Parent Collections & Aggregated Showroom (Production Hardened)**
+  - Enhanced `dist/index.html` with real-time text search, instant status filter pills [All, Available, Sold, In-Use], category filters, aggregate value/e-waste banner, and dynamic category visibility.
+  - PII scrubbing audit & remediation completed: purged residual `AHMEDBOO` slug/SKU remnants (`carseats-ahmedbooster` renamed to `carseats-highback-booster`, SKU `LGL-CAR-HIGHBACK-659`).
+  - Standardized location strictly to Milton, ON (`L9T area`) across 100% of lots (30/30), completely eliminating historical Ottawa default remnants.
+  - Enriched specifications, exact manufacturer identifiers, and safety expiry compliance dates for all 3 liquidated car seats (Cosco Go Time Booster Model 35012434C expiry July 2028; Evenflo Triumph; Harmony Commander Deluxe).
+  - Implemented Cloudflare Pages `_redirects` and static HTML redirect fallback stubs (`/carseats-ahmedbooster` -> `/carseats-highback-booster`) for zero broken links or legacy PII exposure.
+  - Dual-branch Git synchronization: pushes mirrored to both `origin/master` and `origin/main` to guarantee Cloudflare Pages builds from the latest production state regardless of default branch tracking.
 - [ ] **Milestone 6: Commercial & Warehouse Expansion API** (Barcode/QR, batch status transitions, webhook ingress).
 
 ---

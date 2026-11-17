@@ -1,6 +1,6 @@
 # Active Syndication & Listing Bundles
 
-Generated on: 2026-11-17T22:41:56.045Z  
+Generated on: 2026-11-17T23:01:56.855Z  
 Total Active Listings: **24**  
 Master Showcase: [https://letgolist.pages.dev](https://letgolist.pages.dev)
 
