@@ -4,7 +4,7 @@ SKU / ID: LGL-PER-ACCESSOR-101
 PRICE: $25 CAD
 CONDITION: GOOD
 STATUS: ACTIVE
-PUBLIC SHOWCASE LINK: https://letgolist.pages.dev/ipad-accessories-logitechcase.html
+PUBLIC SHOWCASE LINK: https://letgolist.pages.dev/l/aFHJs7YEkObU.html
 PHOTOS TO ATTACH (3):
   [1] Sales/iPad/Accessories/LogitechCase/IMG_20250112_211152_666313881081039713.jpg
   [2] Sales/iPad/Accessories/LogitechCase/IMG_20250112_211223_734581773614097374.jpg

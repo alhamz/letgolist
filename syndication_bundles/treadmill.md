@@ -4,7 +4,7 @@ SKU / ID: LGL-FIT-TREADMIL-886
 PRICE: $340 CAD
 CONDITION: VERY GOOD
 STATUS: ACTIVE
-PUBLIC SHOWCASE LINK: https://letgolist.pages.dev/treadmill.html
+PUBLIC SHOWCASE LINK: https://letgolist.pages.dev/l/OwujI03BGk_s.html
 PHOTOS TO ATTACH (4):
   [1] Sales/Treadmill/3276D3A5-95E2-4A89-90ED-AB6342E00837.jpeg
   [2] Sales/Treadmill/7EA20C0D-5666-419F-BE3A-88F3E17D88D8.jpeg

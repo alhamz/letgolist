@@ -4,7 +4,7 @@ SKU / ID: LGL-LAP-3-485
 PRICE: $220 CAD
 CONDITION: VERY GOOD
 STATUS: ACTIVE
-PUBLIC SHOWCASE LINK: https://letgolist.pages.dev/latitutde-3.html
+PUBLIC SHOWCASE LINK: https://letgolist.pages.dev/l/RcwJZinh0vrF.html
 PHOTOS TO ATTACH (4):
   [1] Sales/Latitutde/%3/037A114D-9A45-44C6-A76D-9ABAD3E51911.jpeg
   [2] Sales/Latitutde/%3/5CAD8351-147B-412E-82D3-61E3BA89714B.jpeg

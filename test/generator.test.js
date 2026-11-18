@@ -9,6 +9,7 @@ test('PageGenerator - renderItemPage output integrity', () => {
 
   const mockItem = {
     id: 'test-dock-wd19s',
+    public_token: 'k9x4m2p8q1z7',
     sku: 'LGL-DOC-WD19S-101',
     title: 'Dell WD19S 130W USB-C Docking Station',
     category: 'Docks',
@@ -49,10 +50,12 @@ test('PageGenerator - renderItemPage output integrity', () => {
   assert.ok(html.includes('https://schema.org/'), 'Contains JSON-LD Schema.org context');
   assert.ok(html.includes('"@type": "Product"'), 'Contains JSON-LD Schema.org Product type');
   assert.ok(html.includes('og:title'), 'Contains OpenGraph tags');
+  assert.ok(html.includes('noindex, nofollow'), 'Contains noindex meta tag');
   assert.ok(html.includes('switchMedia'), 'Contains interactive gallery switcher script');
 
-  // Verify file write
+  // Verify scattered file write under dist/l/<public_token>.html
   const writtenPath = generator.writeItemPage(mockItem);
+  assert.ok(writtenPath.endsWith('k9x4m2p8q1z7.html'), 'Written to scattered public_token filename');
   assert.ok(existsSync(writtenPath), 'Generated HTML file must exist on disk');
 
   // Cleanup

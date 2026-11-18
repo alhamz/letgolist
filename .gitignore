@@ -10,6 +10,8 @@ node_modules/
 
 # Build & Cache Outputs
 dist/
+admin/
+.playwright-profile/
 build/
 out/
 .next/

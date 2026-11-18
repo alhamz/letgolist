@@ -394,3 +394,18 @@ All events, architecture decisions, and verification outputs are recorded chrono
      - Verified Laptop Fleet on live catalog: 2x Dell Latitude 7490, 2x Dell Latitude 5400, 2x Dell Latitude 5420 Boxed.
 
 
+
+---
+
+## 2026-11-17T19:07-05:00 — Privacy-Hardened Scattered Capability URLs & Channel Automation Foundation
+
+- **Schema (`src/model/schema.js`):** Added persistent 12-char URL-safe `public_token` generation, `channels` state tracking (`facebook`, `kijiji`, `ebay`), `ensureAllTokensAndChannels()`, `updateChannelState()`, and `markSoldAndFlagChannels()`. Backfilled 31 items in `data/inventory.json`.
+- **Static Site Generator (`src/generator/pageGenerator.js`):**
+  - Switched public item output exclusively to `dist/l/<public_token>.html` with `<meta name="robots" content="noindex, nofollow">`, root-relative `/Sales/...` media paths, and `related_items` cross-linking disabled by default.
+  - Replaced `dist/index.html` with a neutral zero-disclosure Private Listing Portal and added `dist/_headers` (`X-Robots-Tag: noindex, nofollow`).
+  - Removed legacy predictable `dist/<id>.html`, `dist/items/`, and `dist/_redirects` from `dist/`.
+  - Moved the full operator showroom (with active portfolio value, search, filters, and channel badges) to local `admin/index.html` (gitignored, outside `dist/`).
+- **Syndication & Assisted Posting (`src/syndication/exporter.js`, `src/automation/assistedPoster.js`, `bin/letgo.js`):**
+  - Updated syndication links to `/l/<public_token>.html` and rebuilt 24 active bundles in `syndication_bundles/`.
+  - Added CLI commands `links`, `channels`, `sold`, and `post` (Playwright persistent-profile form pre-filler).
+- **Verification:** `node --test test/generator.test.js test/syndication.test.js test/channels.test.js test/feedback.test.js` passed (7/7). `node bin/letgo.js build` rendered 31 scattered pages; `node bin/letgo.js export-all` exported 24 active bundles.

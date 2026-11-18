@@ -4,7 +4,7 @@ SKU / ID: LGL-PHO-IPHONE7S-421
 PRICE: $70 CAD
 CONDITION: GOOD
 STATUS: ACTIVE
-PUBLIC SHOWCASE LINK: https://letgolist.pages.dev/iphones-iphone7s.html
+PUBLIC SHOWCASE LINK: https://letgolist.pages.dev/l/3k7MgRQSmrHN.html
 PHOTOS TO ATTACH (3):
   [1] Sales/iPhones/iPhone7s/IMG_20250112_065040_407507542888222463.jpg
   [2] Sales/iPhones/iPhone7s/IMG_20250112_065137_3630284270034986788.jpg

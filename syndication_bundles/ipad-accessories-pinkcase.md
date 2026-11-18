@@ -4,7 +4,7 @@ SKU / ID: LGL-PER-ACCESSOR-702
 PRICE: $15 CAD
 CONDITION: GOOD
 STATUS: ACTIVE
-PUBLIC SHOWCASE LINK: https://letgolist.pages.dev/ipad-accessories-pinkcase.html
+PUBLIC SHOWCASE LINK: https://letgolist.pages.dev/l/H4-PWHnt9dnM.html
 PHOTOS TO ATTACH (3):
   [1] Sales/iPad/Accessories/PinkCase/IMG_20260506_201910_2981808272183943933.jpg
   [2] Sales/iPad/Accessories/PinkCase/IMG_20260506_201934_6218759450864000872.jpg

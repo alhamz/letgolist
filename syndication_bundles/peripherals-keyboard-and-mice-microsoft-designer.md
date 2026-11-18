@@ -4,7 +4,7 @@ SKU / ID: LGL-PER-KEYBOARD-220
 PRICE: $45 CAD
 CONDITION: VERY GOOD
 STATUS: ACTIVE
-PUBLIC SHOWCASE LINK: https://letgolist.pages.dev/peripherals-keyboard-and-mice-microsoft-designer.html
+PUBLIC SHOWCASE LINK: https://letgolist.pages.dev/l/-bzxWE90L1Ua.html
 PHOTOS TO ATTACH (3):
   [1] Sales/Peripherals/Keyboard and Mice/Microsoft Designer/IMG_20260520_143300_9148155305627430283.jpg
   [2] Sales/Peripherals/Keyboard and Mice/Microsoft Designer/IMG_20260520_143324_5675245997284706607.jpg

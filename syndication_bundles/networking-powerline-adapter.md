@@ -4,7 +4,7 @@ SKU / ID: LGL-NET-POWERLIN-463
 PRICE: $25 CAD
 CONDITION: GOOD
 STATUS: ACTIVE
-PUBLIC SHOWCASE LINK: https://letgolist.pages.dev/networking-powerline-adapter.html
+PUBLIC SHOWCASE LINK: https://letgolist.pages.dev/l/iaQY4qDb10pB.html
 PHOTOS TO ATTACH (2):
   [1] Sales/Networking/powerline adapter/3E359C36-070C-43FD-90D0-BD051F4B7ED7.jpeg
   [2] Sales/Networking/powerline adapter/9BA34A69-F597-4A1C-B446-99083118909C.jpeg

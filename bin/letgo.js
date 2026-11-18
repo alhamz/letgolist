@@ -14,6 +14,7 @@ import { FeedbackManager } from '../src/core/feedback.js';
 import { ItemCurator } from '../src/curator/curator.js';
 import { PageGenerator } from '../src/generator/pageGenerator.js';
 import { SyndicationExporter } from '../src/syndication/exporter.js';
+import { AssistedPoster } from '../src/automation/assistedPoster.js';
 
 const VERSION = '1.0.0';
 
@@ -31,8 +32,12 @@ COMMANDS:
   curate --list          List all draft items awaiting curation and missing attributes
   export <id>            Export copy-paste listing bundle for Facebook, Kijiji, and eBay
   export-all             Export all active item syndication bundles to syndication_bundles/
-  build                  Generate standalone, high-conversion static HTML pages for Cloudflare Pages (dist/items/)
-  render <id>            Render a standalone HTML page for a specific item to dist/items/<id>.html
+  build                  Generate scattered capability pages (dist/l/<token>.html) & private admin/index.html
+  render <id>            Render a scattered standalone HTML page for a specific item
+  links                  List active items with their scattered /l/<token>.html URLs and channel status
+  channels <id|list>     View or update live marketplace URLs/IDs (--fb=URL --kijiji=URL --ebay=ID)
+  post <id>              Launch Playwright assisted form-fill for --channel=facebook|kijiji
+  sold <id>              Mark item sold, re-render public page, and flag other channels for delisting
   pii-audit              Run piiScrub audit over all inventory records to ensure zero PII leakage
   pii-feedback submit    Submit upstream product feedback / edge case report to piiScrub
   feedback submit        Submit client product feedback to letgolist (for downstream consumers)
@@ -257,27 +262,32 @@ async function handleCurate(args) {
 }
 
 function handleBuild() {
-  console.log(`Generating standalone item web pages for Cloudflare Pages (dist/)...`);
+  console.log(`Generating scattered capability pages (dist/l/) & private operator dashboard (admin/)...`);
   const store = new InventoryStore();
+  const backfill = store.ensureAllTokensAndChannels();
+  if (backfill.updated > 0) {
+    console.log(`Assigned persistent public_token & channel state to ${backfill.updated} items.`);
+  }
   const db = store.read();
   const generator = new PageGenerator();
 
-  // Sync Sales media to dist/Sales and dist/items/Sales so relative paths resolve cleanly in both
+  // Sync Sales media once to dist/Sales (root-relative /Sales/... resolves from /l/<token>.html)
   const salesSrc = resolve('Sales');
   if (existsSync(salesSrc)) {
     cpSync(salesSrc, resolve('dist', 'Sales'), { recursive: true, force: true });
-    cpSync(salesSrc, resolve('dist', 'items', 'Sales'), { recursive: true, force: true });
   }
 
   const rendered = generator.renderAll(db.items);
-  console.log(`\n✔ Successfully generated ${rendered.length} standalone item pages in dist/ and dist/items/\n`);
+  console.log(`\n✔ Successfully generated ${rendered.length} scattered item pages in dist/l/`);
+  console.log(`✔ Neutral zero-disclosure root portal written to dist/index.html (+ dist/_headers noindex)`);
+  console.log(`✔ Private operator dashboard written to admin/index.html\n`);
   for (const r of rendered.slice(0, 5)) {
-    console.log(`  • dist/${r.id}.html`);
+    console.log(`  • ${r.id} -> dist/l/${r.public_token}.html`);
   }
   if (rendered.length > 5) {
-    console.log(`  • ...and ${rendered.length - 5} more item pages.`);
+    console.log(`  • ...and ${rendered.length - 5} more scattered item pages.`);
   }
-  console.log(`\nReady for Cloudflare Pages direct deployment or embedding!`);
+  console.log(`\nReady for Cloudflare Pages deployment without exposing total inventory!`);
 }
 
 function handleRender(args) {
@@ -288,6 +298,7 @@ function handleRender(args) {
   }
 
   const store = new InventoryStore();
+  store.ensureAllTokensAndChannels();
   const db = store.read();
   const item = db.items.find(i => i.id === id);
 
@@ -298,7 +309,124 @@ function handleRender(args) {
 
   const generator = new PageGenerator();
   const outPath = generator.writeItemPage(item);
-  console.log(`✔ Rendered standalone page: ${outPath}`);
+  console.log(`✔ Rendered scattered page: ${outPath}`);
+}
+
+function handleLinks() {
+  const store = new InventoryStore();
+  store.ensureAllTokensAndChannels();
+  const db = store.read();
+  const baseUrl = 'https://letgolist.pages.dev';
+
+  console.log(`\n=== Scattered Public Capability Links (Active Lots) ===\n`);
+  for (const item of db.items.filter(i => i.status === 'active')) {
+    const slug = item.public_token || item.id;
+    const fb = item.channels?.facebook?.status || 'not_listed';
+    const kj = item.channels?.kijiji?.status || 'not_listed';
+    const eb = item.channels?.ebay?.status || 'not_listed';
+    console.log(`• ${item.title} ($${item.pricing?.active_price || 0} CAD)`);
+    console.log(`  ID:   ${item.id}`);
+    console.log(`  Link: ${baseUrl}/l/${slug}.html`);
+    console.log(`  Ch:   FB=${fb} | Kijiji=${kj} | eBay=${eb}\n`);
+  }
+}
+
+function handleChannels(args) {
+  const store = new InventoryStore();
+  store.ensureAllTokensAndChannels();
+  const sub = args[0];
+
+  if (!sub || sub === 'list') {
+    const db = store.read();
+    console.log(`\n=== Marketplace Channel Sync Status ===\n`);
+    for (const item of db.items) {
+      const ch = item.channels || {};
+      const alerts = ['facebook', 'kijiji', 'ebay'].filter(c => ch[c]?.status === 'needs_delist');
+      const alertStr = alerts.length ? `  [ACTION: DELIST ${alerts.join(', ').toUpperCase()}]` : '';
+      console.log(`• [${item.status.toUpperCase()}] ${item.id}${alertStr}`);
+      console.log(`    FB:     ${ch.facebook?.status || 'not_listed'} ${ch.facebook?.url ? `(${ch.facebook.url})` : ''}`);
+      console.log(`    Kijiji: ${ch.kijiji?.status || 'not_listed'} ${ch.kijiji?.url ? `(${ch.kijiji.url})` : ''}`);
+      console.log(`    eBay:   ${ch.ebay?.status || 'not_listed'} ${ch.ebay?.listing_id ? `[#${ch.ebay.listing_id}]` : ''} ${ch.ebay?.url ? `(${ch.ebay.url})` : ''}`);
+    }
+    console.log('');
+    return;
+  }
+
+  const itemId = sub;
+  let fbUrl = null;
+  let kjUrl = null;
+  let ebId = null;
+  let ebUrl = null;
+  let statusOverride = null;
+
+  for (let i = 1; i < args.length; i++) {
+    const a = args[i];
+    if (a.startsWith('--fb=')) fbUrl = a.split('=')[1];
+    else if (a.startsWith('--kijiji=')) kjUrl = a.split('=')[1];
+    else if (a.startsWith('--ebay=')) ebId = a.split('=')[1];
+    else if (a.startsWith('--ebay-url=')) ebUrl = a.split('=')[1];
+    else if (a.startsWith('--status=')) statusOverride = a.split('=')[1];
+  }
+
+  if (fbUrl) store.updateChannelState(itemId, 'facebook', { status: statusOverride || 'listed', url: fbUrl });
+  if (kjUrl) store.updateChannelState(itemId, 'kijiji', { status: statusOverride || 'listed', url: kjUrl });
+  if (ebId || ebUrl) store.updateChannelState(itemId, 'ebay', { status: statusOverride || 'listed', ...(ebId ? { listing_id: ebId } : {}), ...(ebUrl ? { url: ebUrl } : {}) });
+
+  const updated = store.read().items.find(i => i.id === itemId);
+  console.log(JSON.stringify({ status: 'ok', id: itemId, channels: updated?.channels }, null, 2));
+}
+
+function handleSold(args) {
+  const itemId = args[0];
+  if (!itemId) {
+    console.error('Error: Provide an item ID. Usage: node bin/letgo.js sold <id> [--channel=facebook|kijiji|ebay]');
+    process.exit(1);
+  }
+  let soldChannel = null;
+  for (const a of args.slice(1)) {
+    if (a.startsWith('--channel=')) soldChannel = a.split('=')[1];
+  }
+
+  const store = new InventoryStore();
+  store.ensureAllTokensAndChannels();
+  const { item, flaggedToDelist } = store.markSoldAndFlagChannels(itemId, soldChannel);
+
+  const generator = new PageGenerator();
+  const outPath = generator.writeItemPage(item);
+  generator.writeAdminDashboard(store.read().items);
+
+  console.log(`✔ Marked "${item.title}" as SOLD.`);
+  console.log(`✔ Updated scattered public page: ${outPath}`);
+  if (flaggedToDelist.length > 0) {
+    console.log(`\n⚠ Flagged ${flaggedToDelist.length} other channel(s) for delisting:`);
+    for (const f of flaggedToDelist) {
+      console.log(`  • ${f.channel.toUpperCase()}: ${f.url || f.listing_id || '(URL not recorded)'}`);
+    }
+  }
+}
+
+async function handlePost(args) {
+  const itemId = args[0];
+  if (!itemId) {
+    console.error('Error: Provide an item ID. Usage: node bin/letgo.js post <id> --channel=facebook|kijiji');
+    process.exit(1);
+  }
+  let channel = 'facebook';
+  for (const a of args.slice(1)) {
+    if (a.startsWith('--channel=')) channel = a.split('=')[1];
+  }
+
+  const store = new InventoryStore();
+  store.ensureAllTokensAndChannels();
+  const item = store.read().items.find(i => i.id === itemId);
+  if (!item) {
+    console.error(`Error: Item "${itemId}" not found.`);
+    process.exit(1);
+  }
+
+  const poster = new AssistedPoster();
+  const res = await poster.launchAssistedPost(item, channel);
+  console.log(JSON.stringify(res, null, 2));
 }
 
 function handleExport(args) {
@@ -379,6 +507,18 @@ async function main() {
       break;
     case 'render':
       handleRender(args.slice(1));
+      break;
+    case 'links':
+      handleLinks();
+      break;
+    case 'channels':
+      handleChannels(args.slice(1));
+      break;
+    case 'sold':
+      handleSold(args.slice(1));
+      break;
+    case 'post':
+      await handlePost(args.slice(1));
       break;
     case 'export':
       handleExport(args.slice(1));

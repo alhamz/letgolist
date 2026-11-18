@@ -4,7 +4,7 @@ SKU / ID: LGL-LAP-6-159
 PRICE: $380 CAD
 CONDITION: LIKE NEW
 STATUS: ACTIVE
-PUBLIC SHOWCASE LINK: https://letgolist.pages.dev/latitutde-6.html
+PUBLIC SHOWCASE LINK: https://letgolist.pages.dev/l/0GK7REEgqiHk.html
 PHOTOS TO ATTACH (3):
   [1] Sales/Latitutde/%6/3E0668A5-47B4-4421-81E1-1848E07B6C35.jpeg
   [2] Sales/Latitutde/%6/5282B849-EBAB-49D1-B852-5FDAA3CB73D1.jpeg

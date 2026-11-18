@@ -4,7 +4,7 @@ SKU / ID: LGL-PER-ACCESSOR-172
 PRICE: $35 CAD
 CONDITION: VERY GOOD
 STATUS: ACTIVE
-PUBLIC SHOWCASE LINK: https://letgolist.pages.dev/ipad-accessories-zagg-keyboard-case.html
+PUBLIC SHOWCASE LINK: https://letgolist.pages.dev/l/xhZq6npCdWN9.html
 PHOTOS TO ATTACH (4):
   [1] Sales/iPad/Accessories/ZAGG Keyboard Case/IMG_20260413_132953_5647617791864803855.jpg
   [2] Sales/iPad/Accessories/ZAGG Keyboard Case/IMG_20260413_133019_4595464746116680357.jpg

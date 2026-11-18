@@ -4,7 +4,7 @@ SKU / ID: LGL-PHO-IPHONE8P-555
 PRICE: $130 CAD
 CONDITION: VERY GOOD
 STATUS: ACTIVE
-PUBLIC SHOWCASE LINK: https://letgolist.pages.dev/iphones-iphone8plus.html
+PUBLIC SHOWCASE LINK: https://letgolist.pages.dev/l/v_yUq_GZakEt.html
 PHOTOS TO ATTACH (6):
   [1] Sales/iPhones/iPhone8Plus/IMG_20250111_222105_1787850297677773562.jpg
   [2] Sales/iPhones/iPhone8Plus/IMG_20250111_222140_4472260239214541359.jpg

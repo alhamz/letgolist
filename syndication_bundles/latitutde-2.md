@@ -4,7 +4,7 @@ SKU / ID: LGL-LAP-2-340
 PRICE: $195 CAD
 CONDITION: VERY GOOD
 STATUS: ACTIVE
-PUBLIC SHOWCASE LINK: https://letgolist.pages.dev/latitutde-2.html
+PUBLIC SHOWCASE LINK: https://letgolist.pages.dev/l/ihH2dmaKdZN8.html
 PHOTOS TO ATTACH (4):
   [1] Sales/Latitutde/%2/IMG_20250112_232725_6112139410078618245.jpg
   [2] Sales/Latitutde/%2/IMG_20250112_233349_7569143415795910003.jpg

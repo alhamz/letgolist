@@ -28,7 +28,8 @@ export class SyndicationExporter {
     const priceStr = `$${price} CAD`;
     const loc = item.location?.public_region;
     const locStr = loc ? `${loc.city}, ${loc.region} (${loc.postal_area})` : 'Milton, ON (L9T area)';
-    const webUrl = `${this.baseUrl}/${item.id}.html`;
+    const slug = item.public_token || item.id;
+    const webUrl = `${this.baseUrl}/l/${slug}.html`;
     const photos = item.media?.gallery || (item.media?.primary_image ? [item.media.primary_image] : []);
 
     const sections = [];

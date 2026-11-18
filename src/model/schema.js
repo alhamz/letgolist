@@ -6,6 +6,19 @@
 
 import { readFileSync, writeFileSync, existsSync, mkdirSync } from 'node:fs';
 import { resolve, dirname } from 'node:path';
+import { randomBytes } from 'node:crypto';
+
+export function generatePublicToken(bytes = 9) {
+  return randomBytes(bytes).toString('base64url');
+}
+
+export function createDefaultChannels() {
+  return {
+    facebook: { status: 'not_listed', url: null, posted_at: null, last_synced_at: null },
+    kijiji: { status: 'not_listed', url: null, posted_at: null, last_synced_at: null },
+    ebay: { status: 'not_listed', listing_id: null, url: null, posted_at: null, last_synced_at: null },
+  };
+}
 
 export const CATEGORIES = [
   'Laptops',
@@ -134,32 +147,141 @@ export class InventoryStore {
     const existingIndex = db.items.findIndex(i => i.id === itemData.id);
 
     const now = new Date().toISOString();
+    let savedItem;
     if (existingIndex >= 0) {
-      db.items[existingIndex] = {
-        ...db.items[existingIndex],
+      const existing = db.items[existingIndex];
+      savedItem = {
+        ...existing,
         ...itemData,
+        public_token: itemData.public_token || existing.public_token || generatePublicToken(),
+        channels: itemData.channels || existing.channels || createDefaultChannels(),
         updated_at: now,
       };
+      db.items[existingIndex] = savedItem;
     } else {
-      db.items.push({
+      savedItem = {
         ...itemData,
+        public_token: itemData.public_token || generatePublicToken(),
+        channels: itemData.channels || createDefaultChannels(),
         created_at: now,
         updated_at: now,
-      });
+      };
+      db.items.push(savedItem);
     }
 
     this.write(db);
 
-    if (clearanceData && itemData.clearance_identifiers?.vault_ref) {
+    if (clearanceData && savedItem.clearance_identifiers?.vault_ref) {
       const vault = this.readVault();
-      vault.records[itemData.clearance_identifiers.vault_ref] = {
-        item_id: itemData.id,
+      vault.records[savedItem.clearance_identifiers.vault_ref] = {
+        item_id: savedItem.id,
         updated_at: now,
         ...clearanceData,
       };
       this.writeVault(vault);
     }
 
-    return itemData;
+    return savedItem;
+  }
+
+  /**
+   * Backfills persistent unguessable public_token and channel tracking objects
+   * on all existing inventory items without overwriting existing tokens.
+   */
+  ensureAllTokensAndChannels() {
+    const db = this.read();
+    let changed = 0;
+    const seen = new Set(db.items.map(i => i.public_token).filter(Boolean));
+
+    for (const item of db.items) {
+      let itemChanged = false;
+      if (!item.public_token) {
+        let token = generatePublicToken();
+        while (seen.has(token)) {
+          token = generatePublicToken();
+        }
+        seen.add(token);
+        item.public_token = token;
+        itemChanged = true;
+      }
+      if (!item.channels) {
+        item.channels = createDefaultChannels();
+        itemChanged = true;
+      }
+      if (itemChanged) changed++;
+    }
+
+    if (changed > 0) {
+      this.write(db);
+    }
+    return { total: db.items.length, updated: changed };
+  }
+
+  /**
+   * Updates marketplace channel state (facebook, kijiji, ebay) for an item.
+   */
+  updateChannelState(itemId, channel, patch = {}) {
+    const validChannels = ['facebook', 'kijiji', 'ebay'];
+    if (!validChannels.includes(channel)) {
+      throw new Error(`Invalid channel "${channel}". Expected one of: ${validChannels.join(', ')}`);
+    }
+
+    const db = this.read();
+    const item = db.items.find(i => i.id === itemId);
+    if (!item) {
+      throw new Error(`Item "${itemId}" not found.`);
+    }
+
+    if (!item.channels) {
+      item.channels = createDefaultChannels();
+    }
+
+    const now = new Date().toISOString();
+    item.channels[channel] = {
+      ...item.channels[channel],
+      ...patch,
+      last_synced_at: now,
+    };
+    if (patch.status === 'listed' && !item.channels[channel].posted_at) {
+      item.channels[channel].posted_at = now;
+    }
+    item.updated_at = now;
+
+    this.write(db);
+    return item;
+  }
+
+  /**
+   * Marks an item as sold and flags any other listed channels as 'needs_delist'.
+   */
+  markSoldAndFlagChannels(itemId, soldChannel = null) {
+    const db = this.read();
+    const item = db.items.find(i => i.id === itemId);
+    if (!item) {
+      throw new Error(`Item "${itemId}" not found.`);
+    }
+
+    if (!item.channels) {
+      item.channels = createDefaultChannels();
+    }
+
+    const now = new Date().toISOString();
+    item.status = 'sold';
+    item.updated_at = now;
+
+    const flaggedToDelist = [];
+    for (const ch of ['facebook', 'kijiji', 'ebay']) {
+      if (soldChannel && ch === soldChannel) {
+        item.channels[ch].status = 'sold';
+        item.channels[ch].last_synced_at = now;
+      } else if (item.channels[ch]?.status === 'listed') {
+        item.channels[ch].status = 'needs_delist';
+        item.channels[ch].last_synced_at = now;
+        flaggedToDelist.push({ channel: ch, url: item.channels[ch].url, listing_id: item.channels[ch].listing_id || null });
+      }
+    }
+
+    this.write(db);
+    return { item, flaggedToDelist };
   }
 }

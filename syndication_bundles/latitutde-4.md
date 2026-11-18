@@ -4,7 +4,7 @@ SKU / ID: LGL-LAP-4-834
 PRICE: $220 CAD
 CONDITION: VERY GOOD
 STATUS: ACTIVE
-PUBLIC SHOWCASE LINK: https://letgolist.pages.dev/latitutde-4.html
+PUBLIC SHOWCASE LINK: https://letgolist.pages.dev/l/GSnkkpt1Sumj.html
 PHOTOS TO ATTACH (5):
   [1] Sales/Latitutde/%4/145C2B75-1B99-4481-9296-C3626FE18BFE.jpeg
   [2] Sales/Latitutde/%4/78F41760-115D-4A62-B7D4-D2A452EB42E1.jpeg

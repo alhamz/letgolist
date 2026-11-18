@@ -4,7 +4,7 @@ SKU / ID: LGL-PER-KEYBOARD-829
 PRICE: $30 CAD
 CONDITION: VERY GOOD
 STATUS: ACTIVE
-PUBLIC SHOWCASE LINK: https://letgolist.pages.dev/peripherals-keyboard-asus.html
+PUBLIC SHOWCASE LINK: https://letgolist.pages.dev/l/Ih94Jzjlpuam.html
 PHOTOS TO ATTACH (4):
   [1] Sales/Peripherals/Keyboard/ASUS/IMG_20260330_122224_481097664474132516.jpg
   [2] Sales/Peripherals/Keyboard/ASUS/IMG_20260330_122256_1397973353957447465.jpg

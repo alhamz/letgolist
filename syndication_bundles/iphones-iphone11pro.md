@@ -4,7 +4,7 @@ SKU / ID: LGL-PHO-IPHONE11-412
 PRICE: $175 CAD
 CONDITION: FAIR
 STATUS: ACTIVE
-PUBLIC SHOWCASE LINK: https://letgolist.pages.dev/iphones-iphone11pro.html
+PUBLIC SHOWCASE LINK: https://letgolist.pages.dev/l/_k4C-1PZhexF.html
 PHOTOS TO ATTACH (6):
   [1] Sales/iPhones/iPhone11Pro/IMG_20260504_144602_3209862757808086543.jpg
   [2] Sales/iPhones/iPhone11Pro/IMG_20260504_144658_9166654749341700746.jpg

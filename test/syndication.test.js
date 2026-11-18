@@ -8,6 +8,7 @@ test('SyndicationExporter - formatListing for all channels', () => {
   const exporter = new SyndicationExporter();
   const testItem = {
     id: 'test-item-phone',
+    public_token: 'abc123xyz789',
     sku: 'LGL-PHO-TEST-001',
     title: 'Test Phone 128GB',
     category: 'Phones',
@@ -41,7 +42,7 @@ test('SyndicationExporter - formatListing for all channels', () => {
   assert.ok(output.includes('FACEBOOK MARKETPLACE LISTING COPY'));
   assert.ok(output.includes('KIJIJI CLASSIFIEDS LISTING COPY'));
   assert.ok(output.includes('EBAY LISTING SUMMARY'));
-  assert.ok(output.includes('https://letgolist.pages.dev/test-item-phone.html'));
+  assert.ok(output.includes('https://letgolist.pages.dev/l/abc123xyz789.html'));
   assert.ok(output.includes('Sales/iPhones/test.jpg'));
 });
 

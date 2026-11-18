@@ -4,7 +4,7 @@ SKU / ID: LGL-NET-TPLINKPO-601
 PRICE: $20 CAD
 CONDITION: LIKE NEW
 STATUS: ACTIVE
-PUBLIC SHOWCASE LINK: https://letgolist.pages.dev/networking-tp-link-poe-injector.html
+PUBLIC SHOWCASE LINK: https://letgolist.pages.dev/l/MU5Q-_BsYEjO.html
 PHOTOS TO ATTACH (4):
   [1] Sales/Networking/tp-link POE injector/1396C38C-9448-4F7B-AD92-C81A9075540D.jpeg
   [2] Sales/Networking/tp-link POE injector/2836AFB8-32A8-4095-A764-52C226EC7085.jpeg

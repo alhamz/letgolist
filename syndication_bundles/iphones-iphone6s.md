@@ -4,7 +4,7 @@ SKU / ID: LGL-PHO-IPHONE6S-512
 PRICE: $50 CAD
 CONDITION: GOOD
 STATUS: ACTIVE
-PUBLIC SHOWCASE LINK: https://letgolist.pages.dev/iphones-iphone6s.html
+PUBLIC SHOWCASE LINK: https://letgolist.pages.dev/l/9wRS-_X50fdf.html
 PHOTOS TO ATTACH (2):
   [1] Sales/iPhones/iPhone6S/IMG_20260504_145052_7216121623655051677.jpg
   [2] Sales/iPhones/iPhone6S/IMG_20260504_145132_3388901938558296235.jpg

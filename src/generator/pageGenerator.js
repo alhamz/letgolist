@@ -4,7 +4,7 @@
  * Distraction-free, zero runtime dependencies, optimized for buyers visiting from FB Marketplace, Kijiji, Amazon, etc.
  */
 
-import { writeFileSync, mkdirSync, existsSync, copyFileSync } from 'node:fs';
+import { writeFileSync, mkdirSync, existsSync, copyFileSync, readdirSync, rmSync, unlinkSync } from 'node:fs';
 import { resolve, dirname, join } from 'node:path';
 import { InventoryStore } from '../model/schema.js';
 
@@ -12,14 +12,18 @@ export class PageGenerator {
   constructor(options = {}) {
     this.projectRoot = options.projectRoot || resolve('.');
     this.distDir = options.distDir || resolve(this.projectRoot, 'dist');
-    this.itemsDir = resolve(this.distDir, 'items');
+    this.listingsDir = resolve(this.distDir, 'l');
+    this.adminDir = options.adminDir || resolve(this.projectRoot, 'admin');
     this.store = new InventoryStore({ projectRoot: this.projectRoot });
     this.ensureDirs();
   }
 
   ensureDirs() {
-    if (!existsSync(this.itemsDir)) {
-      mkdirSync(this.itemsDir, { recursive: true });
+    if (!existsSync(this.listingsDir)) {
+      mkdirSync(this.listingsDir, { recursive: true });
+    }
+    if (!existsSync(this.adminDir)) {
+      mkdirSync(this.adminDir, { recursive: true });
     }
   }
 
@@ -53,12 +57,12 @@ export class PageGenerator {
     const primaryImg = item.media?.primary_image || gallery[0] || '';
 
     // Clean, encode, and format media paths for browsers and Cloudflare Pages
-    // Corrects special characters in folder names like '%1' (%251) and '#0' (%230) and spaces (%20)
+    // Root-relative paths ensure /l/<token>.html resolves media cleanly without duplicating Sales/
     const toRelativeMedia = (p) => {
       if (!p) return '';
-      const cleanPath = p.replace(/\\/g, '/').replace(/^\.\//, '');
+      const cleanPath = p.replace(/\\/g, '/').replace(/^\.\//, '').replace(/^\//, '');
       const parts = cleanPath.split('/').map(seg => encodeURIComponent(seg));
-      return `./${parts.join('/')}`;
+      return `/${parts.join('/')}`;
     };
 
     const mediaList = gallery.map(m => ({
@@ -100,9 +104,9 @@ export class PageGenerator {
       }
     };
 
-    // Render Related Accessories / Companion Items
+    // Related items are omitted on public scattered pages by default to prevent inventory cross-discovery.
     let relatedHtml = '';
-    const relatedIds = item.related_items || [];
+    const relatedIds = this.includeRelated ? (item.related_items || []) : [];
     if (relatedIds.length > 0) {
       let itemsList = allItems;
       if (!itemsList) {
@@ -150,6 +154,7 @@ export class PageGenerator {
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
   <title>${this._escape(item.title)} | Verified Item Profile</title>
   <meta name="description" content="${this._escape(item.title)} - ${this._escape(conditionDescription)}. Local pickup in ${this._escape(locStr)}.">
   
@@ -883,69 +888,136 @@ export class PageGenerator {
   }
 
   /**
-   * Writes the rendered page to dist/items/<id>.html and dist/<id>.html
+   * Writes the rendered page strictly to the scattered capability URL dist/l/<public_token>.html
    */
   writeItemPage(item, allItems = null) {
     const html = this.renderItemPage(item, allItems);
-    const itemPath = resolve(this.itemsDir, `${item.id}.html`);
-    const rootPath = resolve(this.distDir, `${item.id}.html`);
+    const slug = item.public_token || item.id;
+    const itemPath = resolve(this.listingsDir, `${slug}.html`);
     writeFileSync(itemPath, html, 'utf-8');
-    writeFileSync(rootPath, html, 'utf-8');
     return itemPath;
   }
 
   /**
-   * Renders all items currently in the database into dist/items/ and dist/
-   * Also writes the directory index page at dist/index.html
+   * Removes legacy predictable HTML files in dist/ and dist/items/ so
+   * trimming a URL back to / or /items/ cannot enumerate inventory.
+   */
+  cleanLegacyPublicPages() {
+    if (existsSync(this.distDir)) {
+      for (const entry of readdirSync(this.distDir)) {
+        if (entry.endsWith('.html') || entry === '_redirects') {
+          try { unlinkSync(resolve(this.distDir, entry)); } catch {}
+        }
+      }
+      const legacyItemsDir = resolve(this.distDir, 'items');
+      if (existsSync(legacyItemsDir)) {
+        try { rmSync(legacyItemsDir, { recursive: true, force: true }); } catch {}
+      }
+    }
+    if (existsSync(this.listingsDir)) {
+      for (const entry of readdirSync(this.listingsDir)) {
+        if (entry.endsWith('.html')) {
+          try { unlinkSync(resolve(this.listingsDir, entry)); } catch {}
+        }
+      }
+    }
+  }
+
+  /**
+   * Renders all items to scattered capability URLs under dist/l/<public_token>.html,
+   * writes a neutral private-portal dist/index.html + dist/_headers,
+   * and writes the full operator dashboard locally to admin/index.html.
    */
   renderAll(items) {
+    this.cleanLegacyPublicPages();
+    this.ensureDirs();
+
     const results = [];
     for (const item of items) {
       const p = this.writeItemPage(item, items);
-      results.push({ id: item.id, path: p });
+      results.push({ id: item.id, public_token: item.public_token || item.id, path: p });
     }
-    this.writeIndexPage(items);
-    this.writeRedirects();
+    this.writePublicRootPortal();
+    this.writeHeaders();
+    this.writeAdminDashboard(items);
     return results;
   }
 
   /**
-   * Writes Cloudflare Pages _redirects file and static HTML redirect stubs
-   * for legacy, scrubbed, or superseded item slugs to guarantee zero 404s and zero PII.
+   * Writes Cloudflare Pages _headers to prevent search engine indexing of any route.
    */
-  writeRedirects() {
-    const redirects = [
-      '/carseats-ahmedbooster /carseats-highback-booster 301',
-      '/carseats-ahmedbooster.html /carseats-highback-booster.html 301',
-      '/items/carseats-ahmedbooster.html /items/carseats-highback-booster.html 301'
-    ];
-    writeFileSync(resolve(this.distDir, '_redirects'), redirects.join('\n') + '\n', 'utf-8');
-
-    const stubHtml = `<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="refresh" content="0; url=./carseats-highback-booster.html">
-  <title>Redirecting...</title>
-  <script>window.location.replace('./carseats-highback-booster.html');</script>
-</head>
-<body>
-  <p>Redirecting to <a href="./carseats-highback-booster.html">Highback Booster Car Seat</a>...</p>
-</body>
-</html>`;
-
-    writeFileSync(resolve(this.distDir, 'carseats-ahmedbooster.html'), stubHtml, 'utf-8');
-    if (!existsSync(this.itemsDir)) {
-      mkdirSync(this.itemsDir, { recursive: true });
-    }
-    writeFileSync(resolve(this.itemsDir, 'carseats-ahmedbooster.html'), stubHtml, 'utf-8');
+  writeHeaders() {
+    const headers = `/*\n  X-Robots-Tag: noindex, nofollow\n  X-Content-Type-Options: nosniff\n`;
+    writeFileSync(resolve(this.distDir, '_headers'), headers, 'utf-8');
   }
 
   /**
-   * Generates an enhanced, interactive directory-style index page at dist/index.html
-   * with real-time text search, category filtering, status toggles, and live metrics.
+   * Writes a neutral, zero-disclosure landing page at dist/index.html.
+   * Exposes zero item counts, zero portfolio value, and zero links.
    */
-  writeIndexPage(items) {
+  writePublicRootPortal() {
+    const html = `<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Direct Listing Portal</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: #0f172a;
+      color: #f8fafc;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem;
+    }
+    .gate-card {
+      max-width: 480px;
+      width: 100%;
+      background: #1e293b;
+      border: 1px solid #334155;
+      border-radius: 16px;
+      padding: 2.25rem;
+      text-align: center;
+      box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.35);
+    }
+    .badge {
+      display: inline-block;
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #38bdf8;
+      background: rgba(56, 189, 248, 0.12);
+      border: 1px solid rgba(56, 189, 248, 0.3);
+      padding: 0.3rem 0.75rem;
+      border-radius: 9999px;
+      margin-bottom: 1.15rem;
+    }
+    h1 { font-size: 1.35rem; font-weight: 700; margin-bottom: 0.75rem; }
+    p { color: #94a3b8; font-size: 0.92rem; line-height: 1.55; }
+  </style>
+</head>
+<body>
+  <main class="gate-card">
+    <div class="badge">Private Listing Portal</div>
+    <h1>Direct Item Link Required</h1>
+    <p>Individual item specifications and media galleries are accessible only via the direct listing link shared in the marketplace ad.</p>
+  </main>
+</body>
+</html>`;
+    writeFileSync(resolve(this.distDir, 'index.html'), html, 'utf-8');
+  }
+
+  /**
+   * Generates the private operator dashboard at admin/index.html (outside dist/)
+   * with portfolio value, search, status filters, channel tracking, and scattered /l/<token> links.
+   */
+  writeAdminDashboard(items) {
     const categories = Array.from(new Set(items.map(i => i.category || 'Other'))).sort();
     const activeCount = items.filter(i => i.status === 'active').length;
     const inUseCount = items.filter(i => i.status === 'in_use').length;
@@ -963,7 +1035,11 @@ export class PageGenerator {
           <div class="card-grid">
             ${catItems.map(item => {
               const primaryImg = item.media?.primary_image || (item.media?.gallery || [])[0] || '';
-              const imgSrc = primaryImg ? `./${primaryImg.replace(/\\/g, '/').split('/').map(encodeURIComponent).join('/')}` : '';
+              const imgSrc = primaryImg ? `../${primaryImg.replace(/\\/g, '/').split('/').map(encodeURIComponent).join('/')}` : '';
+              const slug = item.public_token || item.id;
+              const fbState = item.channels?.facebook?.status || 'not_listed';
+              const kjState = item.channels?.kijiji?.status || 'not_listed';
+              const ebState = item.channels?.ebay?.status || 'not_listed';
               let priceStr = 'Contact for Price';
               if (item.status === 'in_use') {
                 priceStr = 'Not for Sale';
@@ -972,17 +1048,18 @@ export class PageGenerator {
               } else if (item.pricing?.active_price) {
                 priceStr = `$${item.pricing.active_price} CAD`;
               }
-              const searchHaystack = `${item.title} ${item.brand || ''} ${item.model || ''} ${item.category || ''} ${JSON.stringify(item.specs || {})}`.toLowerCase();
+              const searchHaystack = `${item.title} ${item.brand || ''} ${item.model || ''} ${item.category || ''} ${slug} ${JSON.stringify(item.specs || {})}`.toLowerCase();
 
               return `
-                <a href="./${item.id}.html" class="item-card" data-status="${item.status}" data-cat="${this._escape(item.category || 'Other')}" data-search="${this._escape(searchHaystack)}">
+                <a href="../dist/l/${slug}.html" class="item-card" data-status="${item.status}" data-cat="${this._escape(item.category || 'Other')}" data-search="${this._escape(searchHaystack)}">
                   <div class="card-img-wrap">
                     ${imgSrc ? `<img src="${imgSrc}" alt="${this._escape(item.title)}" loading="lazy">` : `<div class="no-img">No Image</div>`}
                     <span class="card-badge ${item.status === 'sold' ? 'status-sold' : item.status === 'in_use' ? 'status-in-use' : 'status-avail'}">${item.status === 'sold' ? 'Sold' : item.status === 'in_use' ? 'In Use' : 'Available'}</span>
                   </div>
                   <div class="card-body">
                     <h3 class="card-title">${this._escape(item.title)}</h3>
-                    <div class="card-meta">${this._escape(item.brand || '')} • ${this._escape(item.model || '')}</div>
+                    <div class="card-meta">${this._escape(item.brand || '')} • ${this._escape(item.model || '')} • /l/${slug}</div>
+                    <div class="card-meta">FB: ${fbState} | KJ: ${kjState} | eBay: ${ebState}</div>
                     <div class="card-price ${item.status === 'sold' ? 'price-sold' : item.status === 'in_use' ? 'price-in-use' : ''}">${priceStr}</div>
                   </div>
                 </a>
@@ -1216,7 +1293,7 @@ export class PageGenerator {
 </body>
 </html>`;
 
-    writeFileSync(resolve(this.distDir, 'index.html'), html, 'utf-8');
+    writeFileSync(resolve(this.adminDir, 'index.html'), html, 'utf-8');
   }
 
   _formatKey(key) {
