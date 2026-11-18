@@ -1051,18 +1051,24 @@ export class PageGenerator {
               const searchHaystack = `${item.title} ${item.brand || ''} ${item.model || ''} ${item.category || ''} ${slug} ${JSON.stringify(item.specs || {})}`.toLowerCase();
 
               return `
-                <a href="../dist/l/${slug}.html" class="item-card" data-status="${item.status}" data-cat="${this._escape(item.category || 'Other')}" data-search="${this._escape(searchHaystack)}">
-                  <div class="card-img-wrap">
-                    ${imgSrc ? `<img src="${imgSrc}" alt="${this._escape(item.title)}" loading="lazy">` : `<div class="no-img">No Image</div>`}
-                    <span class="card-badge ${item.status === 'sold' ? 'status-sold' : item.status === 'in_use' ? 'status-in-use' : 'status-avail'}">${item.status === 'sold' ? 'Sold' : item.status === 'in_use' ? 'In Use' : 'Available'}</span>
+                <div class="item-card" data-id="${this._escape(item.id)}" data-status="${item.status}" data-cat="${this._escape(item.category || 'Other')}" data-search="${this._escape(searchHaystack)}">
+                  <a href="../dist/l/${slug}.html" class="card-link-area" target="_blank" rel="noopener">
+                    <div class="card-img-wrap">
+                      ${imgSrc ? `<img src="${imgSrc}" alt="${this._escape(item.title)}" loading="lazy">` : `<div class="no-img">No Image</div>`}
+                      <span class="card-badge ${item.status === 'sold' ? 'status-sold' : item.status === 'in_use' ? 'status-in-use' : 'status-avail'}">${item.status === 'sold' ? 'Sold' : item.status === 'in_use' ? 'In Use' : 'Available'}</span>
+                    </div>
+                    <div class="card-body">
+                      <h3 class="card-title">${this._escape(item.title)}</h3>
+                      <div class="card-meta">${this._escape(item.brand || '')} • ${this._escape(item.model || '')} • /l/${slug}</div>
+                      <div class="card-meta">FB: ${fbState} | KJ: ${kjState} | eBay: ${ebState}</div>
+                      <div class="card-price ${item.status === 'sold' ? 'price-sold' : item.status === 'in_use' ? 'price-in-use' : ''}">${priceStr}</div>
+                    </div>
+                  </a>
+                  <div class="card-actions">
+                    <button type="button" class="action-btn copy-btn" data-url="https://letgolist.pages.dev/l/${slug}.html">Copy Link</button>
+                    ${item.status === 'active' ? `<button type="button" class="action-btn sold-btn" data-id="${this._escape(item.id)}">Mark Sold</button>` : ''}
                   </div>
-                  <div class="card-body">
-                    <h3 class="card-title">${this._escape(item.title)}</h3>
-                    <div class="card-meta">${this._escape(item.brand || '')} • ${this._escape(item.model || '')} • /l/${slug}</div>
-                    <div class="card-meta">FB: ${fbState} | KJ: ${kjState} | eBay: ${ebState}</div>
-                    <div class="card-price ${item.status === 'sold' ? 'price-sold' : item.status === 'in_use' ? 'price-in-use' : ''}">${priceStr}</div>
-                  </div>
-                </a>
+                </div>
               `;
             }).join('')}
           </div>
@@ -1124,8 +1130,15 @@ export class PageGenerator {
     .count-badge { font-size: 0.75rem; background: var(--card-border); color: var(--text-muted); padding: 0.15rem 0.5rem; border-radius: 999px; }
 
     .card-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 1.25rem; }
-    .item-card { background: var(--card-bg); border: 1px solid var(--card-border); border-radius: 12px; overflow: hidden; text-decoration: none; color: inherit; display: flex; flex-direction: column; transition: transform 0.15s, border-color 0.15s; }
+    .item-card { background: var(--card-bg); border: 1px solid var(--card-border); border-radius: 12px; overflow: hidden; color: inherit; display: flex; flex-direction: column; transition: transform 0.15s, border-color 0.15s; }
     .item-card:hover { transform: translateY(-3px); border-color: var(--primary); }
+    .card-link-area { text-decoration: none; color: inherit; display: flex; flex-direction: column; flex: 1; }
+    .card-actions { display: flex; gap: 0.5rem; padding: 0 1rem 0.9rem; }
+    .action-btn { flex: 1; background: #0f172a; border: 1px solid var(--card-border); color: var(--text); padding: 0.4rem 0.55rem; border-radius: 8px; font-size: 0.78rem; font-weight: 600; cursor: pointer; transition: all 0.15s; }
+    .action-btn:hover { border-color: var(--primary); color: var(--primary); }
+    .sold-btn:hover { border-color: var(--danger); color: var(--danger); }
+    .rebuild-btn { background: rgba(56, 189, 248, 0.15); border: 1px solid var(--primary); color: var(--primary); padding: 0.45rem 0.9rem; border-radius: 8px; font-size: 0.85rem; font-weight: 700; cursor: pointer; }
+    .rebuild-btn:hover { background: var(--primary); color: #0f172a; }
     .card-img-wrap { width: 100%; aspect-ratio: 4 / 3; background: #000; position: relative; overflow: hidden; }
     .card-img-wrap img { width: 100%; height: 100%; object-fit: cover; }
     .no-img { display: flex; align-items: center; justify-content: center; height: 100%; color: var(--text-muted); font-size: 0.85rem; }
@@ -1163,6 +1176,7 @@ export class PageGenerator {
           <div class="stat-badge"><span>Available:</span> <span class="stat-val stat-accent">${activeCount} Lots</span></div>
           <div class="stat-badge"><span>Active Value:</span> <span class="stat-val">$${activeValue} CAD</span></div>
           <div class="stat-badge"><span>Circular Saved:</span> <span class="stat-val">${totalEwaste} kg</span></div>
+          <button type="button" id="rebuildBtn" class="rebuild-btn">Rebuild Site</button>
         </div>
       </div>
     </header>
@@ -1285,6 +1299,63 @@ export class PageGenerator {
           applyFilters();
         });
       });
+
+      // Operator action buttons (Copy Link, Mark Sold, Rebuild)
+      document.querySelectorAll('.copy-btn').forEach(btn => {
+        btn.addEventListener('click', async function() {
+          const url = this.getAttribute('data-url');
+          try {
+            await navigator.clipboard.writeText(url);
+            const orig = this.textContent;
+            this.textContent = 'Copied!';
+            setTimeout(() => { this.textContent = orig; }, 1400);
+          } catch {
+            prompt('Copy public link:', url);
+          }
+        });
+      });
+
+      const isLocalServer = window.location.protocol.startsWith('http');
+      document.querySelectorAll('.sold-btn').forEach(btn => {
+        btn.addEventListener('click', async function() {
+          const id = this.getAttribute('data-id');
+          if (!isLocalServer) {
+            alert('Launch via open-admin.cmd to enable one-click Mark Sold.');
+            return;
+          }
+          if (!confirm('Mark "' + id + '" as SOLD and update its public link?')) return;
+          const res = await fetch('/api/sold', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ id })
+          });
+          if (res.ok) {
+            window.location.reload();
+          } else {
+            alert('Failed to mark sold.');
+          }
+        });
+      });
+
+      const rebuildBtn = document.getElementById('rebuildBtn');
+      if (rebuildBtn) {
+        rebuildBtn.addEventListener('click', async function() {
+          if (!isLocalServer) {
+            alert('Launch via open-admin.cmd to rebuild from the browser.');
+            return;
+          }
+          this.textContent = 'Rebuilding...';
+          this.disabled = true;
+          const res = await fetch('/api/build', { method: 'POST' });
+          if (res.ok) {
+            window.location.reload();
+          } else {
+            this.textContent = 'Rebuild Site';
+            this.disabled = false;
+            alert('Rebuild failed.');
+          }
+        });
+      }
 
       // Initial filter execution to show only active available lots by default
       applyFilters();

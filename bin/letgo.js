@@ -7,6 +7,7 @@
 
 import { cpSync, existsSync } from 'node:fs';
 import { resolve } from 'node:path';
+import { spawn } from 'node:child_process';
 import { CatalogScanner } from '../src/scanner/scanner.js';
 import { InventoryStore } from '../src/model/schema.js';
 import { PiiClient } from '../src/security/piiClient.js';
@@ -15,6 +16,7 @@ import { ItemCurator } from '../src/curator/curator.js';
 import { PageGenerator } from '../src/generator/pageGenerator.js';
 import { SyndicationExporter } from '../src/syndication/exporter.js';
 import { AssistedPoster } from '../src/automation/assistedPoster.js';
+import { AdminServer } from '../src/server/adminServer.js';
 
 const VERSION = '1.0.0';
 
@@ -33,6 +35,7 @@ COMMANDS:
   export <id>            Export copy-paste listing bundle for Facebook, Kijiji, and eBay
   export-all             Export all active item syndication bundles to syndication_bundles/
   build                  Generate scattered capability pages (dist/l/<token>.html) & private admin/index.html
+  admin                  Start local private admin server (127.0.0.1:4173) and open dashboard in browser
   render <id>            Render a scattered standalone HTML page for a specific item
   links                  List active items with their scattered /l/<token>.html URLs and channel status
   channels <id|list>     View or update live marketplace URLs/IDs (--fb=URL --kijiji=URL --ebay=ID)
@@ -478,6 +481,30 @@ function handleExportAll(args) {
   console.log(`  • Copy/paste ready for Facebook Marketplace, Kijiji, and eBay.\n`);
 }
 
+async function handleAdmin(args) {
+  let port = 4173;
+  let openBrowser = true;
+  for (const a of args) {
+    if (a.startsWith('--port=')) port = Number(a.split('=')[1]) || 4173;
+    else if (a === '--no-open') openBrowser = false;
+  }
+
+  const server = new AdminServer({ port });
+  const info = await server.start();
+  console.log(`\nletgolist Private Admin Dashboard running at ${info.url}`);
+  console.log(`Press Ctrl+C to stop.\n`);
+
+  if (openBrowser) {
+    if (process.platform === 'win32') {
+      spawn('cmd', ['/c', 'start', '', info.url], { detached: true, stdio: 'ignore' }).unref();
+    } else if (process.platform === 'darwin') {
+      spawn('open', [info.url], { detached: true, stdio: 'ignore' }).unref();
+    } else {
+      spawn('xdg-open', [info.url], { detached: true, stdio: 'ignore' }).unref();
+    }
+  }
+}
+
 async function main() {
   const args = process.argv.slice(2);
   const cmd = args[0];
@@ -504,6 +531,9 @@ async function main() {
       break;
     case 'build':
       handleBuild();
+      break;
+    case 'admin':
+      await handleAdmin(args.slice(1));
       break;
     case 'render':
       handleRender(args.slice(1));

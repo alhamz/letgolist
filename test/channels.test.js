@@ -6,6 +6,7 @@ import { join } from 'node:path';
 import { InventoryStore } from '../src/model/schema.js';
 import { PageGenerator } from '../src/generator/pageGenerator.js';
 import { AssistedPoster } from '../src/automation/assistedPoster.js';
+import { AdminServer } from '../src/server/adminServer.js';
 
 test('InventoryStore - assigns public_token and flags other channels on sold', () => {
   const tempRoot = mkdtempSync(join(tmpdir(), 'lgl-test-'));
@@ -90,4 +91,51 @@ test('AssistedPoster - builds normalized payload with scattered showcase URL', (
 
   assert.strictEqual(payload.showcaseUrl, 'https://letgolist.pages.dev/l/tok999aaa111.html');
   assert.ok(payload.description.includes('https://letgolist.pages.dev/l/tok999aaa111.html'));
+});
+
+test('AdminServer - serves dashboard and handles /api/items and /api/sold on 127.0.0.1', async () => {
+  const tempRoot = mkdtempSync(join(tmpdir(), 'lgl-srv-'));
+  const server = new AdminServer({ projectRoot: tempRoot, port: 0 });
+  try {
+    server.store.upsertItem({
+      id: 'dock-srv-1',
+      public_token: 'srvtok123456',
+      title: 'Test Server Dock',
+      category: 'Docks',
+      condition: 'good',
+      pricing: { active_price: 45, currency: 'CAD' },
+      status: 'active',
+      media: { gallery: [] },
+      specs: {},
+    });
+
+    const { port } = await new Promise((resStart, rejStart) => {
+      import('node:http').then(({ default: http }) => {
+        server.server = http.createServer((req, res) => server._handleRequest(req, res));
+        server.server.on('error', rejStart);
+        server.server.listen(0, '127.0.0.1', () => resStart(server.server.address()));
+      });
+    });
+
+    const base = `http://127.0.0.1:${port}`;
+    const dashRes = await fetch(`${base}/`);
+    assert.strictEqual(dashRes.status, 200);
+    const dashHtml = await dashRes.text();
+    assert.ok(dashHtml.includes('Test Server Dock'));
+    assert.ok(dashHtml.includes('Copy Link'));
+    assert.ok(dashHtml.includes('Mark Sold'));
+
+    const soldRes = await fetch(`${base}/api/sold`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ id: 'dock-srv-1' }),
+    });
+    assert.strictEqual(soldRes.status, 200);
+    const soldData = await soldRes.json();
+    assert.strictEqual(soldData.status, 'ok');
+    assert.strictEqual(server.store.read().items[0].status, 'sold');
+  } finally {
+    await server.stop();
+    rmSync(tempRoot, { recursive: true, force: true });
+  }
 });
